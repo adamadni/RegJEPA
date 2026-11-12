@@ -34,6 +34,8 @@ python -m pytest -q
 
 The downloader is the only workflow step that needs network access when data are absent. It verifies pinned Git blob IDs and records SHA256 checksums. Upstream data and license files are committed verbatim. Generated tables retain the original labels alongside derived symmetry information; they do not overwrite upstream annotations.
 
+`requirements.lock.txt` additionally pins the full dependency set used for this audit; install it instead of `requirements.txt` for that exact environment. `.gitattributes` disables line-ending conversion for raw snapshots so their checksums remain valid on Windows and Linux.
+
 ## Layout
 
 ```text

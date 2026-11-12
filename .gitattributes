@@ -1,0 +1,6 @@
+* text=auto eol=lf
+# Raw snapshots must survive Windows checkouts byte-for-byte.
+data/raw/** -text
+*.png binary
+data/processed/** linguist-generated=true
+reports/molecule_browser.html linguist-generated=true
