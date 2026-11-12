@@ -1,0 +1,272 @@
+{
+  "schema_version": 1,
+  "run_key": "d76c42313dcf5e17ac96",
+  "config": {
+    "schema_version": 1,
+    "feature_conformers": 1,
+    "conformers": {
+      "num_conformers": 10,
+      "seed": 42,
+      "mmff_max_iterations": 500,
+      "allow_uff_fallback": true,
+      "allow_xtb_fallback": true
+    },
+    "atom_jepa": {
+      "checkpoint_directory": ".cache/models/atom-jepa/molecules",
+      "degrees": "all",
+      "invariant": true,
+      "random_seed": 42,
+      "threads": 4,
+      "batch_size": 1
+    },
+    "morgan": {
+      "radii": [
+        1,
+        2,
+        3
+      ],
+      "bits_per_radius": 2048,
+      "include_chirality": true
+    },
+    "electronic": {
+      "method": "GFN1-xTB",
+      "solvent": "methanol",
+      "accuracy": 1.0,
+      "max_iterations": 500,
+      "timeout_seconds": 180,
+      "threads_per_process": 1
+    }
+  },
+  "tools": {
+    "atom_jepa": {
+      "repository": "atom-jepa/atom-jepa",
+      "revision": "bf14d025fc864d689dbad1ac9c55b8b7054af11e",
+      "checkpoint": "molecules",
+      "package_version": "0.4.0",
+      "files": {
+        "config.json": {
+          "url": "https://huggingface.co/atom-jepa/atom-jepa/resolve/bf14d025fc864d689dbad1ac9c55b8b7054af11e/molecules/config.json",
+          "sha256": "554fdf12fd72d88ce32e11d463324c1e0a923cdc0ffcd439863041933424782e",
+          "bytes": 1017
+        },
+        "model.safetensors": {
+          "url": "https://huggingface.co/atom-jepa/atom-jepa/resolve/bf14d025fc864d689dbad1ac9c55b8b7054af11e/molecules/model.safetensors",
+          "sha256": "0406152686fbae9f737f2c70c9acaf2da0eba6ad57e530142adfee47df75882f",
+          "bytes": 156380852
+        }
+      }
+    },
+    "xtb": {
+      "release": "v6.7.1",
+      "binary_version": "6.7.1pre Windows",
+      "archive_url": "https://github.com/grimme-lab/xtb/releases/download/v6.7.1/xtb-6.7.1pre-windows-x86_64.zip",
+      "archive_sha256": "043e578da4a7e114a4d584972959a875e3ffb9f2767a86723b95aa6719d28d9c",
+      "executable": ".cache/tools/xtb/xtb-6.7.1/bin/xtb.exe"
+    }
+  },
+  "source_records": 535,
+  "unique_structures": 534,
+  "query_rows": 2290,
+  "cohorts": {
+    "conservative_bromination": {
+      "records": 299,
+      "queries": 1264,
+      "matched_queries": 1264,
+      "matched_records": 299
+    },
+    "conservative_halogenation": {
+      "records": 374,
+      "queries": 1597,
+      "matched_queries": 1597,
+      "matched_records": 374
+    },
+    "broad_single_outcome": {
+      "records": 495,
+      "queries": 2133,
+      "matched_queries": 2133,
+      "matched_records": 495
+    },
+    "all_source_records": {
+      "records": 535,
+      "queries": 2290,
+      "matched_queries": 2290,
+      "matched_records": 535
+    }
+  },
+  "blocks": {
+    "morgan": {
+      "shape": [
+        2290,
+        6144
+      ],
+      "available_queries": 2290,
+      "available_records": 535,
+      "sha256": "890ce2eb4bb7fdd712bf5199fef3ddca88320d5318b660cb21568eba7cff94e6"
+    },
+    "electronic": {
+      "shape": [
+        2290,
+        6
+      ],
+      "available_queries": 2290,
+      "available_records": 535,
+      "sha256": "9a547b8b87e0a5f22651283925da98645d308763d4db3871c34a817a4f30525a"
+    },
+    "atom_jepa": {
+      "shape": [
+        2290,
+        768
+      ],
+      "available_queries": 2290,
+      "available_records": 535,
+      "sha256": "be6cc959745b0ce9739850ec7f7b36cd3e93bd191b6126e66d90f84d518b0d36"
+    },
+    "random_backbone": {
+      "shape": [
+        2290,
+        768
+      ],
+      "available_queries": 2290,
+      "available_records": 535,
+      "sha256": "5b542d3270c5ffb256aea219b3b7e12b11851a6e0ed902cf0811e58f09080b14"
+    },
+    "jepa_plus_qm": {
+      "shape": [
+        2290,
+        774
+      ],
+      "available_queries": 2290,
+      "available_records": 535,
+      "sha256": "4572096d8839417ca2f54ab01f30a37709cc8f71b1f7169ef9792e2b4c95d083"
+    }
+  },
+  "models": {
+    "atom_jepa": {
+      "block": "atom_jepa",
+      "architecture": {
+        "num_channels": 256,
+        "pred_num_channels": 128,
+        "num_layers": 8,
+        "pred_num_layers": 3,
+        "lmax": 2,
+        "mmax": 2,
+        "max_radius": 6.0,
+        "num_radial_basis": 128,
+        "max_num_elements": 128,
+        "num_heads": 8,
+        "attn_hidden_channels": 64,
+        "attn_alpha_channels": 64,
+        "attn_value_channels": 16,
+        "ffn_hidden_channels": 512,
+        "edge_channels": 128,
+        "norm_type": "merge_layer_norm",
+        "attn_activation": "sep-merge_gates2_swiglu",
+        "ffn_activation": "sep-merge_gates2_swiglu",
+        "attn_grid_resolution_list": [
+          14,
+          8
+        ],
+        "ffn_grid_resolution_list": [
+          14,
+          14
+        ],
+        "use_envelope": true,
+        "use_grid_mlp": true,
+        "avg_degree": 16.0,
+        "readout_pool": "mean",
+        "dropout": 0.0,
+        "drop_path_rate": 0.05,
+        "predict_irreps": false,
+        "query_radius": 12.0,
+        "grad_checkpointing": true,
+        "pred_grad_checkpointing": true
+      },
+      "parameter_sha256": "6bb651419c3a3dca499a15322346a783079c2e8878234cab3f3f4788edc85139",
+      "parameter_count": 39035904,
+      "trainable_parameter_count": 0,
+      "seed": null,
+      "device": "cpu",
+      "precision": "fp32",
+      "initialization": "published molecular checkpoint"
+    },
+    "random_backbone": {
+      "block": "random_backbone",
+      "architecture": {
+        "num_channels": 256,
+        "pred_num_channels": 128,
+        "num_layers": 8,
+        "pred_num_layers": 3,
+        "lmax": 2,
+        "mmax": 2,
+        "max_radius": 6.0,
+        "num_radial_basis": 128,
+        "max_num_elements": 128,
+        "num_heads": 8,
+        "attn_hidden_channels": 64,
+        "attn_alpha_channels": 64,
+        "attn_value_channels": 16,
+        "ffn_hidden_channels": 512,
+        "edge_channels": 128,
+        "norm_type": "merge_layer_norm",
+        "attn_activation": "sep-merge_gates2_swiglu",
+        "ffn_activation": "sep-merge_gates2_swiglu",
+        "attn_grid_resolution_list": [
+          14,
+          8
+        ],
+        "ffn_grid_resolution_list": [
+          14,
+          14
+        ],
+        "use_envelope": true,
+        "use_grid_mlp": true,
+        "avg_degree": 16.0,
+        "readout_pool": "mean",
+        "dropout": 0.0,
+        "drop_path_rate": 0.05,
+        "predict_irreps": false,
+        "query_radius": 12.0,
+        "grad_checkpointing": true,
+        "pred_grad_checkpointing": true
+      },
+      "parameter_sha256": "e62380d8eda66bf00664ea8bbe26ebb889b26333c3f1fa2bbbeeafbfa0504e66",
+      "parameter_count": 39035904,
+      "trainable_parameter_count": 0,
+      "seed": 42,
+      "device": "cpu",
+      "precision": "fp32",
+      "initialization": "upstream architecture constructor"
+    }
+  },
+  "queries_sha256": "a4107afcb56b50fded171b0e360f3af62db7416d8c1f429fd5e759b3bf021ea4",
+  "geometry": {
+    "unique_structures": 534,
+    "conformers": 5333,
+    "archive": "conformers.npz",
+    "archive_sha256": "be92749b4e8b6120e740f77982304ce571ad9fb6a7cee3a6f5e2c561b06b65a2",
+    "metadata_sha256": "11f3376afed33a842b7fb4771dda6362370b3bda1abfbdbf55077a4e90a963b4"
+  },
+  "electronic_feature_names": [
+    "gfn1_mulliken_charge_e",
+    "gfn1_cm5_charge_e",
+    "gfn1_fukui_fplus",
+    "gfn1_fukui_fminus",
+    "gfn1_fukui_fradical",
+    "gfn1_total_wiberg_order"
+  ],
+  "query_policy": "one row per exact substitution outcome; arithmetic mean of member-atom features, no multiplicity weights",
+  "labels": "reported_positive is an observed-site membership annotation, not a measured product fraction; multiple outcomes remain multi-positive",
+  "scaling": "none; all fitted scalers must be trained within downstream training folds",
+  "split_status": "cohorts are cumulative data stages; train/validation/test indices are not inferred from feature extraction",
+  "source_manifest_sha256": "b1da400dc6a011e336b3f01fabf6d404413d5d9aaed3701c6281d92aa0ea5b08",
+  "dependency_lock_sha256": "1a7a6f1db0480a9948492d2a12b32e6cb3af30efb23c9ad0d38cb27d249d9c46",
+  "implementation_sha256": {
+    "src/regjepa/audit.py": "c285faeb454ef048d40530f97f3258465cbbc6c14b28b53d00a6aa72366242e7",
+    "src/regjepa/chemistry.py": "037a799002b7ed12b6160b17b18b53a4671d1c1214f7ea72f96c76c0d5b8274c",
+    "src/regjepa/feature_io.py": "823574d91258fc9d524bf49387223590caf2b8dee13563c225add810895025d5",
+    "src/regjepa/feature_pipeline.py": "179b55efaef9e5e1bf3144feffda37c244923f2d7aaf041a98f167dcaf5d1f09",
+    "src/regjepa/quantum.py": "5dfc107248b1b990ac62047f0dbc0f0e948de7fb39bcf81a89595ed0aafbee88",
+    "src/regjepa/representations.py": "64228d4bc60d24c44c736c5c235d15c588b0ea25c04bb1579c799cf9aad317be",
+    "src/regjepa/__init__.py": "6726f89cfc5eaf9ea92fbc916e6b7e6906902b3a3cedbc7fa83293897b7d0806"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "feature_conformers": 1,
+  "conformers": {"num_conformers": 10, "seed": 42, "mmff_max_iterations": 500, "allow_uff_fallback": true, "allow_xtb_fallback": true},
+  "atom_jepa": {"checkpoint_directory": ".cache/models/atom-jepa/molecules", "degrees": "all", "invariant": true, "random_seed": 42, "threads": 4, "batch_size": 1},
+  "morgan": {"radii": [1, 2, 3], "bits_per_radius": 2048, "include_chirality": true},
+  "electronic": {"method": "GFN1-xTB", "solvent": "methanol", "accuracy": 1.0, "max_iterations": 500, "timeout_seconds": 180, "threads_per_process": 1}
+}

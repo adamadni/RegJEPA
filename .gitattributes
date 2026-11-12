@@ -2,5 +2,8 @@
 # Raw snapshots must survive Windows checkouts byte-for-byte.
 data/raw/** -text
 *.png binary
+*.npz binary
 data/processed/** linguist-generated=true
+# Hashed feature exports must also retain their exact bytes across platforms.
+data/features/** -text linguist-generated=true
 reports/molecule_browser.html linguist-generated=true

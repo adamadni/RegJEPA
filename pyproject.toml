@@ -1,12 +1,13 @@
 [project]
 name = "regjepa"
-version = "0.1.0"
-description = "Reproducible molecular data audits for JEPA regioselectivity benchmarks"
+version = "0.2.0"
+description = "Validated molecular data and frozen feature banks for JEPA regioselectivity benchmarks"
 requires-python = ">=3.11"
 dependencies = ["rdkit==2026.9.2"]
 
 [project.optional-dependencies]
 test = ["pytest==9.2.0"]
+features = ["atom-jepa==0.4.0", "torch==2.15.0", "scipy==1.18.1"]
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]

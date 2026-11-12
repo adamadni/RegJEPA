@@ -8,7 +8,9 @@ This first study tests the utility of the published representation. It does not 
 
 ## Data gate
 
-Use the proposed conservative bromination cohort after inspecting flags and molecule depictions. Audit duplicate/source grouping and pretrained-data overlap. Keep the broad single-outcome cohort as a separately disclosed sensitivity analysis. Generate fresh 3D conformers from authoritative SMILES while tracking atom-map correspondence; the supplied SDF is 2D. All conformers of one substrate must remain in one split.
+Follow the approved cumulative cohorts: conservative bromination (299 records), conservative halogenation including Cl/I (374), broad single-outcome (495), then all source records (535). Audit duplicate/source grouping and pretrained-data overlap. The latter two stages retain the source ambiguity flags, and the final stage contains multi-positive/no-choice examples requiring separate metrics. All conformers and duplicate records of one substrate must remain in one split.
+
+Fresh 3D conformers and the first shared-conformer feature bank have been extracted from authoritative SMILES with source-to-canonical atom correspondence. See `reports/feature_extraction.md` for exact coverage, protocol exceptions and frozen model provenance. Actual supervised train/validation/test assignments remain downstream of feature extraction.
 
 ## Compared representations
 
@@ -16,9 +18,9 @@ Use the proposed conservative bromination cohort after inspecting flags and mole
 - Randomly initialized frozen version of the same backbone, same features/head.
 - Atom-centered Morgan fingerprints and a simple scorer.
 - Electronic atomic descriptors (e.g. xTB CM5 charges or established predicted QM features) with a suitable simple scorer.
-- Optional JEPA + QM feature concatenation to test complementarity.
+- JEPA + QM feature concatenation to test complementarity.
 
-Choose a linear site scorer and one small nonlinear head with hyperparameters selected only on inner training/validation groups. Average site scores over equivalent candidate groups and rank the resulting outcomes. Do not provide the known product to the input feature extractor.
+Choose a linear site scorer and one small nonlinear head with hyperparameters selected only on inner training/validation groups. Each symmetrically distinct position already has one feature vector; rank those queries directly. Do not provide the known product to the input feature extractor. Fit all scalers only within the training fold; the exported features are unscaled.
 
 ## Evaluation
 

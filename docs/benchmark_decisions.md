@@ -8,7 +8,7 @@
 4. Rank distinct outcome groups. Average atom features/logits within a group to avoid an automatic symmetry multiplicity advantage.
 5. Keep molecules as evaluation units; group duplicate substrates before splitting.
 6. Exclude no-choice and multiple-distinct-outcome records from the initial single-outcome ranking task. Keep them available for separate analyses.
-7. Use the rule-filtered 299-record conservative bromination cohort as a proposed pilot, with the 495-record broad single-outcome cohort as a sensitivity analysis.
+7. Follow the approved cumulative progression: conservative bromination (299), conservative halogenation including Cl/I (374), broad single-outcome (495), then all source records (535). The additional conservative halogenation records use the same metadata exclusions as bromination except for the reaction-class flag.
 8. Use SMILES indexing as authoritative. Do not substitute the SDF structure for comp485 silently; its alkene stereochemistry differs. Supplementary coordinates are 2D throughout.
 
 ## Specific cases for review
@@ -24,6 +24,10 @@
 | comp485 | Source SMILES lacks alkene stereo specified in SDF; only one eligible site | Flag the source discrepancy and keep out of the nontrivial ranking metric |
 | 69 empty-reference rows | The upstream table leaves the field blank | Preserve/flag; do not forward-fill from the previous citation |
 | Ambiguous reagent text | Examples `12`, `C12`, `ICI`, `Nal` | Do not autocorrect to I2/Cl2/ICl/NaI without source review |
+
+## Approved feature-extraction policy
+
+Use one query for each symmetrically distinct substitution outcome, rather than predicting atom probabilities and repairing them afterward. Average member-atom descriptors before the site head; no multiplicity feature or probability multiplier is used. The user approved the cohort progression and this comparison scope.
 
 ## Still requiring an executive decision
 
