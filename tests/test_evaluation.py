@@ -7,6 +7,7 @@ import pytest
 
 from regjepa.evaluation import CandidateTable, choice_loss, paired_bootstrap, ranking_records, summarize_records
 from regjepa.feature_io import load_feature_bank
+from regjepa.linear import LinearScorer, LinearTransform, centered_features
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -99,6 +100,27 @@ def test_constant_real_bank_predictions_recover_analytic_baseline_and_not_source
             duplicate_molecules.append(compound)
     assert "comp40" in duplicate_molecules
     assert len(duplicate_molecules) == 6
+
+
+def test_identical_real_morgan_rows_remain_exact_score_ties_with_this_platform_blas():
+    bank = load_feature_bank(ROOT, cohort="conservative_bromination", blocks=["morgan"])
+    table = CandidateTable.from_queries(bank.queries)
+    values = centered_features(bank.X["morgan"], table)
+    pairs = [(a, b) for indices in table.rows for j, a in enumerate(indices) for b in indices[j+1:]
+             if np.array_equal(values[a], values[b])]
+    assert pairs
+    # Fixed random coefficients test numerical equality, not predictive efficacy;
+    # no coefficient is fitted to these real-data labels.
+    for seed in [7, 19, 43]:
+        rng = np.random.default_rng(seed)
+        coefficients = rng.normal(size=values.shape[1])
+        transform = LinearTransform(np.ones(values.shape[1], dtype=bool), np.ones(values.shape[1]), False)
+        scorer = LinearScorer(transform, coefficients, {})
+        for order in [np.arange(len(values)), rng.permutation(len(values))]:
+            permuted = CandidateTable.from_queries([bank.queries[i] for i in order])
+            scores = scorer.predict(bank.X["morgan"][order], permuted)
+            inverse = np.argsort(order)
+            assert all(scores[inverse[a]] == scores[inverse[b]] for a, b in pairs)
 
 
 def test_bootstrap_resamples_whole_leakage_components_and_preserves_pairing():

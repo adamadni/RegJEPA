@@ -72,20 +72,31 @@ def build_split_plan(compounds: list[str], leakage_groups: dict[str, str], confi
             training["inner_folds"] = grouped_folds(training["train_compounds"], leakage_groups,
                                                    folds=config["inner_folds"], seed=config["split_seed"] + fold["fold"] + 1)
         fold["training_sets"] = training_sets
-    validate_split_plan(outer, compounds, leakage_groups)
+    validate_split_plan(outer, compounds, leakage_groups, config)
     return outer
 
 
-def validate_split_plan(plan: list[dict], compounds: list[str], leakage_groups: dict[str, str]) -> None:
+def validate_split_plan(plan: list[dict], compounds: list[str], leakage_groups: dict[str, str], config: dict) -> None:
     universe = set(compounds)
+    if len(universe) != len(compounds) or not universe <= set(leakage_groups):
+        raise ValueError("Expected compounds must be unique and have known leakage groups")
+    _check_fold_ids(plan, config["outer_folds"])
+    expected_settings = {(budget, seed) for budget in config["label_budgets"] for seed in config["subset_seeds"]}
+    expected_settings.add(("full", None))
     tests = []
     for fold in plan:
-        train, test = set(fold["train_compounds"]), set(fold["test_compounds"])
+        train, test = _unique_ids(fold["train_compounds"]), _unique_ids(fold["test_compounds"])
         _check_partition(train, test, universe, leakage_groups)
         tests.extend(test)
+        training_sets = fold.get("training_sets")
+        if not isinstance(training_sets, list):
+            raise ValueError("Configured training sets are missing")
+        settings = [(item["budget"], item["subset_seed"]) for item in training_sets]
+        if len(settings) != len(expected_settings) or set(settings) != expected_settings:
+            raise ValueError("Configured training sets are missing, duplicated or unexpected")
         by_seed: dict[int, list[dict]] = defaultdict(list)
-        for training in fold.get("training_sets", []):
-            selected = set(training["train_compounds"])
+        for training in training_sets:
+            selected = _unique_ids(training["train_compounds"])
             if not selected <= train or len(selected) != training["actual_labels"]:
                 raise ValueError("Training set escapes outer training fold or has incorrect label count")
             if training["budget"] == "full":
@@ -99,8 +110,9 @@ def validate_split_plan(plan: list[dict], compounds: list[str], leakage_groups: 
             if any(leakage_groups[x] in selected_groups for x in train - selected):
                 raise ValueError("A training subset splits a leakage group")
             inner_tests = []
+            _check_fold_ids(training["inner_folds"], config["inner_folds"])
             for inner in training["inner_folds"]:
-                a, b = set(inner["train_compounds"]), set(inner["test_compounds"])
+                a, b = _unique_ids(inner["train_compounds"]), _unique_ids(inner["test_compounds"])
                 _check_partition(a, b, selected, leakage_groups)
                 inner_tests.extend(b)
             if len(inner_tests) != len(selected) or set(inner_tests) != selected:
@@ -111,6 +123,18 @@ def validate_split_plan(plan: list[dict], compounds: list[str], leakage_groups: 
                 raise ValueError("Learning-curve subsets are not nested")
     if len(tests) != len(universe) or set(tests) != universe:
         raise ValueError("Outer held-out coverage is incomplete or repeated")
+
+
+def _check_fold_ids(folds: list[dict], expected: int) -> None:
+    if len(folds) != expected or {fold["fold"] for fold in folds} != set(range(expected)):
+        raise ValueError("Configured fold counts or fold identifiers do not match")
+
+
+def _unique_ids(values: list[str]) -> set[str]:
+    result = set(values)
+    if len(result) != len(values):
+        raise ValueError("A fold or training set contains duplicate record IDs")
+    return result
 
 
 def _check_partition(train: set[str], test: set[str], universe: set[str], groups: dict[str, str]) -> None:

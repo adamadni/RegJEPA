@@ -1,7 +1,7 @@
 You are an independent scientific and code reviewer for RegJEPA:
 https://github.com/adamadni/RegJEPA
 
-This is the pre-experiment review checkpoint. Inspect the current checkout and
+This is the corrected pre-experiment review checkpoint. Inspect the current checkout and
 its actual HEAD, not just this prompt. The feature-bank baseline commit was
 9e5cddf12813d67f1cc9115ce4b46ec34dd01113. An evaluation harness and linear scorer
 have now been added. No full real-data experiment has run; production splits
@@ -13,12 +13,15 @@ production splits, train real-data models, or send messages externally.
 Tests may write disposable artifacts under .cache; they must not modify
 tracked source/data files. On Windows the configured interpreter is
 .venv\Scripts\python.exe. A suitable test command is:
+.venv\Scripts\python.exe -c "from pathlib import Path; Path('.cache').mkdir(exist_ok=True)"
 .venv\Scripts\python.exe -m pytest -q --basetemp .cache/pytest-claude-review
 
 Read:
 - git ls-files, git log --oneline -5, git status --short
 - README.md, docs/evaluation_protocol.md, configs/evaluation.json
 - reports/evaluation_preflight.md and evaluation_preflight_summary.json
+- reports/evaluation_review_response.md and its JSON sibling, for the confirmed
+  findings, corrections and unchanged grouping/split-schedule comparison
 - the proposal.json and grouping.json identified by that preflight
 - docs/first_experiment.md, docs/benchmark_decisions.md, docs/feature_bank.md
 - src/regjepa/evaluation.py, linear.py, grouping.py, splits.py, protocol.py,
@@ -42,6 +45,10 @@ Review gates:
    positive at ranks 1 and 2 has RR .75, not 1/1.5. Constant scores must recover
    0.2831475288, not the first-row artifact 92/299. Permuting rows must preserve
    metrics, loss, and fitted predictions. Reject incomplete candidate sets.
+   Re-check the fixed per-row logit reduction on your platform. Windows BLAS
+   GEMV split some identical-input logits by up to 4.44e-16. The objective,
+   prediction and component diagnostics now use the same row-wise float64
+   reduction. This must preserve all candidate rows, not pool them again.
 
 2. Source/series linkage and structural separation
    Build linkage over all 535 records before filtering the cohort. Audit
@@ -74,6 +81,12 @@ Review gates:
    Explicit freeze must reproduce the graph and plan before creating a new
    immutable file. Existing features/raw data must remain byte-identical.
    Merely invoking the runner without --run must fit nothing.
+   Re-test the previous bypasses: editing status alone; dissolving source
+   groups then rebuilding/re-hashing both the proposal and grouping audit;
+   deleting configured training subsets; corrupting frozen_proposal_sha256.
+   Every frozen load must verify the exact sibling proposal hash, audit and
+   deterministic rebuild, not merely trust status or a recomputed ID.
+   Distinguish this reproducibility contract from proof of human approval.
 
 5. Results and claims
    No efficacy result exists yet. Review implementation readiness, not which
@@ -81,6 +94,13 @@ Review gates:
    with paired molecular metrics; never candidate rows. Repetitions are not
    independent extra molecules. Keep all 299 primary cases. Sensitivity
    subsets, pretraining membership and nonlinear heads remain separate work.
+   Check full metric/primary-interval reporting, grid-edge flags, and the
+   relative RMS of JEPA/QM score components. This is not an information-share
+   attribution; correlated components can cancel. The fitting grid is unchanged.
+   The protocol records comp480/comp481 as a known broader-series pair across
+   folds. The study does not claim a complete independent-series holdout or
+   out-of-distribution evaluation. DOI semicolons are preserved; comp504 must
+   not create a spurious shared citation key "d".
 
 Return:
 - Exact HEAD, commands/checks performed, and independently computed counts.

@@ -1,4 +1,6 @@
 import copy
+import json
+from pathlib import Path
 
 from regjepa.grouping import bibliography_entities, build_grouping, reference_entities
 
@@ -57,3 +59,24 @@ def test_source_record_order_does_not_change_group_assignments():
     first = build_grouping(r, {x["compound_id"] for x in r}, "", FP, regime="source_series_structure")
     second = build_grouping(list(reversed(r)), {x["compound_id"] for x in r}, "", FP, regime="source_series_structure")
     assert first == second
+
+
+def test_legacy_doi_semicolons_are_preserved_without_spurious_shared_citation_keys():
+    a = "10.1002/1099-1344(200009)43:10<1059::AID-JLCR392>3.0.CO;2-D"
+    b = "10.1234/different;2-D"
+    first = reference_entities(a + ";", {})
+    second = reference_entities(b + ",", {})
+    assert first["entities"] == ["doi:" + a.casefold()]
+    assert second["entities"] == ["doi:" + b.casefold()]
+    assert not first["unresolved_citation_keys"]
+    assert not second["unresolved_citation_keys"]
+    assert set(first["entities"]).isdisjoint(second["entities"])
+
+
+def test_actual_comp504_doi_has_no_false_unresolved_suffix():
+    root = Path(__file__).resolve().parents[1]
+    record = next(r for r in map(json.loads, (root / "data/processed/molecules.jsonl").read_text().splitlines())
+                  if r["compound_id"] == "comp504")
+    info = reference_entities(record["reference_raw"], {})
+    assert info["entities"] == ["doi:" + record["reference_raw"].casefold()]
+    assert not info["bibliographic_identity_unresolved"]

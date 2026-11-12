@@ -9,7 +9,7 @@ import numpy as np
 
 from .evaluation import CandidateTable, choice_loss, paired_bootstrap, ranking_records, summarize_records
 from .feature_io import load_feature_bank
-from .linear import fit_linear
+from .linear import LinearScorer, fit_linear, linear_scores
 from .protocol import file_sha256, load_split_plan, write_json
 
 
@@ -26,6 +26,32 @@ def penalty_vector(choice: dict, width: int) -> np.ndarray:
     if width != 774:
         raise ValueError("Separate JEPA/QM penalties require the literal 768+6 feature layout")
     return np.concatenate([np.full(768, choice["jepa"]), np.full(6, choice["qm"])])
+
+
+def grid_edge_diagnostics(choice: dict, config: dict) -> dict:
+    low, high = min(config["l2_grid"]), max(config["l2_grid"])
+    return {name: {"value": value, "at_minimum": value == low, "at_maximum": value == high}
+            for name, value in choice.items()}
+
+
+def component_score_diagnostics(model: LinearScorer, values: np.ndarray, table: CandidateTable) -> dict:
+    """Relative score amplitudes, not unique information attribution or physical rates."""
+    if values.shape[1] != 774:
+        raise ValueError("JEPA/QM score decomposition requires the original 768+6 columns")
+    features = model.transform.apply(values, table)
+    original_columns = np.flatnonzero(model.transform.keep)
+    jepa_columns = original_columns < 768
+    jepa = linear_scores(features[:, jepa_columns], model.weights[jepa_columns])
+    qm = linear_scores(features[:, ~jepa_columns], model.weights[~jepa_columns])
+    mean_product = lambda a, b: float(np.mean([np.mean(a[indices] * b[indices]) for indices in table.rows]))
+    jepa_rms = float(np.sqrt(mean_product(jepa, jepa)))
+    qm_rms = float(np.sqrt(mean_product(qm, qm)))
+    total = jepa_rms + qm_rms
+    return {"test_molecules": len(table.rows), "jepa_rms": jepa_rms, "qm_rms": qm_rms,
+            "total_score_rms": float(np.sqrt(mean_product(jepa + qm, jepa + qm))),
+            "jepa_qm_mean_product": mean_product(jepa, qm),
+            "qm_relative_rms": qm_rms / total if total > 0 else None,
+            "interpretation": "equal-molecule score RMS; correlated components prevent unique information attribution"}
 
 
 def candidate_subset(values: np.ndarray, queries: list[dict], compounds: list[str]) -> tuple[np.ndarray, list[dict], CandidateTable]:
@@ -86,6 +112,8 @@ def fit_nested_split(values: np.ndarray, queries: list[dict], outer: dict, train
     return {"block": block, "outer_fold": outer["fold"], "budget": training["budget"],
             "subset_seed": training["subset_seed"], "actual_training_labels": len(train_table.rows),
             "selected_penalties": selected, "search": searches, "final_fit": scorer.diagnostics,
+            "regularization_grid_edges": grid_edge_diagnostics(selected, config),
+            "component_scores": component_score_diagnostics(scorer, x_test, test_table) if block == "jepa_plus_qm" else None,
             "molecular_metrics": per_molecule, "predictions": predictions}, scorer
 
 
@@ -119,6 +147,7 @@ def run_experiment(root: Path, split_path: Path, output: Path) -> dict:
     write_json(output / "split_manifest.json", plan, exclusive=True)
     accumulated: dict[tuple[str, str], list[dict]] = defaultdict(list)
     completed = []
+    fit_diagnostics = []
     for block in config["blocks"]:
         bank = load_feature_bank(root, cohort=config["cohort"], blocks=[block])
         for outer in plan["outer_folds"]:
@@ -130,6 +159,8 @@ def run_experiment(root: Path, split_path: Path, output: Path) -> dict:
                 result["model_sha256"] = file_sha256(output / f"{tag}.npz")
                 write_json(output / f"{tag}.json", result, exclusive=True)
                 accumulated[(block, str(training["budget"]))].extend(result["molecular_metrics"])
+                fit_diagnostics.append({key: result[key] for key in ["block", "outer_fold", "budget", "subset_seed",
+                                                                    "selected_penalties", "regularization_grid_edges", "component_scores"]})
                 completed.append(tag)
                 print(f"Completed {tag}; active coefficients={model.diagnostics['active_coefficients']}", flush=True)
     expected = set(plan["compound_to_group"])
@@ -151,16 +182,41 @@ def run_experiment(root: Path, split_path: Path, output: Path) -> dict:
             comparisons.append({"left": left, "right": right, "budget": budget, **comparison})
     summary = {"proposal_id": plan["proposal_id"], "split_sha256": file_sha256(split_path),
                "completed_final_fits": len(completed), "results": summaries, "paired_top1_comparisons": comparisons,
+               "fit_diagnostics": fit_diagnostics,
                "interpretation": "Frozen-feature linear readouts; source-annotation prediction, not product fractions or mechanism inference.",
                "pretraining_overlap_status": "Uni-Mol corpus identified; benchmark membership has not been audited."}
     write_json(output / "summary.json", summary, exclusive=True)
     lines = ["# Linear frozen-feature evaluation", "", f"Split proposal: `{plan['proposal_id']}`.", "",
-             "| Block / label budget | Molecules | Top-1 | MRR | NLL |", "|---|---:|---:|---:|---:|"]
+             "| Block / label budget | Molecules | Top-1 | Top-2 | Top-2 (k>2) | MRR | NLL | Uniform NLL | Information gain |",
+             "|---|---:|---:|---:|---:|---:|---:|---:|---:|"]
     for name, value in summaries.items():
         m = value["metrics"]
-        lines.append(f"| {name} | {m['molecules']} | {m['top1']:.4f} | {m['reciprocal_rank']:.4f} | {m['nll']:.4f} |")
+        nontrivial = f"{m['top2_nontrivial']:.4f}" if m["top2_nontrivial"] is not None else "n/a"
+        lines.append(f"| {name} | {m['molecules']} | {m['top1']:.4f} | {m['top2']:.4f} | {nontrivial} | {m['reciprocal_rank']:.4f} | {m['nll']:.4f} | {m['uniform_nll']:.4f} | {m['information_gain_nats']:.4f} |")
+    lines.extend(["", "## Paired top-1 differences", "", "| Left / right | Budget | Difference | Conditional 95% interval |",
+                  "|---|---|---:|---|"])
+    for comparison in comparisons:
+        low, high = comparison["ci95"]
+        lines.append(f"| {comparison['left']} / {comparison['right']} | {comparison['budget']} | {comparison['mean_delta']:.4f} | [{low:.4f}, {high:.4f}] |")
+    edge_counts: dict[tuple[str, str], list[bool]] = defaultdict(list)
+    for fit in fit_diagnostics:
+        edge_counts[(fit["block"], str(fit["budget"]))].append(
+            any(value["at_minimum"] or value["at_maximum"] for value in fit["regularization_grid_edges"].values()))
+    lines.extend(["", "## Regularization-grid diagnostics", "", "| Block / budget | Final fits selecting a grid edge |", "|---|---:|"])
+    for (block, budget), flags in edge_counts.items():
+        lines.append(f"| {block} / {budget} | {sum(flags)} / {len(flags)} |")
+    lines.extend(["", "Edge selections are diagnostic; the grid is not automatically changed using outer-test performance.",
+                  "", "## JEPA + QM score components", "",
+                  "Relative RMS measures score amplitude, not independent information or product fractions; covariance is retained in JSON.", "",
+                  "| Fold / budget / subset seed | JEPA RMS | QM RMS | QM relative RMS |", "|---|---:|---:|---:|"])
+    for fit in fit_diagnostics:
+        diagnostic = fit["component_scores"]
+        if diagnostic is not None:
+            share = f"{diagnostic['qm_relative_rms']:.4f}" if diagnostic["qm_relative_rms"] is not None else "n/a"
+            lines.append(f"| {fit['outer_fold']} / {fit['budget']} / {fit['subset_seed']} | {diagnostic['jepa_rms']:.4f} | {diagnostic['qm_rms']:.4f} | {share} |")
     lines.extend(["", "Exact ties receive expected metrics. Repetition metrics are averaged per molecule; logits are not ensembled.",
                   "Paired confidence intervals resample leakage components and are conditional on the fitted models.",
+                  "Intervals are computed for the primary top-1 comparison; secondary metrics are descriptive.",
                   "All source records are retained. Bibliographic uncertainty and pretraining overlap limit generalization claims.",
                   "", "Full diagnostics, molecular predictions and paired intervals are in summary.json and per-fit JSON files.", ""])
     (output / "summary.md").write_text("\n".join(lines), encoding="utf-8", newline="\n")

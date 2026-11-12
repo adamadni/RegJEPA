@@ -14,7 +14,7 @@ def test_outer_and_inner_folds_keep_complete_groups_and_nested_budgets():
     names, groups = identity()
     config = {"outer_folds": 4, "inner_folds": 3, "split_seed": 42, "subset_seeds": [17, 29], "label_budgets": [8, 16]}
     plan = build_split_plan(names, groups, config)
-    validate_split_plan(plan, names, groups)
+    validate_split_plan(plan, names, groups, config)
     assert plan == build_split_plan(list(reversed(names)), groups, config)
     assert sorted(x for f in plan for x in f["test_compounds"]) == names
     for fold in plan:
@@ -38,10 +38,10 @@ def test_impossible_grouped_fold_request_is_not_silently_relaxed():
 
 def test_corrupt_split_that_separates_same_structure_is_rejected():
     names, groups = identity()
-    plan = build_split_plan(names, groups, {"outer_folds": 4, "inner_folds": 2, "split_seed": 42,
-                                          "subset_seeds": [17], "label_budgets": [8]})
+    config = {"outer_folds": 4, "inner_folds": 2, "split_seed": 42, "subset_seeds": [17], "label_budgets": [8]}
+    plan = build_split_plan(names, groups, config)
     bad = copy.deepcopy(plan)
     held = bad[0]["test_compounds"].pop()
     bad[0]["train_compounds"].append(held)
     with pytest.raises(ValueError, match="Leakage group"):
-        validate_split_plan(bad, names, groups)
+        validate_split_plan(bad, names, groups, config)

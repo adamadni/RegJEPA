@@ -2,7 +2,7 @@
 
 No real-data scorer has been fitted. Splits are proposals, not frozen experiment assignments.
 
-Proposal: `83cde96ea4d814325d8c`. File: `data/splits/83cde96ea4d814325d8c/proposal.json`.
+Proposal: `09ebadea135ec50dc873`. File: `data/splits/09ebadea135ec50dc873/proposal.json`.
 
 Cohort: 299 records / 299 structures / 1264 outcome queries.
 Uniform expected top-1: 0.2831475288; first-row tie artifact: 0.3076923077.
@@ -12,7 +12,7 @@ Maximum Tanimoto between different components: **0.566667**, below the fixed 0.6
 
 All 535 source records participate in linkage before cohort filtering. Pointer tokens and named targets are joined explicitly, including mixed DOI/patent + pointer records. Suffix aliases and international patent families are not guessed.
 
-Unverified bibliographic identities remain for **38** selected records. They are listed in the JSON sibling; known explicit links are constrained, but this is not a verified publication-family holdout.
+Unverified bibliographic identities remain for **37** selected records. They are listed in the JSON sibling; known explicit links are constrained, but this is not a verified publication-family holdout.
 
 | Outer fold | Training records | Test records |
 |---|---:|---:|

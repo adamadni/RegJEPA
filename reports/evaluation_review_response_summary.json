@@ -1,0 +1,79 @@
+{
+  "reviewed_commit": "2524f802de4b93b82cb00bafd9c9770a516f62fc",
+  "old_proposal_id": "83cde96ea4d814325d8c",
+  "new_proposal_id": "09ebadea135ec50dc873",
+  "new_proposal_path": "data/splits/09ebadea135ec50dc873/proposal.json",
+  "production_status": "proposal_not_frozen",
+  "full_experiment_run": false,
+  "real_data_scorers_trained": false,
+  "tests": {
+    "passed": 90,
+    "failed": 0,
+    "command": ".venv/Scripts/python.exe -m pytest -q --basetemp .cache/pytest-claude-corrections2"
+  },
+  "same_group_assignments": true,
+  "same_full_outer_inner_subset_schedule": true,
+  "same_fitting_config": true,
+  "cohort": {
+    "records": 299,
+    "queries": 1264,
+    "leakage_groups": 250,
+    "unresolved_bibliographic_before": 38,
+    "unresolved_bibliographic_after": 37
+  },
+  "freeze_regressions_rejected": [
+    "status-only edit",
+    "dissolved groups with rebuilt and rehashed proposal plus forged matching audit",
+    "missing configured training settings/label budgets/inner fold",
+    "wrong sibling-proposal SHA256",
+    "byte-edited proposal sibling",
+    "missing grouping audit"
+  ],
+  "tie_numerics": {
+    "maximum_observed_raw_blas_identical_row_difference": 4.440892098500626e-16,
+    "fixed_row_reduction_identical_row_difference": 0.0,
+    "fixed_coefficients_fitted_to_real_labels": false
+  },
+  "nearest_outer_training_tanimoto": {
+    "median": 0.3448275862068966,
+    "maximum": 0.5666666666666667,
+    "count_ge_0_5": 27,
+    "molecules": 299
+  },
+  "known_broader_series_pair": {
+    "comp480": {
+      "doi": "10.1002/jhet.5570350601",
+      "fold": 1
+    },
+    "comp481": {
+      "doi": "10.1002/jhet.5570350602",
+      "fold": 0
+    },
+    "evidence": "https://onlinelibrary.wiley.com/doi/10.1002/jhet.5570350602/full",
+    "interpretation": "Known source-token and similarity holdout, not a complete independent-series or OOD benchmark"
+  },
+  "unchanged_data": {
+    "data/raw": {
+      "files": 10,
+      "byte_identical_to_head": true
+    },
+    "data/features": {
+      "files": 10,
+      "byte_identical_to_head": true
+    }
+  },
+  "additional_reporting": [
+    "regularization grid-edge flags",
+    "JEPA/QM score RMS and covariance diagnostics",
+    "all descriptive metrics in Markdown",
+    "primary top-1 paired intervals in Markdown"
+  ],
+  "deferred": [
+    "No real-data convergence check or full experiment",
+    "No automatic resume",
+    "No secondary-metric paired confidence intervals",
+    "No inferred range expansion for comp199-201",
+    "No curated cross-publication series merge",
+    "No pretraining-membership audit"
+  ]
+}

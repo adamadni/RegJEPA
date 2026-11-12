@@ -38,6 +38,12 @@ def test_full_runner_preserves_held_out_coverage_and_paired_artifacts_on_synthet
     assert len(list(output.glob("*.npz"))) == 18
     assert (output / "summary.md").is_file()
     assert json.loads((output / "summary.json").read_text())["proposal_id"] == "synthetic"
+    assert len(summary["fit_diagnostics"]) == 18
+    markdown = (output / "summary.md").read_text()
+    assert "Top-2 (k>2)" in markdown
+    assert "Information gain" in markdown
+    assert "Paired top-1 differences" in markdown
+    assert "Regularization-grid diagnostics" in markdown
     for setting in summary["results"].values():
         assert setting["metrics"]["molecules"] == 12
         assert {r["compound_id"] for r in setting["molecular_metrics"]} == set(names)

@@ -8,6 +8,18 @@ import numpy as np
 from .evaluation import CandidateTable, choice_loss
 
 
+def linear_scores(values: np.ndarray, weights: np.ndarray) -> np.ndarray:
+    """Fixed per-row reductions keep identical inputs tied across batch positions."""
+    features = np.ascontiguousarray(values, dtype=np.float64)
+    coefficients = np.asarray(weights, dtype=np.float64)
+    if features.ndim != 2 or coefficients.shape != (features.shape[1],):
+        raise ValueError("Linear score dimensions do not match")
+    # A BLAS GEMV may use different summation kernels for different row positions.
+    # The resulting ~1e-16 differences can incorrectly split exact feature ties.
+    # Do not merge outcome rows or introduce a label-dependent score tolerance.
+    return np.einsum("ij,j->i", features, coefficients, optimize=False)
+
+
 def centered_features(values: np.ndarray, table: CandidateTable) -> np.ndarray:
     data = np.asarray(values, dtype=np.float64)
     if data.ndim != 2 or data.shape[0] != table.n_rows or not np.isfinite(data).all():
@@ -40,14 +52,14 @@ class LinearTransform:
         centered = centered_features(values, table)
         if centered.shape[1] != len(self.keep):
             raise ValueError("Feature width differs from the training transform")
-        return centered[:, self.keep] / self.scale[self.keep]
+        return np.ascontiguousarray(centered[:, self.keep] / self.scale[self.keep])
 
 
 def linear_objective(weights: np.ndarray, values: np.ndarray, table: CandidateTable,
                      penalties: np.ndarray) -> tuple[float, np.ndarray]:
     if weights.shape != (values.shape[1],) or penalties.shape != weights.shape or np.any(penalties <= 0):
         raise ValueError("One positive L2 penalty is required per fitted coefficient")
-    nll, derivative = choice_loss(values @ weights, table)
+    nll, derivative = choice_loss(linear_scores(values, weights), table)
     return nll + float(0.5 * np.dot(penalties, weights ** 2)), values.T @ derivative + penalties * weights
 
 
@@ -58,7 +70,7 @@ class LinearScorer:
     diagnostics: dict
 
     def predict(self, values: np.ndarray, table: CandidateTable) -> np.ndarray:
-        return self.transform.apply(values, table) @ self.weights
+        return linear_scores(self.transform.apply(values, table), self.weights)
 
 
 def fit_linear(values: np.ndarray, table: CandidateTable, penalties: float | np.ndarray,

@@ -4,8 +4,8 @@ import numpy as np
 import pytest
 
 from regjepa.evaluation import CandidateTable, choice_loss
-from regjepa.experiment import fit_nested_split, penalty_candidates, penalty_vector
-from regjepa.linear import LinearTransform, centered_features, fit_linear, linear_objective
+from regjepa.experiment import component_score_diagnostics, fit_nested_split, grid_edge_diagnostics, penalty_candidates, penalty_vector
+from regjepa.linear import LinearScorer, LinearTransform, centered_features, fit_linear, linear_objective
 
 
 def candidates(molecules=8):
@@ -94,6 +94,33 @@ def test_concat_penalties_are_applied_to_the_correct_components():
     config = {"l2_grid": [.1, 1.], "combined_penalties": "separate_jepa_qm"}
     assert len(penalty_candidates("jepa_plus_qm", config)) == 4
     assert len(penalty_candidates("atom_jepa", config)) == 2
+
+
+def test_regularization_grid_reports_each_components_boundary_without_changing_it():
+    choice = {"jepa": 10., "qm": .01}
+    diagnostics = grid_edge_diagnostics(choice, {"l2_grid": [.001, .01, .1, 10.]})
+    assert diagnostics["jepa"]["at_maximum"]
+    assert not diagnostics["qm"]["at_minimum"]
+    assert not diagnostics["qm"]["at_maximum"]
+    assert choice == {"jepa": 10., "qm": .01}
+
+
+def test_component_score_diagnostics_respect_original_column_positions_after_dropping():
+    q, _ = candidates(2)
+    table = CandidateTable.from_queries(q)
+    values = np.zeros((4, 774))
+    values[:, 0] = [-1., 1., -1., 1.]
+    values[:, 768] = [-2., 2., -2., 2.]
+    keep = np.zeros(774, dtype=bool); keep[[0, 768]] = True
+    transform = LinearTransform(keep, np.ones(774), False)
+    model = LinearScorer(transform, np.array([.5, .25]), {})
+    result = component_score_diagnostics(model, values, table)
+    assert result["jepa_rms"] == result["qm_rms"] == .5
+    assert result["total_score_rms"] == 1.
+    assert result["qm_relative_rms"] == .5
+    assert result["jepa_qm_mean_product"] == .25
+    zeros = LinearScorer(transform, np.zeros(2), {})
+    assert component_score_diagnostics(zeros, values, table)["qm_relative_rms"] is None
 
 
 def test_nested_selection_and_fitted_weights_do_not_see_outer_test_labels_or_features():

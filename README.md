@@ -103,6 +103,13 @@ Preparation writes an immutable, label-blind split **proposal** and a grouping a
 
 After reviewing the proposal, use the explicit freeze and run commands in the protocol. The runner inspects artifacts without fitting unless `--run` is supplied, and fitting rejects unfrozen or changed inputs. Legacy raw-atom scoring helpers in `chemistry.py` are not used on feature-bank rows; the harness has independent exact-tie-aware metrics.
 
+For tests with a workspace-local temporary directory, create its parent first (also works in a fresh clone):
+
+```text
+python -c "from pathlib import Path; Path('.cache').mkdir(exist_ok=True)"
+python -m pytest -q --basetemp .cache/pytest-evaluation
+```
+
 ## Source attribution
 
 The vendored benchmark is from [jensengroup/db-regioselectivity](https://github.com/jensengroup/db-regioselectivity), associated with [Kromann et al., Chemical Science, 2018](https://doi.org/10.1039/C7SC04156J). Additional input structures are from [jensengroup/SI_RegioSQM20](https://github.com/jensengroup/SI_RegioSQM20), associated with [Ree et al., Journal of Cheminformatics, 2021](https://doi.org/10.1186/s13321-021-00490-7). Their MIT licenses and upstream copyright notices are preserved with the corresponding raw data. Repository code licensing has not yet been selected.

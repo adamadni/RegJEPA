@@ -34,17 +34,21 @@ class Components:
         self.parent[max(a, b)] = min(a, b)
 
 
-DOI = re.compile(r"10\.\d{4,9}/[^\s;,]+", re.I)
+DOI = re.compile(r"10\.\d{4,9}/[^\s{}\"']+", re.I)
 PATENT = re.compile(r"\b(?:WO|US|EP|CN|JP|KR|DE|FR|GB|IN)\d[A-Za-z0-9]*\b", re.I)
 POINTER = re.compile(r"\bcomp\d+[a-z]*(?:-\d+[a-z]*)*\b", re.I)
+
+
+def doi_entity(token: str) -> str:
+    """Preserve internal suffix punctuation, including legacy DOI semicolons."""
+    return "doi:" + token.rstrip(".,;").casefold()
 
 
 def bibliography_entities(text: str) -> dict[str, list[str]]:
     entries = {}
     for match in re.finditer(r"^@\w+\{\s*([^,\s]+)\s*,(.*?)(?=^@\w+\{|\Z)", text, re.M | re.S):
         key, body = match.groups()
-        entries[key.casefold()] = sorted({"doi:" + token.rstrip(".}\"").casefold()
-                                         for token in DOI.findall(body)})
+        entries[key.casefold()] = sorted({doi_entity(token) for token in DOI.findall(body)})
     return entries
 
 
@@ -53,7 +57,7 @@ def reference_entities(raw: str, bibliography: dict[str, list[str]]) -> dict:
     remaining = re.sub(r"https?://(?:dx\.)?doi\.org/", "", raw, flags=re.I)
     entities, pointers, targets, opaque = set(), [], set(), []
     for match in DOI.findall(remaining):
-        entities.add("doi:" + match.rstrip(".").casefold())
+        entities.add(doi_entity(match))
     remaining = DOI.sub(" ", remaining)
     for match in PATENT.findall(remaining):
         # Kind codes (A/A1/A3/B2...) distinguish publications of the same numbered

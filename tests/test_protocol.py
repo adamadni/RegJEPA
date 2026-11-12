@@ -6,8 +6,9 @@ from pathlib import Path
 
 import pytest
 
-from regjepa.protocol import freeze_protocol, load_split_plan, locked_input_sha256, prepare_protocol, verify_inputs, write_json
-from regjepa.splits import validate_split_plan
+from regjepa.grouping import stable_digest
+from regjepa.protocol import file_sha256, freeze_protocol, load_split_plan, locked_input_sha256, prepare_protocol, verify_inputs, write_json
+from regjepa.splits import build_split_plan, validate_split_plan
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -27,7 +28,7 @@ def test_actual_cohort_groups_preserve_duplicate_source_and_named_series(protoco
     duplicate = next(g for g in grouping["groups"] if "comp13" in g["selected_members"])
     assert "comp598" in duplicate["all_source_members"]
     assert summary["maximum_between_group_tanimoto"] < .6
-    validate_split_plan(plan["outer_folds"], sorted(groups), groups)
+    validate_split_plan(plan["outer_folds"], sorted(groups), groups, plan["config"])
 
 
 def test_unfrozen_proposal_cannot_be_used_for_an_experiment(protocol, tmp_path):
@@ -111,3 +112,88 @@ def test_freeze_rejects_changed_grouping_even_if_fold_file_was_untouched(protoco
     write_json(tmp_path / "grouping.json", bad)
     with pytest.raises(ValueError, match="Grouping audit differs"):
         freeze_protocol(ROOT, path)
+
+
+def bound_candidate(tmp_path, plan, grouping):
+    proposal_path = tmp_path / "proposal.json"
+    write_json(proposal_path, plan)
+    write_json(tmp_path / "grouping.json", grouping)
+    frozen = dict(plan, status="frozen", frozen_proposal_sha256=file_sha256(proposal_path))
+    path = tmp_path / "frozen.json"
+    write_json(path, frozen)
+    return path
+
+
+def refresh_identifier(plan):
+    plan.pop("proposal_id", None)
+    plan["proposal_id"] = stable_digest(plan)[:20]
+
+
+def test_one_word_status_edit_cannot_bypass_the_freeze_contract(protocol, tmp_path):
+    plan, grouping, _ = protocol
+    write_json(tmp_path / "proposal.json", plan)
+    write_json(tmp_path / "grouping.json", grouping)
+    path = tmp_path / "frozen.json"
+    write_json(path, dict(plan, status="frozen"))
+    with pytest.raises(ValueError, match="not bound"):
+        load_split_plan(ROOT, path)
+
+
+def test_rehashed_dissolved_groups_fail_even_with_matching_forged_audit_and_binding(protocol, tmp_path):
+    original, original_grouping, _ = protocol
+    plan, grouping = copy.deepcopy(original), copy.deepcopy(original_grouping)
+    mapping = {compound: "dissolved:" + compound for compound in plan["compound_to_group"]}
+    plan["compound_to_group"] = mapping
+    plan["outer_folds"] = build_split_plan(sorted(mapping), mapping, plan["config"])
+    grouping["compound_to_group"] = mapping
+    grouping["groups"] = [{"group_id": group, "selected_members": [compound], "all_source_members": [compound]}
+                          for compound, group in mapping.items()]
+    plan["grouping_digest"] = stable_digest(grouping)
+    refresh_identifier(plan)
+    path = bound_candidate(tmp_path, plan, grouping)
+    with pytest.raises(ValueError, match="cannot be reproduced"):
+        load_split_plan(ROOT, path)
+
+
+@pytest.mark.parametrize("omission", ["all_training_sets", "label_budgets", "one_inner_fold"])
+def test_rehashed_incomplete_training_schedule_is_rejected(protocol, tmp_path, omission):
+    original, grouping, _ = protocol
+    plan = copy.deepcopy(original)
+    for fold in plan["outer_folds"]:
+        if omission == "all_training_sets":
+            del fold["training_sets"]
+        elif omission == "label_budgets":
+            fold["training_sets"] = [t for t in fold["training_sets"] if t["budget"] == "full"]
+        else:
+            fold["training_sets"][0]["inner_folds"].pop()
+    refresh_identifier(plan)
+    path = bound_candidate(tmp_path, plan, grouping)
+    with pytest.raises(ValueError, match="Configured"):
+        load_split_plan(ROOT, path)
+
+
+def test_wrong_frozen_proposal_hash_is_rejected(protocol, tmp_path):
+    plan, grouping, _ = protocol
+    path = bound_candidate(tmp_path, plan, grouping)
+    frozen = json.loads(path.read_text())
+    frozen["frozen_proposal_sha256"] = "0" * 64
+    write_json(path, frozen)
+    with pytest.raises(ValueError, match="not bound"):
+        load_split_plan(ROOT, path)
+
+
+def test_bound_proposal_byte_edits_are_rejected_even_if_json_value_is_unchanged(protocol, tmp_path):
+    plan, grouping, _ = protocol
+    path = bound_candidate(tmp_path, plan, grouping)
+    proposal = tmp_path / "proposal.json"
+    proposal.write_bytes(proposal.read_bytes() + b"\n")
+    with pytest.raises(ValueError, match="not bound"):
+        load_split_plan(ROOT, path)
+
+
+def test_loading_a_frozen_artifact_requires_its_grouping_audit(protocol, tmp_path):
+    plan, grouping, _ = protocol
+    path = bound_candidate(tmp_path, plan, grouping)
+    (tmp_path / "grouping.json").unlink()
+    with pytest.raises(ValueError, match="missing its grouping audit"):
+        load_split_plan(ROOT, path)

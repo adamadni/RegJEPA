@@ -162,23 +162,39 @@ def prepare_protocol(root: Path, config: dict) -> tuple[dict, dict, dict]:
 
 def load_split_plan(root: Path, path: Path, *, require_frozen: bool = True) -> dict:
     plan = json.loads(path.read_text(encoding="utf-8"))
+    if plan.get("status") not in {"proposal", "frozen"}:
+        raise ValueError("Unknown split artifact status")
     if require_frozen and plan.get("status") != "frozen":
         raise ValueError("Experiment requires an explicitly frozen split artifact; proposals cannot be used for fitting")
     validate_config(plan["config"])
     verify_inputs(root, plan)
-    validate_split_plan(plan["outer_folds"], sorted(plan["compound_to_group"]), plan["compound_to_group"])
+    validate_split_plan(plan["outer_folds"], sorted(plan["compound_to_group"]), plan["compound_to_group"], plan["config"])
     proposal = {k: v for k, v in plan.items() if k not in {"proposal_id", "frozen_proposal_sha256"}}
     proposal["status"] = "proposal"
     if stable_digest(proposal)[:20] != plan["proposal_id"]:
         raise ValueError("Split proposal content does not match its identifier")
+    if plan["status"] == "proposal":
+        if "frozen_proposal_sha256" in plan:
+            raise ValueError("A proposal cannot carry a frozen-artifact binding")
+        return plan
+    proposal_path = path.with_name("proposal.json")
+    if not proposal_path.is_file() or plan.get("frozen_proposal_sha256") != file_sha256(proposal_path):
+        raise ValueError("Frozen artifact is not bound to the exact sibling proposal")
+    bound = json.loads(proposal_path.read_text(encoding="utf-8"))
+    if bound.get("status") != "proposal":
+        raise ValueError("Frozen artifact requires an unchanged proposal sibling")
+    expected = dict(bound, status="frozen", frozen_proposal_sha256=file_sha256(proposal_path))
+    if plan != expected:
+        raise ValueError("Frozen artifact differs from its bound proposal")
+    verify_reproduction(root, proposal_path, bound)
     return plan
 
 
-def freeze_protocol(root: Path, proposal_path: Path) -> Path:
-    plan = load_split_plan(root, proposal_path, require_frozen=False)
-    if plan["status"] != "proposal":
-        raise ValueError("Only a reviewed proposal can be explicitly frozen")
+def verify_reproduction(root: Path, proposal_path: Path, plan: dict) -> None:
+    """Enforce the freeze contract; this is not a certificate of human review."""
     grouping_path = proposal_path.with_name("grouping.json")
+    if not grouping_path.is_file():
+        raise ValueError("Split artifact is missing its grouping audit")
     grouping = json.loads(grouping_path.read_text(encoding="utf-8"))
     if stable_digest(grouping) != plan["grouping_digest"] or grouping["compound_to_group"] != plan["compound_to_group"]:
         raise ValueError("Grouping audit differs from split proposal")
@@ -186,6 +202,13 @@ def freeze_protocol(root: Path, proposal_path: Path) -> Path:
     rebuilt, rebuilt_grouping, _ = prepare_protocol(root, plan["config"])
     if rebuilt != plan or rebuilt_grouping != grouping:
         raise ValueError("Split proposal cannot be reproduced from locked inputs")
+
+
+def freeze_protocol(root: Path, proposal_path: Path) -> Path:
+    plan = load_split_plan(root, proposal_path, require_frozen=False)
+    if plan["status"] != "proposal":
+        raise ValueError("Only a reviewed proposal can be explicitly frozen")
+    verify_reproduction(root, proposal_path, plan)
     frozen = dict(plan, status="frozen", frozen_proposal_sha256=file_sha256(proposal_path))
     output = proposal_path.with_name("frozen.json")
     write_json(output, frozen, exclusive=True)

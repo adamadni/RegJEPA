@@ -21,6 +21,8 @@ These constraints are combined by graph union, not applied independently and the
 
 The raw metadata do not recover every publication or international patent family. Pointer-only and opaque-key records remain explicitly flagged; no source is repaired by guessing. The resulting evaluation is a holdout of the known source/series and structural components, not a proven independent-publication-family benchmark. Unverified source identities are a review item before freezing and a limitation to retain in any eventual report.
 
+A known limitation is comp480/comp481: their distinct DOI tokens, `10.1002/jhet.5570350601` and `10.1002/jhet.5570350602`, refer to parts XXVII and XXVIII of the Furopyridines series, and the current grouping places them in different outer folds. The [publisher's XXVIII page](https://onlinelibrary.wiley.com/doi/10.1002/jhet.5570350602/full) explicitly identifies the preceding part and shared authors. The token-based grouping does not infer these broader series links from article metadata. This counterexample rules out a complete independent-series/publication-family claim. No grouping change is made silently: adding curated cross-publication series edges would require a separately documented protocol and new proposals. The Tanimoto cutoff alone also does not establish out-of-distribution generalization.
+
 Largest-first assignment balances molecular counts across whole components, with fixed seeded tie-breaking. The same grouping is used for inner folds and whole-component learning-curve subsets. Requested fold counts are not silently reduced. A budget is an upper bound on source records, not candidate rows; actual counts are reported if atomic groups prevent an exact budget. Every supervised label used for inner selection is inside that budget.
 
 ## Linear readout and scaling
@@ -31,17 +33,21 @@ For this linear-only protocol, subtract each molecule's mean candidate feature v
 
 The six L2 strengths are 1e-4, 1e-3, 1e-2, 0.1, 1 and 10, selected separately for each feature block using molecule-averaged inner-validation NLL. For JEPA + QM, independently search the Cartesian product of JEPA and QM strengths (36 candidates). The larger search budget is explicit and remains inside inner folds. A single penalty would still be a valid model; separate penalties make the tested complementarity less dependent on a shared shrinkage choice.
 
+The same numerical grid does not give every representation the same effective shrinkage regime. Each final fit reports whether each selected penalty is at the minimum or maximum; these flags never automatically expand the grid using held-out performance. Finite penalties do not force an entire feature block exactly to zero, so the fitted concatenation is not guaranteed to match either single-block fit. JEPA/QM score decomposition reports equal-molecule RMS amplitudes, their mean product, and `RMS(QM)/(RMS(JEPA)+RMS(QM))`. The last quantity is a diagnostic of relative score amplitude, not a unique information share, because the components can be correlated or cancel.
+
 L-BFGS-B starts at zero with analytic gradients, at most 1000 iterations, gradient tolerance 1e-7, relative objective tolerance 1e-14 and accepted final gradient infinity norm <=1e-5. Failed convergence aborts a fit; it is never counted as a valid result. No early stopping uses outer-test data. An exact inner-NLL tie prefers stronger shrinkage in a fixed candidate order.
 
 ## Exact ties and evaluation units
 
 The harness ranks outcome rows directly; it never calls `chemistry.mean_group_scores` or `chemistry.top1_hit` on bank rows. Those legacy helpers take atom-indexed scores and are outside this evaluation path.
 
+Linear logits use a fixed per-row float64 reduction rather than BLAS GEMV. On the Windows environment, GEMV gave identical Morgan rows differences up to 4.44e-16 depending on their batch position, which can split exact score ties. The row-wise reduction is used for the objective, prediction and component diagnostics. It preserves every candidate row and does not infer extra chemical equivalences or introduce an approximate-tie tolerance. Regression tests exercise identical real Morgan rows under permutations and fixed, unfitted coefficients on the actual platform.
+
 If a reported outcome has `a` rows strictly above it and is tied with `t` rows including itself, top-k credit is `clip(k-a, 0, t)/t`. Reciprocal rank is the mean of `1/(a+1)` through `1/(a+t)`, not the reciprocal of their mean rank. Ties are exact equality in float64 logits; no implicit NumPy relative tolerance is used. Reordering candidate rows must not change any metric.
 
 Report molecule-average top-1, top-2, top-2 restricted to candidate sets larger than two, MRR, raw NLL, uniform NLL `log(k)`, and information gain `log(k)-NLL`. Training loss is not divided by `log(k)`, which would change molecular weights. Repeated subset metrics are averaged per molecule before aggregate reporting; logits are not ensembled.
 
-Paired 95% intervals use 10,000 bootstrap resamples of the full leakage components, preserving all member molecules and method pairing. The metric remains a molecular mean, and candidate rows are never resampled independently. These intervals are conditional on the fitted out-of-fold models, not a complete estimate of uncertainty from repeating model selection. Comparisons are exploratory and are not presented as adjusted confirmatory significance tests.
+Paired 95% intervals for the primary top-1 comparison use 10,000 bootstrap resamples of the full leakage components, preserving all member molecules and method pairing. Secondary metrics are descriptive, without paired intervals in this version. The metric remains a molecular mean, and candidate rows are never resampled independently. These intervals are conditional on the fitted out-of-fold models, not a complete estimate of uncertainty from repeating model selection. Comparisons are exploratory and are not presented as adjusted confirmatory significance tests.
 
 All 299 records stay in the primary result. Seven geometry-fallback records are flagged for a possible predefined secondary sensitivity analysis using matched cases across every block. No sensitivity models are implemented or run in this milestone.
 
@@ -61,9 +67,11 @@ python scripts/prepare_evaluation.py --freeze data/splits/PROPOSAL_ID/proposal.j
 python scripts/run_linear_evaluation.py --splits data/splits/PROPOSAL_ID/frozen.json --run
 ```
 
-Freezing validates hashes, graph constraints and fold/subset coverage, and regenerates the plan from locked metadata to check reproducibility. It writes a separate immutable frozen artifact; it does not overwrite the proposal. Fitting rejects proposals, changed inputs and changed latest-bank pointers. A later protocol or implementation change requires preparing a new proposal. The runner also requires `--run`; merely inspecting an artifact never fits a model.
+Freezing validates hashes, graph constraints and the configured outer/inner fold counts, budget/seed combinations and full-training settings, then regenerates the plan from locked metadata to check reproducibility. It writes a separate immutable frozen artifact; it does not overwrite the proposal. Every subsequent load of a frozen artifact (including inspection without `--run`) checks `frozen_proposal_sha256` against the exact sibling `proposal.json`, requires the matching sibling `grouping.json`, and repeats deterministic graph/plan reconstruction. A status edit or a rehashed alternative grouping cannot bypass this contract. Keep these three artifacts together. These checks enforce a reproducible freeze contract; they do not cryptographically attest that a human reviewed it.
 
-The full run writes per-fit coefficients, masks/scales, convergence diagnostics, hyperparameter searches and query-aligned held-out scores. Markdown/JSON summaries and paired intervals are stored under `reports/evaluation_runs/PROPOSAL_ID/`. Existing output directories are not overwritten. Per-fit artifacts remain inspectable after an interrupted run, but automatic resume is not implemented.
+Fitting rejects proposals, changed inputs and changed latest-bank pointers. A later protocol or implementation change requires preparing a new proposal. The runner also requires `--run`; merely inspecting an artifact never fits a model.
+
+The full run writes per-fit coefficients, masks/scales, convergence diagnostics, hyperparameter searches, grid-edge flags, JEPA/QM score components and query-aligned held-out scores. Markdown/JSON summaries include all descriptive metrics and primary top-1 intervals and are stored under `reports/evaluation_runs/PROPOSAL_ID/`. Existing output directories are not overwritten. Per-fit artifacts remain inspectable after an interrupted run, but automatic resume is not implemented. Real-data convergence remains unchecked before the first authorized fitting run.
 
 ## Outstanding scientific checks
 
