@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "cohort": "conservative_bromination",
+  "blocks": ["atom_jepa", "random_backbone", "morgan", "electronic", "jepa_plus_qm"],
+  "regime": "source_series_structure",
+  "fingerprint": {"radius": 2, "bits": 2048, "include_chirality": true, "similarity_threshold": 0.6},
+  "outer_folds": 5,
+  "inner_folds": 3,
+  "split_seed": 20261112,
+  "subset_seeds": [17, 29, 43],
+  "label_budgets": [50, 100],
+  "include_full_budget": true,
+  "l2_grid": [0.0001, 0.001, 0.01, 0.1, 1.0, 10.0],
+  "combined_penalties": "separate_jepa_qm",
+  "dense_scaling": "train_only_equal_molecule_within_rms",
+  "morgan_scaling": "unscaled",
+  "tie_policy": "uniform_expected_metrics_for_exact_ties",
+  "bootstrap_repetitions": 10000,
+  "bootstrap_seed": 42,
+  "optimizer": {"max_iterations": 1000, "gradient_tolerance": 0.0000001, "accepted_gradient": 0.00001}
+}

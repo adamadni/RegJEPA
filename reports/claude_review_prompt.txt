@@ -1,0 +1,95 @@
+You are an independent scientific and code reviewer for RegJEPA:
+https://github.com/adamadni/RegJEPA
+
+This is the pre-experiment review checkpoint. Inspect the current checkout and
+its actual HEAD, not just this prompt. The feature-bank baseline commit was
+9e5cddf12813d67f1cc9115ce4b46ec34dd01113. An evaluation harness and linear scorer
+have now been added. No full real-data experiment has run; production splits
+are proposals and have not been frozen. Synthetic scorer fits and temporary
+freeze-path tests are validation, not benchmark results.
+
+Review only. Do not edit files, install packages, create branches, freeze
+production splits, train real-data models, or send messages externally.
+Tests may write disposable artifacts under .cache; they must not modify
+tracked source/data files. On Windows the configured interpreter is
+.venv\Scripts\python.exe. A suitable test command is:
+.venv\Scripts\python.exe -m pytest -q --basetemp .cache/pytest-claude-review
+
+Read:
+- git ls-files, git log --oneline -5, git status --short
+- README.md, docs/evaluation_protocol.md, configs/evaluation.json
+- reports/evaluation_preflight.md and evaluation_preflight_summary.json
+- the proposal.json and grouping.json identified by that preflight
+- docs/first_experiment.md, docs/benchmark_decisions.md, docs/feature_bank.md
+- src/regjepa/evaluation.py, linear.py, grouping.py, splits.py, protocol.py,
+  experiment.py, and the prepare/run scripts and new tests
+- requirements-evaluation.txt and pyproject.toml
+
+Use the configured Python/RDKit environment where available. Do not substitute
+the union of candidate-rooted fingerprints for whole-molecule fingerprints.
+The dependency file pins NumPy and SciPy explicitly; there is no sklearn,
+pandas, plotting or training-framework dependency in the new evaluation path.
+
+Recompute the conservative_bromination bank through load_feature_bank:
+299 source records, 299 structure keys, 1264 distinct-outcome rows, uniform
+top-1 0.28314752879970273. Check every actual number against the preflight,
+and report discrepancies rather than changing inputs to make them match.
+
+Review gates:
+1. Ties and candidate integrity
+   A row is an already averaged symmetry outcome. No second atom pooling.
+   Exact ties get expected top-1/top-2 and expected reciprocal rank. A tied
+   positive at ranks 1 and 2 has RR .75, not 1/1.5. Constant scores must recover
+   0.2831475288, not the first-row artifact 92/299. Permuting rows must preserve
+   metrics, loss, and fitted predictions. Reject incomplete candidate sets.
+
+2. Source/series linkage and structural separation
+   Build linkage over all 535 records before filtering the cohort. Audit
+   DOI/citation tokens, explicit pointer targets, mixed patent/DOI + pointer
+   records, and links through excluded source records. Confirm comp13 and
+   comp598 remain linked (structure key 99dc853bd5c632ca729e).
+   Check that suffix aliases and international patent families are not guessed.
+   Unknown bibliographic identities must remain visible, not silently declared
+   resolved. Check whether the limited source claims in the protocol are fair.
+   Whole-molecule Morgan radius 2, 2048 bits, chirality, Tanimoto >=0.6 edges
+   are joined transitively with source/identity edges. No such neighbour may
+   cross a fold. Check component sizes, all edge constraints, inner and outer
+   folds, nested budgets and actual counts. Do not choose cutoffs using labels.
+
+3. Training correctness and leakage
+   Only coefficient weights are trained. Candidate sets, not rows, receive
+   equal training/evaluation weight. Test labels, yields, source IDs, products
+   and n_reported_outcomes are not feature inputs.
+   Check finite-difference gradients, stable logsumexp, training-only scales
+   and constant-column handling. Centering is linear-invariant; do not assume
+   it would preserve a future nonlinear head's context.
+   Inner selection uses only labels inside the stated 50/100/full budget.
+   Each block has its own inner search; JEPA+QM has 36 two-penalty candidates,
+   other blocks have 6. Column counts alone do not prove QM is ignored.
+   Fail on nonconvergence; no outer-test early stopping or selection.
+
+4. Artifact and execution safeguards
+   Preparation must never train. Fitting must reject unfrozen proposals,
+   modified locks or split contents, and incomplete held-out coverage.
+   Explicit freeze must reproduce the graph and plan before creating a new
+   immutable file. Existing features/raw data must remain byte-identical.
+   Merely invoking the runner without --run must fit nothing.
+
+5. Results and claims
+   No efficacy result exists yet. Review implementation readiness, not which
+   representation wins. Future confidence intervals resample leakage groups
+   with paired molecular metrics; never candidate rows. Repetitions are not
+   independent extra molecules. Keep all 299 primary cases. Sensitivity
+   subsets, pretraining membership and nonlinear heads remain separate work.
+
+Return:
+- Exact HEAD, commands/checks performed, and independently computed counts.
+- Blockers / major / minor findings with file:line evidence and consequences.
+- Whether each gate is supported, failed, or not checked.
+- Whether bibliographic uncertainty prevents freezing under the stated claim,
+  distinguishing that from a stronger independent-publication-family claim.
+- The smallest necessary corrections and remaining scientific limitations.
+
+Do not claim to execute tests or inspect artifacts that were unavailable.
+Do not treat unused legacy raw-atom helpers as the bank-row evaluation path.
+End with a section titled "## Not done".

@@ -79,7 +79,7 @@ from regjepa.feature_io import load_feature_bank
 bank = load_feature_bank(Path.cwd(), cohort="conservative_bromination")
 X = bank.X["atom_jepa"]  # one row per distinct-position query
 recorded_sites = bank.observed_membership
-reaction_groups = bank.compound_ids
+structure_keys = [row["structure_key"] for row in bank.queries]
 ```
 
 The loader verifies row alignment and rejects incomplete candidate sets. Use `structure_key` from `bank.queries` to keep duplicate substrates together when assigning supervised folds. See the [feature-bank dictionary](docs/feature_bank.md) for array and geometry conventions.
@@ -89,6 +89,19 @@ The loader verifies row alignment and rejects incomplete candidate sets. Use `st
 The cumulative cohorts are conservative bromination (299 records), conservative halogenation including Cl/I (374), broad single-outcome (495), and all source records (535). All cohorts use the same feature definitions and query identifiers. Multi-outcome and no-choice records remain flagged in the final stage.
 
 Compare these frozen features through simple site-scoring heads on identical grouped splits. Each molecule contributes one evaluation unit. See [the first-experiment plan](docs/first_experiment.md).
+
+## Linear evaluation harness
+
+The linear scorer and nested evaluation harness are implemented. No full real-data experiment has run. Read the [evaluation protocol](docs/evaluation_protocol.md), [grouping/split preflight](reports/evaluation_preflight.md), and [Claude review prompt](reports/claude_review_prompt.txt).
+
+```text
+python -m pip install -r requirements-evaluation.txt
+python scripts/prepare_evaluation.py
+```
+
+Preparation writes an immutable, label-blind split **proposal** and a grouping audit under `data/splits/`, plus Markdown/JSON preflight reports. All 535 records participate in linkage before filtering the 299-record cohort. Exact identity, tautomer, explicit source/series links and whole-molecule Morgan Tanimoto >=0.6 neighbours stay together. This is a conservative metadata constraint, not verified international patent-family recovery.
+
+After reviewing the proposal, use the explicit freeze and run commands in the protocol. The runner inspects artifacts without fitting unless `--run` is supplied, and fitting rejects unfrozen or changed inputs. Legacy raw-atom scoring helpers in `chemistry.py` are not used on feature-bank rows; the harness has independent exact-tie-aware metrics.
 
 ## Source attribution
 

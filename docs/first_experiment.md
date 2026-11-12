@@ -24,7 +24,9 @@ Choose a linear site scorer and one small nonlinear head with hyperparameters se
 
 ## Evaluation
 
-Use grouped outer cross-validation and inner-only model selection. Evaluate identical 50-, 100-, and 200-label training subsets where fold size allows, plus the full available training fold. Report the actual cohort/fold counts; do not promise training sizes that a group split cannot provide. Repeat training seeds and compare paired molecular predictions.
+Use grouped outer cross-validation and inner-only model selection. The implemented linear pilot uses identical nested 50- and 100-label training subsets plus the full available training fold, with three subset seeds; 200 is omitted because full training contains only 239-240 records. Label budgets include inner-selection labels. Report actual cohort/fold counts and compare paired molecular predictions. The linear optimizer is deterministic and is not given artificial initialization repetitions.
+
+See `docs/evaluation_protocol.md` and `reports/evaluation_preflight.md` for the reviewable source/series graph, explicit whole-molecule similarity constraints and split proposals. No production splits are frozen and no real-data scorers have been trained yet. Nonlinear heads remain a later comparison.
 
 Report outcome-level top-1, top-2 where meaningful, reciprocal rank, subgroup results, and training-size learning curves. Use molecule/group-level uncertainty, not atom-level confidence intervals. The conservative cohort's analytical uniform-outcome baseline is 28.3%, not 50%.
 

@@ -1,0 +1,221 @@
+{
+  "proposal_id": "83cde96ea4d814325d8c",
+  "split_status": "proposal_not_frozen",
+  "cohort": "conservative_bromination",
+  "rows": 1264,
+  "molecules": 299,
+  "structures": 299,
+  "candidate_count_distribution": {
+    "2": 55,
+    "3": 67,
+    "4": 62,
+    "5": 39,
+    "6": 39,
+    "7": 28,
+    "8": 4,
+    "9": 4,
+    "12": 1
+  },
+  "analytical_uniform_metrics": {
+    "top1": 0.28314752879970273,
+    "top2": 0.5662950575994055,
+    "reciprocal_rank": 0.5400247102602175,
+    "nll": 1.352522146639527,
+    "uniform_top1": 0.28314752879970273,
+    "uniform_nll": 1.352522146639527,
+    "information_gain_nats": 0.0,
+    "molecules": 299,
+    "structures": 299,
+    "top2_nontrivial_molecules": 244,
+    "top2_nontrivial": 0.46853369763205827
+  },
+  "constant_first_row_top1": 0.3076923076923077,
+  "identical_morgan_candidate_vectors": [
+    {
+      "compound_id": "comp276",
+      "local_row_pairs": [
+        [
+          0,
+          10
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          2,
+          11
+        ]
+      ]
+    },
+    {
+      "compound_id": "comp40",
+      "local_row_pairs": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "compound_id": "comp440",
+      "local_row_pairs": [
+        [
+          3,
+          5
+        ]
+      ]
+    },
+    {
+      "compound_id": "comp510",
+      "local_row_pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "compound_id": "comp538",
+      "local_row_pairs": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "compound_id": "comp548",
+      "local_row_pairs": [
+        [
+          0,
+          1
+        ]
+      ]
+    }
+  ],
+  "leakage_groups": 250,
+  "largest_leakage_group": 5,
+  "leakage_group_size_distribution": {
+    "1": 218,
+    "2": 22,
+    "3": 5,
+    "4": 3,
+    "5": 2
+  },
+  "maximum_between_group_tanimoto": 0.5666666666666667,
+  "unresolved_bibliographic_records": [
+    "comp125",
+    "comp126",
+    "comp131",
+    "comp14",
+    "comp141",
+    "comp143",
+    "comp149",
+    "comp15",
+    "comp150",
+    "comp17",
+    "comp178",
+    "comp179",
+    "comp180",
+    "comp182",
+    "comp195",
+    "comp199",
+    "comp20",
+    "comp201",
+    "comp218",
+    "comp236",
+    "comp24",
+    "comp244",
+    "comp245",
+    "comp246",
+    "comp249",
+    "comp250",
+    "comp251",
+    "comp254",
+    "comp256",
+    "comp257",
+    "comp258",
+    "comp259",
+    "comp260",
+    "comp276",
+    "comp289",
+    "comp296",
+    "comp48",
+    "comp504"
+  ],
+  "outer_counts": [
+    {
+      "fold": 0,
+      "train": 240,
+      "test": 59
+    },
+    {
+      "fold": 1,
+      "train": 239,
+      "test": 60
+    },
+    {
+      "fold": 2,
+      "train": 239,
+      "test": 60
+    },
+    {
+      "fold": 3,
+      "train": 239,
+      "test": 60
+    },
+    {
+      "fold": 4,
+      "train": 239,
+      "test": 60
+    }
+  ],
+  "actual_learning_curve_labels": [
+    [
+      "100",
+      100
+    ],
+    [
+      "50",
+      50
+    ],
+    [
+      "full",
+      239
+    ],
+    [
+      "full",
+      240
+    ]
+  ],
+  "geometry_fallback_records": [
+    "comp420",
+    "comp427",
+    "comp484",
+    "comp522",
+    "comp546",
+    "comp547",
+    "comp570"
+  ],
+  "source_limitations": [
+    "Pointer tokens preserve explicit series links but do not recover missing publications.",
+    "National patent identifiers are not independently verified international patent families.",
+    "Opaque citation keys are grouped exactly; their bibliographic identities remain unverified."
+  ],
+  "full_experiment_run": false,
+  "proposal_path": "data/splits/83cde96ea4d814325d8c/proposal.json",
+  "planned_inner_fits": 6300,
+  "planned_final_fits": 175,
+  "penalty_candidates_per_block": {
+    "atom_jepa": 6,
+    "random_backbone": 6,
+    "morgan": 6,
+    "electronic": 6,
+    "jepa_plus_qm": 36
+  }
+}

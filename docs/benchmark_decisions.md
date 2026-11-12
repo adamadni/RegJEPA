@@ -33,9 +33,9 @@ Use one query for each symmetrically distinct substitution outcome, rather than 
 
 - Is the first scientific claim about traditional substrate-driven EAS susceptibility, or condition-specific bromination? The current source is stronger for the former; full conditions are not normalized.
 - Should the 69 missing-reference rows be restored to a training cohort after literature recovery? This would enlarge the conservative cohort, but reference recovery must precede that decision.
-- Should symmetry-expanded positives be pooled before or after the site head? Both should agree for a linear head; averaging logits is the specified baseline.
+- Symmetry pooling is settled for the feature bank: member-atom descriptors are already averaged before the head. Rank bank rows directly and do not apply raw-atom pooling helpers again.
 - What independent second dataset will be used to confirm a result? The current dataset is too small and narrow for the final broad claim.
-- How will source/patent-family groups and fingerprint clusters be balanced for grouped cross-validation? No final test split is committed yet to avoid freezing it before these issues are resolved.
+- A label-blind source/series + structure grouping implementation and split proposals are now available; see `docs/evaluation_protocol.md`. Bibliographic identities and international patent families are not fully recovered. Proposals remain unfrozen for review before the full experiment.
 
 The current policy does not merge chemically similar sites, resonance-related sites in different tautomers, near-symmetric 3D conformations, or stereochemically distinct products. Atropisomerism and other stereo not encoded in the source cannot be recovered by this audit.
 

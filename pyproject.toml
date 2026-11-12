@@ -8,6 +8,7 @@ dependencies = ["rdkit==2026.9.2"]
 [project.optional-dependencies]
 test = ["pytest==9.2.0"]
 features = ["atom-jepa==0.4.0", "torch==2.15.0", "scipy==1.18.1"]
+evaluation = ["numpy==2.5.4", "scipy==1.18.1"]
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]
