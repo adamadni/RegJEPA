@@ -17,4 +17,4 @@ The only amendment was a larger iteration cap, 1,000 to 5,000. Convergence toler
 
 ## Not done
 
-Independent Claude results review and the scientific checks listed in the results report. No new cohort, nonlinear model or posthoc tuning has been run.
+The supplied Claude review has been received; its reporting findings were independently recomputed and incorporated in `evaluation_results.md` and `evaluation_reporting_audit.md`. Focused re-review and the reviewer's unchecked gates remain outstanding, together with the scientific checks listed in the results report. No new cohort, nonlinear model or posthoc tuning has been run.

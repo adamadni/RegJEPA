@@ -641,6 +641,3112 @@
     "combined_minus_electronic_top1_intervals_include_zero_at_all_budgets": true,
     "combined_nll_lower_than_electronic_at_all_budgets": true,
     "nll_comparison_scope": "Descriptive only; no paired NLL intervals were in the approved protocol",
-    "conclusion": "This pilot does not resolve a top-1 benefit of pretraining versus the random backbone or of adding JEPA to QM; it does not establish equivalence or absence of benefit."
-  }
+    "conclusion": "This pilot does not resolve a top-1 benefit of pretraining versus the random backbone or of adding JEPA to QM; it does not establish equivalence or absence of benefit.",
+    "grid_boundary_caveat": "Random selected maximum penalty in 7/15 fits at 50 labels; do not treat the positive pretrained-minus-random point estimate as directional evidence. Endpoint selections do not establish the counterfactual outside-grid performance.",
+    "complementarity_caveat": "Maximum JEPA penalty selected in 4/15, 2/15 and 1/5 combined fits at 50/100/full; this favors stronger JEPA shrinkage within the tested grid and limits complementarity claims."
+  },
+  "positive_ties": {
+    "atom_jepa:budget50": {
+      "evaluated_molecule_fits": 897,
+      "positive_tie_molecule_fits": 0,
+      "unique_molecules_with_positive_tie": 0
+    },
+    "atom_jepa:budget100": {
+      "evaluated_molecule_fits": 897,
+      "positive_tie_molecule_fits": 0,
+      "unique_molecules_with_positive_tie": 0
+    },
+    "atom_jepa:budgetfull": {
+      "evaluated_molecule_fits": 299,
+      "positive_tie_molecule_fits": 0,
+      "unique_molecules_with_positive_tie": 0
+    },
+    "random_backbone:budget50": {
+      "evaluated_molecule_fits": 897,
+      "positive_tie_molecule_fits": 0,
+      "unique_molecules_with_positive_tie": 0
+    },
+    "random_backbone:budget100": {
+      "evaluated_molecule_fits": 897,
+      "positive_tie_molecule_fits": 0,
+      "unique_molecules_with_positive_tie": 0
+    },
+    "random_backbone:budgetfull": {
+      "evaluated_molecule_fits": 299,
+      "positive_tie_molecule_fits": 0,
+      "unique_molecules_with_positive_tie": 0
+    },
+    "morgan:budget50": {
+      "evaluated_molecule_fits": 897,
+      "positive_tie_molecule_fits": 141,
+      "unique_molecules_with_positive_tie": 79
+    },
+    "morgan:budget100": {
+      "evaluated_molecule_fits": 897,
+      "positive_tie_molecule_fits": 70,
+      "unique_molecules_with_positive_tie": 47
+    },
+    "morgan:budgetfull": {
+      "evaluated_molecule_fits": 299,
+      "positive_tie_molecule_fits": 5,
+      "unique_molecules_with_positive_tie": 5
+    },
+    "electronic:budget50": {
+      "evaluated_molecule_fits": 897,
+      "positive_tie_molecule_fits": 0,
+      "unique_molecules_with_positive_tie": 0
+    },
+    "electronic:budget100": {
+      "evaluated_molecule_fits": 897,
+      "positive_tie_molecule_fits": 0,
+      "unique_molecules_with_positive_tie": 0
+    },
+    "electronic:budgetfull": {
+      "evaluated_molecule_fits": 299,
+      "positive_tie_molecule_fits": 0,
+      "unique_molecules_with_positive_tie": 0
+    },
+    "jepa_plus_qm:budget50": {
+      "evaluated_molecule_fits": 897,
+      "positive_tie_molecule_fits": 0,
+      "unique_molecules_with_positive_tie": 0
+    },
+    "jepa_plus_qm:budget100": {
+      "evaluated_molecule_fits": 897,
+      "positive_tie_molecule_fits": 0,
+      "unique_molecules_with_positive_tie": 0
+    },
+    "jepa_plus_qm:budgetfull": {
+      "evaluated_molecule_fits": 299,
+      "positive_tie_molecule_fits": 0,
+      "unique_molecules_with_positive_tie": 0
+    }
+  },
+  "negative_information_gain": {
+    "atom_jepa:budget50": {
+      "molecules": 299,
+      "negative": 61,
+      "zero": 0,
+      "positive": 238,
+      "negative_compound_ids": [
+        "comp109",
+        "comp128",
+        "comp129",
+        "comp131",
+        "comp135",
+        "comp14",
+        "comp143",
+        "comp149",
+        "comp160",
+        "comp182",
+        "comp195",
+        "comp202",
+        "comp205",
+        "comp245",
+        "comp246",
+        "comp249",
+        "comp250",
+        "comp251",
+        "comp254",
+        "comp257",
+        "comp29",
+        "comp30",
+        "comp316",
+        "comp334",
+        "comp370",
+        "comp374",
+        "comp389",
+        "comp401",
+        "comp414",
+        "comp420",
+        "comp438",
+        "comp445",
+        "comp472",
+        "comp479",
+        "comp48",
+        "comp484",
+        "comp498",
+        "comp500",
+        "comp501",
+        "comp502",
+        "comp503",
+        "comp511",
+        "comp517",
+        "comp521",
+        "comp522",
+        "comp530",
+        "comp531",
+        "comp532",
+        "comp533",
+        "comp535",
+        "comp544",
+        "comp547",
+        "comp551",
+        "comp554",
+        "comp566",
+        "comp570",
+        "comp579",
+        "comp58",
+        "comp583",
+        "comp586",
+        "comp73"
+      ]
+    },
+    "atom_jepa:budget100": {
+      "molecules": 299,
+      "negative": 51,
+      "zero": 0,
+      "positive": 248,
+      "negative_compound_ids": [
+        "comp10",
+        "comp124",
+        "comp128",
+        "comp129",
+        "comp131",
+        "comp135",
+        "comp14",
+        "comp182",
+        "comp202",
+        "comp205",
+        "comp246",
+        "comp249",
+        "comp251",
+        "comp254",
+        "comp257",
+        "comp29",
+        "comp30",
+        "comp334",
+        "comp370",
+        "comp374",
+        "comp401",
+        "comp414",
+        "comp420",
+        "comp438",
+        "comp445",
+        "comp472",
+        "comp477",
+        "comp48",
+        "comp484",
+        "comp498",
+        "comp500",
+        "comp501",
+        "comp502",
+        "comp503",
+        "comp511",
+        "comp517",
+        "comp521",
+        "comp522",
+        "comp528",
+        "comp530",
+        "comp531",
+        "comp532",
+        "comp533",
+        "comp535",
+        "comp544",
+        "comp546",
+        "comp547",
+        "comp551",
+        "comp562",
+        "comp566",
+        "comp74"
+      ]
+    },
+    "atom_jepa:budgetfull": {
+      "molecules": 299,
+      "negative": 44,
+      "zero": 0,
+      "positive": 255,
+      "negative_compound_ids": [
+        "comp124",
+        "comp128",
+        "comp129",
+        "comp131",
+        "comp135",
+        "comp156",
+        "comp160",
+        "comp205",
+        "comp21",
+        "comp249",
+        "comp251",
+        "comp29",
+        "comp316",
+        "comp334",
+        "comp374",
+        "comp414",
+        "comp420",
+        "comp438",
+        "comp445",
+        "comp472",
+        "comp48",
+        "comp484",
+        "comp498",
+        "comp500",
+        "comp501",
+        "comp502",
+        "comp503",
+        "comp509",
+        "comp511",
+        "comp517",
+        "comp521",
+        "comp522",
+        "comp528",
+        "comp530",
+        "comp531",
+        "comp532",
+        "comp533",
+        "comp544",
+        "comp547",
+        "comp551",
+        "comp562",
+        "comp566",
+        "comp73",
+        "comp74"
+      ]
+    },
+    "random_backbone:budget50": {
+      "molecules": 299,
+      "negative": 84,
+      "zero": 0,
+      "positive": 215,
+      "negative_compound_ids": [
+        "comp10",
+        "comp11",
+        "comp112",
+        "comp124",
+        "comp125",
+        "comp126",
+        "comp128",
+        "comp131",
+        "comp135",
+        "comp147",
+        "comp16",
+        "comp160",
+        "comp17",
+        "comp199",
+        "comp201",
+        "comp202",
+        "comp21",
+        "comp218",
+        "comp24",
+        "comp245",
+        "comp249",
+        "comp250",
+        "comp251",
+        "comp254",
+        "comp256",
+        "comp257",
+        "comp258",
+        "comp259",
+        "comp29",
+        "comp30",
+        "comp316",
+        "comp334",
+        "comp34",
+        "comp370",
+        "comp374",
+        "comp381",
+        "comp389",
+        "comp390",
+        "comp391",
+        "comp398",
+        "comp401",
+        "comp402",
+        "comp414",
+        "comp420",
+        "comp434",
+        "comp438",
+        "comp445",
+        "comp453",
+        "comp454",
+        "comp466",
+        "comp472",
+        "comp479",
+        "comp483",
+        "comp484",
+        "comp501",
+        "comp502",
+        "comp504",
+        "comp511",
+        "comp519",
+        "comp52",
+        "comp520",
+        "comp522",
+        "comp528",
+        "comp530",
+        "comp531",
+        "comp532",
+        "comp534",
+        "comp535",
+        "comp54",
+        "comp544",
+        "comp547",
+        "comp55",
+        "comp551",
+        "comp554",
+        "comp566",
+        "comp579",
+        "comp586",
+        "comp75",
+        "comp81",
+        "comp83",
+        "comp88",
+        "comp92",
+        "comp96",
+        "comp97"
+      ]
+    },
+    "random_backbone:budget100": {
+      "molecules": 299,
+      "negative": 75,
+      "zero": 0,
+      "positive": 224,
+      "negative_compound_ids": [
+        "comp10",
+        "comp112",
+        "comp124",
+        "comp125",
+        "comp126",
+        "comp128",
+        "comp129",
+        "comp131",
+        "comp147",
+        "comp156",
+        "comp16",
+        "comp160",
+        "comp17",
+        "comp199",
+        "comp202",
+        "comp204",
+        "comp205",
+        "comp21",
+        "comp245",
+        "comp249",
+        "comp251",
+        "comp254",
+        "comp256",
+        "comp257",
+        "comp259",
+        "comp29",
+        "comp30",
+        "comp31",
+        "comp316",
+        "comp334",
+        "comp34",
+        "comp374",
+        "comp381",
+        "comp386",
+        "comp389",
+        "comp391",
+        "comp401",
+        "comp402",
+        "comp414",
+        "comp420",
+        "comp431",
+        "comp438",
+        "comp445",
+        "comp453",
+        "comp454",
+        "comp472",
+        "comp473",
+        "comp479",
+        "comp484",
+        "comp495",
+        "comp501",
+        "comp502",
+        "comp504",
+        "comp511",
+        "comp52",
+        "comp522",
+        "comp528",
+        "comp530",
+        "comp531",
+        "comp532",
+        "comp534",
+        "comp535",
+        "comp547",
+        "comp551",
+        "comp554",
+        "comp555",
+        "comp562",
+        "comp575",
+        "comp576",
+        "comp58",
+        "comp81",
+        "comp88",
+        "comp92",
+        "comp96",
+        "comp97"
+      ]
+    },
+    "random_backbone:budgetfull": {
+      "molecules": 299,
+      "negative": 46,
+      "zero": 0,
+      "positive": 253,
+      "negative_compound_ids": [
+        "comp1",
+        "comp124",
+        "comp126",
+        "comp128",
+        "comp129",
+        "comp131",
+        "comp149",
+        "comp160",
+        "comp17",
+        "comp199",
+        "comp2",
+        "comp202",
+        "comp204",
+        "comp21",
+        "comp245",
+        "comp251",
+        "comp257",
+        "comp259",
+        "comp29",
+        "comp31",
+        "comp316",
+        "comp334",
+        "comp374",
+        "comp381",
+        "comp386",
+        "comp391",
+        "comp401",
+        "comp402",
+        "comp414",
+        "comp445",
+        "comp484",
+        "comp501",
+        "comp502",
+        "comp511",
+        "comp52",
+        "comp522",
+        "comp528",
+        "comp531",
+        "comp532",
+        "comp535",
+        "comp557",
+        "comp58",
+        "comp587",
+        "comp73",
+        "comp81",
+        "comp96"
+      ]
+    },
+    "morgan:budget50": {
+      "molecules": 299,
+      "negative": 109,
+      "zero": 1,
+      "positive": 189,
+      "negative_compound_ids": [
+        "comp10",
+        "comp106",
+        "comp11",
+        "comp124",
+        "comp128",
+        "comp129",
+        "comp131",
+        "comp134",
+        "comp14",
+        "comp143",
+        "comp160",
+        "comp17",
+        "comp178",
+        "comp179",
+        "comp180",
+        "comp182",
+        "comp199",
+        "comp202",
+        "comp204",
+        "comp218",
+        "comp244",
+        "comp245",
+        "comp246",
+        "comp249",
+        "comp251",
+        "comp254",
+        "comp256",
+        "comp257",
+        "comp259",
+        "comp27",
+        "comp289",
+        "comp30",
+        "comp31",
+        "comp314",
+        "comp315",
+        "comp329",
+        "comp33",
+        "comp332",
+        "comp334",
+        "comp347",
+        "comp348",
+        "comp355",
+        "comp357",
+        "comp362",
+        "comp364",
+        "comp365",
+        "comp375",
+        "comp389",
+        "comp390",
+        "comp391",
+        "comp398",
+        "comp402",
+        "comp406",
+        "comp414",
+        "comp420",
+        "comp439",
+        "comp447",
+        "comp448",
+        "comp461",
+        "comp468",
+        "comp48",
+        "comp488",
+        "comp489",
+        "comp490",
+        "comp494",
+        "comp495",
+        "comp498",
+        "comp499",
+        "comp500",
+        "comp501",
+        "comp502",
+        "comp503",
+        "comp504",
+        "comp508",
+        "comp511",
+        "comp519",
+        "comp52",
+        "comp520",
+        "comp522",
+        "comp528",
+        "comp530",
+        "comp531",
+        "comp533",
+        "comp534",
+        "comp541",
+        "comp544",
+        "comp547",
+        "comp552",
+        "comp554",
+        "comp557",
+        "comp562",
+        "comp575",
+        "comp576",
+        "comp577",
+        "comp578",
+        "comp579",
+        "comp587",
+        "comp59",
+        "comp62",
+        "comp64",
+        "comp71",
+        "comp74",
+        "comp75",
+        "comp81",
+        "comp86",
+        "comp88",
+        "comp89",
+        "comp96",
+        "comp97"
+      ]
+    },
+    "morgan:budget100": {
+      "molecules": 299,
+      "negative": 81,
+      "zero": 0,
+      "positive": 218,
+      "negative_compound_ids": [
+        "comp10",
+        "comp11",
+        "comp112",
+        "comp128",
+        "comp129",
+        "comp131",
+        "comp134",
+        "comp147",
+        "comp149",
+        "comp160",
+        "comp17",
+        "comp199",
+        "comp204",
+        "comp218",
+        "comp24",
+        "comp244",
+        "comp245",
+        "comp246",
+        "comp249",
+        "comp25",
+        "comp250",
+        "comp251",
+        "comp259",
+        "comp28",
+        "comp30",
+        "comp31",
+        "comp315",
+        "comp325",
+        "comp334",
+        "comp348",
+        "comp389",
+        "comp391",
+        "comp398",
+        "comp402",
+        "comp406",
+        "comp414",
+        "comp420",
+        "comp427",
+        "comp439",
+        "comp447",
+        "comp448",
+        "comp468",
+        "comp48",
+        "comp488",
+        "comp494",
+        "comp495",
+        "comp498",
+        "comp499",
+        "comp500",
+        "comp501",
+        "comp502",
+        "comp504",
+        "comp508",
+        "comp511",
+        "comp517",
+        "comp52",
+        "comp520",
+        "comp522",
+        "comp530",
+        "comp533",
+        "comp534",
+        "comp535",
+        "comp544",
+        "comp547",
+        "comp551",
+        "comp554",
+        "comp555",
+        "comp562",
+        "comp575",
+        "comp576",
+        "comp577",
+        "comp578",
+        "comp579",
+        "comp586",
+        "comp62",
+        "comp64",
+        "comp74",
+        "comp81",
+        "comp83",
+        "comp86",
+        "comp88"
+      ]
+    },
+    "morgan:budgetfull": {
+      "molecules": 299,
+      "negative": 64,
+      "zero": 0,
+      "positive": 235,
+      "negative_compound_ids": [
+        "comp10",
+        "comp11",
+        "comp112",
+        "comp128",
+        "comp129",
+        "comp131",
+        "comp14",
+        "comp147",
+        "comp160",
+        "comp204",
+        "comp218",
+        "comp236",
+        "comp24",
+        "comp245",
+        "comp249",
+        "comp25",
+        "comp250",
+        "comp251",
+        "comp289",
+        "comp296",
+        "comp30",
+        "comp334",
+        "comp343",
+        "comp386",
+        "comp389",
+        "comp391",
+        "comp398",
+        "comp401",
+        "comp406",
+        "comp414",
+        "comp418",
+        "comp420",
+        "comp468",
+        "comp48",
+        "comp494",
+        "comp495",
+        "comp498",
+        "comp499",
+        "comp500",
+        "comp501",
+        "comp502",
+        "comp503",
+        "comp504",
+        "comp508",
+        "comp511",
+        "comp517",
+        "comp52",
+        "comp520",
+        "comp522",
+        "comp530",
+        "comp533",
+        "comp534",
+        "comp535",
+        "comp544",
+        "comp547",
+        "comp554",
+        "comp56",
+        "comp562",
+        "comp579",
+        "comp586",
+        "comp587",
+        "comp62",
+        "comp71",
+        "comp88"
+      ]
+    },
+    "electronic:budget50": {
+      "molecules": 299,
+      "negative": 30,
+      "zero": 0,
+      "positive": 269,
+      "negative_compound_ids": [
+        "comp13",
+        "comp131",
+        "comp134",
+        "comp14",
+        "comp149",
+        "comp15",
+        "comp195",
+        "comp204",
+        "comp244",
+        "comp245",
+        "comp246",
+        "comp250",
+        "comp251",
+        "comp254",
+        "comp258",
+        "comp29",
+        "comp32",
+        "comp34",
+        "comp386",
+        "comp439",
+        "comp499",
+        "comp5",
+        "comp508",
+        "comp51",
+        "comp52",
+        "comp528",
+        "comp531",
+        "comp533",
+        "comp547",
+        "comp75"
+      ]
+    },
+    "electronic:budget100": {
+      "molecules": 299,
+      "negative": 25,
+      "zero": 0,
+      "positive": 274,
+      "negative_compound_ids": [
+        "comp124",
+        "comp13",
+        "comp131",
+        "comp14",
+        "comp15",
+        "comp195",
+        "comp204",
+        "comp244",
+        "comp245",
+        "comp246",
+        "comp251",
+        "comp254",
+        "comp34",
+        "comp386",
+        "comp439",
+        "comp5",
+        "comp508",
+        "comp51",
+        "comp52",
+        "comp528",
+        "comp531",
+        "comp533",
+        "comp547",
+        "comp551",
+        "comp75"
+      ]
+    },
+    "electronic:budgetfull": {
+      "molecules": 299,
+      "negative": 22,
+      "zero": 0,
+      "positive": 277,
+      "negative_compound_ids": [
+        "comp131",
+        "comp14",
+        "comp15",
+        "comp204",
+        "comp245",
+        "comp246",
+        "comp251",
+        "comp254",
+        "comp258",
+        "comp34",
+        "comp386",
+        "comp391",
+        "comp499",
+        "comp508",
+        "comp51",
+        "comp52",
+        "comp528",
+        "comp531",
+        "comp533",
+        "comp547",
+        "comp551",
+        "comp75"
+      ]
+    },
+    "jepa_plus_qm:budget50": {
+      "molecules": 299,
+      "negative": 30,
+      "zero": 0,
+      "positive": 269,
+      "negative_compound_ids": [
+        "comp13",
+        "comp131",
+        "comp135",
+        "comp14",
+        "comp143",
+        "comp15",
+        "comp195",
+        "comp204",
+        "comp245",
+        "comp246",
+        "comp251",
+        "comp254",
+        "comp32",
+        "comp34",
+        "comp357",
+        "comp374",
+        "comp386",
+        "comp391",
+        "comp439",
+        "comp508",
+        "comp51",
+        "comp511",
+        "comp52",
+        "comp528",
+        "comp53",
+        "comp531",
+        "comp533",
+        "comp547",
+        "comp551",
+        "comp73"
+      ]
+    },
+    "jepa_plus_qm:budget100": {
+      "molecules": 299,
+      "negative": 25,
+      "zero": 0,
+      "positive": 274,
+      "negative_compound_ids": [
+        "comp131",
+        "comp135",
+        "comp14",
+        "comp15",
+        "comp204",
+        "comp245",
+        "comp246",
+        "comp250",
+        "comp251",
+        "comp254",
+        "comp29",
+        "comp34",
+        "comp374",
+        "comp386",
+        "comp414",
+        "comp439",
+        "comp508",
+        "comp51",
+        "comp511",
+        "comp52",
+        "comp528",
+        "comp531",
+        "comp533",
+        "comp547",
+        "comp551"
+      ]
+    },
+    "jepa_plus_qm:budgetfull": {
+      "molecules": 299,
+      "negative": 21,
+      "zero": 0,
+      "positive": 278,
+      "negative_compound_ids": [
+        "comp135",
+        "comp14",
+        "comp15",
+        "comp204",
+        "comp245",
+        "comp246",
+        "comp250",
+        "comp251",
+        "comp29",
+        "comp34",
+        "comp386",
+        "comp414",
+        "comp508",
+        "comp51",
+        "comp52",
+        "comp522",
+        "comp528",
+        "comp531",
+        "comp533",
+        "comp547",
+        "comp551"
+      ]
+    }
+  },
+  "candidate_count_exact": {
+    "atom_jepa:budget50": {
+      "2": {
+        "molecules": 55,
+        "top1": 0.7939393939393937,
+        "top2": 1.0,
+        "reciprocal_rank": 0.8969696969696972,
+        "nll": 0.46346105796842124,
+        "information_gain_nats": 0.22968612259152402,
+        "uniform_top1": 0.5
+      },
+      "3": {
+        "molecules": 67,
+        "top1": 0.5572139303482586,
+        "top2": 0.835820895522388,
+        "reciprocal_rank": 0.7512437810945274,
+        "nll": 0.9857916312500756,
+        "information_gain_nats": 0.11282065741803442,
+        "uniform_top1": 0.33333333333333326
+      },
+      "4": {
+        "molecules": 62,
+        "top1": 0.6612903225806451,
+        "top2": 0.8494623655913978,
+        "reciprocal_rank": 0.8028673835125449,
+        "nll": 0.8762489948635918,
+        "information_gain_nats": 0.5100453662562987,
+        "uniform_top1": 0.25
+      },
+      "5": {
+        "molecules": 39,
+        "top1": 0.6324786324786326,
+        "top2": 0.8290598290598289,
+        "reciprocal_rank": 0.7816239316239316,
+        "nll": 0.9497771491184392,
+        "information_gain_nats": 0.6596607633156609,
+        "uniform_top1": 0.20000000000000007
+      },
+      "6": {
+        "molecules": 39,
+        "top1": 0.623931623931624,
+        "top2": 0.7863247863247863,
+        "reciprocal_rank": 0.7675213675213675,
+        "nll": 0.9780413621815646,
+        "information_gain_nats": 0.8137181070464904,
+        "uniform_top1": 0.1666666666666667
+      },
+      "7": {
+        "molecules": 28,
+        "top1": 0.619047619047619,
+        "top2": 0.8333333333333333,
+        "reciprocal_rank": 0.7707482993197278,
+        "nll": 1.0223093011584345,
+        "information_gain_nats": 0.9236008478968785,
+        "uniform_top1": 0.14285714285714285
+      },
+      "8": {
+        "molecules": 4,
+        "top1": 0.49999999999999994,
+        "top2": 0.8333333333333333,
+        "reciprocal_rank": 0.7083333333333334,
+        "nll": 1.344424393460445,
+        "information_gain_nats": 0.7350171482193909,
+        "uniform_top1": 0.125
+      },
+      "9": {
+        "molecules": 4,
+        "top1": 0.5,
+        "top2": 0.75,
+        "reciprocal_rank": 0.6833333333333333,
+        "nll": 1.3995294989695806,
+        "information_gain_nats": 0.797695078366639,
+        "uniform_top1": 0.1111111111111111
+      },
+      "12": {
+        "molecules": 1,
+        "top1": 0.6666666666666666,
+        "top2": 1.0,
+        "reciprocal_rank": 0.8333333333333334,
+        "nll": 1.115311211727177,
+        "information_gain_nats": 1.3695954380608233,
+        "uniform_top1": 0.08333333333333333
+      }
+    },
+    "atom_jepa:budget100": {
+      "2": {
+        "molecules": 55,
+        "top1": 0.8363636363636363,
+        "top2": 1.0,
+        "reciprocal_rank": 0.9181818181818182,
+        "nll": 0.39309874055545835,
+        "information_gain_nats": 0.3000484400044868,
+        "uniform_top1": 0.5
+      },
+      "3": {
+        "molecules": 67,
+        "top1": 0.6019900497512437,
+        "top2": 0.8805970149253731,
+        "reciprocal_rank": 0.781094527363184,
+        "nll": 0.8713321627630867,
+        "information_gain_nats": 0.2272801259050231,
+        "uniform_top1": 0.33333333333333326
+      },
+      "4": {
+        "molecules": 62,
+        "top1": 0.7365591397849462,
+        "top2": 0.9193548387096773,
+        "reciprocal_rank": 0.8525985663082438,
+        "nll": 0.7129670584856099,
+        "information_gain_nats": 0.6733273026342806,
+        "uniform_top1": 0.25
+      },
+      "5": {
+        "molecules": 39,
+        "top1": 0.717948717948718,
+        "top2": 0.9316239316239315,
+        "reciprocal_rank": 0.8452991452991453,
+        "nll": 0.7069451273276052,
+        "information_gain_nats": 0.9024927851064951,
+        "uniform_top1": 0.20000000000000007
+      },
+      "6": {
+        "molecules": 39,
+        "top1": 0.7008547008547009,
+        "top2": 0.8205128205128205,
+        "reciprocal_rank": 0.8118233618233618,
+        "nll": 0.8975234650461167,
+        "information_gain_nats": 0.8942360041819382,
+        "uniform_top1": 0.1666666666666667
+      },
+      "7": {
+        "molecules": 28,
+        "top1": 0.7619047619047619,
+        "top2": 0.8928571428571429,
+        "reciprocal_rank": 0.8565476190476191,
+        "nll": 0.7439705214497379,
+        "information_gain_nats": 1.2019396276055756,
+        "uniform_top1": 0.14285714285714285
+      },
+      "8": {
+        "molecules": 4,
+        "top1": 0.41666666666666663,
+        "top2": 0.5833333333333333,
+        "reciprocal_rank": 0.6319444444444444,
+        "nll": 1.4088906182957428,
+        "information_gain_nats": 0.6705509233840931,
+        "uniform_top1": 0.125
+      },
+      "9": {
+        "molecules": 4,
+        "top1": 0.6666666666666666,
+        "top2": 0.8333333333333333,
+        "reciprocal_rank": 0.7785714285714286,
+        "nll": 1.3472881432116692,
+        "information_gain_nats": 0.8499364341245506,
+        "uniform_top1": 0.1111111111111111
+      },
+      "12": {
+        "molecules": 1,
+        "top1": 0.3333333333333333,
+        "top2": 1.0,
+        "reciprocal_rank": 0.6666666666666666,
+        "nll": 0.9200100626812464,
+        "information_gain_nats": 1.5648965871067542,
+        "uniform_top1": 0.08333333333333333
+      }
+    },
+    "atom_jepa:budgetfull": {
+      "2": {
+        "molecules": 55,
+        "top1": 0.8181818181818182,
+        "top2": 1.0,
+        "reciprocal_rank": 0.9090909090909091,
+        "nll": 0.3630522623465828,
+        "information_gain_nats": 0.3300949182133625,
+        "uniform_top1": 0.5
+      },
+      "3": {
+        "molecules": 67,
+        "top1": 0.6567164179104478,
+        "top2": 0.8805970149253731,
+        "reciprocal_rank": 0.808457711442786,
+        "nll": 0.7319865579413296,
+        "information_gain_nats": 0.3666257307267804,
+        "uniform_top1": 0.33333333333333326
+      },
+      "4": {
+        "molecules": 62,
+        "top1": 0.7903225806451613,
+        "top2": 0.9193548387096774,
+        "reciprocal_rank": 0.8817204301075269,
+        "nll": 0.5985950305094464,
+        "information_gain_nats": 0.7876993306104442,
+        "uniform_top1": 0.25
+      },
+      "5": {
+        "molecules": 39,
+        "top1": 0.8205128205128205,
+        "top2": 0.9743589743589743,
+        "reciprocal_rank": 0.9059829059829059,
+        "nll": 0.5530094185646126,
+        "information_gain_nats": 1.056428493869488,
+        "uniform_top1": 0.20000000000000004
+      },
+      "6": {
+        "molecules": 39,
+        "top1": 0.6923076923076923,
+        "top2": 0.8717948717948718,
+        "reciprocal_rank": 0.8183760683760684,
+        "nll": 0.8102292849844945,
+        "information_gain_nats": 0.9815301842435602,
+        "uniform_top1": 0.1666666666666667
+      },
+      "7": {
+        "molecules": 28,
+        "top1": 0.7857142857142857,
+        "top2": 0.9642857142857143,
+        "reciprocal_rank": 0.8821428571428571,
+        "nll": 0.5853098394998372,
+        "information_gain_nats": 1.360600309555476,
+        "uniform_top1": 0.14285714285714285
+      },
+      "8": {
+        "molecules": 4,
+        "top1": 0.75,
+        "top2": 1.0,
+        "reciprocal_rank": 0.875,
+        "nll": 0.9261168687386998,
+        "information_gain_nats": 1.153324672941136,
+        "uniform_top1": 0.125
+      },
+      "9": {
+        "molecules": 4,
+        "top1": 0.75,
+        "top2": 0.75,
+        "reciprocal_rank": 0.8333333333333333,
+        "nll": 1.0808340216127414,
+        "information_gain_nats": 1.1163905557234783,
+        "uniform_top1": 0.1111111111111111
+      },
+      "12": {
+        "molecules": 1,
+        "top1": 1.0,
+        "top2": 1.0,
+        "reciprocal_rank": 1.0,
+        "nll": 0.6788796706030596,
+        "information_gain_nats": 1.8060269791849408,
+        "uniform_top1": 0.08333333333333333
+      }
+    },
+    "random_backbone:budget50": {
+      "2": {
+        "molecules": 55,
+        "top1": 0.8000000000000002,
+        "top2": 1.0,
+        "reciprocal_rank": 0.8999999999999999,
+        "nll": 0.4933898281851505,
+        "information_gain_nats": 0.19975735237479486,
+        "uniform_top1": 0.5
+      },
+      "3": {
+        "molecules": 67,
+        "top1": 0.47263681592039797,
+        "top2": 0.8009950248756219,
+        "reciprocal_rank": 0.7031509121061359,
+        "nll": 1.193341097545113,
+        "information_gain_nats": -0.09472880887700351,
+        "uniform_top1": 0.33333333333333326
+      },
+      "4": {
+        "molecules": 62,
+        "top1": 0.6989247311827956,
+        "top2": 0.8924731182795698,
+        "reciprocal_rank": 0.8301971326164875,
+        "nll": 0.8654559071115199,
+        "information_gain_nats": 0.5208384540083706,
+        "uniform_top1": 0.25
+      },
+      "5": {
+        "molecules": 39,
+        "top1": 0.6153846153846154,
+        "top2": 0.8034188034188033,
+        "reciprocal_rank": 0.7625356125356125,
+        "nll": 1.1729619511983365,
+        "information_gain_nats": 0.4364759612357641,
+        "uniform_top1": 0.20000000000000007
+      },
+      "6": {
+        "molecules": 39,
+        "top1": 0.5555555555555556,
+        "top2": 0.7435897435897436,
+        "reciprocal_rank": 0.7175213675213675,
+        "nll": 1.3220553232351884,
+        "information_gain_nats": 0.46970414599286653,
+        "uniform_top1": 0.1666666666666667
+      },
+      "7": {
+        "molecules": 28,
+        "top1": 0.47619047619047616,
+        "top2": 0.7380952380952381,
+        "reciprocal_rank": 0.6812641723356009,
+        "nll": 1.2800345538827307,
+        "information_gain_nats": 0.6658755951725827,
+        "uniform_top1": 0.14285714285714285
+      },
+      "8": {
+        "molecules": 4,
+        "top1": 0.5,
+        "top2": 0.8333333333333334,
+        "reciprocal_rank": 0.7,
+        "nll": 1.4865314835448453,
+        "information_gain_nats": 0.5929100581349903,
+        "uniform_top1": 0.125
+      },
+      "9": {
+        "molecules": 4,
+        "top1": 0.6666666666666666,
+        "top2": 0.75,
+        "reciprocal_rank": 0.7549603174603174,
+        "nll": 1.7087407940651462,
+        "information_gain_nats": 0.4884837832710733,
+        "uniform_top1": 0.1111111111111111
+      },
+      "12": {
+        "molecules": 1,
+        "top1": 1.0,
+        "top2": 1.0,
+        "reciprocal_rank": 1.0,
+        "nll": 0.9565138036327903,
+        "information_gain_nats": 1.52839284615521,
+        "uniform_top1": 0.08333333333333333
+      }
+    },
+    "random_backbone:budget100": {
+      "2": {
+        "molecules": 55,
+        "top1": 0.8303030303030302,
+        "top2": 1.0,
+        "reciprocal_rank": 0.9151515151515152,
+        "nll": 0.3958302715160833,
+        "information_gain_nats": 0.29731690904386204,
+        "uniform_top1": 0.5
+      },
+      "3": {
+        "molecules": 67,
+        "top1": 0.5074626865671642,
+        "top2": 0.8557213930348259,
+        "reciprocal_rank": 0.7296849087893864,
+        "nll": 1.1654581113051157,
+        "information_gain_nats": -0.0668458226370056,
+        "uniform_top1": 0.33333333333333326
+      },
+      "4": {
+        "molecules": 62,
+        "top1": 0.7311827956989246,
+        "top2": 0.913978494623656,
+        "reciprocal_rank": 0.8503584229390682,
+        "nll": 0.6941833878107124,
+        "information_gain_nats": 0.6921109733091787,
+        "uniform_top1": 0.25
+      },
+      "5": {
+        "molecules": 39,
+        "top1": 0.6410256410256411,
+        "top2": 0.8974358974358975,
+        "reciprocal_rank": 0.7967236467236466,
+        "nll": 0.922601768477916,
+        "information_gain_nats": 0.6868361439561842,
+        "uniform_top1": 0.20000000000000007
+      },
+      "6": {
+        "molecules": 39,
+        "top1": 0.6581196581196581,
+        "top2": 0.8803418803418804,
+        "reciprocal_rank": 0.8011396011396013,
+        "nll": 1.0266822660295685,
+        "information_gain_nats": 0.7650772031984868,
+        "uniform_top1": 0.1666666666666667
+      },
+      "7": {
+        "molecules": 28,
+        "top1": 0.6904761904761905,
+        "top2": 0.869047619047619,
+        "reciprocal_rank": 0.8158730158730159,
+        "nll": 0.9841623730757891,
+        "information_gain_nats": 0.9617477759795243,
+        "uniform_top1": 0.14285714285714285
+      },
+      "8": {
+        "molecules": 4,
+        "top1": 0.5833333333333333,
+        "top2": 0.8333333333333334,
+        "reciprocal_rank": 0.7388888888888889,
+        "nll": 1.1328804322875732,
+        "information_gain_nats": 0.9465611093922628,
+        "uniform_top1": 0.125
+      },
+      "9": {
+        "molecules": 4,
+        "top1": 0.75,
+        "top2": 0.75,
+        "reciprocal_rank": 0.810515873015873,
+        "nll": 1.0590391680154858,
+        "information_gain_nats": 1.1381854093207338,
+        "uniform_top1": 0.1111111111111111
+      },
+      "12": {
+        "molecules": 1,
+        "top1": 1.0,
+        "top2": 1.0,
+        "reciprocal_rank": 1.0,
+        "nll": 0.4015939317923718,
+        "information_gain_nats": 2.0833127179956286,
+        "uniform_top1": 0.08333333333333333
+      }
+    },
+    "random_backbone:budgetfull": {
+      "2": {
+        "molecules": 55,
+        "top1": 0.8909090909090909,
+        "top2": 1.0,
+        "reciprocal_rank": 0.9454545454545454,
+        "nll": 0.27430600491783286,
+        "information_gain_nats": 0.4188411756421124,
+        "uniform_top1": 0.5
+      },
+      "3": {
+        "molecules": 67,
+        "top1": 0.5970149253731343,
+        "top2": 0.9402985074626866,
+        "reciprocal_rank": 0.7885572139303482,
+        "nll": 0.8656428756446305,
+        "information_gain_nats": 0.23296941302347937,
+        "uniform_top1": 0.33333333333333326
+      },
+      "4": {
+        "molecules": 62,
+        "top1": 0.7741935483870968,
+        "top2": 0.9193548387096774,
+        "reciprocal_rank": 0.8736559139784946,
+        "nll": 0.625221093683409,
+        "information_gain_nats": 0.761073267436482,
+        "uniform_top1": 0.25
+      },
+      "5": {
+        "molecules": 39,
+        "top1": 0.7435897435897436,
+        "top2": 0.9487179487179487,
+        "reciprocal_rank": 0.8611111111111112,
+        "nll": 0.7120738823842375,
+        "information_gain_nats": 0.897364030049863,
+        "uniform_top1": 0.20000000000000004
+      },
+      "6": {
+        "molecules": 39,
+        "top1": 0.6923076923076923,
+        "top2": 0.9230769230769231,
+        "reciprocal_rank": 0.8290598290598289,
+        "nll": 0.798309719359653,
+        "information_gain_nats": 0.9934497498684022,
+        "uniform_top1": 0.1666666666666667
+      },
+      "7": {
+        "molecules": 28,
+        "top1": 0.8214285714285714,
+        "top2": 0.9642857142857143,
+        "reciprocal_rank": 0.9047619047619048,
+        "nll": 0.7213781619372975,
+        "information_gain_nats": 1.2245319871180158,
+        "uniform_top1": 0.14285714285714285
+      },
+      "8": {
+        "molecules": 4,
+        "top1": 0.75,
+        "top2": 1.0,
+        "reciprocal_rank": 0.875,
+        "nll": 0.9780897010134906,
+        "information_gain_nats": 1.1013518406663452,
+        "uniform_top1": 0.125
+      },
+      "9": {
+        "molecules": 4,
+        "top1": 0.75,
+        "top2": 0.75,
+        "reciprocal_rank": 0.8,
+        "nll": 0.9107743650851708,
+        "information_gain_nats": 1.2864502122510486,
+        "uniform_top1": 0.1111111111111111
+      },
+      "12": {
+        "molecules": 1,
+        "top1": 1.0,
+        "top2": 1.0,
+        "reciprocal_rank": 1.0,
+        "nll": 0.34732354077722877,
+        "information_gain_nats": 2.1375831090107718,
+        "uniform_top1": 0.08333333333333333
+      }
+    },
+    "morgan:budget50": {
+      "2": {
+        "molecules": 55,
+        "top1": 0.6999999999999998,
+        "top2": 1.0,
+        "reciprocal_rank": 0.8500000000000001,
+        "nll": 0.5820017998312244,
+        "information_gain_nats": 0.11114538072872095,
+        "uniform_top1": 0.5
+      },
+      "3": {
+        "molecules": 67,
+        "top1": 0.35572139303482586,
+        "top2": 0.7313432835820894,
+        "reciprocal_rank": 0.6330845771144278,
+        "nll": 1.1248399285687225,
+        "information_gain_nats": -0.026227639900612817,
+        "uniform_top1": 0.33333333333333326
+      },
+      "4": {
+        "molecules": 62,
+        "top1": 0.40949820788530467,
+        "top2": 0.6406810035842294,
+        "reciprocal_rank": 0.6274641577060933,
+        "nll": 1.339324237026421,
+        "information_gain_nats": 0.046970124093469734,
+        "uniform_top1": 0.25
+      },
+      "5": {
+        "molecules": 39,
+        "top1": 0.4280626780626781,
+        "top2": 0.6267806267806267,
+        "reciprocal_rank": 0.6307336182336183,
+        "nll": 1.419399821175102,
+        "information_gain_nats": 0.19003809125899843,
+        "uniform_top1": 0.20000000000000007
+      },
+      "6": {
+        "molecules": 39,
+        "top1": 0.4074074074074074,
+        "top2": 0.5669515669515669,
+        "reciprocal_rank": 0.5941120607787276,
+        "nll": 1.6117614650605354,
+        "information_gain_nats": 0.17999800416751946,
+        "uniform_top1": 0.1666666666666667
+      },
+      "7": {
+        "molecules": 28,
+        "top1": 0.3273809523809524,
+        "top2": 0.5535714285714285,
+        "reciprocal_rank": 0.5552721088435374,
+        "nll": 1.662761500325555,
+        "information_gain_nats": 0.2831486487297581,
+        "uniform_top1": 0.14285714285714285
+      },
+      "8": {
+        "molecules": 4,
+        "top1": 0.16666666666666666,
+        "top2": 0.16666666666666666,
+        "reciprocal_rank": 0.3722222222222222,
+        "nll": 2.0248795703290035,
+        "information_gain_nats": 0.05456197135083227,
+        "uniform_top1": 0.125
+      },
+      "9": {
+        "molecules": 4,
+        "top1": 0.15277777777777776,
+        "top2": 0.3333333333333333,
+        "reciprocal_rank": 0.3954034391534391,
+        "nll": 2.0171100873709014,
+        "information_gain_nats": 0.180114489965318,
+        "uniform_top1": 0.1111111111111111
+      },
+      "12": {
+        "molecules": 1,
+        "top1": 1.0,
+        "top2": 1.0,
+        "reciprocal_rank": 1.0,
+        "nll": 1.6341610380887321,
+        "information_gain_nats": 0.850745611699268,
+        "uniform_top1": 0.08333333333333333
+      }
+    },
+    "morgan:budget100": {
+      "2": {
+        "molecules": 55,
+        "top1": 0.7393939393939393,
+        "top2": 1.0,
+        "reciprocal_rank": 0.8696969696969699,
+        "nll": 0.5449429248681962,
+        "information_gain_nats": 0.1482042556917492,
+        "uniform_top1": 0.5
+      },
+      "3": {
+        "molecules": 67,
+        "top1": 0.41791044776119396,
+        "top2": 0.808457711442786,
+        "reciprocal_rank": 0.6770315091210614,
+        "nll": 1.108980923745587,
+        "information_gain_nats": -0.010368635077477187,
+        "uniform_top1": 0.33333333333333326
+      },
+      "4": {
+        "molecules": 62,
+        "top1": 0.49193548387096775,
+        "top2": 0.7365591397849462,
+        "reciprocal_rank": 0.6917562724014338,
+        "nll": 1.2063914398867501,
+        "information_gain_nats": 0.17990292123314056,
+        "uniform_top1": 0.25
+      },
+      "5": {
+        "molecules": 39,
+        "top1": 0.48860398860398857,
+        "top2": 0.7806267806267807,
+        "reciprocal_rank": 0.6997625830959164,
+        "nll": 1.2693688931876368,
+        "information_gain_nats": 0.3400690192464632,
+        "uniform_top1": 0.20000000000000007
+      },
+      "6": {
+        "molecules": 39,
+        "top1": 0.4772079772079772,
+        "top2": 0.6638176638176637,
+        "reciprocal_rank": 0.6550094966761636,
+        "nll": 1.4259954269743953,
+        "information_gain_nats": 0.36576404225365955,
+        "uniform_top1": 0.1666666666666667
+      },
+      "7": {
+        "molecules": 28,
+        "top1": 0.5000000000000001,
+        "top2": 0.7261904761904762,
+        "reciprocal_rank": 0.6883219954648526,
+        "nll": 1.2920236681222774,
+        "information_gain_nats": 0.6538864809330359,
+        "uniform_top1": 0.14285714285714285
+      },
+      "8": {
+        "molecules": 4,
+        "top1": 0.3333333333333333,
+        "top2": 0.41666666666666663,
+        "reciprocal_rank": 0.5101190476190476,
+        "nll": 1.8292276298698906,
+        "information_gain_nats": 0.25021391180994507,
+        "uniform_top1": 0.125
+      },
+      "9": {
+        "molecules": 4,
+        "top1": 0.16666666666666666,
+        "top2": 0.4861111111111111,
+        "reciprocal_rank": 0.45310846560846557,
+        "nll": 1.8204209740763015,
+        "information_gain_nats": 0.37680360325991774,
+        "uniform_top1": 0.1111111111111111
+      },
+      "12": {
+        "molecules": 1,
+        "top1": 0.6666666666666666,
+        "top2": 1.0,
+        "reciprocal_rank": 0.8333333333333334,
+        "nll": 1.6800223699146164,
+        "information_gain_nats": 0.804884279873384,
+        "uniform_top1": 0.08333333333333333
+      }
+    },
+    "morgan:budgetfull": {
+      "2": {
+        "molecules": 55,
+        "top1": 0.6909090909090909,
+        "top2": 1.0,
+        "reciprocal_rank": 0.8454545454545455,
+        "nll": 0.5424598630067125,
+        "information_gain_nats": 0.150687317553233,
+        "uniform_top1": 0.5
+      },
+      "3": {
+        "molecules": 67,
+        "top1": 0.5223880597014925,
+        "top2": 0.9029850746268657,
+        "reciprocal_rank": 0.7450248756218906,
+        "nll": 1.0154051266317388,
+        "information_gain_nats": 0.08320716203637117,
+        "uniform_top1": 0.33333333333333326
+      },
+      "4": {
+        "molecules": 62,
+        "top1": 0.6532258064516129,
+        "top2": 0.8709677419354839,
+        "reciprocal_rank": 0.7983870967741935,
+        "nll": 1.0388411829213113,
+        "information_gain_nats": 0.34745317819857924,
+        "uniform_top1": 0.25
+      },
+      "5": {
+        "molecules": 39,
+        "top1": 0.6025641025641025,
+        "top2": 0.9230769230769231,
+        "reciprocal_rank": 0.7807692307692308,
+        "nll": 1.048824208158992,
+        "information_gain_nats": 0.5606137042751084,
+        "uniform_top1": 0.20000000000000004
+      },
+      "6": {
+        "molecules": 39,
+        "top1": 0.5897435897435898,
+        "top2": 0.7948717948717948,
+        "reciprocal_rank": 0.7452991452991453,
+        "nll": 1.2105449142813687,
+        "information_gain_nats": 0.5812145549466862,
+        "uniform_top1": 0.1666666666666667
+      },
+      "7": {
+        "molecules": 28,
+        "top1": 0.8571428571428571,
+        "top2": 0.9285714285714286,
+        "reciprocal_rank": 0.9119047619047619,
+        "nll": 0.9018540359419219,
+        "information_gain_nats": 1.0440561131133914,
+        "uniform_top1": 0.14285714285714285
+      },
+      "8": {
+        "molecules": 4,
+        "top1": 1.0,
+        "top2": 1.0,
+        "reciprocal_rank": 1.0,
+        "nll": 1.0133262155206082,
+        "information_gain_nats": 1.0661153261592275,
+        "uniform_top1": 0.125
+      },
+      "9": {
+        "molecules": 4,
+        "top1": 0.25,
+        "top2": 0.75,
+        "reciprocal_rank": 0.5625,
+        "nll": 1.6032594153111606,
+        "information_gain_nats": 0.593965162025059,
+        "uniform_top1": 0.1111111111111111
+      },
+      "12": {
+        "molecules": 1,
+        "top1": 1.0,
+        "top2": 1.0,
+        "reciprocal_rank": 1.0,
+        "nll": 1.633854150920819,
+        "information_gain_nats": 0.8510524988671813,
+        "uniform_top1": 0.08333333333333333
+      }
+    },
+    "electronic:budget50": {
+      "2": {
+        "molecules": 55,
+        "top1": 0.9393939393939393,
+        "top2": 1.0,
+        "reciprocal_rank": 0.9696969696969696,
+        "nll": 0.23256595716846568,
+        "information_gain_nats": 0.46058122339147967,
+        "uniform_top1": 0.5
+      },
+      "3": {
+        "molecules": 67,
+        "top1": 0.8557213930348258,
+        "top2": 0.9552238805970149,
+        "reciprocal_rank": 0.9203980099502487,
+        "nll": 0.41909050406493165,
+        "information_gain_nats": 0.6795217846031781,
+        "uniform_top1": 0.33333333333333326
+      },
+      "4": {
+        "molecules": 62,
+        "top1": 0.7903225806451613,
+        "top2": 0.9247311827956989,
+        "reciprocal_rank": 0.8808243727598566,
+        "nll": 0.6364901733148373,
+        "information_gain_nats": 0.7498041878050535,
+        "uniform_top1": 0.25
+      },
+      "5": {
+        "molecules": 39,
+        "top1": 0.7948717948717948,
+        "top2": 0.8803418803418802,
+        "reciprocal_rank": 0.8685185185185185,
+        "nll": 0.9557323793781864,
+        "information_gain_nats": 0.6537055330559144,
+        "uniform_top1": 0.20000000000000007
+      },
+      "6": {
+        "molecules": 39,
+        "top1": 0.7264957264957265,
+        "top2": 0.8803418803418802,
+        "reciprocal_rank": 0.8363247863247866,
+        "nll": 0.6829490627528862,
+        "information_gain_nats": 1.108810406475169,
+        "uniform_top1": 0.1666666666666667
+      },
+      "7": {
+        "molecules": 28,
+        "top1": 0.8095238095238095,
+        "top2": 0.9285714285714286,
+        "reciprocal_rank": 0.8886904761904763,
+        "nll": 0.5801747083776301,
+        "information_gain_nats": 1.3657354406776832,
+        "uniform_top1": 0.14285714285714285
+      },
+      "8": {
+        "molecules": 4,
+        "top1": 0.9166666666666666,
+        "top2": 1.0,
+        "reciprocal_rank": 0.9583333333333334,
+        "nll": 0.3515709149409951,
+        "information_gain_nats": 1.7278706267388406,
+        "uniform_top1": 0.125
+      },
+      "9": {
+        "molecules": 4,
+        "top1": 0.8333333333333333,
+        "top2": 0.9166666666666666,
+        "reciprocal_rank": 0.9027777777777778,
+        "nll": 0.6436786177317297,
+        "information_gain_nats": 1.55354595960449,
+        "uniform_top1": 0.1111111111111111
+      },
+      "12": {
+        "molecules": 1,
+        "top1": 0.0,
+        "top2": 0.3333333333333333,
+        "reciprocal_rank": 0.38888888888888884,
+        "nll": 2.4015976451869876,
+        "information_gain_nats": 0.0833090046010126,
+        "uniform_top1": 0.08333333333333333
+      }
+    },
+    "electronic:budget100": {
+      "2": {
+        "molecules": 55,
+        "top1": 0.9454545454545454,
+        "top2": 1.0,
+        "reciprocal_rank": 0.9727272727272728,
+        "nll": 0.21357575824637817,
+        "information_gain_nats": 0.4795714223135671,
+        "uniform_top1": 0.5
+      },
+      "3": {
+        "molecules": 67,
+        "top1": 0.8457711442786069,
+        "top2": 0.9701492537313433,
+        "reciprocal_rank": 0.917910447761194,
+        "nll": 0.4164562996425949,
+        "information_gain_nats": 0.6821559890255149,
+        "uniform_top1": 0.33333333333333326
+      },
+      "4": {
+        "molecules": 62,
+        "top1": 0.8602150537634409,
+        "top2": 0.9623655913978495,
+        "reciprocal_rank": 0.9220430107526881,
+        "nll": 0.5204709025668943,
+        "information_gain_nats": 0.8658234585529964,
+        "uniform_top1": 0.25
+      },
+      "5": {
+        "molecules": 39,
+        "top1": 0.8119658119658119,
+        "top2": 0.9059829059829059,
+        "reciprocal_rank": 0.8827635327635327,
+        "nll": 0.8975711697882082,
+        "information_gain_nats": 0.7118667426458919,
+        "uniform_top1": 0.20000000000000007
+      },
+      "6": {
+        "molecules": 39,
+        "top1": 0.7350427350427351,
+        "top2": 0.9059829059829061,
+        "reciprocal_rank": 0.8452991452991453,
+        "nll": 0.7233044030459236,
+        "information_gain_nats": 1.0684550661821315,
+        "uniform_top1": 0.1666666666666667
+      },
+      "7": {
+        "molecules": 28,
+        "top1": 0.8928571428571429,
+        "top2": 0.9642857142857143,
+        "reciprocal_rank": 0.9404761904761905,
+        "nll": 0.4659293793130117,
+        "information_gain_nats": 1.4799807697423015,
+        "uniform_top1": 0.14285714285714285
+      },
+      "8": {
+        "molecules": 4,
+        "top1": 1.0,
+        "top2": 1.0,
+        "reciprocal_rank": 1.0,
+        "nll": 0.2562868116836511,
+        "information_gain_nats": 1.8231547299961846,
+        "uniform_top1": 0.125
+      },
+      "9": {
+        "molecules": 4,
+        "top1": 0.9166666666666666,
+        "top2": 1.0,
+        "reciprocal_rank": 0.9583333333333334,
+        "nll": 0.4721195843111364,
+        "information_gain_nats": 1.725104993025083,
+        "uniform_top1": 0.1111111111111111
+      },
+      "12": {
+        "molecules": 1,
+        "top1": 0.0,
+        "top2": 0.3333333333333333,
+        "reciprocal_rank": 0.38888888888888884,
+        "nll": 2.161072868664366,
+        "information_gain_nats": 0.32383378112363453,
+        "uniform_top1": 0.08333333333333333
+      }
+    },
+    "electronic:budgetfull": {
+      "2": {
+        "molecules": 55,
+        "top1": 0.9454545454545454,
+        "top2": 1.0,
+        "reciprocal_rank": 0.9727272727272728,
+        "nll": 0.22432113381304808,
+        "information_gain_nats": 0.4688260467468972,
+        "uniform_top1": 0.5
+      },
+      "3": {
+        "molecules": 67,
+        "top1": 0.835820895522388,
+        "top2": 0.9701492537313433,
+        "reciprocal_rank": 0.9129353233830846,
+        "nll": 0.411382761862792,
+        "information_gain_nats": 0.6872295268053178,
+        "uniform_top1": 0.33333333333333326
+      },
+      "4": {
+        "molecules": 62,
+        "top1": 0.8709677419354839,
+        "top2": 0.9838709677419355,
+        "reciprocal_rank": 0.9314516129032258,
+        "nll": 0.4308088135539404,
+        "information_gain_nats": 0.9554855475659503,
+        "uniform_top1": 0.25
+      },
+      "5": {
+        "molecules": 39,
+        "top1": 0.8205128205128205,
+        "top2": 0.8974358974358975,
+        "reciprocal_rank": 0.8863247863247862,
+        "nll": 0.7444407763704266,
+        "information_gain_nats": 0.8649971360636736,
+        "uniform_top1": 0.20000000000000004
+      },
+      "6": {
+        "molecules": 39,
+        "top1": 0.7435897435897436,
+        "top2": 0.9487179487179487,
+        "reciprocal_rank": 0.856837606837607,
+        "nll": 0.7032319791950855,
+        "information_gain_nats": 1.0885274900329693,
+        "uniform_top1": 0.1666666666666667
+      },
+      "7": {
+        "molecules": 28,
+        "top1": 0.9285714285714286,
+        "top2": 1.0,
+        "reciprocal_rank": 0.9642857142857143,
+        "nll": 0.3202106041347802,
+        "information_gain_nats": 1.6256995449205327,
+        "uniform_top1": 0.14285714285714285
+      },
+      "8": {
+        "molecules": 4,
+        "top1": 1.0,
+        "top2": 1.0,
+        "reciprocal_rank": 1.0,
+        "nll": 0.14317579824055304,
+        "information_gain_nats": 1.9362657434392827,
+        "uniform_top1": 0.125
+      },
+      "9": {
+        "molecules": 4,
+        "top1": 0.75,
+        "top2": 1.0,
+        "reciprocal_rank": 0.875,
+        "nll": 0.37440075026201874,
+        "information_gain_nats": 1.8228238270742008,
+        "uniform_top1": 0.1111111111111111
+      },
+      "12": {
+        "molecules": 1,
+        "top1": 0.0,
+        "top2": 1.0,
+        "reciprocal_rank": 0.5,
+        "nll": 1.9815682305657838,
+        "information_gain_nats": 0.5033384192222166,
+        "uniform_top1": 0.08333333333333333
+      }
+    },
+    "jepa_plus_qm:budget50": {
+      "2": {
+        "molecules": 55,
+        "top1": 0.9272727272727272,
+        "top2": 1.0,
+        "reciprocal_rank": 0.9636363636363636,
+        "nll": 0.23006782985839297,
+        "information_gain_nats": 0.4630793507015523,
+        "uniform_top1": 0.5
+      },
+      "3": {
+        "molecules": 67,
+        "top1": 0.8308457711442786,
+        "top2": 0.9601990049751243,
+        "reciprocal_rank": 0.9087893864013268,
+        "nll": 0.4259525210177549,
+        "information_gain_nats": 0.672659767650355,
+        "uniform_top1": 0.33333333333333326
+      },
+      "4": {
+        "molecules": 62,
+        "top1": 0.7688172043010753,
+        "top2": 0.9462365591397849,
+        "reciprocal_rank": 0.8741039426523297,
+        "nll": 0.6570335350413546,
+        "information_gain_nats": 0.729260826078536,
+        "uniform_top1": 0.25
+      },
+      "5": {
+        "molecules": 39,
+        "top1": 0.7606837606837608,
+        "top2": 0.8717948717948718,
+        "reciprocal_rank": 0.8511396011396011,
+        "nll": 0.9601888493643839,
+        "information_gain_nats": 0.6492490630697164,
+        "uniform_top1": 0.20000000000000007
+      },
+      "6": {
+        "molecules": 39,
+        "top1": 0.7948717948717949,
+        "top2": 0.9316239316239315,
+        "reciprocal_rank": 0.8853276353276354,
+        "nll": 0.5883151337388666,
+        "information_gain_nats": 1.2034443354891882,
+        "uniform_top1": 0.1666666666666667
+      },
+      "7": {
+        "molecules": 28,
+        "top1": 0.8928571428571429,
+        "top2": 0.988095238095238,
+        "reciprocal_rank": 0.9428571428571428,
+        "nll": 0.4988684487566936,
+        "information_gain_nats": 1.4470417002986196,
+        "uniform_top1": 0.14285714285714285
+      },
+      "8": {
+        "molecules": 4,
+        "top1": 0.9166666666666666,
+        "top2": 1.0,
+        "reciprocal_rank": 0.9583333333333334,
+        "nll": 0.34176340211637596,
+        "information_gain_nats": 1.73767813956346,
+        "uniform_top1": 0.125
+      },
+      "9": {
+        "molecules": 4,
+        "top1": 0.9166666666666666,
+        "top2": 1.0,
+        "reciprocal_rank": 0.9583333333333334,
+        "nll": 0.5375520510231243,
+        "information_gain_nats": 1.6596725263130951,
+        "uniform_top1": 0.1111111111111111
+      },
+      "12": {
+        "molecules": 1,
+        "top1": 0.6666666666666666,
+        "top2": 0.6666666666666666,
+        "reciprocal_rank": 0.7777777777777777,
+        "nll": 1.800435810140211,
+        "information_gain_nats": 0.6844708396477895,
+        "uniform_top1": 0.08333333333333333
+      }
+    },
+    "jepa_plus_qm:budget100": {
+      "2": {
+        "molecules": 55,
+        "top1": 0.9272727272727272,
+        "top2": 1.0,
+        "reciprocal_rank": 0.9636363636363636,
+        "nll": 0.2167823616945831,
+        "information_gain_nats": 0.47636481886536225,
+        "uniform_top1": 0.5
+      },
+      "3": {
+        "molecules": 67,
+        "top1": 0.8457711442786069,
+        "top2": 0.9800995024875623,
+        "reciprocal_rank": 0.9195688225538973,
+        "nll": 0.42470444364480986,
+        "information_gain_nats": 0.6739078450233,
+        "uniform_top1": 0.33333333333333326
+      },
+      "4": {
+        "molecules": 62,
+        "top1": 0.8387096774193548,
+        "top2": 0.967741935483871,
+        "reciprocal_rank": 0.9130824372759858,
+        "nll": 0.45615352431364126,
+        "information_gain_nats": 0.9301408368062493,
+        "uniform_top1": 0.25
+      },
+      "5": {
+        "molecules": 39,
+        "top1": 0.7863247863247863,
+        "top2": 0.8974358974358975,
+        "reciprocal_rank": 0.8735042735042734,
+        "nll": 0.667695756181083,
+        "information_gain_nats": 0.9417421562530172,
+        "uniform_top1": 0.20000000000000007
+      },
+      "6": {
+        "molecules": 39,
+        "top1": 0.8119658119658119,
+        "top2": 0.9658119658119657,
+        "reciprocal_rank": 0.8977207977207976,
+        "nll": 0.5498016858252731,
+        "information_gain_nats": 1.2419577834027817,
+        "uniform_top1": 0.1666666666666667
+      },
+      "7": {
+        "molecules": 28,
+        "top1": 0.9523809523809523,
+        "top2": 0.9761904761904762,
+        "reciprocal_rank": 0.9706349206349206,
+        "nll": 0.24419354664589452,
+        "information_gain_nats": 1.7017166024094188,
+        "uniform_top1": 0.14285714285714285
+      },
+      "8": {
+        "molecules": 4,
+        "top1": 1.0,
+        "top2": 1.0,
+        "reciprocal_rank": 1.0,
+        "nll": 0.20248178208630585,
+        "information_gain_nats": 1.87695975959353,
+        "uniform_top1": 0.125
+      },
+      "9": {
+        "molecules": 4,
+        "top1": 0.9166666666666666,
+        "top2": 1.0,
+        "reciprocal_rank": 0.9583333333333334,
+        "nll": 0.45854416744697374,
+        "information_gain_nats": 1.7386804098892457,
+        "uniform_top1": 0.1111111111111111
+      },
+      "12": {
+        "molecules": 1,
+        "top1": 0.6666666666666666,
+        "top2": 1.0,
+        "reciprocal_rank": 0.8333333333333334,
+        "nll": 0.8728306713418759,
+        "information_gain_nats": 1.6120759784461243,
+        "uniform_top1": 0.08333333333333333
+      }
+    },
+    "jepa_plus_qm:budgetfull": {
+      "2": {
+        "molecules": 55,
+        "top1": 0.9454545454545454,
+        "top2": 1.0,
+        "reciprocal_rank": 0.9727272727272728,
+        "nll": 0.21165231409272853,
+        "information_gain_nats": 0.4814948664672167,
+        "uniform_top1": 0.5
+      },
+      "3": {
+        "molecules": 67,
+        "top1": 0.8208955223880597,
+        "top2": 0.9850746268656716,
+        "reciprocal_rank": 0.907960199004975,
+        "nll": 0.40587606396024434,
+        "information_gain_nats": 0.6927362247078652,
+        "uniform_top1": 0.33333333333333326
+      },
+      "4": {
+        "molecules": 62,
+        "top1": 0.8709677419354839,
+        "top2": 0.9838709677419355,
+        "reciprocal_rank": 0.9314516129032258,
+        "nll": 0.4217533794207081,
+        "information_gain_nats": 0.9645409816991825,
+        "uniform_top1": 0.25
+      },
+      "5": {
+        "molecules": 39,
+        "top1": 0.7948717948717948,
+        "top2": 0.8717948717948718,
+        "reciprocal_rank": 0.8705128205128206,
+        "nll": 0.6812116709814747,
+        "information_gain_nats": 0.9282262414526256,
+        "uniform_top1": 0.20000000000000004
+      },
+      "6": {
+        "molecules": 39,
+        "top1": 0.8205128205128205,
+        "top2": 0.9230769230769231,
+        "reciprocal_rank": 0.8952991452991452,
+        "nll": 0.5253306910471669,
+        "information_gain_nats": 1.2664287781808878,
+        "uniform_top1": 0.1666666666666667
+      },
+      "7": {
+        "molecules": 28,
+        "top1": 0.9642857142857143,
+        "top2": 1.0,
+        "reciprocal_rank": 0.9821428571428571,
+        "nll": 0.19206904973486097,
+        "information_gain_nats": 1.753841099320452,
+        "uniform_top1": 0.14285714285714285
+      },
+      "8": {
+        "molecules": 4,
+        "top1": 1.0,
+        "top2": 1.0,
+        "reciprocal_rank": 1.0,
+        "nll": 0.1541552213411405,
+        "information_gain_nats": 1.925286320338695,
+        "uniform_top1": 0.125
+      },
+      "9": {
+        "molecules": 4,
+        "top1": 1.0,
+        "top2": 1.0,
+        "reciprocal_rank": 1.0,
+        "nll": 0.31108670213367123,
+        "information_gain_nats": 1.8861378752025484,
+        "uniform_top1": 0.1111111111111111
+      },
+      "12": {
+        "molecules": 1,
+        "top1": 1.0,
+        "top2": 1.0,
+        "reciprocal_rank": 1.0,
+        "nll": 0.8359623431993104,
+        "information_gain_nats": 1.64894430658869,
+        "uniform_top1": 0.08333333333333333
+      }
+    }
+  },
+  "candidate_count_bins": {
+    "atom_jepa:budget50": {
+      "2": {
+        "molecules": 55,
+        "top1": 0.7939393939393937,
+        "top2": 1.0,
+        "reciprocal_rank": 0.8969696969696972,
+        "nll": 0.46346105796842124,
+        "information_gain_nats": 0.22968612259152402,
+        "uniform_top1": 0.5
+      },
+      "3": {
+        "molecules": 67,
+        "top1": 0.5572139303482586,
+        "top2": 0.835820895522388,
+        "reciprocal_rank": 0.7512437810945274,
+        "nll": 0.9857916312500756,
+        "information_gain_nats": 0.11282065741803442,
+        "uniform_top1": 0.33333333333333326
+      },
+      "4": {
+        "molecules": 62,
+        "top1": 0.6612903225806451,
+        "top2": 0.8494623655913978,
+        "reciprocal_rank": 0.8028673835125449,
+        "nll": 0.8762489948635918,
+        "information_gain_nats": 0.5100453662562987,
+        "uniform_top1": 0.25
+      },
+      "5": {
+        "molecules": 39,
+        "top1": 0.6324786324786326,
+        "top2": 0.8290598290598289,
+        "reciprocal_rank": 0.7816239316239316,
+        "nll": 0.9497771491184392,
+        "information_gain_nats": 0.6596607633156609,
+        "uniform_top1": 0.20000000000000007
+      },
+      "6": {
+        "molecules": 39,
+        "top1": 0.623931623931624,
+        "top2": 0.7863247863247863,
+        "reciprocal_rank": 0.7675213675213675,
+        "nll": 0.9780413621815646,
+        "information_gain_nats": 0.8137181070464904,
+        "uniform_top1": 0.1666666666666667
+      },
+      "7+": {
+        "molecules": 37,
+        "top1": 0.5945945945945947,
+        "top2": 0.8288288288288288,
+        "reciprocal_rank": 0.7562419562419561,
+        "nll": 1.1004266814563093,
+        "information_gain_nats": 0.9016558942031768,
+        "uniform_top1": 0.1358858858858859
+      }
+    },
+    "atom_jepa:budget100": {
+      "2": {
+        "molecules": 55,
+        "top1": 0.8363636363636363,
+        "top2": 1.0,
+        "reciprocal_rank": 0.9181818181818182,
+        "nll": 0.39309874055545835,
+        "information_gain_nats": 0.3000484400044868,
+        "uniform_top1": 0.5
+      },
+      "3": {
+        "molecules": 67,
+        "top1": 0.6019900497512437,
+        "top2": 0.8805970149253731,
+        "reciprocal_rank": 0.781094527363184,
+        "nll": 0.8713321627630867,
+        "information_gain_nats": 0.2272801259050231,
+        "uniform_top1": 0.33333333333333326
+      },
+      "4": {
+        "molecules": 62,
+        "top1": 0.7365591397849462,
+        "top2": 0.9193548387096773,
+        "reciprocal_rank": 0.8525985663082438,
+        "nll": 0.7129670584856099,
+        "information_gain_nats": 0.6733273026342806,
+        "uniform_top1": 0.25
+      },
+      "5": {
+        "molecules": 39,
+        "top1": 0.717948717948718,
+        "top2": 0.9316239316239315,
+        "reciprocal_rank": 0.8452991452991453,
+        "nll": 0.7069451273276052,
+        "information_gain_nats": 0.9024927851064951,
+        "uniform_top1": 0.20000000000000007
+      },
+      "6": {
+        "molecules": 39,
+        "top1": 0.7008547008547009,
+        "top2": 0.8205128205128205,
+        "reciprocal_rank": 0.8118233618233618,
+        "nll": 0.8975234650461167,
+        "information_gain_nats": 0.8942360041819382,
+        "uniform_top1": 0.1666666666666667
+      },
+      "7+": {
+        "molecules": 37,
+        "top1": 0.7027027027027027,
+        "top2": 0.8558558558558558,
+        "reciprocal_rank": 0.8187044187044187,
+        "nll": 0.8858351272784744,
+        "information_gain_nats": 1.116247448381012,
+        "uniform_top1": 0.1358858858858859
+      }
+    },
+    "atom_jepa:budgetfull": {
+      "2": {
+        "molecules": 55,
+        "top1": 0.8181818181818182,
+        "top2": 1.0,
+        "reciprocal_rank": 0.9090909090909091,
+        "nll": 0.3630522623465828,
+        "information_gain_nats": 0.3300949182133625,
+        "uniform_top1": 0.5
+      },
+      "3": {
+        "molecules": 67,
+        "top1": 0.6567164179104478,
+        "top2": 0.8805970149253731,
+        "reciprocal_rank": 0.808457711442786,
+        "nll": 0.7319865579413296,
+        "information_gain_nats": 0.3666257307267804,
+        "uniform_top1": 0.33333333333333326
+      },
+      "4": {
+        "molecules": 62,
+        "top1": 0.7903225806451613,
+        "top2": 0.9193548387096774,
+        "reciprocal_rank": 0.8817204301075269,
+        "nll": 0.5985950305094464,
+        "information_gain_nats": 0.7876993306104442,
+        "uniform_top1": 0.25
+      },
+      "5": {
+        "molecules": 39,
+        "top1": 0.8205128205128205,
+        "top2": 0.9743589743589743,
+        "reciprocal_rank": 0.9059829059829059,
+        "nll": 0.5530094185646126,
+        "information_gain_nats": 1.056428493869488,
+        "uniform_top1": 0.20000000000000004
+      },
+      "6": {
+        "molecules": 39,
+        "top1": 0.6923076923076923,
+        "top2": 0.8717948717948718,
+        "reciprocal_rank": 0.8183760683760684,
+        "nll": 0.8102292849844945,
+        "information_gain_nats": 0.9815301842435602,
+        "uniform_top1": 0.1666666666666667
+      },
+      "7+": {
+        "molecules": 37,
+        "top1": 0.7837837837837838,
+        "top2": 0.9459459459459459,
+        "reciprocal_rank": 0.8792792792792792,
+        "nll": 0.6782529388649802,
+        "information_gain_nats": 1.3238296367945062,
+        "uniform_top1": 0.1358858858858859
+      }
+    },
+    "random_backbone:budget50": {
+      "2": {
+        "molecules": 55,
+        "top1": 0.8000000000000002,
+        "top2": 1.0,
+        "reciprocal_rank": 0.8999999999999999,
+        "nll": 0.4933898281851505,
+        "information_gain_nats": 0.19975735237479486,
+        "uniform_top1": 0.5
+      },
+      "3": {
+        "molecules": 67,
+        "top1": 0.47263681592039797,
+        "top2": 0.8009950248756219,
+        "reciprocal_rank": 0.7031509121061359,
+        "nll": 1.193341097545113,
+        "information_gain_nats": -0.09472880887700351,
+        "uniform_top1": 0.33333333333333326
+      },
+      "4": {
+        "molecules": 62,
+        "top1": 0.6989247311827956,
+        "top2": 0.8924731182795698,
+        "reciprocal_rank": 0.8301971326164875,
+        "nll": 0.8654559071115199,
+        "information_gain_nats": 0.5208384540083706,
+        "uniform_top1": 0.25
+      },
+      "5": {
+        "molecules": 39,
+        "top1": 0.6153846153846154,
+        "top2": 0.8034188034188033,
+        "reciprocal_rank": 0.7625356125356125,
+        "nll": 1.1729619511983365,
+        "information_gain_nats": 0.4364759612357641,
+        "uniform_top1": 0.20000000000000007
+      },
+      "6": {
+        "molecules": 39,
+        "top1": 0.5555555555555556,
+        "top2": 0.7435897435897436,
+        "reciprocal_rank": 0.7175213675213675,
+        "nll": 1.3220553232351884,
+        "information_gain_nats": 0.46970414599286653,
+        "uniform_top1": 0.1666666666666667
+      },
+      "7+": {
+        "molecules": 37,
+        "top1": 0.5135135135135135,
+        "top2": 0.7567567567567568,
+        "reciprocal_rank": 0.6998712998712999,
+        "nll": 1.3399613627780869,
+        "information_gain_nats": 0.6621212128813995,
+        "uniform_top1": 0.1358858858858859
+      }
+    },
+    "random_backbone:budget100": {
+      "2": {
+        "molecules": 55,
+        "top1": 0.8303030303030302,
+        "top2": 1.0,
+        "reciprocal_rank": 0.9151515151515152,
+        "nll": 0.3958302715160833,
+        "information_gain_nats": 0.29731690904386204,
+        "uniform_top1": 0.5
+      },
+      "3": {
+        "molecules": 67,
+        "top1": 0.5074626865671642,
+        "top2": 0.8557213930348259,
+        "reciprocal_rank": 0.7296849087893864,
+        "nll": 1.1654581113051157,
+        "information_gain_nats": -0.0668458226370056,
+        "uniform_top1": 0.33333333333333326
+      },
+      "4": {
+        "molecules": 62,
+        "top1": 0.7311827956989246,
+        "top2": 0.913978494623656,
+        "reciprocal_rank": 0.8503584229390682,
+        "nll": 0.6941833878107124,
+        "information_gain_nats": 0.6921109733091787,
+        "uniform_top1": 0.25
+      },
+      "5": {
+        "molecules": 39,
+        "top1": 0.6410256410256411,
+        "top2": 0.8974358974358975,
+        "reciprocal_rank": 0.7967236467236466,
+        "nll": 0.922601768477916,
+        "information_gain_nats": 0.6868361439561842,
+        "uniform_top1": 0.20000000000000007
+      },
+      "6": {
+        "molecules": 39,
+        "top1": 0.6581196581196581,
+        "top2": 0.8803418803418804,
+        "reciprocal_rank": 0.8011396011396013,
+        "nll": 1.0266822660295685,
+        "information_gain_nats": 0.7650772031984868,
+        "uniform_top1": 0.1666666666666667
+      },
+      "7+": {
+        "molecules": 37,
+        "top1": 0.6936936936936937,
+        "top2": 0.8558558558558559,
+        "reciprocal_rank": 0.811947661947662,
+        "nll": 0.9925896967331543,
+        "information_gain_nats": 1.0094928789263324,
+        "uniform_top1": 0.1358858858858859
+      }
+    },
+    "random_backbone:budgetfull": {
+      "2": {
+        "molecules": 55,
+        "top1": 0.8909090909090909,
+        "top2": 1.0,
+        "reciprocal_rank": 0.9454545454545454,
+        "nll": 0.27430600491783286,
+        "information_gain_nats": 0.4188411756421124,
+        "uniform_top1": 0.5
+      },
+      "3": {
+        "molecules": 67,
+        "top1": 0.5970149253731343,
+        "top2": 0.9402985074626866,
+        "reciprocal_rank": 0.7885572139303482,
+        "nll": 0.8656428756446305,
+        "information_gain_nats": 0.23296941302347937,
+        "uniform_top1": 0.33333333333333326
+      },
+      "4": {
+        "molecules": 62,
+        "top1": 0.7741935483870968,
+        "top2": 0.9193548387096774,
+        "reciprocal_rank": 0.8736559139784946,
+        "nll": 0.625221093683409,
+        "information_gain_nats": 0.761073267436482,
+        "uniform_top1": 0.25
+      },
+      "5": {
+        "molecules": 39,
+        "top1": 0.7435897435897436,
+        "top2": 0.9487179487179487,
+        "reciprocal_rank": 0.8611111111111112,
+        "nll": 0.7120738823842375,
+        "information_gain_nats": 0.897364030049863,
+        "uniform_top1": 0.20000000000000004
+      },
+      "6": {
+        "molecules": 39,
+        "top1": 0.6923076923076923,
+        "top2": 0.9230769230769231,
+        "reciprocal_rank": 0.8290598290598289,
+        "nll": 0.798309719359653,
+        "information_gain_nats": 0.9934497498684022,
+        "uniform_top1": 0.1666666666666667
+      },
+      "7+": {
+        "molecules": 37,
+        "top1": 0.8108108108108109,
+        "top2": 0.9459459459459459,
+        "reciprocal_rank": 0.8927927927927928,
+        "nll": 0.7594964416058434,
+        "information_gain_nats": 1.242586134053643,
+        "uniform_top1": 0.1358858858858859
+      }
+    },
+    "morgan:budget50": {
+      "2": {
+        "molecules": 55,
+        "top1": 0.6999999999999998,
+        "top2": 1.0,
+        "reciprocal_rank": 0.8500000000000001,
+        "nll": 0.5820017998312244,
+        "information_gain_nats": 0.11114538072872095,
+        "uniform_top1": 0.5
+      },
+      "3": {
+        "molecules": 67,
+        "top1": 0.35572139303482586,
+        "top2": 0.7313432835820894,
+        "reciprocal_rank": 0.6330845771144278,
+        "nll": 1.1248399285687225,
+        "information_gain_nats": -0.026227639900612817,
+        "uniform_top1": 0.33333333333333326
+      },
+      "4": {
+        "molecules": 62,
+        "top1": 0.40949820788530467,
+        "top2": 0.6406810035842294,
+        "reciprocal_rank": 0.6274641577060933,
+        "nll": 1.339324237026421,
+        "information_gain_nats": 0.046970124093469734,
+        "uniform_top1": 0.25
+      },
+      "5": {
+        "molecules": 39,
+        "top1": 0.4280626780626781,
+        "top2": 0.6267806267806267,
+        "reciprocal_rank": 0.6307336182336183,
+        "nll": 1.419399821175102,
+        "information_gain_nats": 0.19003809125899843,
+        "uniform_top1": 0.20000000000000007
+      },
+      "6": {
+        "molecules": 39,
+        "top1": 0.4074074074074074,
+        "top2": 0.5669515669515669,
+        "reciprocal_rank": 0.5941120607787276,
+        "nll": 1.6117614650605354,
+        "information_gain_nats": 0.17999800416751946,
+        "uniform_top1": 0.1666666666666667
+      },
+      "7+": {
+        "molecules": 37,
+        "top1": 0.3093093093093093,
+        "top2": 0.5000000000000001,
+        "reciprocal_rank": 0.5302195052195051,
+        "nll": 1.7394443696757809,
+        "information_gain_nats": 0.2626382059837053,
+        "uniform_top1": 0.1358858858858859
+      }
+    },
+    "morgan:budget100": {
+      "2": {
+        "molecules": 55,
+        "top1": 0.7393939393939393,
+        "top2": 1.0,
+        "reciprocal_rank": 0.8696969696969699,
+        "nll": 0.5449429248681962,
+        "information_gain_nats": 0.1482042556917492,
+        "uniform_top1": 0.5
+      },
+      "3": {
+        "molecules": 67,
+        "top1": 0.41791044776119396,
+        "top2": 0.808457711442786,
+        "reciprocal_rank": 0.6770315091210614,
+        "nll": 1.108980923745587,
+        "information_gain_nats": -0.010368635077477187,
+        "uniform_top1": 0.33333333333333326
+      },
+      "4": {
+        "molecules": 62,
+        "top1": 0.49193548387096775,
+        "top2": 0.7365591397849462,
+        "reciprocal_rank": 0.6917562724014338,
+        "nll": 1.2063914398867501,
+        "information_gain_nats": 0.17990292123314056,
+        "uniform_top1": 0.25
+      },
+      "5": {
+        "molecules": 39,
+        "top1": 0.48860398860398857,
+        "top2": 0.7806267806267807,
+        "reciprocal_rank": 0.6997625830959164,
+        "nll": 1.2693688931876368,
+        "information_gain_nats": 0.3400690192464632,
+        "uniform_top1": 0.20000000000000007
+      },
+      "6": {
+        "molecules": 39,
+        "top1": 0.4772079772079772,
+        "top2": 0.6638176638176637,
+        "reciprocal_rank": 0.6550094966761636,
+        "nll": 1.4259954269743953,
+        "information_gain_nats": 0.36576404225365955,
+        "uniform_top1": 0.1666666666666667
+      },
+      "7+": {
+        "molecules": 37,
+        "top1": 0.4504504504504504,
+        "top2": 0.6741741741741741,
+        "reciprocal_rank": 0.6475475475475476,
+        "nll": 1.4177102565708959,
+        "information_gain_nats": 0.5843723190885903,
+        "uniform_top1": 0.1358858858858859
+      }
+    },
+    "morgan:budgetfull": {
+      "2": {
+        "molecules": 55,
+        "top1": 0.6909090909090909,
+        "top2": 1.0,
+        "reciprocal_rank": 0.8454545454545455,
+        "nll": 0.5424598630067125,
+        "information_gain_nats": 0.150687317553233,
+        "uniform_top1": 0.5
+      },
+      "3": {
+        "molecules": 67,
+        "top1": 0.5223880597014925,
+        "top2": 0.9029850746268657,
+        "reciprocal_rank": 0.7450248756218906,
+        "nll": 1.0154051266317388,
+        "information_gain_nats": 0.08320716203637117,
+        "uniform_top1": 0.33333333333333326
+      },
+      "4": {
+        "molecules": 62,
+        "top1": 0.6532258064516129,
+        "top2": 0.8709677419354839,
+        "reciprocal_rank": 0.7983870967741935,
+        "nll": 1.0388411829213113,
+        "information_gain_nats": 0.34745317819857924,
+        "uniform_top1": 0.25
+      },
+      "5": {
+        "molecules": 39,
+        "top1": 0.6025641025641025,
+        "top2": 0.9230769230769231,
+        "reciprocal_rank": 0.7807692307692308,
+        "nll": 1.048824208158992,
+        "information_gain_nats": 0.5606137042751084,
+        "uniform_top1": 0.20000000000000004
+      },
+      "6": {
+        "molecules": 39,
+        "top1": 0.5897435897435898,
+        "top2": 0.7948717948717948,
+        "reciprocal_rank": 0.7452991452991453,
+        "nll": 1.2105449142813687,
+        "information_gain_nats": 0.5812145549466862,
+        "uniform_top1": 0.1666666666666667
+      },
+      "7+": {
+        "molecules": 37,
+        "top1": 0.8108108108108109,
+        "top2": 0.918918918918919,
+        "reciprocal_rank": 0.886036036036036,
+        "nll": 1.0095164778546408,
+        "information_gain_nats": 0.9925660978048454,
+        "uniform_top1": 0.1358858858858859
+      }
+    },
+    "electronic:budget50": {
+      "2": {
+        "molecules": 55,
+        "top1": 0.9393939393939393,
+        "top2": 1.0,
+        "reciprocal_rank": 0.9696969696969696,
+        "nll": 0.23256595716846568,
+        "information_gain_nats": 0.46058122339147967,
+        "uniform_top1": 0.5
+      },
+      "3": {
+        "molecules": 67,
+        "top1": 0.8557213930348258,
+        "top2": 0.9552238805970149,
+        "reciprocal_rank": 0.9203980099502487,
+        "nll": 0.41909050406493165,
+        "information_gain_nats": 0.6795217846031781,
+        "uniform_top1": 0.33333333333333326
+      },
+      "4": {
+        "molecules": 62,
+        "top1": 0.7903225806451613,
+        "top2": 0.9247311827956989,
+        "reciprocal_rank": 0.8808243727598566,
+        "nll": 0.6364901733148373,
+        "information_gain_nats": 0.7498041878050535,
+        "uniform_top1": 0.25
+      },
+      "5": {
+        "molecules": 39,
+        "top1": 0.7948717948717948,
+        "top2": 0.8803418803418802,
+        "reciprocal_rank": 0.8685185185185185,
+        "nll": 0.9557323793781864,
+        "information_gain_nats": 0.6537055330559144,
+        "uniform_top1": 0.20000000000000007
+      },
+      "6": {
+        "molecules": 39,
+        "top1": 0.7264957264957265,
+        "top2": 0.8803418803418802,
+        "reciprocal_rank": 0.8363247863247866,
+        "nll": 0.6829490627528862,
+        "information_gain_nats": 1.108810406475169,
+        "uniform_top1": 0.1666666666666667
+      },
+      "7+": {
+        "molecules": 37,
+        "top1": 0.8018018018018018,
+        "top2": 0.9189189189189187,
+        "reciprocal_rank": 0.8842342342342343,
+        "nll": 0.6115537192013928,
+        "information_gain_nats": 1.3905288564580935,
+        "uniform_top1": 0.1358858858858859
+      }
+    },
+    "electronic:budget100": {
+      "2": {
+        "molecules": 55,
+        "top1": 0.9454545454545454,
+        "top2": 1.0,
+        "reciprocal_rank": 0.9727272727272728,
+        "nll": 0.21357575824637817,
+        "information_gain_nats": 0.4795714223135671,
+        "uniform_top1": 0.5
+      },
+      "3": {
+        "molecules": 67,
+        "top1": 0.8457711442786069,
+        "top2": 0.9701492537313433,
+        "reciprocal_rank": 0.917910447761194,
+        "nll": 0.4164562996425949,
+        "information_gain_nats": 0.6821559890255149,
+        "uniform_top1": 0.33333333333333326
+      },
+      "4": {
+        "molecules": 62,
+        "top1": 0.8602150537634409,
+        "top2": 0.9623655913978495,
+        "reciprocal_rank": 0.9220430107526881,
+        "nll": 0.5204709025668943,
+        "information_gain_nats": 0.8658234585529964,
+        "uniform_top1": 0.25
+      },
+      "5": {
+        "molecules": 39,
+        "top1": 0.8119658119658119,
+        "top2": 0.9059829059829059,
+        "reciprocal_rank": 0.8827635327635327,
+        "nll": 0.8975711697882082,
+        "information_gain_nats": 0.7118667426458919,
+        "uniform_top1": 0.20000000000000007
+      },
+      "6": {
+        "molecules": 39,
+        "top1": 0.7350427350427351,
+        "top2": 0.9059829059829061,
+        "reciprocal_rank": 0.8452991452991453,
+        "nll": 0.7233044030459236,
+        "information_gain_nats": 1.0684550661821315,
+        "uniform_top1": 0.1666666666666667
+      },
+      "7+": {
+        "molecules": 37,
+        "top1": 0.8828828828828829,
+        "top2": 0.9549549549549549,
+        "reciprocal_rank": 0.933933933933934,
+        "nll": 0.48974921820021217,
+        "information_gain_nats": 1.5123333574592743,
+        "uniform_top1": 0.1358858858858859
+      }
+    },
+    "electronic:budgetfull": {
+      "2": {
+        "molecules": 55,
+        "top1": 0.9454545454545454,
+        "top2": 1.0,
+        "reciprocal_rank": 0.9727272727272728,
+        "nll": 0.22432113381304808,
+        "information_gain_nats": 0.4688260467468972,
+        "uniform_top1": 0.5
+      },
+      "3": {
+        "molecules": 67,
+        "top1": 0.835820895522388,
+        "top2": 0.9701492537313433,
+        "reciprocal_rank": 0.9129353233830846,
+        "nll": 0.411382761862792,
+        "information_gain_nats": 0.6872295268053178,
+        "uniform_top1": 0.33333333333333326
+      },
+      "4": {
+        "molecules": 62,
+        "top1": 0.8709677419354839,
+        "top2": 0.9838709677419355,
+        "reciprocal_rank": 0.9314516129032258,
+        "nll": 0.4308088135539404,
+        "information_gain_nats": 0.9554855475659503,
+        "uniform_top1": 0.25
+      },
+      "5": {
+        "molecules": 39,
+        "top1": 0.8205128205128205,
+        "top2": 0.8974358974358975,
+        "reciprocal_rank": 0.8863247863247862,
+        "nll": 0.7444407763704266,
+        "information_gain_nats": 0.8649971360636736,
+        "uniform_top1": 0.20000000000000004
+      },
+      "6": {
+        "molecules": 39,
+        "top1": 0.7435897435897436,
+        "top2": 0.9487179487179487,
+        "reciprocal_rank": 0.856837606837607,
+        "nll": 0.7032319791950855,
+        "information_gain_nats": 1.0885274900329693,
+        "uniform_top1": 0.1666666666666667
+      },
+      "7+": {
+        "molecules": 37,
+        "top1": 0.8918918918918919,
+        "top2": 1.0,
+        "reciprocal_rank": 0.9459459459459459,
+        "nll": 0.351831657847295,
+        "information_gain_nats": 1.6502509178121911,
+        "uniform_top1": 0.1358858858858859
+      }
+    },
+    "jepa_plus_qm:budget50": {
+      "2": {
+        "molecules": 55,
+        "top1": 0.9272727272727272,
+        "top2": 1.0,
+        "reciprocal_rank": 0.9636363636363636,
+        "nll": 0.23006782985839297,
+        "information_gain_nats": 0.4630793507015523,
+        "uniform_top1": 0.5
+      },
+      "3": {
+        "molecules": 67,
+        "top1": 0.8308457711442786,
+        "top2": 0.9601990049751243,
+        "reciprocal_rank": 0.9087893864013268,
+        "nll": 0.4259525210177549,
+        "information_gain_nats": 0.672659767650355,
+        "uniform_top1": 0.33333333333333326
+      },
+      "4": {
+        "molecules": 62,
+        "top1": 0.7688172043010753,
+        "top2": 0.9462365591397849,
+        "reciprocal_rank": 0.8741039426523297,
+        "nll": 0.6570335350413546,
+        "information_gain_nats": 0.729260826078536,
+        "uniform_top1": 0.25
+      },
+      "5": {
+        "molecules": 39,
+        "top1": 0.7606837606837608,
+        "top2": 0.8717948717948718,
+        "reciprocal_rank": 0.8511396011396011,
+        "nll": 0.9601888493643839,
+        "information_gain_nats": 0.6492490630697164,
+        "uniform_top1": 0.20000000000000007
+      },
+      "6": {
+        "molecules": 39,
+        "top1": 0.7948717948717949,
+        "top2": 0.9316239316239315,
+        "reciprocal_rank": 0.8853276353276354,
+        "nll": 0.5883151337388666,
+        "information_gain_nats": 1.2034443354891882,
+        "uniform_top1": 0.1666666666666667
+      },
+      "7+": {
+        "molecules": 37,
+        "top1": 0.8918918918918919,
+        "top2": 0.9819819819819818,
+        "reciprocal_rank": 0.9417417417417419,
+        "nll": 0.5212436266996118,
+        "information_gain_nats": 1.4808389489598746,
+        "uniform_top1": 0.1358858858858859
+      }
+    },
+    "jepa_plus_qm:budget100": {
+      "2": {
+        "molecules": 55,
+        "top1": 0.9272727272727272,
+        "top2": 1.0,
+        "reciprocal_rank": 0.9636363636363636,
+        "nll": 0.2167823616945831,
+        "information_gain_nats": 0.47636481886536225,
+        "uniform_top1": 0.5
+      },
+      "3": {
+        "molecules": 67,
+        "top1": 0.8457711442786069,
+        "top2": 0.9800995024875623,
+        "reciprocal_rank": 0.9195688225538973,
+        "nll": 0.42470444364480986,
+        "information_gain_nats": 0.6739078450233,
+        "uniform_top1": 0.33333333333333326
+      },
+      "4": {
+        "molecules": 62,
+        "top1": 0.8387096774193548,
+        "top2": 0.967741935483871,
+        "reciprocal_rank": 0.9130824372759858,
+        "nll": 0.45615352431364126,
+        "information_gain_nats": 0.9301408368062493,
+        "uniform_top1": 0.25
+      },
+      "5": {
+        "molecules": 39,
+        "top1": 0.7863247863247863,
+        "top2": 0.8974358974358975,
+        "reciprocal_rank": 0.8735042735042734,
+        "nll": 0.667695756181083,
+        "information_gain_nats": 0.9417421562530172,
+        "uniform_top1": 0.20000000000000007
+      },
+      "6": {
+        "molecules": 39,
+        "top1": 0.8119658119658119,
+        "top2": 0.9658119658119657,
+        "reciprocal_rank": 0.8977207977207976,
+        "nll": 0.5498016858252731,
+        "information_gain_nats": 1.2419577834027817,
+        "uniform_top1": 0.1666666666666667
+      },
+      "7+": {
+        "molecules": 37,
+        "top1": 0.9459459459459459,
+        "top2": 0.9819819819819818,
+        "reciprocal_rank": 0.9687687687687688,
+        "nll": 0.2798473993394606,
+        "information_gain_nats": 1.7222351763200257,
+        "uniform_top1": 0.1358858858858859
+      }
+    },
+    "jepa_plus_qm:budgetfull": {
+      "2": {
+        "molecules": 55,
+        "top1": 0.9454545454545454,
+        "top2": 1.0,
+        "reciprocal_rank": 0.9727272727272728,
+        "nll": 0.21165231409272853,
+        "information_gain_nats": 0.4814948664672167,
+        "uniform_top1": 0.5
+      },
+      "3": {
+        "molecules": 67,
+        "top1": 0.8208955223880597,
+        "top2": 0.9850746268656716,
+        "reciprocal_rank": 0.907960199004975,
+        "nll": 0.40587606396024434,
+        "information_gain_nats": 0.6927362247078652,
+        "uniform_top1": 0.33333333333333326
+      },
+      "4": {
+        "molecules": 62,
+        "top1": 0.8709677419354839,
+        "top2": 0.9838709677419355,
+        "reciprocal_rank": 0.9314516129032258,
+        "nll": 0.4217533794207081,
+        "information_gain_nats": 0.9645409816991825,
+        "uniform_top1": 0.25
+      },
+      "5": {
+        "molecules": 39,
+        "top1": 0.7948717948717948,
+        "top2": 0.8717948717948718,
+        "reciprocal_rank": 0.8705128205128206,
+        "nll": 0.6812116709814747,
+        "information_gain_nats": 0.9282262414526256,
+        "uniform_top1": 0.20000000000000004
+      },
+      "6": {
+        "molecules": 39,
+        "top1": 0.8205128205128205,
+        "top2": 0.9230769230769231,
+        "reciprocal_rank": 0.8952991452991452,
+        "nll": 0.5253306910471669,
+        "information_gain_nats": 1.2664287781808878,
+        "uniform_top1": 0.1666666666666667
+      },
+      "7+": {
+        "molecules": 37,
+        "top1": 0.972972972972973,
+        "top2": 1.0,
+        "reciprocal_rank": 0.9864864864864865,
+        "nll": 0.21823955215336932,
+        "information_gain_nats": 1.7838430235061171,
+        "uniform_top1": 0.1358858858858859
+      }
+    }
+  },
+  "morgan_tie_cause_counts": {
+    "50": {
+      "mask_contributes_and_all_tied_pairs_identical_after_mask": 137,
+      "mask_differences_all_unseen_columns": 137,
+      "all_tied_pairs_identical_in_full_fingerprint": 3,
+      "retained_vectors_differ": 1
+    },
+    "100": {
+      "mask_contributes_and_all_tied_pairs_identical_after_mask": 67,
+      "mask_differences_all_unseen_columns": 67,
+      "all_tied_pairs_identical_in_full_fingerprint": 3
+    },
+    "full": {
+      "mask_contributes_and_all_tied_pairs_identical_after_mask": 4,
+      "mask_differences_all_unseen_columns": 4,
+      "all_tied_pairs_identical_in_full_fingerprint": 1
+    }
+  },
+  "full_budget_discordance": [
+    {
+      "left": "atom_jepa",
+      "right": "random_backbone",
+      "left_only": 34,
+      "right_only": 31,
+      "both_correct": 192,
+      "both_incorrect": 42
+    },
+    {
+      "left": "jepa_plus_qm",
+      "right": "electronic",
+      "left_only": 12,
+      "right_only": 8,
+      "both_correct": 248,
+      "both_incorrect": 31
+    }
+  ],
+  "reporting_audit": "reports/evaluation_reporting_audit.json",
+  "report_amended_at_utc": "2026-11-13T09:28:32.542841+00:00",
+  "amendment_provenance": {
+    "fits_compared": 146,
+    "all_parameter_arrays_bitwise_identical": true,
+    "all_prediction_scores_bitwise_identical": true,
+    "all_selected_penalties_identical": true,
+    "archive_files_byte_identical": 146,
+    "fit_json_files_byte_identical": 146,
+    "limit": "Artifacts establish unchanged outputs, not what was viewed or why the cap was chosen."
+  },
+  "post_review_additions_scope": "Descriptive saved-artifact reporting only; unchanged model outputs, grids, paired intervals and outcome labels. No new inferential claims."
 }

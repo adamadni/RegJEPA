@@ -29,7 +29,10 @@ the complete acceptance rule. No convergence threshold is being relaxed.
 Proposed replacement: af05d8348e60ad38b6e4. It changes only
 optimizer.max_iterations from 1000 to 5000. It is not approved/frozen unless a
 subsequent explicit approval/frozen record exists. Compare actual artifacts.
-No outer-test performance was inspected to choose this amendment. A fresh run
+The execution account states that convergence diagnostics, not outer-test
+performance, motivated the amendment; this is not an independently verifiable
+access history. The later reporting audit compares all 146 already-completed
+fits and finds byte-identical model archives and fit JSON files. A fresh run
 would rerun all 6300 inner fits and 175 final fits; there is no resume/merging
 of partial old results. Earlier artifacts remain a separate incomplete attempt.
 

@@ -1,0 +1,76 @@
+Review the reporting-only response to your RegJEPA results review.
+Repository: https://github.com/adamadni/RegJEPA
+
+Record actual HEAD and git status. Compare with baseline b9c94f4. Review only:
+no edits to tracked files, installations, branches, proposals/freezes, model
+fits, hyperparameter searches, regenerated features or external messages.
+Disposable read-only calculation evidence may be written under .cache.
+
+The frozen experiment remains af05d8348e60ad38b6e4: 6,300 inner fits and 175
+final fits. Read reports/evaluation_results.md/.json and
+reports/evaluation_reporting_audit.md/.json. The latter independently
+recomputed the supplied review's figures using existing artifacts. It loaded
+and deterministically rebuilt the frozen plan in the pinned WSL runtime,
+checked all 175 model hashes, replayed all 35 Morgan models and compared all
+146 original/amended fit pairs. No models were refitted and no intervals added.
+This is our audit evidence, not a substitute for checks you independently run.
+
+Also inspect README.md, docs/first_experiment.md, the amended execution-status
+records, iteration-amendment prose, and the original immutable run artifacts.
+The implementation and data should have no diff from baseline; only reporting,
+documentation and review prompts have changed. Do not modify the frozen run's
+summary.md/json to repair presentation: its original generator output is kept
+for provenance; the amended interpretation is in evaluation_results.md/json.
+
+Verify:
+1. Recount endpoint directions from selected_penalties, not just edge flags:
+   random max at 50: 7/15; Morgan max at 50: 2/15; electronic min at 50/full:
+   1/15 and 2/5; combined JEPA max at 50/100/full: 4/15, 2/15, 1/5;
+   combined QM min at 50: 2/15. All other endpoint counts are zero.
+   An endpoint is a bounded-search warning, not proof that wider penalties
+   improve held-out top-1 or a quantitative estimate of bias. Is the new
+   50-label pretraining and complementarity wording appropriately qualified?
+2. Morgan positive-site ties: 141/897, 70/897, 5/299 molecule-fits; unique
+   molecules affected: 79/299, 47/299, 5/299. Other blocks have no positive-site
+   ties. Distinguish symmetry outcomes, molecules and repetition evaluations.
+3. Check saved 6,144-column atom-centered Morgan arrays, training masks and
+   coefficients for the cause breakdown: 137/67/4 events involve mask-collapsed
+   vectors, all differing dropped columns zero throughout training; 3/3/1
+   involve identical original vectors; one remaining 50-label event is comp414
+   at fold 2 / seed 17 with distinct retained vectors and two differing nonzero
+   coefficients. Its linear scores still tie exactly. Event/pair IDs are in
+   evaluation_reporting_audit.json. The mask rule is within-molecule training
+   variation, broader than unseen bits. Would leaving training-zero columns
+   present change this zero-initialized positive-L2 linear optimum? Do not
+   conflate these fingerprints with the whole-molecule grouping fingerprints.
+4. Recount molecules with negative mean information gain after averaging
+   repetitions, not negative individual molecule-fits:
+   Morgan 109/81/64; random 84/75/46; JEPA 61/51/44; electronic 30/25/22;
+   combined 30/25/21 at 50/100/full. Denominator 299 in every cell.
+5. Recompute all candidate-count tables from summary molecular_metrics. Bins
+   2/3/4/5/6/7+ contain 55/67/62/39/39/37 molecules; exact-k detail is in JSON.
+   Full-budget examples: random vs JEPA at k=2: 89.09% vs 81.82%; combined vs
+   electronic at k>=7: 97.30% vs 89.19%, three extra net hits. The remaining
+   262 molecules contribute one extra net hit. Tables are post-review descriptive
+   breakdowns with no added subgroup intervals/tests or model selection.
+6. Verify all 146 old NPZ archives and fit JSON files are byte-identical in the
+   amended run. The revised prose attributes the convergence-only rationale to
+   the execution record, and explicitly says files cannot prove what was viewed
+   or whether the decision was independent of already-available held-out metrics.
+7. Confirm every pre-existing aggregate metric, selected penalty, confidence
+   interval and model hash is unchanged. No posthoc NLL interval or
+   multiplicity-adjusted significance claim was added. Original comparisons
+   remain exploratory/unadjusted. New NLL inference, wider grids, encoder seeds
+   and pretraining membership are deferred to a prospective protocol/audit.
+
+For read-only saved-model checks, use the existing exact-version WSL runtime
+described in evaluation_amended_runtime.json if available. The original
+validate_evaluation_results.py can write a new audit under .cache without
+fitting; do not overwrite the existing report. If RDKit or this runtime is
+unavailable, identify unperformed grouping/frozen-load checks explicitly.
+
+Return actual HEAD, checks performed, discrepancies and blockers/major/minor
+findings with file:line evidence. Say whether the reporting findings are now
+addressed and which scientific claims remain unresolved. Do not treat our
+recomputation or your prior posthoc intervals as a complete independent review.
+End with a section titled "## Not done".

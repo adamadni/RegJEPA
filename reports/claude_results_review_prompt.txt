@@ -16,9 +16,15 @@ f938849. Reviewed model implementation: 977f120. The user explicitly approved
 "Approve cap 5,000 and rerun". Compare this binding to the exact proposal hash.
 The original 09ebadea135ec50dc873 attempt failed at its 1,000-iteration cap and
 remains preserved separately with 146 final fits. The amended experiment reruns
-all five blocks from scratch, changing only max_iterations to 5,000. No outer
-test performance was inspected to choose the amendment. No failed or old fit
-may be substituted into the amended run.
+all five blocks from scratch, changing only max_iterations to 5,000. The
+execution account states that cap selection used convergence diagnostics,
+not held-out performance; the artifacts cannot independently establish what
+was viewed. All 146 original model archives and fit JSON files are byte-identical
+in the amended run. No failed or old fit may be substituted into the amended run.
+
+A supplied review has since identified reporting omissions. Read
+evaluation_reporting_audit.md/.json and claude_reporting_amendment_review_prompt.txt
+for the recomputed findings, corrections and focused re-review scope.
 
 Read:
 - README.md, docs/evaluation_protocol.md, docs/feature_bank.md

@@ -6,7 +6,7 @@ Approved replacement: **`af05d8348e60ad38b6e4`**. Status: **user-approved and fr
 
 The only configuration change is `optimizer.max_iterations`: **1,000 → 5,000**. Both the 1e-7 optimizer target and the successful-termination/accepted-gradient checks remain unchanged. Optimizer type, initial coefficients, objective, feature blocks, transformations, hyperparameter grids, seeds, data, leakage groups, outer/inner folds and nested label budgets are identical. The larger cap permits additional iterations; it does not force already converged fits to continue.
 
-The change is driven by the convergence failure, without inspecting outer-test performance. A successful full run would execute the same 6,300 inner fits and 175 final fits in a new output directory. The existing runner has no resume path, so it will rerun all five blocks and preserve the original incomplete attempt separately.
+The execution record attributes the change to the convergence failure rather than outer-test performance. This is an execution account, not an independently verifiable access history: the original run had already written held-out metrics for 146 fits. The completed reporting audit verifies that all 146 original model archives and fit JSON files are byte-identical in the amended run. This establishes unchanged outputs, not what was viewed or how the cap was chosen. See `evaluation_reporting_audit.md` and `.json`. The amended run executed the same 6,300 inner fits and 175 final fits in a new directory, without resuming or overwriting the original attempt.
 
 The original-cap replay reproduced the failure exactly: inner fold 1, 160 training molecules, JEPA penalty 0.0001 and QM penalty 10. Its diagnostics are in `evaluation_convergence_diagnosis.md` and `.json`. The artifact audit in `evaluation_failed_attempt_integrity.md` and `.json` independently checked the cap-only difference, identical groups/folds/locks and the saved model hashes. These checks do not prove the larger cap will converge.
 
@@ -18,4 +18,4 @@ Files: `configs/evaluation_iteration_extension.json`, `data/splits/af05d8348e60a
 
 ## Not done
 
-Independent results review remains pending. No convergence threshold was relaxed and no failed fit was counted as valid.
+The supplied results review has been received and its reporting findings incorporated; focused re-review and unchecked independent-review gates remain outstanding. No convergence threshold was relaxed and no failed fit was counted as valid.

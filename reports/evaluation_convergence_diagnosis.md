@@ -17,7 +17,7 @@ The replay reproduced the exact original failure:
 
 L-BFGS-B reported `STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT`. Its gradient target is 1e-7 and relative-objective tolerance is 1e-14. The additional acceptance guard is gradient at most 1e-5, together with successful termination and finite coefficients/objective. Although the gradient guard passed, optimizer success did not; the fit correctly raised an exception.
 
-The replay completed 91 inner fits and failed on fit 92. This is diagnostic work under the original cap, separate from the original run's 3,168 inner fits recorded in completed tasks. Its full fit-level diagnostics are in `evaluation_convergence_diagnosis.json`. No outer-test performance was inspected for the iteration amendment.
+The replay completed 91 inner fits and failed on fit 92. This is diagnostic work under the original cap, separate from the original run's 3,168 inner fits recorded in completed tasks. Its full fit-level diagnostics are in `evaluation_convergence_diagnosis.json`. The execution account states that cap selection used convergence diagnostics rather than outer-test performance; the saved artifacts do not independently establish what was viewed. The later reporting audit verifies unchanged outputs for all 146 already-completed fits.
 
 ## Not done
 

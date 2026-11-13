@@ -6,6 +6,8 @@ The current milestone is a **completed frozen-feature linear pilot on 299 conser
 
 Electronic descriptors are the strongest single block. Adding JEPA gives small positive top-1 point estimates, but its gain over QM and pretrained JEPA's gain over the random backbone remain unresolved by the exploratory paired intervals. Read the [results and limits](reports/evaluation_results.md), [numerical audit](reports/evaluation_result_validation.md), and [Claude results-review prompt](reports/claude_results_review_prompt.txt).
 
+The [reporting-review response](reports/evaluation_reporting_audit.md) adds penalty-edge direction, Morgan tie causes, per-molecule negative information gain and candidate-count breakdowns without refitting. At 50 labels, random selects the strongest tested penalty in 7 of 15 fits; that bounded search limits interpretation of the small pretrained-versus-random point difference.
+
 See the [feature extraction report](reports/feature_extraction.md) and `data/features/latest.json` for the aligned feature bank, geometry archive, checkpoint provenance and coverage.
 
 ## Initial data decision

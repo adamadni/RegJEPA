@@ -13,7 +13,7 @@ State: **stopped by the reviewed convergence guard; full experiment incomplete**
 
 An original-cap diagnostic replay reproduced the exact failure at inner fold **1**, with **160** training molecules and penalties **JEPA = 0.0001, QM = 10**. It completed 91 inner fits before failing on fit 92. Replay fits are not replacements for the original attempt and are not mixed into its saved outputs. See `evaluation_convergence_diagnosis.json`.
 
-An artifact audit verified all 146 saved model hashes and convergence diagnostics for all 3,168 recorded inner fits plus 146 final fits. No outer-test performance was inspected for the cap amendment. See `evaluation_failed_attempt_integrity.json`.
+An artifact audit verified all 146 saved model hashes and convergence diagnostics for all 3,168 recorded inner fits plus 146 final fits. The execution account attributes the cap amendment to convergence diagnostics rather than outer-test performance; it does not provide an independently auditable access history. A later reporting audit confirms that all 146 original model archives and fit JSON files are byte-identical in the amended run. See `evaluation_failed_attempt_integrity.json` and `evaluation_reporting_audit.json`.
 
 Frozen artifacts, approval and matching Linux runtime are committed at `75cb053`. The approved code and data remain unchanged. Partial artifacts are preserved under `reports/evaluation_runs/09ebadea135ec50dc873/`; they are not presented as a completed five-model study.
 
