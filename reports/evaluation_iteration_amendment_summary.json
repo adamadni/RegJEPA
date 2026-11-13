@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "status": "proposed_not_approved",
+  "original_approved_proposal": "09ebadea135ec50dc873",
+  "proposed_proposal_id": "af05d8348e60ad38b6e4",
+  "proposal_path": "data/splits/af05d8348e60ad38b6e4/proposal.json",
+  "config_path": "configs/evaluation_iteration_extension.json",
+  "only_configuration_change": {
+    "optimizer.max_iterations": {
+      "before": 1000,
+      "after": 5000
+    }
+  },
+  "same_groups": true,
+  "same_full_split_and_subset_schedule": true,
+  "gradient_tolerance_unchanged": 1e-07,
+  "accepted_gradient_unchanged": 1e-05,
+  "planned_inner_fits": 6300,
+  "planned_final_fits": 175,
+  "reason": "An inner JEPA+QM fit reached the reviewed iteration cap. This proposal changes computation budget only; no outer-test performance was used.",
+  "rerun_policy": "Fresh run of all five blocks; do not mix the incomplete original attempt with the amended result."
+}

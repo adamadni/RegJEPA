@@ -1,18 +1,22 @@
 # Approved evaluation execution status
 
-Proposal `09ebadea135ec50dc873` was explicitly approved by the user for freezing and the full linear experiment.
+Approved proposal: `09ebadea135ec50dc873`; approved source commit: `977f1206632a846638ca43606cc6a7375ddbeadf`.
 
-- Reviewed source commit: `977f1206632a846638ca43606cc6a7375ddbeadf`.
-- Frozen artifact: `data/splits/09ebadea135ec50dc873/frozen.json`.
-- Frozen artifact SHA256: `85291f5e62470fe73a084e5851733b54972af3e3b12e62857c78daeeb91314b5`.
-- Approval: `data/splits/09ebadea135ec50dc873/approval.json`.
-- State: **frozen and ready to launch; no real-data fits completed yet**.
-- Planned workload: 6,300 inner fits plus 175 final fits, using the reviewed configuration.
+State: **stopped by the reviewed convergence guard; full experiment incomplete**.
 
-Windows Application Control blocked the existing Windows RDKit DLLs. The existing WSL2 Linux environment was given an isolated cache-local Python 3.12.14 environment with the exact pinned NumPy 2.5.4, RDKit 2026.9.2 and SciPy 1.18.1 packages. It rebuilt the exact approved proposal and passed all 90 tests. No Windows security settings, reviewed implementation, raw data or feature-bank files were changed.
+- Completed final fits: **146 / 175**.
+- Completed inner fits recorded in finished tasks: **3,168 / 6,300** (additional inner fits in the failed task are not yet counted).
+- All 35 tasks each for Atom-JEPA, random backbone, Morgan and electronic descriptors are saved; six JEPA+QM tasks are saved.
+- Failed task: `jepa_plus_qm_fold0_budgetfull_seedNone`, during inner fitting.
+- Stop: **1,000 iterations reached**, with gradient infinity norm **3.26982777983e-07**.
+- L-BFGS-B uses gradient target **1e-7** and relative-objective tolerance **1e-14**. The reviewed acceptance rule requires successful optimizer termination, finite objective/coefficients, and gradient at most **1e-5**. This fit failed because the optimizer reported its iteration limit; passing the gradient guard alone is insufficient. No result was silently accepted or replaced.
 
-Runtime details and validation are in `reports/evaluation_runtime.json`; the machine-readable execution state is in `reports/evaluation_execution_status.json`.
+An original-cap diagnostic replay reproduced the exact failure at inner fold **1**, with **160** training molecules and penalties **JEPA = 0.0001, QM = 10**. It completed 91 inner fits before failing on fit 92. Replay fits are not replacements for the original attempt and are not mixed into its saved outputs. See `evaluation_convergence_diagnosis.json`.
+
+An artifact audit verified all 146 saved model hashes and convergence diagnostics for all 3,168 recorded inner fits plus 146 final fits. No outer-test performance was inspected for the cap amendment. See `evaluation_failed_attempt_integrity.json`.
+
+Frozen artifacts, approval and matching Linux runtime are committed at `75cb053`. The approved code and data remain unchanged. Partial artifacts are preserved under `reports/evaluation_runs/09ebadea135ec50dc873/`; they are not presented as a completed five-model study.
 
 ## Not done
 
-The full experiment has not yet started. Automatic resume, pretraining-overlap recovery and independent publication-family reconstruction are outside this run.
+Full comparison, final paired intervals, and successful completion of all JEPA+QM settings. An iteration-budget amendment requires a new proposal and explicit user approval.

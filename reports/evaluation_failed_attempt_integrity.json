@@ -1,0 +1,630 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-11-13T00:12:48.703614+00:00",
+  "original_proposal_id": "09ebadea135ec50dc873",
+  "proposed_proposal_id": "af05d8348e60ad38b6e4",
+  "configuration_differences": [
+    {
+      "path": "optimizer.max_iterations",
+      "before": 1000,
+      "after": 5000
+    }
+  ],
+  "unchanged_proposal_fields": {
+    "schema_version": true,
+    "status": true,
+    "feature_manifest": true,
+    "feature_run_key": true,
+    "compound_to_group": true,
+    "outer_folds": true,
+    "grouping_digest": true,
+    "input_sha256": true,
+    "input_hash_policy": true,
+    "versions": true,
+    "source_limitations": true,
+    "fit_status": true
+  },
+  "grouping_files_byte_identical": true,
+  "saved_model_pairs": 146,
+  "saved_model_pairs_by_block": {
+    "atom_jepa": 35,
+    "electronic": 35,
+    "jepa_plus_qm": 6,
+    "morgan": 35,
+    "random_backbone": 35
+  },
+  "completed_inner_fits_in_saved_tasks": 3168,
+  "all_saved_fits_converged_under_original_rule": true,
+  "largest_saved_iteration_count": 940,
+  "largest_saved_gradient_inf_norm": 4.436536773287124e-07,
+  "all_saved_model_hashes_valid": true,
+  "full_summary_exists": false,
+  "amended_proposal_frozen": false,
+  "outer_performance_inspected": false,
+  "model_hash_checks": [
+    {
+      "tag": "atom_jepa_fold0_budget100_seed17",
+      "model_sha256": "208ea9a889f4b46ea353ca278a70d3a08b996885b6d3c09118345079a8a69fe1"
+    },
+    {
+      "tag": "atom_jepa_fold0_budget100_seed29",
+      "model_sha256": "1706aff13229094e06ba644a909e93e6522fbd29bee3a0470151befff92520d4"
+    },
+    {
+      "tag": "atom_jepa_fold0_budget100_seed43",
+      "model_sha256": "e2646de70edb1be26f0f1d6d5d74055c7d01ae2037682d592af1b3d0ca0df13a"
+    },
+    {
+      "tag": "atom_jepa_fold0_budget50_seed17",
+      "model_sha256": "4cba6364dedd1c2a56338063d26ae95458c602f10ceaa342f3b158366ba1d6d5"
+    },
+    {
+      "tag": "atom_jepa_fold0_budget50_seed29",
+      "model_sha256": "ac8e24c1cabff89cc2034a1fcfd4e00dc06cf5c2a4771dd6334544d3a6bb6416"
+    },
+    {
+      "tag": "atom_jepa_fold0_budget50_seed43",
+      "model_sha256": "0fa9711f1638cf49557458885027a4df9716388360b5dd7bcf2aec3457daa56e"
+    },
+    {
+      "tag": "atom_jepa_fold0_budgetfull_seedNone",
+      "model_sha256": "76af7cf2bf0d52138969073da42458eda2d05868ce7929078e303f39dfdc19fb"
+    },
+    {
+      "tag": "atom_jepa_fold1_budget100_seed17",
+      "model_sha256": "d0524eba8588789aacf50254876f00190a48c3165f441086d5e8b1078ba90dc6"
+    },
+    {
+      "tag": "atom_jepa_fold1_budget100_seed29",
+      "model_sha256": "10d103d47adae4a6165605cf75f16123ecbc26e4703bc67ea25ad80b1166a63a"
+    },
+    {
+      "tag": "atom_jepa_fold1_budget100_seed43",
+      "model_sha256": "174ba30af425e249ed69ded4b2dece07213b036e3b125b02c5a1cf311c0f0138"
+    },
+    {
+      "tag": "atom_jepa_fold1_budget50_seed17",
+      "model_sha256": "ba2816560f974731b2c7dc51645977b23aebaa8ff70a273c8960489681dba01d"
+    },
+    {
+      "tag": "atom_jepa_fold1_budget50_seed29",
+      "model_sha256": "3ca999e91a0777807be5447a73197f3b63474bd8b66afaed14b9b793c987c53a"
+    },
+    {
+      "tag": "atom_jepa_fold1_budget50_seed43",
+      "model_sha256": "7cef69554a676dca5badf8936f23dd66e31acec53d02c4d4b1406952294d21ef"
+    },
+    {
+      "tag": "atom_jepa_fold1_budgetfull_seedNone",
+      "model_sha256": "8db0efc211ed88daed178a534ed50e331850a1f961ad34070fc2e2bf1de0bee0"
+    },
+    {
+      "tag": "atom_jepa_fold2_budget100_seed17",
+      "model_sha256": "679a811cdc7785fb9ec137502bbe66de302822797b1f6ee51893a96d77f618b8"
+    },
+    {
+      "tag": "atom_jepa_fold2_budget100_seed29",
+      "model_sha256": "5041c563b67028028387efc0171d4146f7d8f22940a85e2eb1870c58eb14799f"
+    },
+    {
+      "tag": "atom_jepa_fold2_budget100_seed43",
+      "model_sha256": "81e688826b0ad1591c16ed4b08232a3c6447cf68276cc6d571e477b7b6184c07"
+    },
+    {
+      "tag": "atom_jepa_fold2_budget50_seed17",
+      "model_sha256": "d575cc7037d81cfa6c6be5b0a8d4be5c52e4fe294e4cdfd4df014a820f0bac89"
+    },
+    {
+      "tag": "atom_jepa_fold2_budget50_seed29",
+      "model_sha256": "107d14dc6c5056aeeed1ea28c3386090da419535942be22a7a45ee9747562a8a"
+    },
+    {
+      "tag": "atom_jepa_fold2_budget50_seed43",
+      "model_sha256": "21d900fe3d7e227803522c57f295b4ab08e6c9de5def405852458da13855efe3"
+    },
+    {
+      "tag": "atom_jepa_fold2_budgetfull_seedNone",
+      "model_sha256": "d4104c705bc6730d6216c7c1f08062898e81873cdebf1d69e5f09f1e1d2da854"
+    },
+    {
+      "tag": "atom_jepa_fold3_budget100_seed17",
+      "model_sha256": "43c17f742142771175cb56a40954442f4bdee14fb662b404aeafb64f09506458"
+    },
+    {
+      "tag": "atom_jepa_fold3_budget100_seed29",
+      "model_sha256": "67643a83524a6853ea460ee724b294d94d45368667b26b9fa85bf072afe6478d"
+    },
+    {
+      "tag": "atom_jepa_fold3_budget100_seed43",
+      "model_sha256": "04fb54d1953804aabe0b31a5eae731e6c70ba6b9a684638925d6fab6480b3097"
+    },
+    {
+      "tag": "atom_jepa_fold3_budget50_seed17",
+      "model_sha256": "5450f77a7acf1da53c76f1fb95a4864fc47740be6b079a1bca8d333f8ef8622f"
+    },
+    {
+      "tag": "atom_jepa_fold3_budget50_seed29",
+      "model_sha256": "3db67cbcd81f1e1a2bd99dba8f6c6dbb5971b79d840ee48daeb45a2d4a7d43eb"
+    },
+    {
+      "tag": "atom_jepa_fold3_budget50_seed43",
+      "model_sha256": "f239879c40fdaa2881e486304181d81eff1109cf0b95f806cefd411b73c333ec"
+    },
+    {
+      "tag": "atom_jepa_fold3_budgetfull_seedNone",
+      "model_sha256": "7f2efdfa7250509b51667e747c2161b18cf44f34d709766f27d53cf74cbfbb91"
+    },
+    {
+      "tag": "atom_jepa_fold4_budget100_seed17",
+      "model_sha256": "ce14cca278baa7c97faf3751c47dc836367f34b44af764775e1c0de5cad172ac"
+    },
+    {
+      "tag": "atom_jepa_fold4_budget100_seed29",
+      "model_sha256": "b6e592393de67bd8a8d37acbb0cbbed410f5a9c4d95c0295843b270b0999018c"
+    },
+    {
+      "tag": "atom_jepa_fold4_budget100_seed43",
+      "model_sha256": "456519bea9018a40277958f4cf7ad0098d909b728a63ede45e1cf8de2a0b04c4"
+    },
+    {
+      "tag": "atom_jepa_fold4_budget50_seed17",
+      "model_sha256": "ab8a4b447ca0fb6329db7ced4b27e5a9ceeec747eb4e9aaf6abbae6eb9a7fcaa"
+    },
+    {
+      "tag": "atom_jepa_fold4_budget50_seed29",
+      "model_sha256": "7156797723e8a4f7100a445a7bb46fa559eff6985ced570b0793aef272c716be"
+    },
+    {
+      "tag": "atom_jepa_fold4_budget50_seed43",
+      "model_sha256": "526994dda35610e230ddc91376f6251eb988ad2f0a79dd230b3556fc7840918c"
+    },
+    {
+      "tag": "atom_jepa_fold4_budgetfull_seedNone",
+      "model_sha256": "e5156a54a8970fdbbd7e01a594da612390df2d48c3353bf6f4b60926a546bb10"
+    },
+    {
+      "tag": "electronic_fold0_budget100_seed17",
+      "model_sha256": "c2165cfd7645b279c6dadd37d4555cb9768ada3685e01dfcfd1d65ec46887b2f"
+    },
+    {
+      "tag": "electronic_fold0_budget100_seed29",
+      "model_sha256": "ecae90d9afffa817e62adf2558f57171d086591c2a720fcaca6f0c44f0b7db7f"
+    },
+    {
+      "tag": "electronic_fold0_budget100_seed43",
+      "model_sha256": "8e0d41f580225063dd9277029ac307f700f0f9a12454d49323a1d69736a608cc"
+    },
+    {
+      "tag": "electronic_fold0_budget50_seed17",
+      "model_sha256": "3e83f25a6596011496eeb920b4eae19b9ae0c205993e14cd51b31c3e5d9356cc"
+    },
+    {
+      "tag": "electronic_fold0_budget50_seed29",
+      "model_sha256": "b8734f87cc4e163fd068421cedf2dcb2700aa143c3468ccfd557d1b4ed034caa"
+    },
+    {
+      "tag": "electronic_fold0_budget50_seed43",
+      "model_sha256": "9edd6e03b180479ae9789544f3ab3c2162f64036d3a6f3ac63b71667e85652f8"
+    },
+    {
+      "tag": "electronic_fold0_budgetfull_seedNone",
+      "model_sha256": "b245e090cb203ae967c736db743e615ae696621c66917a67cc92e87a7e84ae84"
+    },
+    {
+      "tag": "electronic_fold1_budget100_seed17",
+      "model_sha256": "2bc77ecd7fc4e5762b16e32f87b3fe86cacf5c2ed955de86001ab4d6d240a2c5"
+    },
+    {
+      "tag": "electronic_fold1_budget100_seed29",
+      "model_sha256": "5c2bd6dd33525d071d9f1be155eef525383f828641153db6711d72a36bdb59bb"
+    },
+    {
+      "tag": "electronic_fold1_budget100_seed43",
+      "model_sha256": "02300f5199e160df0e6e14967c1c41417bb091bbe7bec0db27153ccc61cc61a7"
+    },
+    {
+      "tag": "electronic_fold1_budget50_seed17",
+      "model_sha256": "e5b1ba3380b94f2dd14b73024bffc58723823f351ca2ef82a4db1c6a81912bad"
+    },
+    {
+      "tag": "electronic_fold1_budget50_seed29",
+      "model_sha256": "632ede6b638674d9cdf0297bdc2dde455df01f97ef067e425cf4d1b20ec149ca"
+    },
+    {
+      "tag": "electronic_fold1_budget50_seed43",
+      "model_sha256": "d9a7e03671dda678fc279cd983fa928e5e780ab96dee51283678b5d29190f338"
+    },
+    {
+      "tag": "electronic_fold1_budgetfull_seedNone",
+      "model_sha256": "eb305f8bb6e36818c71389fb3af94b68b9c7e8d55fafbb181614f78519daf876"
+    },
+    {
+      "tag": "electronic_fold2_budget100_seed17",
+      "model_sha256": "0fce9df3fb0afd9db2e7aeb68c99547d64cd6250f1ae3a935a54ba51636f08eb"
+    },
+    {
+      "tag": "electronic_fold2_budget100_seed29",
+      "model_sha256": "91326ec4adc47341cf87624c2e2bf158d949b0a890d2fbdf36706af4869bfa33"
+    },
+    {
+      "tag": "electronic_fold2_budget100_seed43",
+      "model_sha256": "71883d03bec076aa8e135312634b57f0bbce3358b1632c18763a803a64ea74c5"
+    },
+    {
+      "tag": "electronic_fold2_budget50_seed17",
+      "model_sha256": "95667702bc7f23b806d3da216d6c67a463051b80a728a7b96288d6952d07c3d5"
+    },
+    {
+      "tag": "electronic_fold2_budget50_seed29",
+      "model_sha256": "54b833b98aa324194ab9bc629db3040268a8c91a77be615a3c1f8331a9a6eb16"
+    },
+    {
+      "tag": "electronic_fold2_budget50_seed43",
+      "model_sha256": "42180bdde39dc80fd95f116d607c20cb41caf954a938d6e50b365f010110bb4b"
+    },
+    {
+      "tag": "electronic_fold2_budgetfull_seedNone",
+      "model_sha256": "28b2d87754743cb19a40d3404b8903a0470c97781bab0785fbcfc91b5ad5422d"
+    },
+    {
+      "tag": "electronic_fold3_budget100_seed17",
+      "model_sha256": "6a218cbcbebad0ff9a28f46915ae0bbc10cbd4d73370ca47d98ce281a38afee8"
+    },
+    {
+      "tag": "electronic_fold3_budget100_seed29",
+      "model_sha256": "b6c1ed2dfad9bf4abea9dd82878a2e4ccc9d81bbee861ba1b2798beca34c9704"
+    },
+    {
+      "tag": "electronic_fold3_budget100_seed43",
+      "model_sha256": "ea70527f2001c2319f448a0a7c3d22b7d48e5e6a6116704332452717b2d16135"
+    },
+    {
+      "tag": "electronic_fold3_budget50_seed17",
+      "model_sha256": "8c6d037b25def96d6d40ea5119e0a8e243d1af9849ab733aaf53140858f8b59b"
+    },
+    {
+      "tag": "electronic_fold3_budget50_seed29",
+      "model_sha256": "64cad22bc28c781dcfa19c57ef6e177826b4e082ff2a90dfe40e2bc843364f62"
+    },
+    {
+      "tag": "electronic_fold3_budget50_seed43",
+      "model_sha256": "361aedc6a6137c59b357c2f3e32dba0b195bd70b8bb388e977e7e35f8246d090"
+    },
+    {
+      "tag": "electronic_fold3_budgetfull_seedNone",
+      "model_sha256": "67da1b6b2e911bc74b82f497e0ac45918bc5d85a99a8071e85d109d6e16b5f78"
+    },
+    {
+      "tag": "electronic_fold4_budget100_seed17",
+      "model_sha256": "537d3578ccf5842c767e01808c321f1d70281166c9a93545d177a3cef9b4eb5b"
+    },
+    {
+      "tag": "electronic_fold4_budget100_seed29",
+      "model_sha256": "2e7efff86f2a5bfddb150cc699b3c7d2f4f98685489dd0c6fa9a28411c65eb86"
+    },
+    {
+      "tag": "electronic_fold4_budget100_seed43",
+      "model_sha256": "eedbfc8a154745924d922409d6e7055806a98bc78764a6f507442efab6388475"
+    },
+    {
+      "tag": "electronic_fold4_budget50_seed17",
+      "model_sha256": "0b66111004868352fa93fa815844e8aaaa58b6cbd5a27a39f548ad2e5d54e5a8"
+    },
+    {
+      "tag": "electronic_fold4_budget50_seed29",
+      "model_sha256": "b84dc37e840ffc168a66c1fe6d030e6224f183b0e3a39f5db90f70531b783be2"
+    },
+    {
+      "tag": "electronic_fold4_budget50_seed43",
+      "model_sha256": "332ba73b2c6986338e82818f372a9c03ce57aa659603a425521fc9cf39178675"
+    },
+    {
+      "tag": "electronic_fold4_budgetfull_seedNone",
+      "model_sha256": "0b04669facceb4c4deadc41ffa3d69f40e4431a5df88748e3e57322cd17706e9"
+    },
+    {
+      "tag": "jepa_plus_qm_fold0_budget100_seed17",
+      "model_sha256": "db2e85efc4d02f771cbad7bf44d3dc20ef3f00554a204c11a1caa6225b862a07"
+    },
+    {
+      "tag": "jepa_plus_qm_fold0_budget100_seed29",
+      "model_sha256": "fa17fd0ba46d14167b50b4d9ce15404eb60e9432ee03da1a20d331491129f41b"
+    },
+    {
+      "tag": "jepa_plus_qm_fold0_budget100_seed43",
+      "model_sha256": "8870840bf7c475bf31061689d86c328d928dae42930746864b0c03fc551249c2"
+    },
+    {
+      "tag": "jepa_plus_qm_fold0_budget50_seed17",
+      "model_sha256": "1ab9bd0beb8b3825a1b4f5073569182264ba7ed92887dfae48107ae4acf67381"
+    },
+    {
+      "tag": "jepa_plus_qm_fold0_budget50_seed29",
+      "model_sha256": "07e4f3019945e8b9870a233d051c05c1093c471b5dac962752016e4028b20a44"
+    },
+    {
+      "tag": "jepa_plus_qm_fold0_budget50_seed43",
+      "model_sha256": "0bb991ce2b04978e41038d519a7c8ba07fbe5fb99f320b7777f973db86a65d3c"
+    },
+    {
+      "tag": "morgan_fold0_budget100_seed17",
+      "model_sha256": "a3fb5e40837fa6991724ed98932cb323f31598df278cc218fe8962c4235dabd2"
+    },
+    {
+      "tag": "morgan_fold0_budget100_seed29",
+      "model_sha256": "29fea0dce4d28e9a40f3861da2d39fd56f2bf4f2a851803d5f6209147b6bd74b"
+    },
+    {
+      "tag": "morgan_fold0_budget100_seed43",
+      "model_sha256": "056e39addcba923338ce2f75b9c48a816044f4f435014b2659a9b30af2c8f10c"
+    },
+    {
+      "tag": "morgan_fold0_budget50_seed17",
+      "model_sha256": "277cb0814bc5861fb41bc70c39b9095a641a3cd00376b677cd99194c98ff5572"
+    },
+    {
+      "tag": "morgan_fold0_budget50_seed29",
+      "model_sha256": "f860ec3bcf58b0500658a5c74661465fa6defcf9a33f64d2128956e871782fee"
+    },
+    {
+      "tag": "morgan_fold0_budget50_seed43",
+      "model_sha256": "1e70c01ea8707b0b9a41df53bc780d084200a3fb55347e63a99f387f08a4ad3b"
+    },
+    {
+      "tag": "morgan_fold0_budgetfull_seedNone",
+      "model_sha256": "d1875c8001fe56bafcea6d0717ee15c081924b2bb5df0bd043d7246f5f912c6a"
+    },
+    {
+      "tag": "morgan_fold1_budget100_seed17",
+      "model_sha256": "df4ecabec47b476ce34e8479a67ca73c4c0141c3f76eae79e640993273f4a0eb"
+    },
+    {
+      "tag": "morgan_fold1_budget100_seed29",
+      "model_sha256": "074edd8f21661b0d769df4417bcf86ae877e90b6351667f8b7bfec236eda1411"
+    },
+    {
+      "tag": "morgan_fold1_budget100_seed43",
+      "model_sha256": "3440ef189f85ac1681eb6528af490af8f8e717a4d10716998913205476a50c4e"
+    },
+    {
+      "tag": "morgan_fold1_budget50_seed17",
+      "model_sha256": "4e783900487fcf01cb7dd2480087c30cbc6e3f32805e42f3e50e2de97e1e8fca"
+    },
+    {
+      "tag": "morgan_fold1_budget50_seed29",
+      "model_sha256": "a93ef69d6637657c83497f648fd574ae84cfecbb718f22c17b5791f879edffb8"
+    },
+    {
+      "tag": "morgan_fold1_budget50_seed43",
+      "model_sha256": "572e6f5d0aea2de769414f32d1ca8d5e94b8466ecc415cdceaa0a2c6a963f16f"
+    },
+    {
+      "tag": "morgan_fold1_budgetfull_seedNone",
+      "model_sha256": "fa5579e6119ccf19a6f3bd462e17238709acd3ccab820c36768b2832e6c5b828"
+    },
+    {
+      "tag": "morgan_fold2_budget100_seed17",
+      "model_sha256": "8bf2848fc8faa009a5fcc5b694556df9e11c67de82d0650077928e236cb64266"
+    },
+    {
+      "tag": "morgan_fold2_budget100_seed29",
+      "model_sha256": "26910e59d37285ef7a8004708764f01b9a09539f00f40ac3cd14d66f1a4855a5"
+    },
+    {
+      "tag": "morgan_fold2_budget100_seed43",
+      "model_sha256": "aeed1bd1f0c81d84245f9360292a9e0a849b692123355ab8a3b20fbd41c872a7"
+    },
+    {
+      "tag": "morgan_fold2_budget50_seed17",
+      "model_sha256": "9f1d73515d8cbe92c0f80b8ed0e6db3cc2d601f55fef56f7a3e5a5e6f60ebba8"
+    },
+    {
+      "tag": "morgan_fold2_budget50_seed29",
+      "model_sha256": "a5685b4be187d31b42565ec15b8a37d4fa81d7b6dd43ec9582699b8042c521e1"
+    },
+    {
+      "tag": "morgan_fold2_budget50_seed43",
+      "model_sha256": "289f49c9233fc71d023dc343f8b0c588504e84ad6b1ab56a3546d982a7fb6a04"
+    },
+    {
+      "tag": "morgan_fold2_budgetfull_seedNone",
+      "model_sha256": "ff1ba37f20ad62bd0524a1cc56ae5fc8f14bb7e73a9027eca2373fd53b899839"
+    },
+    {
+      "tag": "morgan_fold3_budget100_seed17",
+      "model_sha256": "fb01d0a7c869d14985f7eb83ce80da9a3d84bcf427e5dac8a51eb52a9c1ab46d"
+    },
+    {
+      "tag": "morgan_fold3_budget100_seed29",
+      "model_sha256": "e8c6ba4f1573ce4bd6da94d15ae6de72583e4f2f7876611ead01213a51cf0ac1"
+    },
+    {
+      "tag": "morgan_fold3_budget100_seed43",
+      "model_sha256": "75f83547b5eaef3c18d1d567fc05d469fc20019c0f4f04f4d913a0bde99ee3b4"
+    },
+    {
+      "tag": "morgan_fold3_budget50_seed17",
+      "model_sha256": "e3784d4503e3a7569b48454cd23f77e2ca89d737381cdbd05fc0f1bc64a9ec50"
+    },
+    {
+      "tag": "morgan_fold3_budget50_seed29",
+      "model_sha256": "147d02d9d268d7a3ccfb6722bf9b5d7b82257282d72f81c30eb2bcb8662d1b28"
+    },
+    {
+      "tag": "morgan_fold3_budget50_seed43",
+      "model_sha256": "737e907816c058393f3eeeb3b4c0ea25d8e476d53a9f078d03a09278e9208e2c"
+    },
+    {
+      "tag": "morgan_fold3_budgetfull_seedNone",
+      "model_sha256": "10dc299dbd96cdacd01a136134408eb6ceb06d735a2d52472f017fae41394d0a"
+    },
+    {
+      "tag": "morgan_fold4_budget100_seed17",
+      "model_sha256": "a444d42f5018c41f2587967d19d4ad103d9dd6aac7d86c1b42a136c66e8ad667"
+    },
+    {
+      "tag": "morgan_fold4_budget100_seed29",
+      "model_sha256": "5beaee86547434d97ca1964c3ffcded61d98512728420d20b917b681066bc107"
+    },
+    {
+      "tag": "morgan_fold4_budget100_seed43",
+      "model_sha256": "2adecb41f7301eeb640b5dcb46a723d91d6ed52667c05a88b079959ff287bbfc"
+    },
+    {
+      "tag": "morgan_fold4_budget50_seed17",
+      "model_sha256": "5fd751a7f60295fd9821cfae669c624b54f44ab3660b812612f8d46338ff1f2e"
+    },
+    {
+      "tag": "morgan_fold4_budget50_seed29",
+      "model_sha256": "08f2144110413ab92e5ed04b9986412f63ba08dd97baba177ec9b3884b1409dc"
+    },
+    {
+      "tag": "morgan_fold4_budget50_seed43",
+      "model_sha256": "c28788440994e80b868350d7075ccdcecb882e6197757def5c900398f938a061"
+    },
+    {
+      "tag": "morgan_fold4_budgetfull_seedNone",
+      "model_sha256": "9c6d067dda9b716cd3570b9f9777f51c00a071e4d637d5592f52f2234206786c"
+    },
+    {
+      "tag": "random_backbone_fold0_budget100_seed17",
+      "model_sha256": "43a059f61eb34fcc482264a7124fcccd7e855a4262271700e732ec1b76be7dd9"
+    },
+    {
+      "tag": "random_backbone_fold0_budget100_seed29",
+      "model_sha256": "5df170cadf2105fcc9de5b71782f64a358346dc883832c17b5dbb82cf0fc406e"
+    },
+    {
+      "tag": "random_backbone_fold0_budget100_seed43",
+      "model_sha256": "10cf7a867294182ee9edfd33edf34361177a42798b320e397fa7830490118217"
+    },
+    {
+      "tag": "random_backbone_fold0_budget50_seed17",
+      "model_sha256": "fb38d37e5a8e44c05c75ac5ade076268b4d196b133894e142f1961b15b4dad6e"
+    },
+    {
+      "tag": "random_backbone_fold0_budget50_seed29",
+      "model_sha256": "2c7ad5f1777e588555ad8de3ca57c00776c3e4cd739d2365e09697104c896060"
+    },
+    {
+      "tag": "random_backbone_fold0_budget50_seed43",
+      "model_sha256": "9319e64d38b9446b9f33c2221a34f97872282ca75dde76281de8ffc39c003eab"
+    },
+    {
+      "tag": "random_backbone_fold0_budgetfull_seedNone",
+      "model_sha256": "967da19fd0a5203d7d8fa355688f1fb22d3be45a8a38db87290d5541d1657279"
+    },
+    {
+      "tag": "random_backbone_fold1_budget100_seed17",
+      "model_sha256": "9244ddbffdbc4f2c550ee8cb190ec583d0eef37c87c1b4d5a9ae805e2dce4c52"
+    },
+    {
+      "tag": "random_backbone_fold1_budget100_seed29",
+      "model_sha256": "5c3eac454fa072f118617272ae327183b63afa1400c88afeb3dae408a10f8e5e"
+    },
+    {
+      "tag": "random_backbone_fold1_budget100_seed43",
+      "model_sha256": "74fb0f11656515502a4e5a066be9c4fe7c3620916c91097d0c3c3efa8bf2a581"
+    },
+    {
+      "tag": "random_backbone_fold1_budget50_seed17",
+      "model_sha256": "5f24176dca07274ba600b5fedbfe2d4651e3e7862c5d0acb3d9137ade9c54f73"
+    },
+    {
+      "tag": "random_backbone_fold1_budget50_seed29",
+      "model_sha256": "21c9ed1af1d58e484cc497590a8962890203b542c4177f6babbb7e573a96f4fb"
+    },
+    {
+      "tag": "random_backbone_fold1_budget50_seed43",
+      "model_sha256": "d4bad8f4b4ab8f853eb7568c46326f9aa96ae0435c16b20ee4a22bda42e93468"
+    },
+    {
+      "tag": "random_backbone_fold1_budgetfull_seedNone",
+      "model_sha256": "fbc4ab99730c867772d3d3df7b654fccbba0c27d922b31b99aeec1ab0b8c64c7"
+    },
+    {
+      "tag": "random_backbone_fold2_budget100_seed17",
+      "model_sha256": "0e3ea9575fdf122eacbbd8b73b985343aa0ef86a7140c7c3fefbb48da1f7eeda"
+    },
+    {
+      "tag": "random_backbone_fold2_budget100_seed29",
+      "model_sha256": "9253ee403c8d51b885b41e68157f0212e783d485294d939640fe2fcb80a2c13c"
+    },
+    {
+      "tag": "random_backbone_fold2_budget100_seed43",
+      "model_sha256": "9ad02775506d81b6325ac3fb545e422c7a22e4210ec3468e53fe1ff1b92e42a9"
+    },
+    {
+      "tag": "random_backbone_fold2_budget50_seed17",
+      "model_sha256": "fb5fd527da2354b7261b2ea4b014942aed1f24e285211ee4e1f3a6b541e75f6a"
+    },
+    {
+      "tag": "random_backbone_fold2_budget50_seed29",
+      "model_sha256": "c73443d1d2699ecb7d29af1ed245d1847834d1ebd86827187aa1fce8f467d0e5"
+    },
+    {
+      "tag": "random_backbone_fold2_budget50_seed43",
+      "model_sha256": "8dca9005286477b574743e6506477e6c7ce97d398c18708cbb2f97f7f64bf797"
+    },
+    {
+      "tag": "random_backbone_fold2_budgetfull_seedNone",
+      "model_sha256": "19edfb054c63e6b72820ef9035eee1a44f1220a1477babbb50505402dfa649ed"
+    },
+    {
+      "tag": "random_backbone_fold3_budget100_seed17",
+      "model_sha256": "1797b4ec523da20597544e4035a42fa1be595a874bb3069595f35c2fd1b94e04"
+    },
+    {
+      "tag": "random_backbone_fold3_budget100_seed29",
+      "model_sha256": "7bd6a644c424acc942d42dfd684fbe933e2d1ea1c40fbbf26546486ddec39078"
+    },
+    {
+      "tag": "random_backbone_fold3_budget100_seed43",
+      "model_sha256": "07b1b73858c0bf28026e863003134f4ece4dbbae941c44b03e181a154371432c"
+    },
+    {
+      "tag": "random_backbone_fold3_budget50_seed17",
+      "model_sha256": "139d5e51c0afa437b7404e4cad43da486cddd466141ef73a3e05c349ce5341f6"
+    },
+    {
+      "tag": "random_backbone_fold3_budget50_seed29",
+      "model_sha256": "a2279e57b52511396276953f2f2376053003e2596cc7d61e8c50b5210846cb4b"
+    },
+    {
+      "tag": "random_backbone_fold3_budget50_seed43",
+      "model_sha256": "b67e7f2e60999fffd1d24f9c9383a117d27b076efa2a1baba5965a2957b7db70"
+    },
+    {
+      "tag": "random_backbone_fold3_budgetfull_seedNone",
+      "model_sha256": "a0f5da69842cb7064105a1440ef47d5867d3a9346b3d17c54c5f09326b1c62f1"
+    },
+    {
+      "tag": "random_backbone_fold4_budget100_seed17",
+      "model_sha256": "f082ed0f992d9a70414cf39bde4f69bec468922cb3487bae74a8c3fd1f30c660"
+    },
+    {
+      "tag": "random_backbone_fold4_budget100_seed29",
+      "model_sha256": "1805daf87091aa94aaa0e06d1b4bbe94e0fe599b0bde8526c378b7729db9cf74"
+    },
+    {
+      "tag": "random_backbone_fold4_budget100_seed43",
+      "model_sha256": "1d45e2650535d92cce5a127a0b96916aac46c7d1569c741a6815a30afa8ebefe"
+    },
+    {
+      "tag": "random_backbone_fold4_budget50_seed17",
+      "model_sha256": "61975398546f581891397ca30f9e8be12dfcc1c64f98f997cc5d2e3b11ce1d9f"
+    },
+    {
+      "tag": "random_backbone_fold4_budget50_seed29",
+      "model_sha256": "f628b58e5f782931485c38f61371eacd7f2316a23edc7d795d8a63110c61db36"
+    },
+    {
+      "tag": "random_backbone_fold4_budget50_seed43",
+      "model_sha256": "dadc6b87a37047cc4c836e92617e8d85b66afd07fe6b5a641f88779e254c18a2"
+    },
+    {
+      "tag": "random_backbone_fold4_budgetfull_seedNone",
+      "model_sha256": "84c2d2bbd721ba229abd71399ccdfa927c14aaa2033ce9de5b18d4b7ff05a897"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+Review the RegJEPA convergence failure and proposed computation-budget amendment.
+Repository: https://github.com/adamadni/RegJEPA
+
+Review only. Do not edit source/configuration/data, install packages, create a
+branch, freeze a proposal, or launch a model fit. Read actual files and identify
+the checkout HEAD. Do not infer approval from a proposal directory's existence.
+
+The user approved proposal 09ebadea135ec50dc873 at reviewed implementation
+977f1206632a846638ca43606cc6a7375ddbeadf. Freeze/approval/runtime records were
+committed at 75cb0538cf73947c4db318e7fc3ca15806cc25ba. The approval record
+binds the proposal hash; resolve these commits against the actual checkout.
+
+Execution of that exact frozen protocol stopped on an inner JEPA+QM fit after
+146 of 175 final fits had been saved: 35 each for Atom-JEPA, random backbone,
+Morgan and electronic features, and 6 for JEPA+QM. The failed task was
+jepa_plus_qm_fold0_budgetfull_seedNone. The exception reported:
+  optimizer message: STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+  iterations: 1000
+  objective: 0.0007126250584747123
+  gradient infinity norm: 3.269827779833867e-07
+  active coefficients: 774
+
+This was not accepted as convergence. The reviewed implementation requires
+optimizer success, finite coefficients/objective, and gradient <= 1e-5. L-BFGS-B
+uses gtol=1e-7 and ftol=1e-14, so successful relative-objective termination can
+also be accepted if the gradient guard passes. Do not describe gtol alone as
+the complete acceptance rule. No convergence threshold is being relaxed.
+
+Proposed replacement: af05d8348e60ad38b6e4. It changes only
+optimizer.max_iterations from 1000 to 5000. It is not approved/frozen unless a
+subsequent explicit approval/frozen record exists. Compare actual artifacts.
+No outer-test performance was inspected to choose this amendment. A fresh run
+would rerun all 6300 inner fits and 175 final fits; there is no resume/merging
+of partial old results. Earlier artifacts remain a separate incomplete attempt.
+
+Read:
+- git ls-files, git log --oneline -5, git status --short
+- data/splits/README.md
+- data/splits/09ebadea135ec50dc873/{proposal,grouping,frozen,approval}.json
+- data/splits/af05d8348e60ad38b6e4/{proposal,grouping}.json
+- configs/evaluation.json and configs/evaluation_iteration_extension.json
+- reports/evaluation_execution_status.md and .json
+- reports/evaluation_iteration_amendment.md and _summary.json
+- reports/evaluation_runtime.json
+- src/regjepa/linear.py, experiment.py, protocol.py and docs/evaluation_protocol.md
+- reports/evaluation_convergence_diagnosis.json, if present, for a replay under
+  the original 1000-iteration cap; replay diagnostics are not replacement fits.
+
+Checks:
+1. Recursively compare configurations and verify that max_iterations is the
+   only changed leaf. Confirm identical compound_to_group, outer/inner folds,
+   training subsets, seeds, label budgets, feature/data/source locks, objective,
+   preprocessing, regularization grids, optimizer settings except the cap,
+   tie policy, bootstrap settings, and intended workload.
+2. Verify the failed fit truly failed the unchanged successful-termination rule.
+   Distinguish its gradient from both gtol and accepted_gradient. Does permitting
+   more iterations address an optimization limit without changing model selection
+   or using outer-test outcomes? Do not promise the new cap will suffice.
+3. Count the partial JSON/model pairs and completed inner fits from diagnostics.
+   Confirm no full-study summary exists for the failed attempt. Validate hashes
+   and convergence of saved fits without comparing their predictive performance.
+4. Verify a fresh amended run cannot overwrite/mix the old directory and that
+   the amended artifact will still require the normal reproducibility checks.
+   Approval records document human authorization separately from frozen bindings.
+5. Confirm reviewed source, raw data and feature bank have not changed. Preserve
+   the limited known-source/similarity-component holdout claim. No OOD, mechanism,
+   product-fraction, independent-publication-family or JEPA-objective claim follows.
+
+Return exact HEAD, checks actually performed, blockers/major/minor findings with
+file:line evidence, whether this is a computation-only amendment under the
+unchanged scientific protocol, and any reason it should not be approved.
+Do not execute fits or inspect outer-test performance for this review.
+End with a section titled "## Not done".

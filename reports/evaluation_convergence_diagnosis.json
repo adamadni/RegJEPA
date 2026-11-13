@@ -1,0 +1,2399 @@
+{
+  "schema_version": 1,
+  "proposal_id": "09ebadea135ec50dc873",
+  "task": "jepa_plus_qm_fold0_budgetfull_seedNone",
+  "purpose": "Original-cap convergence diagnosis, not a resumed or replacement experiment",
+  "max_iterations": 1000,
+  "outer_performance_inspected": false,
+  "started_at_utc": "2026-11-13T00:11:41.200078+00:00",
+  "fit_attempts": [
+    {
+      "fit_number_in_task": 1,
+      "stage": "inner",
+      "inner_fold": 0,
+      "penalties": {
+        "jepa": 10.0,
+        "qm": 10.0
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 16,
+        "active_coefficients": 774,
+        "objective": 0.8564182786188376,
+        "gradient_inf_norm": 4.978069239464089e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 8.315943698999998
+    },
+    {
+      "fit_number_in_task": 2,
+      "stage": "inner",
+      "inner_fold": 1,
+      "penalties": {
+        "jepa": 10.0,
+        "qm": 10.0
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 16,
+        "active_coefficients": 774,
+        "objective": 0.8416046318807351,
+        "gradient_inf_norm": 1.852849437766757e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.07157581000000235
+    },
+    {
+      "fit_number_in_task": 3,
+      "stage": "inner",
+      "inner_fold": 2,
+      "penalties": {
+        "jepa": 10.0,
+        "qm": 10.0
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 16,
+        "active_coefficients": 774,
+        "objective": 0.823310569776472,
+        "gradient_inf_norm": 4.0346698870763475e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.06246860099999907
+    },
+    {
+      "fit_number_in_task": 4,
+      "stage": "inner",
+      "inner_fold": 0,
+      "penalties": {
+        "jepa": 10.0,
+        "qm": 1.0
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 41,
+        "active_coefficients": 774,
+        "objective": 0.7212605605372494,
+        "gradient_inf_norm": 8.57157371747519e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.14480752099999705
+    },
+    {
+      "fit_number_in_task": 5,
+      "stage": "inner",
+      "inner_fold": 1,
+      "penalties": {
+        "jepa": 10.0,
+        "qm": 1.0
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 43,
+        "active_coefficients": 774,
+        "objective": 0.7233017873448198,
+        "gradient_inf_norm": 8.12326107491046e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.16380839199999997
+    },
+    {
+      "fit_number_in_task": 6,
+      "stage": "inner",
+      "inner_fold": 2,
+      "penalties": {
+        "jepa": 10.0,
+        "qm": 1.0
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 44,
+        "active_coefficients": 774,
+        "objective": 0.6738934125414288,
+        "gradient_inf_norm": 1.271478458769737e-07,
+        "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+      },
+      "elapsed_seconds": 0.1587967369999994
+    },
+    {
+      "fit_number_in_task": 7,
+      "stage": "inner",
+      "inner_fold": 0,
+      "penalties": {
+        "jepa": 10.0,
+        "qm": 0.1
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 89,
+        "active_coefficients": 774,
+        "objective": 0.509350245455956,
+        "gradient_inf_norm": 8.576745455859958e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.25069109500000053
+    },
+    {
+      "fit_number_in_task": 8,
+      "stage": "inner",
+      "inner_fold": 1,
+      "penalties": {
+        "jepa": 10.0,
+        "qm": 0.1
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 88,
+        "active_coefficients": 774,
+        "objective": 0.5347922461734003,
+        "gradient_inf_norm": 8.58312058510391e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.29355776000000233
+    },
+    {
+      "fit_number_in_task": 9,
+      "stage": "inner",
+      "inner_fold": 2,
+      "penalties": {
+        "jepa": 10.0,
+        "qm": 0.1
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 82,
+        "active_coefficients": 774,
+        "objective": 0.42452048171170126,
+        "gradient_inf_norm": 1.1897656563425452e-07,
+        "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+      },
+      "elapsed_seconds": 0.22226037700000134
+    },
+    {
+      "fit_number_in_task": 10,
+      "stage": "inner",
+      "inner_fold": 0,
+      "penalties": {
+        "jepa": 10.0,
+        "qm": 0.01
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 158,
+        "active_coefficients": 774,
+        "objective": 0.41926159936687857,
+        "gradient_inf_norm": 1.8754659643176186e-07,
+        "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+      },
+      "elapsed_seconds": 0.400644745000001
+    },
+    {
+      "fit_number_in_task": 11,
+      "stage": "inner",
+      "inner_fold": 1,
+      "penalties": {
+        "jepa": 10.0,
+        "qm": 0.01
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 175,
+        "active_coefficients": 774,
+        "objective": 0.4449561237615118,
+        "gradient_inf_norm": 7.759044086830952e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.43980954999999966
+    },
+    {
+      "fit_number_in_task": 12,
+      "stage": "inner",
+      "inner_fold": 2,
+      "penalties": {
+        "jepa": 10.0,
+        "qm": 0.01
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 156,
+        "active_coefficients": 774,
+        "objective": 0.2870683229692928,
+        "gradient_inf_norm": 1.285289192212019e-07,
+        "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+      },
+      "elapsed_seconds": 0.5638907199999998
+    },
+    {
+      "fit_number_in_task": 13,
+      "stage": "inner",
+      "inner_fold": 0,
+      "penalties": {
+        "jepa": 10.0,
+        "qm": 0.001
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 239,
+        "active_coefficients": 774,
+        "objective": 0.3841057934160788,
+        "gradient_inf_norm": 1.4299239875286904e-07,
+        "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+      },
+      "elapsed_seconds": 0.7399543189999989
+    },
+    {
+      "fit_number_in_task": 14,
+      "stage": "inner",
+      "inner_fold": 1,
+      "penalties": {
+        "jepa": 10.0,
+        "qm": 0.001
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 230,
+        "active_coefficients": 774,
+        "objective": 0.39607036543613927,
+        "gradient_inf_norm": 1.147951014282252e-07,
+        "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+      },
+      "elapsed_seconds": 0.543714125000001
+    },
+    {
+      "fit_number_in_task": 15,
+      "stage": "inner",
+      "inner_fold": 2,
+      "penalties": {
+        "jepa": 10.0,
+        "qm": 0.001
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 365,
+        "active_coefficients": 774,
+        "objective": 0.24292111106366218,
+        "gradient_inf_norm": 8.879485247602348e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.903421091000002
+    },
+    {
+      "fit_number_in_task": 16,
+      "stage": "inner",
+      "inner_fold": 0,
+      "penalties": {
+        "jepa": 10.0,
+        "qm": 0.0001
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 333,
+        "active_coefficients": 774,
+        "objective": 0.37182627913906013,
+        "gradient_inf_norm": 9.891332208259319e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 1.0058475199999997
+    },
+    {
+      "fit_number_in_task": 17,
+      "stage": "inner",
+      "inner_fold": 1,
+      "penalties": {
+        "jepa": 10.0,
+        "qm": 0.0001
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 309,
+        "active_coefficients": 774,
+        "objective": 0.37453584959685715,
+        "gradient_inf_norm": 9.310663664119541e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.7251173830000042
+    },
+    {
+      "fit_number_in_task": 18,
+      "stage": "inner",
+      "inner_fold": 2,
+      "penalties": {
+        "jepa": 10.0,
+        "qm": 0.0001
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 364,
+        "active_coefficients": 774,
+        "objective": 0.23047196686373617,
+        "gradient_inf_norm": 1.0592890239632686e-07,
+        "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+      },
+      "elapsed_seconds": 0.8915868790000019
+    },
+    {
+      "fit_number_in_task": 19,
+      "stage": "inner",
+      "inner_fold": 0,
+      "penalties": {
+        "jepa": 1.0,
+        "qm": 10.0
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 32,
+        "active_coefficients": 774,
+        "objective": 0.388086117375232,
+        "gradient_inf_norm": 8.058600120541826e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.08008890400000013
+    },
+    {
+      "fit_number_in_task": 20,
+      "stage": "inner",
+      "inner_fold": 1,
+      "penalties": {
+        "jepa": 1.0,
+        "qm": 10.0
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 33,
+        "active_coefficients": 774,
+        "objective": 0.39373017614399847,
+        "gradient_inf_norm": 8.427871459742997e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.10299342700000125
+    },
+    {
+      "fit_number_in_task": 21,
+      "stage": "inner",
+      "inner_fold": 2,
+      "penalties": {
+        "jepa": 1.0,
+        "qm": 10.0
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 32,
+        "active_coefficients": 774,
+        "objective": 0.38211686949027446,
+        "gradient_inf_norm": 7.03934170676046e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.1021905349999983
+    },
+    {
+      "fit_number_in_task": 22,
+      "stage": "inner",
+      "inner_fold": 0,
+      "penalties": {
+        "jepa": 1.0,
+        "qm": 1.0
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 32,
+        "active_coefficients": 774,
+        "objective": 0.36323264406236944,
+        "gradient_inf_norm": 4.2247452481693204e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.08172266300000075
+    },
+    {
+      "fit_number_in_task": 23,
+      "stage": "inner",
+      "inner_fold": 1,
+      "penalties": {
+        "jepa": 1.0,
+        "qm": 1.0
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 33,
+        "active_coefficients": 774,
+        "objective": 0.3672125037264068,
+        "gradient_inf_norm": 6.722826247085312e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.10150672600000377
+    },
+    {
+      "fit_number_in_task": 24,
+      "stage": "inner",
+      "inner_fold": 2,
+      "penalties": {
+        "jepa": 1.0,
+        "qm": 1.0
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 30,
+        "active_coefficients": 774,
+        "objective": 0.3500955107144774,
+        "gradient_inf_norm": 6.183792931532817e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.08566785200000027
+    },
+    {
+      "fit_number_in_task": 25,
+      "stage": "inner",
+      "inner_fold": 0,
+      "penalties": {
+        "jepa": 1.0,
+        "qm": 0.1
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 76,
+        "active_coefficients": 774,
+        "objective": 0.28054356062800717,
+        "gradient_inf_norm": 7.737995560280764e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.3508834140000019
+    },
+    {
+      "fit_number_in_task": 26,
+      "stage": "inner",
+      "inner_fold": 1,
+      "penalties": {
+        "jepa": 1.0,
+        "qm": 0.1
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 78,
+        "active_coefficients": 774,
+        "objective": 0.2854361315458176,
+        "gradient_inf_norm": 8.721903913683215e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.23143139399999768
+    },
+    {
+      "fit_number_in_task": 27,
+      "stage": "inner",
+      "inner_fold": 2,
+      "penalties": {
+        "jepa": 1.0,
+        "qm": 0.1
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 66,
+        "active_coefficients": 774,
+        "objective": 0.24939135876371016,
+        "gradient_inf_norm": 9.014408669169582e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.226407382000005
+    },
+    {
+      "fit_number_in_task": 28,
+      "stage": "inner",
+      "inner_fold": 0,
+      "penalties": {
+        "jepa": 1.0,
+        "qm": 0.01
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 158,
+        "active_coefficients": 774,
+        "objective": 0.21378967697405066,
+        "gradient_inf_norm": 8.966886529820917e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.3883129600000004
+    },
+    {
+      "fit_number_in_task": 29,
+      "stage": "inner",
+      "inner_fold": 1,
+      "penalties": {
+        "jepa": 1.0,
+        "qm": 0.01
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 175,
+        "active_coefficients": 774,
+        "objective": 0.21903355522716633,
+        "gradient_inf_norm": 9.15996935971046e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.42875681499999985
+    },
+    {
+      "fit_number_in_task": 30,
+      "stage": "inner",
+      "inner_fold": 2,
+      "penalties": {
+        "jepa": 1.0,
+        "qm": 0.01
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 137,
+        "active_coefficients": 774,
+        "objective": 0.1591320763415755,
+        "gradient_inf_norm": 6.077918812859295e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.3221244259999949
+    },
+    {
+      "fit_number_in_task": 31,
+      "stage": "inner",
+      "inner_fold": 0,
+      "penalties": {
+        "jepa": 1.0,
+        "qm": 0.001
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 343,
+        "active_coefficients": 774,
+        "objective": 0.19379155130503076,
+        "gradient_inf_norm": 9.79851776522489e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.8488797220000066
+    },
+    {
+      "fit_number_in_task": 32,
+      "stage": "inner",
+      "inner_fold": 1,
+      "penalties": {
+        "jepa": 1.0,
+        "qm": 0.001
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 398,
+        "active_coefficients": 774,
+        "objective": 0.1949001182006074,
+        "gradient_inf_norm": 9.539632383104464e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 1.1195477979999993
+    },
+    {
+      "fit_number_in_task": 33,
+      "stage": "inner",
+      "inner_fold": 2,
+      "penalties": {
+        "jepa": 1.0,
+        "qm": 0.001
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 285,
+        "active_coefficients": 774,
+        "objective": 0.12569923725464,
+        "gradient_inf_norm": 9.989750162335423e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.6595706470000025
+    },
+    {
+      "fit_number_in_task": 34,
+      "stage": "inner",
+      "inner_fold": 0,
+      "penalties": {
+        "jepa": 1.0,
+        "qm": 0.0001
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 439,
+        "active_coefficients": 774,
+        "objective": 0.1853954188381956,
+        "gradient_inf_norm": 9.701739288683637e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 1.0148096739999986
+    },
+    {
+      "fit_number_in_task": 35,
+      "stage": "inner",
+      "inner_fold": 1,
+      "penalties": {
+        "jepa": 1.0,
+        "qm": 0.0001
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 598,
+        "active_coefficients": 774,
+        "objective": 0.180466286771256,
+        "gradient_inf_norm": 9.451859344923293e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 1.5816588150000044
+    },
+    {
+      "fit_number_in_task": 36,
+      "stage": "inner",
+      "inner_fold": 2,
+      "penalties": {
+        "jepa": 1.0,
+        "qm": 0.0001
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 446,
+        "active_coefficients": 774,
+        "objective": 0.11676549653033852,
+        "gradient_inf_norm": 9.073465447127088e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 1.0507763069999996
+    },
+    {
+      "fit_number_in_task": 37,
+      "stage": "inner",
+      "inner_fold": 0,
+      "penalties": {
+        "jepa": 0.1,
+        "qm": 10.0
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 78,
+        "active_coefficients": 774,
+        "objective": 0.10790778031144878,
+        "gradient_inf_norm": 7.993262592445594e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.1901602820000008
+    },
+    {
+      "fit_number_in_task": 38,
+      "stage": "inner",
+      "inner_fold": 1,
+      "penalties": {
+        "jepa": 0.1,
+        "qm": 10.0
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 78,
+        "active_coefficients": 774,
+        "objective": 0.11509876690226635,
+        "gradient_inf_norm": 4.61371623579343e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.19345283100000188
+    },
+    {
+      "fit_number_in_task": 39,
+      "stage": "inner",
+      "inner_fold": 2,
+      "penalties": {
+        "jepa": 0.1,
+        "qm": 10.0
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 76,
+        "active_coefficients": 774,
+        "objective": 0.11163077228226839,
+        "gradient_inf_norm": 6.476639093019876e-07,
+        "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+      },
+      "elapsed_seconds": 0.1823205369999954
+    },
+    {
+      "fit_number_in_task": 40,
+      "stage": "inner",
+      "inner_fold": 0,
+      "penalties": {
+        "jepa": 0.1,
+        "qm": 1.0
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 47,
+        "active_coefficients": 774,
+        "objective": 0.1066354615821089,
+        "gradient_inf_norm": 6.68800601436384e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.13065592199999543
+    },
+    {
+      "fit_number_in_task": 41,
+      "stage": "inner",
+      "inner_fold": 1,
+      "penalties": {
+        "jepa": 0.1,
+        "qm": 1.0
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 47,
+        "active_coefficients": 774,
+        "objective": 0.11331222266767758,
+        "gradient_inf_norm": 6.720165432721331e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.12983140200000065
+    },
+    {
+      "fit_number_in_task": 42,
+      "stage": "inner",
+      "inner_fold": 2,
+      "penalties": {
+        "jepa": 0.1,
+        "qm": 1.0
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 45,
+        "active_coefficients": 774,
+        "objective": 0.10950246921501891,
+        "gradient_inf_norm": 6.755839247751805e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.12010103200000088
+    },
+    {
+      "fit_number_in_task": 43,
+      "stage": "inner",
+      "inner_fold": 0,
+      "penalties": {
+        "jepa": 0.1,
+        "qm": 0.1
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 46,
+        "active_coefficients": 774,
+        "objective": 0.09742671504077034,
+        "gradient_inf_norm": 7.588513876045228e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.1463203309999983
+    },
+    {
+      "fit_number_in_task": 44,
+      "stage": "inner",
+      "inner_fold": 1,
+      "penalties": {
+        "jepa": 0.1,
+        "qm": 0.1
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 45,
+        "active_coefficients": 774,
+        "objective": 0.10134007789461293,
+        "gradient_inf_norm": 8.663529195277776e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.15527227399999788
+    },
+    {
+      "fit_number_in_task": 45,
+      "stage": "inner",
+      "inner_fold": 2,
+      "penalties": {
+        "jepa": 0.1,
+        "qm": 0.1
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 43,
+        "active_coefficients": 774,
+        "objective": 0.09527204870018881,
+        "gradient_inf_norm": 7.94782046460718e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.13630776699999814
+    },
+    {
+      "fit_number_in_task": 46,
+      "stage": "inner",
+      "inner_fold": 0,
+      "penalties": {
+        "jepa": 0.1,
+        "qm": 0.01
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 102,
+        "active_coefficients": 774,
+        "objective": 0.07343853415076484,
+        "gradient_inf_norm": 8.865348122971684e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.3102348929999934
+    },
+    {
+      "fit_number_in_task": 47,
+      "stage": "inner",
+      "inner_fold": 1,
+      "penalties": {
+        "jepa": 0.1,
+        "qm": 0.01
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 107,
+        "active_coefficients": 774,
+        "objective": 0.07512440089004016,
+        "gradient_inf_norm": 8.116193681321701e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.300620256000002
+    },
+    {
+      "fit_number_in_task": 48,
+      "stage": "inner",
+      "inner_fold": 2,
+      "penalties": {
+        "jepa": 0.1,
+        "qm": 0.01
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 86,
+        "active_coefficients": 774,
+        "objective": 0.06321754141286078,
+        "gradient_inf_norm": 9.984578842360536e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.22061882199999872
+    },
+    {
+      "fit_number_in_task": 49,
+      "stage": "inner",
+      "inner_fold": 0,
+      "penalties": {
+        "jepa": 0.1,
+        "qm": 0.001
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 210,
+        "active_coefficients": 774,
+        "objective": 0.05789104381517517,
+        "gradient_inf_norm": 8.82171565727563e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.4765847930000007
+    },
+    {
+      "fit_number_in_task": 50,
+      "stage": "inner",
+      "inner_fold": 1,
+      "penalties": {
+        "jepa": 0.1,
+        "qm": 0.001
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 243,
+        "active_coefficients": 774,
+        "objective": 0.0587675498365134,
+        "gradient_inf_norm": 5.8825666721237443e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.5507391020000014
+    },
+    {
+      "fit_number_in_task": 51,
+      "stage": "inner",
+      "inner_fold": 2,
+      "penalties": {
+        "jepa": 0.1,
+        "qm": 0.001
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 196,
+        "active_coefficients": 774,
+        "objective": 0.04107253546776846,
+        "gradient_inf_norm": 6.9515211877395e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.42940797600000025
+    },
+    {
+      "fit_number_in_task": 52,
+      "stage": "inner",
+      "inner_fold": 0,
+      "penalties": {
+        "jepa": 0.1,
+        "qm": 0.0001
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 618,
+        "active_coefficients": 774,
+        "objective": 0.05352107489180573,
+        "gradient_inf_norm": 9.56591476690416e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 1.459970245000001
+    },
+    {
+      "fit_number_in_task": 53,
+      "stage": "inner",
+      "inner_fold": 1,
+      "penalties": {
+        "jepa": 0.1,
+        "qm": 0.0001
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 574,
+        "active_coefficients": 774,
+        "objective": 0.05306617058484153,
+        "gradient_inf_norm": 9.868077877024173e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 1.2232606540000006
+    },
+    {
+      "fit_number_in_task": 54,
+      "stage": "inner",
+      "inner_fold": 2,
+      "penalties": {
+        "jepa": 0.1,
+        "qm": 0.0001
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 363,
+        "active_coefficients": 774,
+        "objective": 0.03382954619246821,
+        "gradient_inf_norm": 5.6903394540991966e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.8235268190000014
+    },
+    {
+      "fit_number_in_task": 55,
+      "stage": "inner",
+      "inner_fold": 0,
+      "penalties": {
+        "jepa": 0.01,
+        "qm": 10.0
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 200,
+        "active_coefficients": 774,
+        "objective": 0.022390887017783447,
+        "gradient_inf_norm": 9.770777693613591e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.4901146560000029
+    },
+    {
+      "fit_number_in_task": 56,
+      "stage": "inner",
+      "inner_fold": 1,
+      "penalties": {
+        "jepa": 0.01,
+        "qm": 10.0
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 203,
+        "active_coefficients": 774,
+        "objective": 0.024761296914703322,
+        "gradient_inf_norm": 6.056123377719443e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.4900501480000017
+    },
+    {
+      "fit_number_in_task": 57,
+      "stage": "inner",
+      "inner_fold": 2,
+      "penalties": {
+        "jepa": 0.01,
+        "qm": 10.0
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 195,
+        "active_coefficients": 774,
+        "objective": 0.024097738107022475,
+        "gradient_inf_norm": 9.897472659395161e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.44475401700000106
+    },
+    {
+      "fit_number_in_task": 58,
+      "stage": "inner",
+      "inner_fold": 0,
+      "penalties": {
+        "jepa": 0.01,
+        "qm": 1.0
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 68,
+        "active_coefficients": 774,
+        "objective": 0.022358621548805913,
+        "gradient_inf_norm": 5.109499142991365e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.16846471199999513
+    },
+    {
+      "fit_number_in_task": 59,
+      "stage": "inner",
+      "inner_fold": 1,
+      "penalties": {
+        "jepa": 0.01,
+        "qm": 1.0
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 69,
+        "active_coefficients": 774,
+        "objective": 0.0247079523916708,
+        "gradient_inf_norm": 7.080309700818396e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.17736150200000367
+    },
+    {
+      "fit_number_in_task": 60,
+      "stage": "inner",
+      "inner_fold": 2,
+      "penalties": {
+        "jepa": 0.01,
+        "qm": 1.0
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 71,
+        "active_coefficients": 774,
+        "objective": 0.024034387524996616,
+        "gradient_inf_norm": 4.828463392851125e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.16495784300000338
+    },
+    {
+      "fit_number_in_task": 61,
+      "stage": "inner",
+      "inner_fold": 0,
+      "penalties": {
+        "jepa": 0.01,
+        "qm": 0.1
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 57,
+        "active_coefficients": 774,
+        "objective": 0.022050667848747825,
+        "gradient_inf_norm": 6.186575561540307e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.14065115500000047
+    },
+    {
+      "fit_number_in_task": 62,
+      "stage": "inner",
+      "inner_fold": 1,
+      "penalties": {
+        "jepa": 0.01,
+        "qm": 0.1
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 55,
+        "active_coefficients": 774,
+        "objective": 0.0242065482166361,
+        "gradient_inf_norm": 6.283711450808362e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.14186192999999747
+    },
+    {
+      "fit_number_in_task": 63,
+      "stage": "inner",
+      "inner_fold": 2,
+      "penalties": {
+        "jepa": 0.01,
+        "qm": 0.1
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 54,
+        "active_coefficients": 774,
+        "objective": 0.0234398514479488,
+        "gradient_inf_norm": 9.278725567702859e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.1353546479999963
+    },
+    {
+      "fit_number_in_task": 64,
+      "stage": "inner",
+      "inner_fold": 0,
+      "penalties": {
+        "jepa": 0.01,
+        "qm": 0.01
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 51,
+        "active_coefficients": 774,
+        "objective": 0.019917166175889643,
+        "gradient_inf_norm": 8.067562091312354e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.1204771789999981
+    },
+    {
+      "fit_number_in_task": 65,
+      "stage": "inner",
+      "inner_fold": 1,
+      "penalties": {
+        "jepa": 0.01,
+        "qm": 0.01
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 50,
+        "active_coefficients": 774,
+        "objective": 0.02107954060981445,
+        "gradient_inf_norm": 8.262918704427945e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.11833182699999867
+    },
+    {
+      "fit_number_in_task": 66,
+      "stage": "inner",
+      "inner_fold": 2,
+      "penalties": {
+        "jepa": 0.01,
+        "qm": 0.01
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 45,
+        "active_coefficients": 774,
+        "objective": 0.019739337774461227,
+        "gradient_inf_norm": 9.572190512723445e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.11691742300000385
+    },
+    {
+      "fit_number_in_task": 67,
+      "stage": "inner",
+      "inner_fold": 0,
+      "penalties": {
+        "jepa": 0.01,
+        "qm": 0.001
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 114,
+        "active_coefficients": 774,
+        "objective": 0.01488132805083733,
+        "gradient_inf_norm": 9.643721735216014e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.26756974999999983
+    },
+    {
+      "fit_number_in_task": 68,
+      "stage": "inner",
+      "inner_fold": 1,
+      "penalties": {
+        "jepa": 0.01,
+        "qm": 0.001
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 121,
+        "active_coefficients": 774,
+        "objective": 0.0152709556418189,
+        "gradient_inf_norm": 9.495217190508623e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.2761586470000026
+    },
+    {
+      "fit_number_in_task": 69,
+      "stage": "inner",
+      "inner_fold": 2,
+      "penalties": {
+        "jepa": 0.01,
+        "qm": 0.001
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 95,
+        "active_coefficients": 774,
+        "objective": 0.012615698487355045,
+        "gradient_inf_norm": 5.3151382122516334e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.23297841899999838
+    },
+    {
+      "fit_number_in_task": 70,
+      "stage": "inner",
+      "inner_fold": 0,
+      "penalties": {
+        "jepa": 0.01,
+        "qm": 0.0001
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 222,
+        "active_coefficients": 774,
+        "objective": 0.011850950830414,
+        "gradient_inf_norm": 8.963791348165994e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.5099185250000033
+    },
+    {
+      "fit_number_in_task": 71,
+      "stage": "inner",
+      "inner_fold": 1,
+      "penalties": {
+        "jepa": 0.01,
+        "qm": 0.0001
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 324,
+        "active_coefficients": 774,
+        "objective": 0.012040957248652043,
+        "gradient_inf_norm": 9.14150129451756e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.7170113529999966
+    },
+    {
+      "fit_number_in_task": 72,
+      "stage": "inner",
+      "inner_fold": 2,
+      "penalties": {
+        "jepa": 0.01,
+        "qm": 0.0001
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 177,
+        "active_coefficients": 774,
+        "objective": 0.008248258467944997,
+        "gradient_inf_norm": 7.84047795320244e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.39759811799999767
+    },
+    {
+      "fit_number_in_task": 73,
+      "stage": "inner",
+      "inner_fold": 0,
+      "penalties": {
+        "jepa": 0.001,
+        "qm": 10.0
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 477,
+        "active_coefficients": 774,
+        "objective": 0.003934307878888636,
+        "gradient_inf_norm": 9.774674352301042e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 1.1549400399999996
+    },
+    {
+      "fit_number_in_task": 74,
+      "stage": "inner",
+      "inner_fold": 1,
+      "penalties": {
+        "jepa": 0.001,
+        "qm": 10.0
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 489,
+        "active_coefficients": 774,
+        "objective": 0.004450906495396635,
+        "gradient_inf_norm": 6.674784485788095e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 1.146783984999999
+    },
+    {
+      "fit_number_in_task": 75,
+      "stage": "inner",
+      "inner_fold": 2,
+      "penalties": {
+        "jepa": 0.001,
+        "qm": 10.0
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 507,
+        "active_coefficients": 774,
+        "objective": 0.004346208937615425,
+        "gradient_inf_norm": 5.017533994820973e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 1.1501135379999994
+    },
+    {
+      "fit_number_in_task": 76,
+      "stage": "inner",
+      "inner_fold": 0,
+      "penalties": {
+        "jepa": 0.001,
+        "qm": 1.0
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 162,
+        "active_coefficients": 774,
+        "objective": 0.003933688124815327,
+        "gradient_inf_norm": 8.205286081098759e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.37827256699999623
+    },
+    {
+      "fit_number_in_task": 77,
+      "stage": "inner",
+      "inner_fold": 1,
+      "penalties": {
+        "jepa": 0.001,
+        "qm": 1.0
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 160,
+        "active_coefficients": 774,
+        "objective": 0.00444979410996943,
+        "gradient_inf_norm": 9.443806104478454e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.32867909200000156
+    },
+    {
+      "fit_number_in_task": 78,
+      "stage": "inner",
+      "inner_fold": 2,
+      "penalties": {
+        "jepa": 0.001,
+        "qm": 1.0
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 171,
+        "active_coefficients": 774,
+        "objective": 0.00434489006122947,
+        "gradient_inf_norm": 4.1294760871359287e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.396381771999998
+    },
+    {
+      "fit_number_in_task": 79,
+      "stage": "inner",
+      "inner_fold": 0,
+      "penalties": {
+        "jepa": 0.001,
+        "qm": 0.1
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 61,
+        "active_coefficients": 774,
+        "objective": 0.003927522618615579,
+        "gradient_inf_norm": 8.933702213428604e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.14518895300000167
+    },
+    {
+      "fit_number_in_task": 80,
+      "stage": "inner",
+      "inner_fold": 1,
+      "penalties": {
+        "jepa": 0.001,
+        "qm": 0.1
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 69,
+        "active_coefficients": 774,
+        "objective": 0.004438746927849179,
+        "gradient_inf_norm": 3.662509337864074e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.16685282899999976
+    },
+    {
+      "fit_number_in_task": 81,
+      "stage": "inner",
+      "inner_fold": 2,
+      "penalties": {
+        "jepa": 0.001,
+        "qm": 0.1
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 67,
+        "active_coefficients": 774,
+        "objective": 0.004331795346632355,
+        "gradient_inf_norm": 9.836815673613334e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.15703837999999593
+    },
+    {
+      "fit_number_in_task": 82,
+      "stage": "inner",
+      "inner_fold": 0,
+      "penalties": {
+        "jepa": 0.001,
+        "qm": 0.01
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 54,
+        "active_coefficients": 774,
+        "objective": 0.0038688821365883714,
+        "gradient_inf_norm": 6.039235093367243e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.1392287379999999
+    },
+    {
+      "fit_number_in_task": 83,
+      "stage": "inner",
+      "inner_fold": 1,
+      "penalties": {
+        "jepa": 0.001,
+        "qm": 0.01
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 56,
+        "active_coefficients": 774,
+        "objective": 0.00433542660264109,
+        "gradient_inf_norm": 9.52051332456271e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.1494659760000019
+    },
+    {
+      "fit_number_in_task": 84,
+      "stage": "inner",
+      "inner_fold": 2,
+      "penalties": {
+        "jepa": 0.001,
+        "qm": 0.01
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 56,
+        "active_coefficients": 774,
+        "objective": 0.0042095458109535425,
+        "gradient_inf_norm": 9.371011029397219e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.13387697299999957
+    },
+    {
+      "fit_number_in_task": 85,
+      "stage": "inner",
+      "inner_fold": 0,
+      "penalties": {
+        "jepa": 0.001,
+        "qm": 0.001
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 51,
+        "active_coefficients": 774,
+        "objective": 0.0034718115643216736,
+        "gradient_inf_norm": 8.171245958667618e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.1360781739999979
+    },
+    {
+      "fit_number_in_task": 86,
+      "stage": "inner",
+      "inner_fold": 1,
+      "penalties": {
+        "jepa": 0.001,
+        "qm": 0.001
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 52,
+        "active_coefficients": 774,
+        "objective": 0.0037128498188098687,
+        "gradient_inf_norm": 6.47283827751743e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.1320110840000055
+    },
+    {
+      "fit_number_in_task": 87,
+      "stage": "inner",
+      "inner_fold": 2,
+      "penalties": {
+        "jepa": 0.001,
+        "qm": 0.001
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 48,
+        "active_coefficients": 774,
+        "objective": 0.0034739434096006205,
+        "gradient_inf_norm": 8.148420693935241e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.10794999399999483
+    },
+    {
+      "fit_number_in_task": 88,
+      "stage": "inner",
+      "inner_fold": 0,
+      "penalties": {
+        "jepa": 0.001,
+        "qm": 0.0001
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 110,
+        "active_coefficients": 774,
+        "objective": 0.002581255844025708,
+        "gradient_inf_norm": 9.047062490297479e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.276233996000002
+    },
+    {
+      "fit_number_in_task": 89,
+      "stage": "inner",
+      "inner_fold": 1,
+      "penalties": {
+        "jepa": 0.001,
+        "qm": 0.0001
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 115,
+        "active_coefficients": 774,
+        "objective": 0.002653226569775219,
+        "gradient_inf_norm": 9.844043063540102e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.2602699549999983
+    },
+    {
+      "fit_number_in_task": 90,
+      "stage": "inner",
+      "inner_fold": 2,
+      "penalties": {
+        "jepa": 0.001,
+        "qm": 0.0001
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 91,
+        "active_coefficients": 774,
+        "objective": 0.002169713291848841,
+        "gradient_inf_norm": 8.834871586205028e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 0.22986860699999312
+    },
+    {
+      "fit_number_in_task": 91,
+      "stage": "inner",
+      "inner_fold": 0,
+      "penalties": {
+        "jepa": 0.0001,
+        "qm": 10.0
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "converged",
+      "diagnostics": {
+        "converged": true,
+        "iterations": 891,
+        "active_coefficients": 774,
+        "objective": 0.0006204610383958095,
+        "gradient_inf_norm": 8.273270253003712e-08,
+        "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      "elapsed_seconds": 1.9521061690000039
+    },
+    {
+      "fit_number_in_task": 92,
+      "stage": "inner",
+      "inner_fold": 1,
+      "penalties": {
+        "jepa": 0.0001,
+        "qm": 10.0
+      },
+      "training_molecules": 160,
+      "optimizer_arguments": {
+        "standardize": true,
+        "max_iterations": 1000,
+        "gradient_tolerance": 1e-07,
+        "accepted_gradient": 1e-05
+      },
+      "status": "failed",
+      "error": "Linear scorer did not converge: {'converged': False, 'iterations': 1000, 'active_coefficients': 774, 'objective': 0.0007126250584747123, 'gradient_inf_norm': 3.269827779833867e-07, 'optimizer_message': 'STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT'}",
+      "elapsed_seconds": 2.2974797180000053
+    }
+  ],
+  "status": "failure_reproduced",
+  "failure_message": "Linear scorer did not converge: {'converged': False, 'iterations': 1000, 'active_coefficients': 774, 'objective': 0.0007126250584747123, 'gradient_inf_norm': 3.269827779833867e-07, 'optimizer_message': 'STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT'}",
+  "finished_at_utc": "2026-11-13T00:12:29.810228+00:00"
+}
