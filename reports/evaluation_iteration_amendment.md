@@ -1,8 +1,8 @@
-# Proposed iteration-budget amendment
+# Approved iteration-budget amendment
 
 Original approved proposal: `09ebadea135ec50dc873`. It stopped at the 1,000-iteration cap during inner JEPA+QM fitting after saving 146 of 175 final fits.
 
-Proposed replacement: **`af05d8348e60ad38b6e4`**. Status: **not approved and not frozen**.
+Approved replacement: **`af05d8348e60ad38b6e4`**. Status: **user-approved and frozen**. The exact approval is "Approve cap 5,000 and rerun". Its proposal-hash binding is in `data/splits/af05d8348e60ad38b6e4/approval.json`; current execution state is in `reports/evaluation_amended_execution_status.json`.
 
 The only configuration change is `optimizer.max_iterations`: **1,000 → 5,000**. Both the 1e-7 optimizer target and the successful-termination/accepted-gradient checks remain unchanged. Optimizer type, initial coefficients, objective, feature blocks, transformations, hyperparameter grids, seeds, data, leakage groups, outer/inner folds and nested label budgets are identical. The larger cap permits additional iterations; it does not force already converged fits to continue.
 
@@ -16,4 +16,4 @@ Files: `configs/evaluation_iteration_extension.json`, `data/splits/af05d8348e60a
 
 ## Not done
 
-The amended protocol has not been approved, frozen or fitted. No convergence threshold has been relaxed and no failed fit has been counted as valid.
+The fresh rerun and its verification are pending. No convergence threshold has been relaxed and no failed fit has been counted as valid.

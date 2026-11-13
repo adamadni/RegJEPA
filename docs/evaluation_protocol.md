@@ -37,6 +37,8 @@ The same numerical grid does not give every representation the same effective sh
 
 L-BFGS-B starts at zero with analytic gradients, at most 1000 iterations, gradient tolerance 1e-7, relative objective tolerance 1e-14 and accepted final gradient infinity norm <=1e-5. Failed convergence aborts a fit; it is never counted as a valid result. No early stopping uses outer-test data. An exact inner-NLL tie prefers stronger shrinkage in a fixed candidate order.
 
+The original approved proposal `09ebadea135ec50dc873` stopped at that 1,000-iteration cap on an inner JEPA+QM fit. The user subsequently approved proposal `af05d8348e60ad38b6e4`, changing only `optimizer.max_iterations` to **5,000** and authorizing a fresh rerun of all five blocks. Its embedded configuration and `configs/evaluation_iteration_extension.json` are authoritative for that run; the original configuration and incomplete outputs remain preserved. All convergence thresholds, grouping, splits, budgets, grids and source/data locks are unchanged. See `reports/evaluation_iteration_amendment.md` and the exact approval binding alongside the amended frozen proposal.
+
 ## Exact ties and evaluation units
 
 The harness ranks outcome rows directly; it never calls `chemistry.mean_group_scores` or `chemistry.top1_hit` on bank rows. Those legacy helpers take atom-indexed scores and are outside this evaluation path.
