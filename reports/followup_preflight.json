@@ -1,0 +1,352 @@
+{
+  "proposal_id": "1ddb9c393580ec2e232f",
+  "status": "proposal_not_frozen_no_real_data_models_fitted",
+  "source_records": 299,
+  "structures": 299,
+  "outcome_rows": 1264,
+  "leakage_groups": 250,
+  "identical_original_fold_and_subset_schedule": true,
+  "feature_bank_unchanged": true,
+  "fzero_minus_half_fplus_fminus_max_abs": 0.0005000084638595581,
+  "workload": {
+    "arms": [
+      {
+        "id": "qm_all_linear",
+        "head": "linear",
+        "settings": 35,
+        "width": 6,
+        "penalty_candidates": 10,
+        "inner_optimizer_attempts": 1050,
+        "final_optimizer_attempts": 35
+      },
+      {
+        "id": "qm_mulliken_linear",
+        "head": "linear",
+        "settings": 5,
+        "width": 1,
+        "penalty_candidates": 10,
+        "inner_optimizer_attempts": 150,
+        "final_optimizer_attempts": 5
+      },
+      {
+        "id": "qm_cm5_linear",
+        "head": "linear",
+        "settings": 5,
+        "width": 1,
+        "penalty_candidates": 10,
+        "inner_optimizer_attempts": 150,
+        "final_optimizer_attempts": 5
+      },
+      {
+        "id": "qm_fplus_linear",
+        "head": "linear",
+        "settings": 5,
+        "width": 1,
+        "penalty_candidates": 10,
+        "inner_optimizer_attempts": 150,
+        "final_optimizer_attempts": 5
+      },
+      {
+        "id": "qm_fminus_linear",
+        "head": "linear",
+        "settings": 5,
+        "width": 1,
+        "penalty_candidates": 10,
+        "inner_optimizer_attempts": 150,
+        "final_optimizer_attempts": 5
+      },
+      {
+        "id": "qm_fzero_linear",
+        "head": "linear",
+        "settings": 5,
+        "width": 1,
+        "penalty_candidates": 10,
+        "inner_optimizer_attempts": 150,
+        "final_optimizer_attempts": 5
+      },
+      {
+        "id": "qm_wiberg_linear",
+        "head": "linear",
+        "settings": 5,
+        "width": 1,
+        "penalty_candidates": 10,
+        "inner_optimizer_attempts": 150,
+        "final_optimizer_attempts": 5
+      },
+      {
+        "id": "qm_charges_linear",
+        "head": "linear",
+        "settings": 35,
+        "width": 2,
+        "penalty_candidates": 10,
+        "inner_optimizer_attempts": 1050,
+        "final_optimizer_attempts": 35
+      },
+      {
+        "id": "qm_fukui_linear",
+        "head": "linear",
+        "settings": 35,
+        "width": 3,
+        "penalty_candidates": 10,
+        "inner_optimizer_attempts": 1050,
+        "final_optimizer_attempts": 35
+      },
+      {
+        "id": "qm_fukui_pair_linear",
+        "head": "linear",
+        "settings": 35,
+        "width": 2,
+        "penalty_candidates": 10,
+        "inner_optimizer_attempts": 1050,
+        "final_optimizer_attempts": 35
+      },
+      {
+        "id": "qm_no_charges_linear",
+        "head": "linear",
+        "settings": 35,
+        "width": 4,
+        "penalty_candidates": 10,
+        "inner_optimizer_attempts": 1050,
+        "final_optimizer_attempts": 35
+      },
+      {
+        "id": "qm_no_fukui_linear",
+        "head": "linear",
+        "settings": 35,
+        "width": 3,
+        "penalty_candidates": 10,
+        "inner_optimizer_attempts": 1050,
+        "final_optimizer_attempts": 35
+      },
+      {
+        "id": "qm_without_mulliken_linear",
+        "head": "linear",
+        "settings": 5,
+        "width": 5,
+        "penalty_candidates": 10,
+        "inner_optimizer_attempts": 150,
+        "final_optimizer_attempts": 5
+      },
+      {
+        "id": "qm_without_cm5_linear",
+        "head": "linear",
+        "settings": 5,
+        "width": 5,
+        "penalty_candidates": 10,
+        "inner_optimizer_attempts": 150,
+        "final_optimizer_attempts": 5
+      },
+      {
+        "id": "qm_without_fplus_linear",
+        "head": "linear",
+        "settings": 5,
+        "width": 5,
+        "penalty_candidates": 10,
+        "inner_optimizer_attempts": 150,
+        "final_optimizer_attempts": 5
+      },
+      {
+        "id": "qm_without_fminus_linear",
+        "head": "linear",
+        "settings": 5,
+        "width": 5,
+        "penalty_candidates": 10,
+        "inner_optimizer_attempts": 150,
+        "final_optimizer_attempts": 5
+      },
+      {
+        "id": "qm_without_fzero_linear",
+        "head": "linear",
+        "settings": 5,
+        "width": 5,
+        "penalty_candidates": 10,
+        "inner_optimizer_attempts": 150,
+        "final_optimizer_attempts": 5
+      },
+      {
+        "id": "qm_without_wiberg_linear",
+        "head": "linear",
+        "settings": 5,
+        "width": 5,
+        "penalty_candidates": 10,
+        "inner_optimizer_attempts": 150,
+        "final_optimizer_attempts": 5
+      },
+      {
+        "id": "jepa_linear",
+        "head": "linear",
+        "settings": 35,
+        "width": 768,
+        "penalty_candidates": 10,
+        "inner_optimizer_attempts": 1050,
+        "final_optimizer_attempts": 35
+      },
+      {
+        "id": "jepa_qm_linear",
+        "head": "linear",
+        "settings": 35,
+        "width": 774,
+        "penalty_candidates": 100,
+        "inner_optimizer_attempts": 10500,
+        "final_optimizer_attempts": 35
+      },
+      {
+        "id": "random_linear",
+        "head": "linear",
+        "settings": 35,
+        "width": 768,
+        "penalty_candidates": 10,
+        "inner_optimizer_attempts": 1050,
+        "final_optimizer_attempts": 35
+      },
+      {
+        "id": "random_qm_linear",
+        "head": "linear",
+        "settings": 35,
+        "width": 774,
+        "penalty_candidates": 100,
+        "inner_optimizer_attempts": 10500,
+        "final_optimizer_attempts": 35
+      },
+      {
+        "id": "morgan_linear",
+        "head": "linear",
+        "settings": 35,
+        "width": 6144,
+        "penalty_candidates": 10,
+        "inner_optimizer_attempts": 1050,
+        "final_optimizer_attempts": 35
+      },
+      {
+        "id": "morgan_qm_linear",
+        "head": "linear",
+        "settings": 35,
+        "width": 6150,
+        "penalty_candidates": 100,
+        "inner_optimizer_attempts": 10500,
+        "final_optimizer_attempts": 35
+      },
+      {
+        "id": "jepa_scalar_linear",
+        "head": "linear",
+        "settings": 35,
+        "width": 256,
+        "penalty_candidates": 10,
+        "inner_optimizer_attempts": 1050,
+        "final_optimizer_attempts": 35
+      },
+      {
+        "id": "jepa_scalar_qm_linear",
+        "head": "linear",
+        "settings": 35,
+        "width": 262,
+        "penalty_candidates": 100,
+        "inner_optimizer_attempts": 10500,
+        "final_optimizer_attempts": 35
+      },
+      {
+        "id": "random_scalar_linear",
+        "head": "linear",
+        "settings": 35,
+        "width": 256,
+        "penalty_candidates": 10,
+        "inner_optimizer_attempts": 1050,
+        "final_optimizer_attempts": 35
+      },
+      {
+        "id": "random_scalar_qm_linear",
+        "head": "linear",
+        "settings": 35,
+        "width": 262,
+        "penalty_candidates": 100,
+        "inner_optimizer_attempts": 10500,
+        "final_optimizer_attempts": 35
+      },
+      {
+        "id": "qm_all_mlp",
+        "head": "mlp",
+        "settings": 35,
+        "width": 6,
+        "penalty_candidates": 10,
+        "inner_optimizer_attempts": 2100,
+        "final_optimizer_attempts": 70
+      },
+      {
+        "id": "jepa_mlp",
+        "head": "mlp",
+        "settings": 35,
+        "width": 768,
+        "penalty_candidates": 10,
+        "inner_optimizer_attempts": 2100,
+        "final_optimizer_attempts": 70
+      },
+      {
+        "id": "random_mlp",
+        "head": "mlp",
+        "settings": 35,
+        "width": 768,
+        "penalty_candidates": 10,
+        "inner_optimizer_attempts": 2100,
+        "final_optimizer_attempts": 70
+      },
+      {
+        "id": "jepa_qm_mlp",
+        "head": "mlp",
+        "settings": 35,
+        "width": 774,
+        "penalty_candidates": 10,
+        "inner_optimizer_attempts": 2100,
+        "final_optimizer_attempts": 70
+      },
+      {
+        "id": "random_qm_mlp",
+        "head": "mlp",
+        "settings": 35,
+        "width": 774,
+        "penalty_candidates": 10,
+        "inner_optimizer_attempts": 2100,
+        "final_optimizer_attempts": 70
+      },
+      {
+        "id": "jepa_scalar_mlp",
+        "head": "mlp",
+        "settings": 35,
+        "width": 256,
+        "penalty_candidates": 10,
+        "inner_optimizer_attempts": 2100,
+        "final_optimizer_attempts": 70
+      },
+      {
+        "id": "random_scalar_mlp",
+        "head": "mlp",
+        "settings": 35,
+        "width": 256,
+        "penalty_candidates": 10,
+        "inner_optimizer_attempts": 2100,
+        "final_optimizer_attempts": 70
+      },
+      {
+        "id": "jepa_scalar_qm_mlp",
+        "head": "mlp",
+        "settings": 35,
+        "width": 262,
+        "penalty_candidates": 10,
+        "inner_optimizer_attempts": 2100,
+        "final_optimizer_attempts": 70
+      },
+      {
+        "id": "random_scalar_qm_mlp",
+        "head": "mlp",
+        "settings": 35,
+        "width": 262,
+        "penalty_candidates": 10,
+        "inner_optimizer_attempts": 2100,
+        "final_optimizer_attempts": 70
+      }
+    ],
+    "inner_models": 75300,
+    "final_models": 935,
+    "inner_optimizer_attempts": 84750,
+    "final_optimizer_attempts": 1250
+  }
+}

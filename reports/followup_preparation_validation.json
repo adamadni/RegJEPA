@@ -1,0 +1,34 @@
+{
+  "proposal_id": "1ddb9c393580ec2e232f",
+  "status": "prepared_not_frozen_not_run",
+  "recorded_at_utc": "2026-11-13T21:29:24.572643+00:00",
+  "synthetic_tests": {
+    "passed": 9,
+    "failed": 0,
+    "pytest_seconds": 6.49,
+    "command": "python -B -m pytest -q tests/test_followup.py --basetemp .cache/pytest-followup-final"
+  },
+  "runtime_versions": {
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "rdkit": "2026.09.2",
+    "scipy": "1.18.1"
+  },
+  "old_frozen_load_and_deterministic_rebuild": "passed; inspection reported 0 models fitted",
+  "new_proposal_inspection_models_fitted": 0,
+  "same_original_outer_inner_subset_schedule": true,
+  "same_original_leakage_groups": true,
+  "legacy_source_data_features_splits_and_results_git_diff": "empty against b466fd2",
+  "named_contrasts": 49,
+  "pair_budget_cells": 123,
+  "paired_metric_intervals_planned": 246,
+  "workload": {
+    "inner_models": 75300,
+    "final_models": 935,
+    "inner_optimizer_attempts": 84750,
+    "final_optimizer_attempts": 1250
+  },
+  "new_runtime_dependencies": [],
+  "all_layer_extraction_status": "deferred; Windows Application Control blocked the existing xxhash extension; no security settings changed",
+  "validation_scope": "Synthetic optimization and artifact replay plus actual input/split/preflight checks. No follow-up real-data fit or efficacy result."
+}

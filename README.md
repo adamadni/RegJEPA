@@ -8,6 +8,8 @@ Electronic descriptors are the strongest single block. Adding JEPA gives small p
 
 The [reporting-review response](reports/evaluation_reporting_audit.md) adds penalty-edge direction, Morgan tie causes, per-molecule negative information gain and candidate-count breakdowns without refitting. At 50 labels, random selects the strongest tested penalty in 7 of 15 fits; that bounded search limits interpretation of the small pretrained-versus-random point difference.
 
+The next [descriptor/hybrid/readout protocol](docs/followup_protocol.md) is implemented and prepared as proposal `1ddb9c393580ec2e232f`, **not frozen or run**. It covers QM ablations, QM+random/Morgan controls, scalar-only features and small nonlinear readouts. See the [exact workload](reports/followup_preflight.md), [preparation checks](reports/followup_preparation_validation.md), and [Claude review prompt](reports/claude_followup_review_prompt.txt) before authorizing the larger experiment.
+
 See the [feature extraction report](reports/feature_extraction.md) and `data/features/latest.json` for the aligned feature bank, geometry archive, checkpoint provenance and coverage.
 
 ## Initial data decision

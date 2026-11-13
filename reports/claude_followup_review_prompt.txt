@@ -1,0 +1,100 @@
+Review RegJEPA's new exploratory descriptor/hybrid/readout proposal before any
+real-data fits. Record actual HEAD and git status; do not rely on this prompt
+for file existence. The last completed baseline checkpoint is b466fd2.
+
+Review only: no edits, installations, branches, freezes, feature extraction,
+real-data fitting or external messages. Synthetic tests may write under .cache.
+Do not approve merely because a proposal/frozen status exists.
+
+Proposal: 1ddb9c393580ec2e232f, under data/followup_splits/. It is NOT frozen or
+approved. Parent frozen schedule: af05d8348e60ad38b6e4. Read:
+- docs/followup_protocol.md, configs/followup.json
+- reports/followup_preflight.md/.json and followup_preparation_validation.md/.json
+- data/followup_splits/1ddb9c393580ec2e232f/proposal.json
+- src/regjepa_followup/{features,models,experiment,protocol}.py
+- scripts/{prepare_followup,run_followup,validate_followup}.py
+- tests/test_followup.py and requirements-followup.txt
+- the original protocol, results, reporting audit and frozen-parent artifacts
+
+The new package intentionally leaves src/regjepa unchanged: adding files under
+that original package would change its source-glob freeze reconstruction.
+Check no raw/processed data, original features/latest pointer, original source,
+split artifacts or completed results have changed. The parent must still load
+and deterministically rebuild exactly in the pinned runtime.
+
+Scientific scope:
+1. Eighteen linear descriptor arms: all six, six singles, charge group, Fukui
+   triple, f+/f- pair, six individual leave-one-out arms, and omissions of the
+   charge/Fukui groups. Singles and individual leave-one-out run only at full
+   training; other descriptor arms retain 50/100/full. Verify literal column
+   order and each arm's schedule. f0 approximately equals (f+ + f-)/2 with
+   observed rounding residual 0.0005000085. No unique/causal descriptor importance
+   follows from a redundant leave-one-out test or a changed ridge parameterization.
+2. Ten structural/hybrid linear arms: pretrained, random and Morgan; pretrained
+   and random scalar-only; and each plus full QM. Check QM+random and QM+Morgan
+   are genuinely matched controls. Scalar-only must select existing normalized
+   final-layer l=0 columns 0:256, not a pre-norm block output. No second symmetry
+   pooling, observed-site feature, yield, product, candidate count or source ID.
+3. Nine nonlinear arms: QM, pretrained/random full and scalar features, and
+   their QM hybrids. Single hidden layer, 16 tanh units, no output bias; two
+   restarts (11/23), chosen by regularized TRAINING objective within a fixed
+   penalty. Every restart must converge. These are not new encoder seeds.
+4. Global train-only equal-molecule mean/RMS preserves context for nonlinear
+   interactions and is shared by dense linear/nonlinear inputs. It differs from
+   the original within-molecule RMS and thus changes effective linear shrinkage;
+   all references must be refitted and old/new numbers never pooled. Morgan
+   stays unscaled in linear arms. Dropping constant columns must use training
+   variation only. Check that between-molecule context survives for the MLP.
+5. Ten L2 values 1e-6 through 1000; 100 independent pairs for linear hybrids.
+   MLPs use shared L2 on all weights/biases. Hybrid head comparisons therefore
+   differ in regularization parameterization as well as nonlinearity. All
+   selection stays inside the exact original grouped label budgets. Check loss
+   weighting, gradients and positive L2; no intercept for the linear scorer.
+6. Cap 20,000 iterations, gtol=1e-7, ftol=1e-14, maxls=50, maxcor=10,
+   maxfun=50*max_iterations; success/finite checks plus gradient <=1e-5. Fail
+   closed and record task; no selecting a successful restart while hiding a
+   failed one. Nonlinear stationarity is not proof of a global optimum.
+
+Execution and reporting:
+- Recompute 299 records / 299 structures / 1264 outcomes / 250 groups. Preserve
+  the entire parent outer/inner/subset schedule byte-for-content. The metadata
+  holdout has the old bibliography limits; this previously evaluated cohort
+  is adaptive/exploratory, not fresh confirmatory, independent-family or OOD data.
+- Workload: 37 arms (28 linear/9 MLP), 75,300 inner models and 935 final models.
+  Including restarts: 84,750 inner optimizer attempts and 1,250 final attempts.
+  Verify these counts. This is substantially larger than the first pilot;
+  discuss whether the diagnostic breadth justifies it before approval.
+- Forty-nine named pairs produce 123 pair/budget cells and 246 conditional
+  intervals for top-1 and NLL. Lower NLL is better. Check paired 10,000-draw
+  leakage-component bootstrap, repetition averaging per molecule and complete
+  coverage. Intervals remain exploratory/unadjusted, not a multiple-testing
+  signoff. No posthoc NLL inference is backfilled into old results.
+- Exact identical-input ties must survive batch permutations in both heads.
+  Check the analytic MLP gradient independently and the synthetic context
+  interaction test. Recompute saved synthetic readouts and gradients.
+- Report negative-gain molecule counts, tie molecule-fit counts and candidate
+  count breakdowns, plus both endpoint directions/denominators per penalty
+  component. No scalar RMS is unique information attribution for nonlinear heads.
+- Preparation/inspection must fit nothing; running requires a reproducible
+  frozen sibling binding. Status-only edits, changed source/config/schedule or
+  proposal bytes must fail closed. Approval is a separate human record.
+- Check immutable output/no-resume semantics, model hashes, label-aligned query
+  outputs and saved scaler masks. Validator independently replays final selected
+  gradients; inner/nonselected gradients are available only as diagnostics.
+
+Suggested pinned-runtime synthetic check from repo root:
+wsl -d prexsyn-baseline --exec /usr/bin/env PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=4 OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 /mnt/c/Users/adamm/OneDrive/Documents/ChatGPT/ChemJEPA/.cache/linux-evaluation/venv/bin/python -B -m pytest -q tests/test_followup.py --basetemp .cache/pytest-claude-followup
+Use an available equivalent exact-version environment if reviewing elsewhere.
+Do not silently import sklearn/pandas or install anything. Report unavailable
+RDKit/runtime checks rather than treating the cached evidence as independent.
+
+All-layer features require a separate new export/runtime: Windows Application
+Control blocks xxhash on import. Current arrays only support last-layer scalar
+versus scalar+norm comparisons; the present phase makes no all-layer claim.
+Additional encoder seeds, overlap audit and pretraining are deferred, explicitly.
+
+Return exact HEAD, commands/checks actually performed, computed counts, blockers /
+major / minor findings with file:line evidence, whether each safeguard is supported,
+and the smallest necessary changes before freezing. Flag scope or compute concerns
+without silently pruning arms. Do not run the real-data experiment.
+End with a section titled "## Not done".

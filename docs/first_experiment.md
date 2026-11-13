@@ -32,7 +32,9 @@ Report outcome-level top-1, top-2 where meaningful, reciprocal rank, subgroup re
 
 ## Follow-up gate
 
-Before the next cohort, a new prospective proposal must name paired NLL intervals and their interpretation, widen both ends of the L2 search, and specify additional random-backbone initialization seeds. Encoder-seed replication is distinct from the existing label-subset seeds. Existing feature exports and frozen results must remain intact; new random-encoder features require separate provenance/run keys. The supplied review's posthoc NLL intervals are hypotheses for that protocol, not approved results. Audit pretraining membership before stronger generalization wording. No next-stage proposal has been prepared, and no models have been fitted for the next cohort.
+Before the next cohort, a new prospective proposal must name paired NLL intervals and their interpretation, widen both ends of the L2 search, and specify additional random-backbone initialization seeds. Encoder-seed replication is distinct from the existing label-subset seeds. Existing feature exports and frozen results must remain intact; new random-encoder features require separate provenance/run keys. The supplied review's posthoc NLL intervals are hypotheses for that protocol, not approved results. Audit pretraining membership before stronger generalization wording.
+
+Proposal `1ddb9c393580ec2e232f` now prepares descriptor ablations, missing hybrid controls and readout comparisons on the same conservative bromination cohort, with a widened grid and paired NLL reporting. It is not frozen or run. See `docs/followup_protocol.md`. Additional encoder seeds and next-cohort confirmation remain separate prerequisites; no models have been fitted for the next cohort.
 
 Reproducible low-label and structurally separated-fold gains motivate matched pretraining on the same unlabeled corpus/backbone with JEPA versus reconstruction/denoising. Confirm gains on an independent dataset before extending the claim to other reaction families. A small improvement on this pilot alone remains exploratory.
 
