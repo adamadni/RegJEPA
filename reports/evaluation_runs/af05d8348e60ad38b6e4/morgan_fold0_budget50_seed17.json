@@ -1,0 +1,2716 @@
+{
+  "block": "morgan",
+  "outer_fold": 0,
+  "budget": 50,
+  "subset_seed": 17,
+  "actual_training_labels": 50,
+  "selected_penalties": {
+    "shared": 0.01
+  },
+  "search": [
+    {
+      "penalties": {
+        "shared": 10.0
+      },
+      "validation_nll": 1.402588029996881,
+      "validation_molecules": 50,
+      "fits": [
+        {
+          "converged": true,
+          "iterations": 4,
+          "active_coefficients": 316,
+          "objective": 1.3894864300002425,
+          "gradient_inf_norm": 1.4580862128799055e-08,
+          "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+        },
+        {
+          "converged": true,
+          "iterations": 4,
+          "active_coefficients": 313,
+          "objective": 1.35929450251833,
+          "gradient_inf_norm": 1.7326296994357726e-08,
+          "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+        },
+        {
+          "converged": true,
+          "iterations": 4,
+          "active_coefficients": 353,
+          "objective": 1.4515413837590367,
+          "gradient_inf_norm": 2.2858588813456926e-08,
+          "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+        }
+      ]
+    },
+    {
+      "penalties": {
+        "shared": 1.0
+      },
+      "validation_nll": 1.3175802699874248,
+      "validation_molecules": 50,
+      "fits": [
+        {
+          "converged": true,
+          "iterations": 7,
+          "active_coefficients": 316,
+          "objective": 1.2453891690166978,
+          "gradient_inf_norm": 9.86861323215571e-09,
+          "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+        },
+        {
+          "converged": true,
+          "iterations": 6,
+          "active_coefficients": 313,
+          "objective": 1.2574290295766566,
+          "gradient_inf_norm": 6.72564525079633e-08,
+          "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+        },
+        {
+          "converged": true,
+          "iterations": 7,
+          "active_coefficients": 353,
+          "objective": 1.349762773141116,
+          "gradient_inf_norm": 1.4077002907092462e-08,
+          "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+        }
+      ]
+    },
+    {
+      "penalties": {
+        "shared": 0.1
+      },
+      "validation_nll": 1.137752818700406,
+      "validation_molecules": 50,
+      "fits": [
+        {
+          "converged": true,
+          "iterations": 13,
+          "active_coefficients": 316,
+          "objective": 0.7648776060381568,
+          "gradient_inf_norm": 2.0463867284742365e-08,
+          "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+        },
+        {
+          "converged": true,
+          "iterations": 14,
+          "active_coefficients": 313,
+          "objective": 0.8558200108731189,
+          "gradient_inf_norm": 5.191630867047714e-08,
+          "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+        },
+        {
+          "converged": true,
+          "iterations": 13,
+          "active_coefficients": 353,
+          "objective": 0.9310032513582761,
+          "gradient_inf_norm": 6.415116211595101e-08,
+          "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+        }
+      ]
+    },
+    {
+      "penalties": {
+        "shared": 0.01
+      },
+      "validation_nll": 1.0530450579632873,
+      "validation_molecules": 50,
+      "fits": [
+        {
+          "converged": true,
+          "iterations": 22,
+          "active_coefficients": 316,
+          "objective": 0.27566241208927744,
+          "gradient_inf_norm": 2.4901652741562974e-08,
+          "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+        },
+        {
+          "converged": true,
+          "iterations": 23,
+          "active_coefficients": 313,
+          "objective": 0.32323959387549517,
+          "gradient_inf_norm": 8.167450571601193e-08,
+          "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+        },
+        {
+          "converged": true,
+          "iterations": 27,
+          "active_coefficients": 353,
+          "objective": 0.35144337450866553,
+          "gradient_inf_norm": 3.498900230891567e-08,
+          "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+        }
+      ]
+    },
+    {
+      "penalties": {
+        "shared": 0.001
+      },
+      "validation_nll": 1.0909649783009772,
+      "validation_molecules": 50,
+      "fits": [
+        {
+          "converged": true,
+          "iterations": 25,
+          "active_coefficients": 316,
+          "objective": 0.07880603156901472,
+          "gradient_inf_norm": 6.533998030356031e-08,
+          "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+        },
+        {
+          "converged": true,
+          "iterations": 30,
+          "active_coefficients": 313,
+          "objective": 0.09018628349018368,
+          "gradient_inf_norm": 5.909131738736145e-08,
+          "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+        },
+        {
+          "converged": true,
+          "iterations": 34,
+          "active_coefficients": 353,
+          "objective": 0.08261434613841735,
+          "gradient_inf_norm": 4.696907325986259e-08,
+          "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+        }
+      ]
+    },
+    {
+      "penalties": {
+        "shared": 0.0001
+      },
+      "validation_nll": 1.2012504857324593,
+      "validation_molecules": 50,
+      "fits": [
+        {
+          "converged": true,
+          "iterations": 29,
+          "active_coefficients": 316,
+          "objective": 0.0316467687034299,
+          "gradient_inf_norm": 6.005431223450863e-08,
+          "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+        },
+        {
+          "converged": true,
+          "iterations": 32,
+          "active_coefficients": 313,
+          "objective": 0.03372845449743871,
+          "gradient_inf_norm": 5.8183599808999515e-08,
+          "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+        },
+        {
+          "converged": true,
+          "iterations": 36,
+          "active_coefficients": 353,
+          "objective": 0.015448545119200071,
+          "gradient_inf_norm": 5.8567831805696516e-08,
+          "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+        }
+      ]
+    }
+  ],
+  "final_fit": {
+    "converged": true,
+    "iterations": 26,
+    "active_coefficients": 445,
+    "objective": 0.38420591045296687,
+    "gradient_inf_norm": 4.712106490130331e-08,
+    "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+  },
+  "regularization_grid_edges": {
+    "shared": {
+      "value": 0.01,
+      "at_minimum": false,
+      "at_maximum": false
+    }
+  },
+  "component_scores": null,
+  "molecular_metrics": [
+    {
+      "compound_id": "comp10",
+      "structure_key": "fcba7369386628dbb8f0",
+      "n_candidates": 3,
+      "top1": 0.0,
+      "top2": 1.0,
+      "reciprocal_rank": 0.5,
+      "nll": 2.9183626670680134,
+      "uniform_top1": 0.3333333333333333,
+      "uniform_nll": 1.0986122886681098,
+      "information_gain_nats": -1.8197503783999036,
+      "positive_tie_size": 1,
+      "n_above_positive": 1
+    },
+    {
+      "compound_id": "comp106",
+      "structure_key": "f96908a4573f84cfce9c",
+      "n_candidates": 4,
+      "top1": 1.0,
+      "top2": 1.0,
+      "reciprocal_rank": 1.0,
+      "nll": 1.1169601291149138,
+      "uniform_top1": 0.25,
+      "uniform_nll": 1.3862943611198906,
+      "information_gain_nats": 0.26933423200497675,
+      "positive_tie_size": 1,
+      "n_above_positive": 0
+    },
+    {
+      "compound_id": "comp125",
+      "structure_key": "c8cf4008f8113a39a016",
+      "n_candidates": 6,
+      "top1": 1.0,
+      "top2": 1.0,
+      "reciprocal_rank": 1.0,
+      "nll": 1.093555153414666,
+      "uniform_top1": 0.16666666666666666,
+      "uniform_nll": 1.791759469228055,
+      "information_gain_nats": 0.698204315813389,
+      "positive_tie_size": 1,
+      "n_above_positive": 0
+    },
+    {
+      "compound_id": "comp126",
+      "structure_key": "9a2356a88d8ca4fde639",
+      "n_candidates": 4,
+      "top1": 1.0,
+      "top2": 1.0,
+      "reciprocal_rank": 1.0,
+      "nll": 0.7836022162792154,
+      "uniform_top1": 0.25,
+      "uniform_nll": 1.3862943611198906,
+      "information_gain_nats": 0.6026921448406751,
+      "positive_tie_size": 1,
+      "n_above_positive": 0
+    },
+    {
+      "compound_id": "comp129",
+      "structure_key": "95140439f7aa809bb72d",
+      "n_candidates": 4,
+      "top1": 0.0,
+      "top2": 0.0,
+      "reciprocal_rank": 0.25,
+      "nll": 3.2118109561651864,
+      "uniform_top1": 0.25,
+      "uniform_nll": 1.3862943611198906,
+      "information_gain_nats": -1.8255165950452958,
+      "positive_tie_size": 1,
+      "n_above_positive": 3
+    },
+    {
+      "compound_id": "comp131",
+      "structure_key": "8a8aa8f60953934d8359",
+      "n_candidates": 5,
+      "top1": 0.0,
+      "top2": 0.5,
+      "reciprocal_rank": 0.41666666666666663,
+      "nll": 2.6556504922763815,
+      "uniform_top1": 0.2,
+      "uniform_nll": 1.6094379124341003,
+      "information_gain_nats": -1.0462125798422812,
+      "positive_tie_size": 2,
+      "n_above_positive": 1
+    },
+    {
+      "compound_id": "comp134",
+      "structure_key": "e88e0ea78fb6722f8726",
+      "n_candidates": 6,
+      "top1": 0.0,
+      "top2": 0.0,
+      "reciprocal_rank": 0.16666666666666666,
+      "nll": 2.397654465660106,
+      "uniform_top1": 0.16666666666666666,
+      "uniform_nll": 1.791759469228055,
+      "information_gain_nats": -0.6058949964320512,
+      "positive_tie_size": 1,
+      "n_above_positive": 5
+    },
+    {
+      "compound_id": "comp16",
+      "structure_key": "9980d41e6ed7e491e2ef",
+      "n_candidates": 5,
+      "top1": 1.0,
+      "top2": 1.0,
+      "reciprocal_rank": 1.0,
+      "nll": 0.8278306823059067,
+      "uniform_top1": 0.2,
+      "uniform_nll": 1.6094379124341003,
+      "information_gain_nats": 0.7816072301281936,
+      "positive_tie_size": 1,
+      "n_above_positive": 0
+    },
+    {
+      "compound_id": "comp17",
+      "structure_key": "5306ff39e176e8a57257",
+      "n_candidates": 3,
+      "top1": 1.0,
+      "top2": 1.0,
+      "reciprocal_rank": 1.0,
+      "nll": 0.9928451805030475,
+      "uniform_top1": 0.3333333333333333,
+      "uniform_nll": 1.0986122886681098,
+      "information_gain_nats": 0.1057671081650623,
+      "positive_tie_size": 1,
+      "n_above_positive": 0
+    },
+    {
+      "compound_id": "comp19",
+      "structure_key": "3106ad60654f9ad36e9d",
+      "n_candidates": 4,
+      "top1": 1.0,
+      "top2": 1.0,
+      "reciprocal_rank": 1.0,
+      "nll": 0.022101842068259957,
+      "uniform_top1": 0.25,
+      "uniform_nll": 1.3862943611198906,
+      "information_gain_nats": 1.3641925190516306,
+      "positive_tie_size": 1,
+      "n_above_positive": 0
+    },
+    {
+      "compound_id": "comp218",
+      "structure_key": "e0ad949156e1eb153068",
+      "n_candidates": 3,
+      "top1": 0.0,
+      "top2": 1.0,
+      "reciprocal_rank": 0.5,
+      "nll": 1.5395894892373674,
+      "uniform_top1": 0.3333333333333333,
+      "uniform_nll": 1.0986122886681098,
+      "information_gain_nats": -0.4409772005692576,
+      "positive_tie_size": 1,
+      "n_above_positive": 1
+    },
+    {
+      "compound_id": "comp23",
+      "structure_key": "cc241e7a3c32a7f45d4f",
+      "n_candidates": 6,
+      "top1": 0.0,
+      "top2": 0.0,
+      "reciprocal_rank": 0.2,
+      "nll": 2.507893014986385,
+      "uniform_top1": 0.16666666666666666,
+      "uniform_nll": 1.791759469228055,
+      "information_gain_nats": -0.7161335457583302,
+      "positive_tie_size": 1,
+      "n_above_positive": 4
+    },
+    {
+      "compound_id": "comp27",
+      "structure_key": "7330652f42a362a67425",
+      "n_candidates": 2,
+      "top1": 1.0,
+      "top2": 1.0,
+      "reciprocal_rank": 1.0,
+      "nll": 0.388865413660348,
+      "uniform_top1": 0.5,
+      "uniform_nll": 0.6931471805599453,
+      "information_gain_nats": 0.3042817668995973,
+      "positive_tie_size": 1,
+      "n_above_positive": 0
+    },
+    {
+      "compound_id": "comp289",
+      "structure_key": "6df81ff053159235a4ca",
+      "n_candidates": 2,
+      "top1": 0.0,
+      "top2": 1.0,
+      "reciprocal_rank": 0.5,
+      "nll": 1.3347890793708184,
+      "uniform_top1": 0.5,
+      "uniform_nll": 0.6931471805599453,
+      "information_gain_nats": -0.6416418988108731,
+      "positive_tie_size": 1,
+      "n_above_positive": 1
+    },
+    {
+      "compound_id": "comp3",
+      "structure_key": "a89167f60f55829772e7",
+      "n_candidates": 6,
+      "top1": 0.3333333333333333,
+      "top2": 0.6666666666666666,
+      "reciprocal_rank": 0.611111111111111,
+      "nll": 1.3904089226356262,
+      "uniform_top1": 0.16666666666666666,
+      "uniform_nll": 1.791759469228055,
+      "information_gain_nats": 0.40135054659242875,
+      "positive_tie_size": 3,
+      "n_above_positive": 0
+    },
+    {
+      "compound_id": "comp314",
+      "structure_key": "3b651ebbec9fdbb8d2db",
+      "n_candidates": 7,
+      "top1": 0.0,
+      "top2": 0.5,
+      "reciprocal_rank": 0.41666666666666663,
+      "nll": 2.6295320543505696,
+      "uniform_top1": 0.14285714285714285,
+      "uniform_nll": 1.9459101490553132,
+      "information_gain_nats": -0.6836219052952563,
+      "positive_tie_size": 2,
+      "n_above_positive": 1
+    },
+    {
+      "compound_id": "comp315",
+      "structure_key": "fcda61eea32cf38eef01",
+      "n_candidates": 4,
+      "top1": 0.0,
+      "top2": 0.0,
+      "reciprocal_rank": 0.3333333333333333,
+      "nll": 2.095059331218882,
+      "uniform_top1": 0.25,
+      "uniform_nll": 1.3862943611198906,
+      "information_gain_nats": -0.7087649700989915,
+      "positive_tie_size": 1,
+      "n_above_positive": 2
+    },
+    {
+      "compound_id": "comp317",
+      "structure_key": "95c7b2dd8f761c4fdad0",
+      "n_candidates": 6,
+      "top1": 0.0,
+      "top2": 1.0,
+      "reciprocal_rank": 0.5,
+      "nll": 1.2118622624689834,
+      "uniform_top1": 0.16666666666666666,
+      "uniform_nll": 1.791759469228055,
+      "information_gain_nats": 0.5798972067590715,
+      "positive_tie_size": 1,
+      "n_above_positive": 1
+    },
+    {
+      "compound_id": "comp329",
+      "structure_key": "210785eff4574db9e1f0",
+      "n_candidates": 7,
+      "top1": 0.0,
+      "top2": 0.5,
+      "reciprocal_rank": 0.41666666666666663,
+      "nll": 2.632954662669978,
+      "uniform_top1": 0.14285714285714285,
+      "uniform_nll": 1.9459101490553132,
+      "information_gain_nats": -0.6870445136146646,
+      "positive_tie_size": 2,
+      "n_above_positive": 1
+    },
+    {
+      "compound_id": "comp33",
+      "structure_key": "bee9fdaada0d0b11d789",
+      "n_candidates": 6,
+      "top1": 0.0,
+      "top2": 0.0,
+      "reciprocal_rank": 0.25,
+      "nll": 1.8506528099657296,
+      "uniform_top1": 0.16666666666666666,
+      "uniform_nll": 1.791759469228055,
+      "information_gain_nats": -0.058893340737674604,
+      "positive_tie_size": 1,
+      "n_above_positive": 3
+    },
+    {
+      "compound_id": "comp332",
+      "structure_key": "ade145496a0712c814cd",
+      "n_candidates": 6,
+      "top1": 0.0,
+      "top2": 0.5,
+      "reciprocal_rank": 0.41666666666666663,
+      "nll": 2.6117956988542974,
+      "uniform_top1": 0.16666666666666666,
+      "uniform_nll": 1.791759469228055,
+      "information_gain_nats": -0.8200362296262425,
+      "positive_tie_size": 2,
+      "n_above_positive": 1
+    },
+    {
+      "compound_id": "comp334",
+      "structure_key": "a75bd107413ffb927c38",
+      "n_candidates": 3,
+      "top1": 0.0,
+      "top2": 1.0,
+      "reciprocal_rank": 0.5,
+      "nll": 1.1174059200331634,
+      "uniform_top1": 0.3333333333333333,
+      "uniform_nll": 1.0986122886681098,
+      "information_gain_nats": -0.01879363136505363,
+      "positive_tie_size": 1,
+      "n_above_positive": 1
+    },
+    {
+      "compound_id": "comp347",
+      "structure_key": "007b98d35cfdd15bf8b5",
+      "n_candidates": 4,
+      "top1": 0.0,
+      "top2": 1.0,
+      "reciprocal_rank": 0.5,
+      "nll": 2.4530431191431648,
+      "uniform_top1": 0.25,
+      "uniform_nll": 1.3862943611198906,
+      "information_gain_nats": -1.0667487580232742,
+      "positive_tie_size": 1,
+      "n_above_positive": 1
+    },
+    {
+      "compound_id": "comp359",
+      "structure_key": "b7fac91c9aa14cebd26f",
+      "n_candidates": 4,
+      "top1": 1.0,
+      "top2": 1.0,
+      "reciprocal_rank": 1.0,
+      "nll": 0.19748801756379591,
+      "uniform_top1": 0.25,
+      "uniform_nll": 1.3862943611198906,
+      "information_gain_nats": 1.1888063435560947,
+      "positive_tie_size": 1,
+      "n_above_positive": 0
+    },
+    {
+      "compound_id": "comp360",
+      "structure_key": "5637b7f12b223fac3a4d",
+      "n_candidates": 4,
+      "top1": 1.0,
+      "top2": 1.0,
+      "reciprocal_rank": 1.0,
+      "nll": 0.16485654557297844,
+      "uniform_top1": 0.25,
+      "uniform_nll": 1.3862943611198906,
+      "information_gain_nats": 1.221437815546912,
+      "positive_tie_size": 1,
+      "n_above_positive": 0
+    },
+    {
+      "compound_id": "comp381",
+      "structure_key": "49d968e460669d56e263",
+      "n_candidates": 3,
+      "top1": 0.0,
+      "top2": 1.0,
+      "reciprocal_rank": 0.5,
+      "nll": 1.141129206932612,
+      "uniform_top1": 0.3333333333333333,
+      "uniform_nll": 1.0986122886681098,
+      "information_gain_nats": -0.04251691826450221,
+      "positive_tie_size": 1,
+      "n_above_positive": 1
+    },
+    {
+      "compound_id": "comp389",
+      "structure_key": "2261b15518844aa9616b",
+      "n_candidates": 6,
+      "top1": 0.0,
+      "top2": 0.0,
+      "reciprocal_rank": 0.16666666666666666,
+      "nll": 2.72953873515481,
+      "uniform_top1": 0.16666666666666666,
+      "uniform_nll": 1.791759469228055,
+      "information_gain_nats": -0.9377792659267552,
+      "positive_tie_size": 1,
+      "n_above_positive": 5
+    },
+    {
+      "compound_id": "comp390",
+      "structure_key": "3ddb3ca3b58aec1fcb3d",
+      "n_candidates": 2,
+      "top1": 1.0,
+      "top2": 1.0,
+      "reciprocal_rank": 1.0,
+      "nll": 0.40613042970634194,
+      "uniform_top1": 0.5,
+      "uniform_nll": 0.6931471805599453,
+      "information_gain_nats": 0.28701675085360334,
+      "positive_tie_size": 1,
+      "n_above_positive": 0
+    },
+    {
+      "compound_id": "comp391",
+      "structure_key": "2a5f8253873a40a04a6c",
+      "n_candidates": 3,
+      "top1": 0.0,
+      "top2": 1.0,
+      "reciprocal_rank": 0.5,
+      "nll": 1.4880708613961044,
+      "uniform_top1": 0.3333333333333333,
+      "uniform_nll": 1.0986122886681098,
+      "information_gain_nats": -0.38945857272799467,
+      "positive_tie_size": 1,
+      "n_above_positive": 1
+    },
+    {
+      "compound_id": "comp406",
+      "structure_key": "d4ab1298a63874dacc54",
+      "n_candidates": 3,
+      "top1": 0.0,
+      "top2": 1.0,
+      "reciprocal_rank": 0.5,
+      "nll": 1.5988072991578457,
+      "uniform_top1": 0.3333333333333333,
+      "uniform_nll": 1.0986122886681098,
+      "information_gain_nats": -0.5001950104897359,
+      "positive_tie_size": 1,
+      "n_above_positive": 1
+    },
+    {
+      "compound_id": "comp413",
+      "structure_key": "496063e8007336367a60",
+      "n_candidates": 3,
+      "top1": 1.0,
+      "top2": 1.0,
+      "reciprocal_rank": 1.0,
+      "nll": 0.06752442932643875,
+      "uniform_top1": 0.3333333333333333,
+      "uniform_nll": 1.0986122886681098,
+      "information_gain_nats": 1.031087859341671,
+      "positive_tie_size": 1,
+      "n_above_positive": 0
+    },
+    {
+      "compound_id": "comp420",
+      "structure_key": "c889ec2d814e223c908e",
+      "n_candidates": 3,
+      "top1": 0.0,
+      "top2": 1.0,
+      "reciprocal_rank": 0.5,
+      "nll": 1.4590567328872193,
+      "uniform_top1": 0.3333333333333333,
+      "uniform_nll": 1.0986122886681098,
+      "information_gain_nats": -0.3604444442191095,
+      "positive_tie_size": 1,
+      "n_above_positive": 1
+    },
+    {
+      "compound_id": "comp439",
+      "structure_key": "d00d48e931eb81847e14",
+      "n_candidates": 4,
+      "top1": 0.0,
+      "top2": 1.0,
+      "reciprocal_rank": 0.5,
+      "nll": 2.474908277354455,
+      "uniform_top1": 0.25,
+      "uniform_nll": 1.3862943611198906,
+      "information_gain_nats": -1.0886139162345645,
+      "positive_tie_size": 1,
+      "n_above_positive": 1
+    },
+    {
+      "compound_id": "comp442",
+      "structure_key": "6b16a90604a7899272de",
+      "n_candidates": 6,
+      "top1": 1.0,
+      "top2": 1.0,
+      "reciprocal_rank": 1.0,
+      "nll": 0.06696614470298791,
+      "uniform_top1": 0.16666666666666666,
+      "uniform_nll": 1.791759469228055,
+      "information_gain_nats": 1.724793324525067,
+      "positive_tie_size": 1,
+      "n_above_positive": 0
+    },
+    {
+      "compound_id": "comp466",
+      "structure_key": "a20b9205f31904122a67",
+      "n_candidates": 7,
+      "top1": 1.0,
+      "top2": 1.0,
+      "reciprocal_rank": 1.0,
+      "nll": 0.16181985177988864,
+      "uniform_top1": 0.14285714285714285,
+      "uniform_nll": 1.9459101490553132,
+      "information_gain_nats": 1.7840902972754247,
+      "positive_tie_size": 1,
+      "n_above_positive": 0
+    },
+    {
+      "compound_id": "comp48",
+      "structure_key": "1fe599e53a86d28ace88",
+      "n_candidates": 4,
+      "top1": 0.0,
+      "top2": 0.0,
+      "reciprocal_rank": 0.25,
+      "nll": 3.2118109561651864,
+      "uniform_top1": 0.25,
+      "uniform_nll": 1.3862943611198906,
+      "information_gain_nats": -1.8255165950452958,
+      "positive_tie_size": 1,
+      "n_above_positive": 3
+    },
+    {
+      "compound_id": "comp481",
+      "structure_key": "bf2560d9191de9b28d76",
+      "n_candidates": 4,
+      "top1": 1.0,
+      "top2": 1.0,
+      "reciprocal_rank": 1.0,
+      "nll": 0.12354973096685892,
+      "uniform_top1": 0.25,
+      "uniform_nll": 1.3862943611198906,
+      "information_gain_nats": 1.2627446301530316,
+      "positive_tie_size": 1,
+      "n_above_positive": 0
+    },
+    {
+      "compound_id": "comp483",
+      "structure_key": "8f535fb80b9e2c046967",
+      "n_candidates": 3,
+      "top1": 1.0,
+      "top2": 1.0,
+      "reciprocal_rank": 1.0,
+      "nll": 0.04015820939691803,
+      "uniform_top1": 0.3333333333333333,
+      "uniform_nll": 1.0986122886681098,
+      "information_gain_nats": 1.0584540792711918,
+      "positive_tie_size": 1,
+      "n_above_positive": 0
+    },
+    {
+      "compound_id": "comp488",
+      "structure_key": "8cd862ef4a05c3480465",
+      "n_candidates": 3,
+      "top1": 0.0,
+      "top2": 1.0,
+      "reciprocal_rank": 0.5,
+      "nll": 1.4400888289285572,
+      "uniform_top1": 0.3333333333333333,
+      "uniform_nll": 1.0986122886681098,
+      "information_gain_nats": -0.3414765402604474,
+      "positive_tie_size": 1,
+      "n_above_positive": 1
+    },
+    {
+      "compound_id": "comp519",
+      "structure_key": "d09a2b72370b5a453b15",
+      "n_candidates": 4,
+      "top1": 0.0,
+      "top2": 0.0,
+      "reciprocal_rank": 0.29166666666666663,
+      "nll": 1.9431418452453375,
+      "uniform_top1": 0.25,
+      "uniform_nll": 1.3862943611198906,
+      "information_gain_nats": -0.5568474841254469,
+      "positive_tie_size": 2,
+      "n_above_positive": 2
+    },
+    {
+      "compound_id": "comp520",
+      "structure_key": "e8b168a8d68e8ce4c668",
+      "n_candidates": 4,
+      "top1": 0.0,
+      "top2": 0.0,
+      "reciprocal_rank": 0.25,
+      "nll": 1.823597468561707,
+      "uniform_top1": 0.25,
+      "uniform_nll": 1.3862943611198906,
+      "information_gain_nats": -0.43730310744181633,
+      "positive_tie_size": 1,
+      "n_above_positive": 3
+    },
+    {
+      "compound_id": "comp522",
+      "structure_key": "709925d314142693d61c",
+      "n_candidates": 3,
+      "top1": 0.0,
+      "top2": 0.0,
+      "reciprocal_rank": 0.3333333333333333,
+      "nll": 1.949025062239906,
+      "uniform_top1": 0.3333333333333333,
+      "uniform_nll": 1.0986122886681098,
+      "information_gain_nats": -0.8504127735717961,
+      "positive_tie_size": 1,
+      "n_above_positive": 2
+    },
+    {
+      "compound_id": "comp523",
+      "structure_key": "1c07991156b91144a65f",
+      "n_candidates": 4,
+      "top1": 1.0,
+      "top2": 1.0,
+      "reciprocal_rank": 1.0,
+      "nll": 1.11174840197922,
+      "uniform_top1": 0.25,
+      "uniform_nll": 1.3862943611198906,
+      "information_gain_nats": 0.2745459591406705,
+      "positive_tie_size": 1,
+      "n_above_positive": 0
+    },
+    {
+      "compound_id": "comp531",
+      "structure_key": "ec55f8369d66ecb1085e",
+      "n_candidates": 6,
+      "top1": 0.0,
+      "top2": 0.0,
+      "reciprocal_rank": 0.3333333333333333,
+      "nll": 1.9401892413630706,
+      "uniform_top1": 0.16666666666666666,
+      "uniform_nll": 1.791759469228055,
+      "information_gain_nats": -0.14842977213501563,
+      "positive_tie_size": 1,
+      "n_above_positive": 2
+    },
+    {
+      "compound_id": "comp546",
+      "structure_key": "2dcd2bf41f8791e0031d",
+      "n_candidates": 2,
+      "top1": 1.0,
+      "top2": 1.0,
+      "reciprocal_rank": 1.0,
+      "nll": 0.22718799546133828,
+      "uniform_top1": 0.5,
+      "uniform_nll": 0.6931471805599453,
+      "information_gain_nats": 0.465959185098607,
+      "positive_tie_size": 1,
+      "n_above_positive": 0
+    },
+    {
+      "compound_id": "comp547",
+      "structure_key": "8a95fd92251aa7a13f4e",
+      "n_candidates": 4,
+      "top1": 0.0,
+      "top2": 0.0,
+      "reciprocal_rank": 0.25,
+      "nll": 1.7832199890126947,
+      "uniform_top1": 0.25,
+      "uniform_nll": 1.3862943611198906,
+      "information_gain_nats": -0.39692562789280417,
+      "positive_tie_size": 1,
+      "n_above_positive": 3
+    },
+    {
+      "compound_id": "comp552",
+      "structure_key": "ed9ec5827a58d3b1a55e",
+      "n_candidates": 7,
+      "top1": 0.0,
+      "top2": 0.0,
+      "reciprocal_rank": 0.20555555555555557,
+      "nll": 2.418525256949469,
+      "uniform_top1": 0.14285714285714285,
+      "uniform_nll": 1.9459101490553132,
+      "information_gain_nats": -0.47261510789415584,
+      "positive_tie_size": 3,
+      "n_above_positive": 3
+    },
+    {
+      "compound_id": "comp566",
+      "structure_key": "c529df147951f48ac9fa",
+      "n_candidates": 3,
+      "top1": 0.0,
+      "top2": 0.0,
+      "reciprocal_rank": 0.3333333333333333,
+      "nll": 1.237686981523978,
+      "uniform_top1": 0.3333333333333333,
+      "uniform_nll": 1.0986122886681098,
+      "information_gain_nats": -0.13907469285586815,
+      "positive_tie_size": 1,
+      "n_above_positive": 2
+    },
+    {
+      "compound_id": "comp569",
+      "structure_key": "b4a2296e065ed5a9ac4d",
+      "n_candidates": 2,
+      "top1": 1.0,
+      "top2": 1.0,
+      "reciprocal_rank": 1.0,
+      "nll": 0.3011840017218168,
+      "uniform_top1": 0.5,
+      "uniform_nll": 0.6931471805599453,
+      "information_gain_nats": 0.3919631788381285,
+      "positive_tie_size": 1,
+      "n_above_positive": 0
+    },
+    {
+      "compound_id": "comp575",
+      "structure_key": "da421e43984edd1966f1",
+      "n_candidates": 3,
+      "top1": 0.0,
+      "top2": 1.0,
+      "reciprocal_rank": 0.5,
+      "nll": 0.8034083994419176,
+      "uniform_top1": 0.3333333333333333,
+      "uniform_nll": 1.0986122886681098,
+      "information_gain_nats": 0.29520388922619223,
+      "positive_tie_size": 1,
+      "n_above_positive": 1
+    },
+    {
+      "compound_id": "comp576",
+      "structure_key": "8da7b38900cd1fd90d0a",
+      "n_candidates": 3,
+      "top1": 0.0,
+      "top2": 1.0,
+      "reciprocal_rank": 0.5,
+      "nll": 0.8034083994419176,
+      "uniform_top1": 0.3333333333333333,
+      "uniform_nll": 1.0986122886681098,
+      "information_gain_nats": 0.29520388922619223,
+      "positive_tie_size": 1,
+      "n_above_positive": 1
+    },
+    {
+      "compound_id": "comp577",
+      "structure_key": "823c1e67ae8f15e6e63f",
+      "n_candidates": 3,
+      "top1": 0.0,
+      "top2": 1.0,
+      "reciprocal_rank": 0.5,
+      "nll": 0.8034083994419176,
+      "uniform_top1": 0.3333333333333333,
+      "uniform_nll": 1.0986122886681098,
+      "information_gain_nats": 0.29520388922619223,
+      "positive_tie_size": 1,
+      "n_above_positive": 1
+    },
+    {
+      "compound_id": "comp578",
+      "structure_key": "9497b05fd1644887e398",
+      "n_candidates": 3,
+      "top1": 0.0,
+      "top2": 1.0,
+      "reciprocal_rank": 0.5,
+      "nll": 0.8034083994419176,
+      "uniform_top1": 0.3333333333333333,
+      "uniform_nll": 1.0986122886681098,
+      "information_gain_nats": 0.29520388922619223,
+      "positive_tie_size": 1,
+      "n_above_positive": 1
+    },
+    {
+      "compound_id": "comp71",
+      "structure_key": "0ca4edd8596c5f525eff",
+      "n_candidates": 2,
+      "top1": 1.0,
+      "top2": 1.0,
+      "reciprocal_rank": 1.0,
+      "nll": 0.622611092157037,
+      "uniform_top1": 0.5,
+      "uniform_nll": 0.6931471805599453,
+      "information_gain_nats": 0.07053608840290826,
+      "positive_tie_size": 1,
+      "n_above_positive": 0
+    },
+    {
+      "compound_id": "comp83",
+      "structure_key": "b0c3052a75e9f0811930",
+      "n_candidates": 2,
+      "top1": 0.0,
+      "top2": 1.0,
+      "reciprocal_rank": 0.5,
+      "nll": 1.5600337850457722,
+      "uniform_top1": 0.5,
+      "uniform_nll": 0.6931471805599453,
+      "information_gain_nats": -0.8668866044858269,
+      "positive_tie_size": 1,
+      "n_above_positive": 1
+    },
+    {
+      "compound_id": "comp89",
+      "structure_key": "9029dbc57aacba4fe583",
+      "n_candidates": 3,
+      "top1": 0.0,
+      "top2": 1.0,
+      "reciprocal_rank": 0.5,
+      "nll": 1.3781354432784667,
+      "uniform_top1": 0.3333333333333333,
+      "uniform_nll": 1.0986122886681098,
+      "information_gain_nats": -0.2795231546103569,
+      "positive_tie_size": 1,
+      "n_above_positive": 1
+    },
+    {
+      "compound_id": "comp90",
+      "structure_key": "50c2ea1a7c2967b1c320",
+      "n_candidates": 2,
+      "top1": 0.0,
+      "top2": 1.0,
+      "reciprocal_rank": 0.5,
+      "nll": 0.8145943223815788,
+      "uniform_top1": 0.5,
+      "uniform_nll": 0.6931471805599453,
+      "information_gain_nats": -0.12144714182163352,
+      "positive_tie_size": 1,
+      "n_above_positive": 1
+    },
+    {
+      "compound_id": "comp96",
+      "structure_key": "92d1f81c79749fd048b5",
+      "n_candidates": 7,
+      "top1": 0.0,
+      "top2": 0.5,
+      "reciprocal_rank": 0.41666666666666663,
+      "nll": 1.7505448040695815,
+      "uniform_top1": 0.14285714285714285,
+      "uniform_nll": 1.9459101490553132,
+      "information_gain_nats": 0.19536534498573177,
+      "positive_tie_size": 2,
+      "n_above_positive": 1
+    },
+    {
+      "compound_id": "comp97",
+      "structure_key": "435accc0684e4c9d1c03",
+      "n_candidates": 2,
+      "top1": 1.0,
+      "top2": 1.0,
+      "reciprocal_rank": 1.0,
+      "nll": 0.460607714771071,
+      "uniform_top1": 0.5,
+      "uniform_nll": 0.6931471805599453,
+      "information_gain_nats": 0.2325394657888743,
+      "positive_tie_size": 1,
+      "n_above_positive": 0
+    }
+  ],
+  "predictions": [
+    {
+      "query_id": "comp3:outcome0",
+      "compound_id": "comp3",
+      "structure_key": "a89167f60f55829772e7",
+      "reported_positive": false,
+      "score": -0.7969152026592932
+    },
+    {
+      "query_id": "comp3:outcome1",
+      "compound_id": "comp3",
+      "structure_key": "a89167f60f55829772e7",
+      "reported_positive": true,
+      "score": 0.54855257709415
+    },
+    {
+      "query_id": "comp3:outcome2",
+      "compound_id": "comp3",
+      "structure_key": "a89167f60f55829772e7",
+      "reported_positive": false,
+      "score": 0.54855257709415
+    },
+    {
+      "query_id": "comp3:outcome3",
+      "compound_id": "comp3",
+      "structure_key": "a89167f60f55829772e7",
+      "reported_positive": false,
+      "score": -0.40642524101209143
+    },
+    {
+      "query_id": "comp3:outcome4",
+      "compound_id": "comp3",
+      "structure_key": "a89167f60f55829772e7",
+      "reported_positive": false,
+      "score": -0.4423172876110657
+    },
+    {
+      "query_id": "comp3:outcome5",
+      "compound_id": "comp3",
+      "structure_key": "a89167f60f55829772e7",
+      "reported_positive": false,
+      "score": 0.54855257709415
+    },
+    {
+      "query_id": "comp10:outcome0",
+      "compound_id": "comp10",
+      "structure_key": "fcba7369386628dbb8f0",
+      "reported_positive": false,
+      "score": 2.292833139571469
+    },
+    {
+      "query_id": "comp10:outcome1",
+      "compound_id": "comp10",
+      "structure_key": "fcba7369386628dbb8f0",
+      "reported_positive": true,
+      "score": -0.5524316760536127
+    },
+    {
+      "query_id": "comp10:outcome2",
+      "compound_id": "comp10",
+      "structure_key": "fcba7369386628dbb8f0",
+      "reported_positive": false,
+      "score": -1.7404014635178569
+    },
+    {
+      "query_id": "comp16:outcome0",
+      "compound_id": "comp16",
+      "structure_key": "9980d41e6ed7e491e2ef",
+      "reported_positive": false,
+      "score": 1.151076099042411
+    },
+    {
+      "query_id": "comp16:outcome1",
+      "compound_id": "comp16",
+      "structure_key": "9980d41e6ed7e491e2ef",
+      "reported_positive": true,
+      "score": 1.2583138110702592
+    },
+    {
+      "query_id": "comp16:outcome2",
+      "compound_id": "comp16",
+      "structure_key": "9980d41e6ed7e491e2ef",
+      "reported_positive": false,
+      "score": -0.5200441211112057
+    },
+    {
+      "query_id": "comp16:outcome3",
+      "compound_id": "comp16",
+      "structure_key": "9980d41e6ed7e491e2ef",
+      "reported_positive": false,
+      "score": -0.9846260658037453
+    },
+    {
+      "query_id": "comp16:outcome4",
+      "compound_id": "comp16",
+      "structure_key": "9980d41e6ed7e491e2ef",
+      "reported_positive": false,
+      "score": -0.9047197231977189
+    },
+    {
+      "query_id": "comp17:outcome0",
+      "compound_id": "comp17",
+      "structure_key": "5306ff39e176e8a57257",
+      "reported_positive": false,
+      "score": 0.002643501721277794
+    },
+    {
+      "query_id": "comp17:outcome1",
+      "compound_id": "comp17",
+      "structure_key": "5306ff39e176e8a57257",
+      "reported_positive": true,
+      "score": 0.10988121374912585
+    },
+    {
+      "query_id": "comp17:outcome2",
+      "compound_id": "comp17",
+      "structure_key": "5306ff39e176e8a57257",
+      "reported_positive": false,
+      "score": -0.11252471547040369
+    },
+    {
+      "query_id": "comp19:outcome0",
+      "compound_id": "comp19",
+      "structure_key": "3106ad60654f9ad36e9d",
+      "reported_positive": false,
+      "score": -1.052589164790902
+    },
+    {
+      "query_id": "comp19:outcome1",
+      "compound_id": "comp19",
+      "structure_key": "3106ad60654f9ad36e9d",
+      "reported_positive": false,
+      "score": -1.0287391361667948
+    },
+    {
+      "query_id": "comp19:outcome2",
+      "compound_id": "comp19",
+      "structure_key": "3106ad60654f9ad36e9d",
+      "reported_positive": false,
+      "score": -1.6193428340340257
+    },
+    {
+      "query_id": "comp19:outcome3",
+      "compound_id": "comp19",
+      "structure_key": "3106ad60654f9ad36e9d",
+      "reported_positive": true,
+      "score": 3.7006711349917225
+    },
+    {
+      "query_id": "comp23:outcome0",
+      "compound_id": "comp23",
+      "structure_key": "cc241e7a3c32a7f45d4f",
+      "reported_positive": true,
+      "score": -0.4109415979466746
+    },
+    {
+      "query_id": "comp23:outcome1",
+      "compound_id": "comp23",
+      "structure_key": "cc241e7a3c32a7f45d4f",
+      "reported_positive": false,
+      "score": -1.253847114027611
+    },
+    {
+      "query_id": "comp23:outcome2",
+      "compound_id": "comp23",
+      "structure_key": "cc241e7a3c32a7f45d4f",
+      "reported_positive": false,
+      "score": 1.3020796763017595
+    },
+    {
+      "query_id": "comp23:outcome3",
+      "compound_id": "comp23",
+      "structure_key": "cc241e7a3c32a7f45d4f",
+      "reported_positive": false,
+      "score": 0.46642202319488363
+    },
+    {
+      "query_id": "comp23:outcome4",
+      "compound_id": "comp23",
+      "structure_key": "cc241e7a3c32a7f45d4f",
+      "reported_positive": false,
+      "score": 0.10273743792076664
+    },
+    {
+      "query_id": "comp23:outcome5",
+      "compound_id": "comp23",
+      "structure_key": "cc241e7a3c32a7f45d4f",
+      "reported_positive": false,
+      "score": -0.20645042544312397
+    },
+    {
+      "query_id": "comp27:outcome0",
+      "compound_id": "comp27",
+      "structure_key": "7330652f42a362a67425",
+      "reported_positive": false,
+      "score": -0.3718982549171776
+    },
+    {
+      "query_id": "comp27:outcome1",
+      "compound_id": "comp27",
+      "structure_key": "7330652f42a362a67425",
+      "reported_positive": true,
+      "score": 0.3718982549171776
+    },
+    {
+      "query_id": "comp33:outcome0",
+      "compound_id": "comp33",
+      "structure_key": "bee9fdaada0d0b11d789",
+      "reported_positive": false,
+      "score": 0.2352324883076391
+    },
+    {
+      "query_id": "comp33:outcome1",
+      "compound_id": "comp33",
+      "structure_key": "bee9fdaada0d0b11d789",
+      "reported_positive": false,
+      "score": -0.6771804688807835
+    },
+    {
+      "query_id": "comp33:outcome2",
+      "compound_id": "comp33",
+      "structure_key": "bee9fdaada0d0b11d789",
+      "reported_positive": false,
+      "score": -0.6771804688807835
+    },
+    {
+      "query_id": "comp33:outcome3",
+      "compound_id": "comp33",
+      "structure_key": "bee9fdaada0d0b11d789",
+      "reported_positive": false,
+      "score": 0.8076272368726076
+    },
+    {
+      "query_id": "comp33:outcome4",
+      "compound_id": "comp33",
+      "structure_key": "bee9fdaada0d0b11d789",
+      "reported_positive": true,
+      "score": 0.07626872427368081
+    },
+    {
+      "query_id": "comp33:outcome5",
+      "compound_id": "comp33",
+      "structure_key": "bee9fdaada0d0b11d789",
+      "reported_positive": false,
+      "score": 0.2352324883076391
+    },
+    {
+      "query_id": "comp48:outcome0",
+      "compound_id": "comp48",
+      "structure_key": "1fe599e53a86d28ace88",
+      "reported_positive": false,
+      "score": 0.18585290717057648
+    },
+    {
+      "query_id": "comp48:outcome1",
+      "compound_id": "comp48",
+      "structure_key": "1fe599e53a86d28ace88",
+      "reported_positive": false,
+      "score": -0.488095987614651
+    },
+    {
+      "query_id": "comp48:outcome2",
+      "compound_id": "comp48",
+      "structure_key": "1fe599e53a86d28ace88",
+      "reported_positive": true,
+      "score": -1.2747856326556837
+    },
+    {
+      "query_id": "comp48:outcome3",
+      "compound_id": "comp48",
+      "structure_key": "1fe599e53a86d28ace88",
+      "reported_positive": false,
+      "score": 1.577028713099758
+    },
+    {
+      "query_id": "comp71:outcome0",
+      "compound_id": "comp71",
+      "structure_key": "0ca4edd8596c5f525eff",
+      "reported_positive": false,
+      "score": -0.07321382989375416
+    },
+    {
+      "query_id": "comp71:outcome1",
+      "compound_id": "comp71",
+      "structure_key": "0ca4edd8596c5f525eff",
+      "reported_positive": true,
+      "score": 0.07321382989375416
+    },
+    {
+      "query_id": "comp83:outcome0",
+      "compound_id": "comp83",
+      "structure_key": "b0c3052a75e9f0811930",
+      "reported_positive": false,
+      "score": 0.6620740913365678
+    },
+    {
+      "query_id": "comp83:outcome1",
+      "compound_id": "comp83",
+      "structure_key": "b0c3052a75e9f0811930",
+      "reported_positive": true,
+      "score": -0.6620740913365678
+    },
+    {
+      "query_id": "comp89:outcome0",
+      "compound_id": "comp89",
+      "structure_key": "9029dbc57aacba4fe583",
+      "reported_positive": false,
+      "score": -1.2741276606441907
+    },
+    {
+      "query_id": "comp89:outcome1",
+      "compound_id": "comp89",
+      "structure_key": "9029dbc57aacba4fe583",
+      "reported_positive": true,
+      "score": 0.1361206309877972
+    },
+    {
+      "query_id": "comp89:outcome2",
+      "compound_id": "comp89",
+      "structure_key": "9029dbc57aacba4fe583",
+      "reported_positive": false,
+      "score": 1.1380070296563929
+    },
+    {
+      "query_id": "comp90:outcome0",
+      "compound_id": "comp90",
+      "structure_key": "50c2ea1a7c2967b1c320",
+      "reported_positive": true,
+      "score": -0.11486465325949868
+    },
+    {
+      "query_id": "comp90:outcome1",
+      "compound_id": "comp90",
+      "structure_key": "50c2ea1a7c2967b1c320",
+      "reported_positive": false,
+      "score": 0.11486465325949868
+    },
+    {
+      "query_id": "comp96:outcome0",
+      "compound_id": "comp96",
+      "structure_key": "92d1f81c79749fd048b5",
+      "reported_positive": false,
+      "score": -0.4081324844033091
+    },
+    {
+      "query_id": "comp96:outcome1",
+      "compound_id": "comp96",
+      "structure_key": "92d1f81c79749fd048b5",
+      "reported_positive": true,
+      "score": 0.3356640254310462
+    },
+    {
+      "query_id": "comp96:outcome2",
+      "compound_id": "comp96",
+      "structure_key": "92d1f81c79749fd048b5",
+      "reported_positive": false,
+      "score": 0.9009832492424309
+    },
+    {
+      "query_id": "comp96:outcome3",
+      "compound_id": "comp96",
+      "structure_key": "92d1f81c79749fd048b5",
+      "reported_positive": false,
+      "score": 0.026242275931423253
+    },
+    {
+      "query_id": "comp96:outcome4",
+      "compound_id": "comp96",
+      "structure_key": "92d1f81c79749fd048b5",
+      "reported_positive": false,
+      "score": -0.6136721598752617
+    },
+    {
+      "query_id": "comp96:outcome5",
+      "compound_id": "comp96",
+      "structure_key": "92d1f81c79749fd048b5",
+      "reported_positive": false,
+      "score": -0.5767489317573764
+    },
+    {
+      "query_id": "comp96:outcome6",
+      "compound_id": "comp96",
+      "structure_key": "92d1f81c79749fd048b5",
+      "reported_positive": false,
+      "score": 0.3356640254310462
+    },
+    {
+      "query_id": "comp97:outcome0",
+      "compound_id": "comp97",
+      "structure_key": "435accc0684e4c9d1c03",
+      "reported_positive": false,
+      "score": -0.2680401418927491
+    },
+    {
+      "query_id": "comp97:outcome1",
+      "compound_id": "comp97",
+      "structure_key": "435accc0684e4c9d1c03",
+      "reported_positive": true,
+      "score": 0.2680401418927491
+    },
+    {
+      "query_id": "comp106:outcome0",
+      "compound_id": "comp106",
+      "structure_key": "f96908a4573f84cfce9c",
+      "reported_positive": false,
+      "score": -0.4348197507757782
+    },
+    {
+      "query_id": "comp106:outcome1",
+      "compound_id": "comp106",
+      "structure_key": "f96908a4573f84cfce9c",
+      "reported_positive": true,
+      "score": 0.308976759058577
+    },
+    {
+      "query_id": "comp106:outcome2",
+      "compound_id": "comp106",
+      "structure_key": "f96908a4573f84cfce9c",
+      "reported_positive": false,
+      "score": -0.0821652699084055
+    },
+    {
+      "query_id": "comp106:outcome3",
+      "compound_id": "comp106",
+      "structure_key": "f96908a4573f84cfce9c",
+      "reported_positive": false,
+      "score": 0.20800826162560665
+    },
+    {
+      "query_id": "comp125:outcome0",
+      "compound_id": "comp125",
+      "structure_key": "c8cf4008f8113a39a016",
+      "reported_positive": true,
+      "score": 1.135071480301443
+    },
+    {
+      "query_id": "comp125:outcome1",
+      "compound_id": "comp125",
+      "structure_key": "c8cf4008f8113a39a016",
+      "reported_positive": false,
+      "score": 1.0278337682735952
+    },
+    {
+      "query_id": "comp125:outcome2",
+      "compound_id": "comp125",
+      "structure_key": "c8cf4008f8113a39a016",
+      "reported_positive": false,
+      "score": -0.6432864518800215
+    },
+    {
+      "query_id": "comp125:outcome3",
+      "compound_id": "comp125",
+      "structure_key": "c8cf4008f8113a39a016",
+      "reported_positive": false,
+      "score": -0.7954805824899186
+    },
+    {
+      "query_id": "comp125:outcome4",
+      "compound_id": "comp125",
+      "structure_key": "c8cf4008f8113a39a016",
+      "reported_positive": false,
+      "score": -1.5041864732619292
+    },
+    {
+      "query_id": "comp125:outcome5",
+      "compound_id": "comp125",
+      "structure_key": "c8cf4008f8113a39a016",
+      "reported_positive": false,
+      "score": 0.7800482590568312
+    },
+    {
+      "query_id": "comp126:outcome0",
+      "compound_id": "comp126",
+      "structure_key": "9a2356a88d8ca4fde639",
+      "reported_positive": true,
+      "score": 0.991113159060645
+    },
+    {
+      "query_id": "comp126:outcome1",
+      "compound_id": "comp126",
+      "structure_key": "9a2356a88d8ca4fde639",
+      "reported_positive": false,
+      "score": 0.883875447032797
+    },
+    {
+      "query_id": "comp126:outcome2",
+      "compound_id": "comp126",
+      "structure_key": "9a2356a88d8ca4fde639",
+      "reported_positive": false,
+      "score": -0.8897396699856901
+    },
+    {
+      "query_id": "comp126:outcome3",
+      "compound_id": "comp126",
+      "structure_key": "9a2356a88d8ca4fde639",
+      "reported_positive": false,
+      "score": -0.9852489361077519
+    },
+    {
+      "query_id": "comp129:outcome0",
+      "compound_id": "comp129",
+      "structure_key": "95140439f7aa809bb72d",
+      "reported_positive": true,
+      "score": -1.2747856326556837
+    },
+    {
+      "query_id": "comp129:outcome1",
+      "compound_id": "comp129",
+      "structure_key": "95140439f7aa809bb72d",
+      "reported_positive": false,
+      "score": 1.577028713099758
+    },
+    {
+      "query_id": "comp129:outcome2",
+      "compound_id": "comp129",
+      "structure_key": "95140439f7aa809bb72d",
+      "reported_positive": false,
+      "score": 0.18585290717057648
+    },
+    {
+      "query_id": "comp129:outcome3",
+      "compound_id": "comp129",
+      "structure_key": "95140439f7aa809bb72d",
+      "reported_positive": false,
+      "score": -0.488095987614651
+    },
+    {
+      "query_id": "comp131:outcome0",
+      "compound_id": "comp131",
+      "structure_key": "8a8aa8f60953934d8359",
+      "reported_positive": false,
+      "score": -1.6027579352581751
+    },
+    {
+      "query_id": "comp131:outcome1",
+      "compound_id": "comp131",
+      "structure_key": "8a8aa8f60953934d8359",
+      "reported_positive": false,
+      "score": -1.3563203350235307
+    },
+    {
+      "query_id": "comp131:outcome2",
+      "compound_id": "comp131",
+      "structure_key": "8a8aa8f60953934d8359",
+      "reported_positive": true,
+      "score": 0.1624162249161023
+    },
+    {
+      "query_id": "comp131:outcome3",
+      "compound_id": "comp131",
+      "structure_key": "8a8aa8f60953934d8359",
+      "reported_positive": false,
+      "score": 0.1624162249161023
+    },
+    {
+      "query_id": "comp131:outcome4",
+      "compound_id": "comp131",
+      "structure_key": "8a8aa8f60953934d8359",
+      "reported_positive": false,
+      "score": 2.6342458204495007
+    },
+    {
+      "query_id": "comp134:outcome0",
+      "compound_id": "comp134",
+      "structure_key": "e88e0ea78fb6722f8726",
+      "reported_positive": false,
+      "score": 0.21757146716765602
+    },
+    {
+      "query_id": "comp134:outcome1",
+      "compound_id": "comp134",
+      "structure_key": "e88e0ea78fb6722f8726",
+      "reported_positive": false,
+      "score": 0.860742632267296
+    },
+    {
+      "query_id": "comp134:outcome2",
+      "compound_id": "comp134",
+      "structure_key": "e88e0ea78fb6722f8726",
+      "reported_positive": false,
+      "score": -0.05167032492112661
+    },
+    {
+      "query_id": "comp134:outcome3",
+      "compound_id": "comp134",
+      "structure_key": "e88e0ea78fb6722f8726",
+      "reported_positive": false,
+      "score": -0.05167032492112661
+    },
+    {
+      "query_id": "comp134:outcome4",
+      "compound_id": "comp134",
+      "structure_key": "e88e0ea78fb6722f8726",
+      "reported_positive": true,
+      "score": -0.4902483021065529
+    },
+    {
+      "query_id": "comp134:outcome5",
+      "compound_id": "comp134",
+      "structure_key": "e88e0ea78fb6722f8726",
+      "reported_positive": false,
+      "score": -0.4847251474861473
+    },
+    {
+      "query_id": "comp218:outcome0",
+      "compound_id": "comp218",
+      "structure_key": "e0ad949156e1eb153068",
+      "reported_positive": true,
+      "score": -0.15389302015258421
+    },
+    {
+      "query_id": "comp218:outcome1",
+      "compound_id": "comp218",
+      "structure_key": "e0ad949156e1eb153068",
+      "reported_positive": false,
+      "score": -0.8429906945766229
+    },
+    {
+      "query_id": "comp218:outcome2",
+      "compound_id": "comp218",
+      "structure_key": "e0ad949156e1eb153068",
+      "reported_positive": false,
+      "score": 0.9968837147292067
+    },
+    {
+      "query_id": "comp289:outcome0",
+      "compound_id": "comp289",
+      "structure_key": "6df81ff053159235a4ca",
+      "reported_positive": false,
+      "score": 0.5146658545778015
+    },
+    {
+      "query_id": "comp289:outcome1",
+      "compound_id": "comp289",
+      "structure_key": "6df81ff053159235a4ca",
+      "reported_positive": true,
+      "score": -0.5146658545778015
+    },
+    {
+      "query_id": "comp314:outcome0",
+      "compound_id": "comp314",
+      "structure_key": "3b651ebbec9fdbb8d2db",
+      "reported_positive": false,
+      "score": -1.4459772209485366
+    },
+    {
+      "query_id": "comp314:outcome1",
+      "compound_id": "comp314",
+      "structure_key": "3b651ebbec9fdbb8d2db",
+      "reported_positive": false,
+      "score": -0.5564207804522857
+    },
+    {
+      "query_id": "comp314:outcome2",
+      "compound_id": "comp314",
+      "structure_key": "3b651ebbec9fdbb8d2db",
+      "reported_positive": false,
+      "score": 0.11752811433294173
+    },
+    {
+      "query_id": "comp314:outcome3",
+      "compound_id": "comp314",
+      "structure_key": "3b651ebbec9fdbb8d2db",
+      "reported_positive": true,
+      "score": 0.11752811433294173
+    },
+    {
+      "query_id": "comp314:outcome4",
+      "compound_id": "comp314",
+      "structure_key": "3b651ebbec9fdbb8d2db",
+      "reported_positive": false,
+      "score": 2.4005336291047987
+    },
+    {
+      "query_id": "comp314:outcome5",
+      "compound_id": "comp314",
+      "structure_key": "3b651ebbec9fdbb8d2db",
+      "reported_positive": false,
+      "score": -0.04972178380210629
+    },
+    {
+      "query_id": "comp314:outcome6",
+      "compound_id": "comp314",
+      "structure_key": "3b651ebbec9fdbb8d2db",
+      "reported_positive": false,
+      "score": -0.5834700725677537
+    },
+    {
+      "query_id": "comp315:outcome0",
+      "compound_id": "comp315",
+      "structure_key": "fcda61eea32cf38eef01",
+      "reported_positive": false,
+      "score": 1.1020733348198901
+    },
+    {
+      "query_id": "comp315:outcome1",
+      "compound_id": "comp315",
+      "structure_key": "fcda61eea32cf38eef01",
+      "reported_positive": false,
+      "score": 0.7499699083539151
+    },
+    {
+      "query_id": "comp315:outcome2",
+      "compound_id": "comp315",
+      "structure_key": "fcda61eea32cf38eef01",
+      "reported_positive": true,
+      "score": -0.2891024711092913
+    },
+    {
+      "query_id": "comp315:outcome3",
+      "compound_id": "comp315",
+      "structure_key": "fcda61eea32cf38eef01",
+      "reported_positive": false,
+      "score": -1.5629407720645139
+    },
+    {
+      "query_id": "comp317:outcome0",
+      "compound_id": "comp317",
+      "structure_key": "95c7b2dd8f761c4fdad0",
+      "reported_positive": false,
+      "score": -1.6689426092677024
+    },
+    {
+      "query_id": "comp317:outcome1",
+      "compound_id": "comp317",
+      "structure_key": "95c7b2dd8f761c4fdad0",
+      "reported_positive": false,
+      "score": -0.4268286087016958
+    },
+    {
+      "query_id": "comp317:outcome2",
+      "compound_id": "comp317",
+      "structure_key": "95c7b2dd8f761c4fdad0",
+      "reported_positive": false,
+      "score": 1.3643835462982135
+    },
+    {
+      "query_id": "comp317:outcome3",
+      "compound_id": "comp317",
+      "structure_key": "95c7b2dd8f761c4fdad0",
+      "reported_positive": true,
+      "score": 1.012280119832238
+    },
+    {
+      "query_id": "comp317:outcome4",
+      "compound_id": "comp317",
+      "structure_key": "95c7b2dd8f761c4fdad0",
+      "reported_positive": false,
+      "score": -0.18071753303215687
+    },
+    {
+      "query_id": "comp317:outcome5",
+      "compound_id": "comp317",
+      "structure_key": "95c7b2dd8f761c4fdad0",
+      "reported_positive": false,
+      "score": -0.10017491512889634
+    },
+    {
+      "query_id": "comp329:outcome0",
+      "compound_id": "comp329",
+      "structure_key": "210785eff4574db9e1f0",
+      "reported_positive": false,
+      "score": -0.6543294517489046
+    },
+    {
+      "query_id": "comp329:outcome1",
+      "compound_id": "comp329",
+      "structure_key": "210785eff4574db9e1f0",
+      "reported_positive": false,
+      "score": 0.08946705808545058
+    },
+    {
+      "query_id": "comp329:outcome2",
+      "compound_id": "comp329",
+      "structure_key": "210785eff4574db9e1f0",
+      "reported_positive": true,
+      "score": 0.08946705808545058
+    },
+    {
+      "query_id": "comp329:outcome3",
+      "compound_id": "comp329",
+      "structure_key": "210785eff4574db9e1f0",
+      "reported_positive": false,
+      "score": 2.3724725728573075
+    },
+    {
+      "query_id": "comp329:outcome4",
+      "compound_id": "comp329",
+      "structure_key": "210785eff4574db9e1f0",
+      "reported_positive": false,
+      "score": 0.016386738752573647
+    },
+    {
+      "query_id": "comp329:outcome5",
+      "compound_id": "comp329",
+      "structure_key": "210785eff4574db9e1f0",
+      "reported_positive": false,
+      "score": -1.0185169135864633
+    },
+    {
+      "query_id": "comp329:outcome6",
+      "compound_id": "comp329",
+      "structure_key": "210785eff4574db9e1f0",
+      "reported_positive": false,
+      "score": -0.894947062445415
+    },
+    {
+      "query_id": "comp332:outcome0",
+      "compound_id": "comp332",
+      "structure_key": "ade145496a0712c814cd",
+      "reported_positive": false,
+      "score": -0.8556233298179816
+    },
+    {
+      "query_id": "comp332:outcome1",
+      "compound_id": "comp332",
+      "structure_key": "ade145496a0712c814cd",
+      "reported_positive": false,
+      "score": -0.11182681998362645
+    },
+    {
+      "query_id": "comp332:outcome2",
+      "compound_id": "comp332",
+      "structure_key": "ade145496a0712c814cd",
+      "reported_positive": true,
+      "score": -0.11182681998362645
+    },
+    {
+      "query_id": "comp332:outcome3",
+      "compound_id": "comp332",
+      "structure_key": "ade145496a0712c814cd",
+      "reported_positive": false,
+      "score": 2.171178694788231
+    },
+    {
+      "query_id": "comp332:outcome4",
+      "compound_id": "comp332",
+      "structure_key": "ade145496a0712c814cd",
+      "reported_positive": false,
+      "score": -0.2790767181186745
+    },
+    {
+      "query_id": "comp332:outcome5",
+      "compound_id": "comp332",
+      "structure_key": "ade145496a0712c814cd",
+      "reported_positive": false,
+      "score": -0.8128250068843221
+    },
+    {
+      "query_id": "comp334:outcome0",
+      "compound_id": "comp334",
+      "structure_key": "a75bd107413ffb927c38",
+      "reported_positive": true,
+      "score": 0.13689329558983115
+    },
+    {
+      "query_id": "comp334:outcome1",
+      "compound_id": "comp334",
+      "structure_key": "a75bd107413ffb927c38",
+      "reported_positive": false,
+      "score": -0.778535172187385
+    },
+    {
+      "query_id": "comp334:outcome2",
+      "compound_id": "comp334",
+      "structure_key": "a75bd107413ffb927c38",
+      "reported_positive": false,
+      "score": 0.6416418765975533
+    },
+    {
+      "query_id": "comp347:outcome0",
+      "compound_id": "comp347",
+      "structure_key": "007b98d35cfdd15bf8b5",
+      "reported_positive": false,
+      "score": -0.5868139806792665
+    },
+    {
+      "query_id": "comp347:outcome1",
+      "compound_id": "comp347",
+      "structure_key": "007b98d35cfdd15bf8b5",
+      "reported_positive": false,
+      "score": -0.7361585448704666
+    },
+    {
+      "query_id": "comp347:outcome2",
+      "compound_id": "comp347",
+      "structure_key": "007b98d35cfdd15bf8b5",
+      "reported_positive": true,
+      "score": -0.4382040200772999
+    },
+    {
+      "query_id": "comp347:outcome3",
+      "compound_id": "comp347",
+      "structure_key": "007b98d35cfdd15bf8b5",
+      "reported_positive": false,
+      "score": 1.7611765456270332
+    },
+    {
+      "query_id": "comp359:outcome0",
+      "compound_id": "comp359",
+      "structure_key": "b7fac91c9aa14cebd26f",
+      "reported_positive": false,
+      "score": -0.1830368733837221
+    },
+    {
+      "query_id": "comp359:outcome1",
+      "compound_id": "comp359",
+      "structure_key": "b7fac91c9aa14cebd26f",
+      "reported_positive": false,
+      "score": -0.6949305558779655
+    },
+    {
+      "query_id": "comp359:outcome2",
+      "compound_id": "comp359",
+      "structure_key": "b7fac91c9aa14cebd26f",
+      "reported_positive": false,
+      "score": -1.1446306363495058
+    },
+    {
+      "query_id": "comp359:outcome3",
+      "compound_id": "comp359",
+      "structure_key": "b7fac91c9aa14cebd26f",
+      "reported_positive": true,
+      "score": 2.0225980656111933
+    },
+    {
+      "query_id": "comp360:outcome0",
+      "compound_id": "comp360",
+      "structure_key": "5637b7f12b223fac3a4d",
+      "reported_positive": false,
+      "score": -0.5119201436309587
+    },
+    {
+      "query_id": "comp360:outcome1",
+      "compound_id": "comp360",
+      "structure_key": "5637b7f12b223fac3a4d",
+      "reported_positive": false,
+      "score": -0.5853027991288866
+    },
+    {
+      "query_id": "comp360:outcome2",
+      "compound_id": "comp360",
+      "structure_key": "5637b7f12b223fac3a4d",
+      "reported_positive": false,
+      "score": -1.0350028796004267
+    },
+    {
+      "query_id": "comp360:outcome3",
+      "compound_id": "comp360",
+      "structure_key": "5637b7f12b223fac3a4d",
+      "reported_positive": true,
+      "score": 2.132225822360272
+    },
+    {
+      "query_id": "comp381:outcome0",
+      "compound_id": "comp381",
+      "structure_key": "49d968e460669d56e263",
+      "reported_positive": false,
+      "score": 0.21258206116668027
+    },
+    {
+      "query_id": "comp381:outcome1",
+      "compound_id": "comp381",
+      "structure_key": "49d968e460669d56e263",
+      "reported_positive": false,
+      "score": -0.18349300561706877
+    },
+    {
+      "query_id": "comp381:outcome2",
+      "compound_id": "comp381",
+      "structure_key": "49d968e460669d56e263",
+      "reported_positive": true,
+      "score": -0.02908905554961172
+    },
+    {
+      "query_id": "comp389:outcome0",
+      "compound_id": "comp389",
+      "structure_key": "2261b15518844aa9616b",
+      "reported_positive": true,
+      "score": -0.7579903294735432
+    },
+    {
+      "query_id": "comp389:outcome1",
+      "compound_id": "comp389",
+      "structure_key": "2261b15518844aa9616b",
+      "reported_positive": false,
+      "score": 0.4847859844472227
+    },
+    {
+      "query_id": "comp389:outcome2",
+      "compound_id": "comp389",
+      "structure_key": "2261b15518844aa9616b",
+      "reported_positive": false,
+      "score": 0.983315465298886
+    },
+    {
+      "query_id": "comp389:outcome3",
+      "compound_id": "comp389",
+      "structure_key": "2261b15518844aa9616b",
+      "reported_positive": false,
+      "score": -0.05575691416432037
+    },
+    {
+      "query_id": "comp389:outcome4",
+      "compound_id": "comp389",
+      "structure_key": "2261b15518844aa9616b",
+      "reported_positive": false,
+      "score": -0.1291395696622485
+    },
+    {
+      "query_id": "comp389:outcome5",
+      "compound_id": "comp389",
+      "structure_key": "2261b15518844aa9616b",
+      "reported_positive": false,
+      "score": -0.5252146364459973
+    },
+    {
+      "query_id": "comp390:outcome0",
+      "compound_id": "comp390",
+      "structure_key": "3ddb3ca3b58aec1fcb3d",
+      "reported_positive": false,
+      "score": -0.3455762711265885
+    },
+    {
+      "query_id": "comp390:outcome1",
+      "compound_id": "comp390",
+      "structure_key": "3ddb3ca3b58aec1fcb3d",
+      "reported_positive": true,
+      "score": 0.3455762711265885
+    },
+    {
+      "query_id": "comp391:outcome0",
+      "compound_id": "comp391",
+      "structure_key": "2a5f8253873a40a04a6c",
+      "reported_positive": false,
+      "score": -0.8296759033982544
+    },
+    {
+      "query_id": "comp391:outcome1",
+      "compound_id": "comp391",
+      "structure_key": "2a5f8253873a40a04a6c",
+      "reported_positive": true,
+      "score": -0.1235170825010534
+    },
+    {
+      "query_id": "comp391:outcome2",
+      "compound_id": "comp391",
+      "structure_key": "2a5f8253873a40a04a6c",
+      "reported_positive": false,
+      "score": 0.9531929858993073
+    },
+    {
+      "query_id": "comp406:outcome0",
+      "compound_id": "comp406",
+      "structure_key": "d4ab1298a63874dacc54",
+      "reported_positive": false,
+      "score": -2.3661979445133965
+    },
+    {
+      "query_id": "comp406:outcome1",
+      "compound_id": "comp406",
+      "structure_key": "d4ab1298a63874dacc54",
+      "reported_positive": false,
+      "score": 1.8623590265836198
+    },
+    {
+      "query_id": "comp406:outcome2",
+      "compound_id": "comp406",
+      "structure_key": "d4ab1298a63874dacc54",
+      "reported_positive": true,
+      "score": 0.5038389179297764
+    },
+    {
+      "query_id": "comp413:outcome0",
+      "compound_id": "comp413",
+      "structure_key": "496063e8007336367a60",
+      "reported_positive": true,
+      "score": 2.2368775990701035
+    },
+    {
+      "query_id": "comp413:outcome1",
+      "compound_id": "comp413",
+      "structure_key": "496063e8007336367a60",
+      "reported_positive": false,
+      "score": -1.1598107726402702
+    },
+    {
+      "query_id": "comp413:outcome2",
+      "compound_id": "comp413",
+      "structure_key": "496063e8007336367a60",
+      "reported_positive": false,
+      "score": -1.0770668264298329
+    },
+    {
+      "query_id": "comp420:outcome0",
+      "compound_id": "comp420",
+      "structure_key": "c889ec2d814e223c908e",
+      "reported_positive": false,
+      "score": 0.9406470895869226
+    },
+    {
+      "query_id": "comp420:outcome1",
+      "compound_id": "comp420",
+      "structure_key": "c889ec2d814e223c908e",
+      "reported_positive": true,
+      "score": -0.0984252898762838
+    },
+    {
+      "query_id": "comp420:outcome2",
+      "compound_id": "comp420",
+      "structure_key": "c889ec2d814e223c908e",
+      "reported_positive": false,
+      "score": -0.8422217997106392
+    },
+    {
+      "query_id": "comp439:outcome0",
+      "compound_id": "comp439",
+      "structure_key": "d00d48e931eb81847e14",
+      "reported_positive": false,
+      "score": -0.5358853191879956
+    },
+    {
+      "query_id": "comp439:outcome1",
+      "compound_id": "comp439",
+      "structure_key": "d00d48e931eb81847e14",
+      "reported_positive": false,
+      "score": -0.7005990588443144
+    },
+    {
+      "query_id": "comp439:outcome2",
+      "compound_id": "comp439",
+      "structure_key": "d00d48e931eb81847e14",
+      "reported_positive": true,
+      "score": -0.48702609625745014
+    },
+    {
+      "query_id": "comp439:outcome3",
+      "compound_id": "comp439",
+      "structure_key": "d00d48e931eb81847e14",
+      "reported_positive": false,
+      "score": 1.72351047428976
+    },
+    {
+      "query_id": "comp442:outcome0",
+      "compound_id": "comp442",
+      "structure_key": "6b16a90604a7899272de",
+      "reported_positive": false,
+      "score": -0.8690560593778345
+    },
+    {
+      "query_id": "comp442:outcome1",
+      "compound_id": "comp442",
+      "structure_key": "6b16a90604a7899272de",
+      "reported_positive": false,
+      "score": -1.711961575458771
+    },
+    {
+      "query_id": "comp442:outcome2",
+      "compound_id": "comp442",
+      "structure_key": "6b16a90604a7899272de",
+      "reported_positive": false,
+      "score": -0.19510716459260702
+    },
+    {
+      "query_id": "comp442:outcome3",
+      "compound_id": "comp442",
+      "structure_key": "6b16a90604a7899272de",
+      "reported_positive": false,
+      "score": -0.3226679186030586
+    },
+    {
+      "query_id": "comp442:outcome4",
+      "compound_id": "comp442",
+      "structure_key": "6b16a90604a7899272de",
+      "reported_positive": false,
+      "score": -0.5691055188377026
+    },
+    {
+      "query_id": "comp442:outcome5",
+      "compound_id": "comp442",
+      "structure_key": "6b16a90604a7899272de",
+      "reported_positive": true,
+      "score": 3.6678982368699726
+    },
+    {
+      "query_id": "comp466:outcome0",
+      "compound_id": "comp466",
+      "structure_key": "a20b9205f31904122a67",
+      "reported_positive": false,
+      "score": -1.9805564030186802
+    },
+    {
+      "query_id": "comp466:outcome1",
+      "compound_id": "comp466",
+      "structure_key": "a20b9205f31904122a67",
+      "reported_positive": false,
+      "score": 0.4315782872819033
+    },
+    {
+      "query_id": "comp466:outcome2",
+      "compound_id": "comp466",
+      "structure_key": "a20b9205f31904122a67",
+      "reported_positive": false,
+      "score": -0.5703081113866925
+    },
+    {
+      "query_id": "comp466:outcome3",
+      "compound_id": "comp466",
+      "structure_key": "a20b9205f31904122a67",
+      "reported_positive": false,
+      "score": 0.46876426807651383
+    },
+    {
+      "query_id": "comp466:outcome4",
+      "compound_id": "comp466",
+      "structure_key": "a20b9205f31904122a67",
+      "reported_positive": false,
+      "score": -0.6978688653971441
+    },
+    {
+      "query_id": "comp466:outcome5",
+      "compound_id": "comp466",
+      "structure_key": "a20b9205f31904122a67",
+      "reported_positive": false,
+      "score": -0.9443064656317881
+    },
+    {
+      "query_id": "comp466:outcome6",
+      "compound_id": "comp466",
+      "structure_key": "a20b9205f31904122a67",
+      "reported_positive": true,
+      "score": 3.2926972900758873
+    },
+    {
+      "query_id": "comp481:outcome0",
+      "compound_id": "comp481",
+      "structure_key": "bf2560d9191de9b28d76",
+      "reported_positive": false,
+      "score": -0.762355326424284
+    },
+    {
+      "query_id": "comp481:outcome1",
+      "compound_id": "comp481",
+      "structure_key": "bf2560d9191de9b28d76",
+      "reported_positive": false,
+      "score": -1.6335801557064071
+    },
+    {
+      "query_id": "comp481:outcome2",
+      "compound_id": "comp481",
+      "structure_key": "bf2560d9191de9b28d76",
+      "reported_positive": false,
+      "score": -0.08840643163905643
+    },
+    {
+      "query_id": "comp481:outcome3",
+      "compound_id": "comp481",
+      "structure_key": "bf2560d9191de9b28d76",
+      "reported_positive": true,
+      "score": 2.4843419137697476
+    },
+    {
+      "query_id": "comp483:outcome0",
+      "compound_id": "comp483",
+      "structure_key": "8f535fb80b9e2c046967",
+      "reported_positive": true,
+      "score": 2.603578823636383
+    },
+    {
+      "query_id": "comp483:outcome1",
+      "compound_id": "comp483",
+      "structure_key": "8f535fb80b9e2c046967",
+      "reported_positive": false,
+      "score": -1.489089013136315
+    },
+    {
+      "query_id": "comp483:outcome2",
+      "compound_id": "comp483",
+      "structure_key": "8f535fb80b9e2c046967",
+      "reported_positive": false,
+      "score": -1.1144898105000685
+    },
+    {
+      "query_id": "comp488:outcome0",
+      "compound_id": "comp488",
+      "structure_key": "8cd862ef4a05c3480465",
+      "reported_positive": true,
+      "score": -0.2522622815928186
+    },
+    {
+      "query_id": "comp488:outcome1",
+      "compound_id": "comp488",
+      "structure_key": "8cd862ef4a05c3480465",
+      "reported_positive": false,
+      "score": -0.3242634449352616
+    },
+    {
+      "query_id": "comp488:outcome2",
+      "compound_id": "comp488",
+      "structure_key": "8cd862ef4a05c3480465",
+      "reported_positive": false,
+      "score": 0.5765257265280799
+    },
+    {
+      "query_id": "comp519:outcome0",
+      "compound_id": "comp519",
+      "structure_key": "d09a2b72370b5a453b15",
+      "reported_positive": false,
+      "score": 0.45620647859421126
+    },
+    {
+      "query_id": "comp519:outcome1",
+      "compound_id": "comp519",
+      "structure_key": "d09a2b72370b5a453b15",
+      "reported_positive": false,
+      "score": -0.45620647859421126
+    },
+    {
+      "query_id": "comp519:outcome2",
+      "compound_id": "comp519",
+      "structure_key": "d09a2b72370b5a453b15",
+      "reported_positive": true,
+      "score": -0.45620647859421126
+    },
+    {
+      "query_id": "comp519:outcome3",
+      "compound_id": "comp519",
+      "structure_key": "d09a2b72370b5a453b15",
+      "reported_positive": false,
+      "score": 0.45620647859421126
+    },
+    {
+      "query_id": "comp520:outcome0",
+      "compound_id": "comp520",
+      "structure_key": "e8b168a8d68e8ce4c668",
+      "reported_positive": false,
+      "score": -0.2414224309913196
+    },
+    {
+      "query_id": "comp520:outcome1",
+      "compound_id": "comp520",
+      "structure_key": "e8b168a8d68e8ce4c668",
+      "reported_positive": true,
+      "score": -0.31480508648924754
+    },
+    {
+      "query_id": "comp520:outcome2",
+      "compound_id": "comp520",
+      "structure_key": "e8b168a8d68e8ce4c668",
+      "reported_positive": false,
+      "score": -0.2414224309913196
+    },
+    {
+      "query_id": "comp520:outcome3",
+      "compound_id": "comp520",
+      "structure_key": "e8b168a8d68e8ce4c668",
+      "reported_positive": false,
+      "score": 0.7976499484718866
+    },
+    {
+      "query_id": "comp522:outcome0",
+      "compound_id": "comp522",
+      "structure_key": "709925d314142693d61c",
+      "reported_positive": false,
+      "score": 0.8705102506188688
+    },
+    {
+      "query_id": "comp522:outcome1",
+      "compound_id": "comp522",
+      "structure_key": "709925d314142693d61c",
+      "reported_positive": false,
+      "score": -0.23226969427996547
+    },
+    {
+      "query_id": "comp522:outcome2",
+      "compound_id": "comp522",
+      "structure_key": "709925d314142693d61c",
+      "reported_positive": true,
+      "score": -0.6382405563389035
+    },
+    {
+      "query_id": "comp523:outcome0",
+      "compound_id": "comp523",
+      "structure_key": "1c07991156b91144a65f",
+      "reported_positive": false,
+      "score": -0.3348419255506002
+    },
+    {
+      "query_id": "comp523:outcome1",
+      "compound_id": "comp523",
+      "structure_key": "1c07991156b91144a65f",
+      "reported_positive": true,
+      "score": 0.2992928784728509
+    },
+    {
+      "query_id": "comp523:outcome2",
+      "compound_id": "comp523",
+      "structure_key": "1c07991156b91144a65f",
+      "reported_positive": false,
+      "score": 0.017774523538874668
+    },
+    {
+      "query_id": "comp523:outcome3",
+      "compound_id": "comp523",
+      "structure_key": "1c07991156b91144a65f",
+      "reported_positive": false,
+      "score": 0.017774523538874668
+    },
+    {
+      "query_id": "comp531:outcome0",
+      "compound_id": "comp531",
+      "structure_key": "ec55f8369d66ecb1085e",
+      "reported_positive": false,
+      "score": -0.5802669041668478
+    },
+    {
+      "query_id": "comp531:outcome1",
+      "compound_id": "comp531",
+      "structure_key": "ec55f8369d66ecb1085e",
+      "reported_positive": false,
+      "score": -0.5082657408244047
+    },
+    {
+      "query_id": "comp531:outcome2",
+      "compound_id": "comp531",
+      "structure_key": "ec55f8369d66ecb1085e",
+      "reported_positive": false,
+      "score": 0.404147216364018
+    },
+    {
+      "query_id": "comp531:outcome3",
+      "compound_id": "comp531",
+      "structure_key": "ec55f8369d66ecb1085e",
+      "reported_positive": false,
+      "score": 0.9694664401754028
+    },
+    {
+      "query_id": "comp531:outcome4",
+      "compound_id": "comp531",
+      "structure_key": "ec55f8369d66ecb1085e",
+      "reported_positive": false,
+      "score": -0.2980861989452047
+    },
+    {
+      "query_id": "comp531:outcome5",
+      "compound_id": "comp531",
+      "structure_key": "ec55f8369d66ecb1085e",
+      "reported_positive": true,
+      "score": 0.013005187397035517
+    },
+    {
+      "query_id": "comp546:outcome0",
+      "compound_id": "comp546",
+      "structure_key": "2dcd2bf41f8791e0031d",
+      "reported_positive": true,
+      "score": 0.6831168787749979
+    },
+    {
+      "query_id": "comp546:outcome1",
+      "compound_id": "comp546",
+      "structure_key": "2dcd2bf41f8791e0031d",
+      "reported_positive": false,
+      "score": -0.6831168787749979
+    },
+    {
+      "query_id": "comp547:outcome0",
+      "compound_id": "comp547",
+      "structure_key": "8a95fd92251aa7a13f4e",
+      "reported_positive": false,
+      "score": 0.7602305967233822
+    },
+    {
+      "query_id": "comp547:outcome1",
+      "compound_id": "comp547",
+      "structure_key": "8a95fd92251aa7a13f4e",
+      "reported_positive": false,
+      "score": -0.20038487522303122
+    },
+    {
+      "query_id": "comp547:outcome2",
+      "compound_id": "comp547",
+      "structure_key": "8a95fd92251aa7a13f4e",
+      "reported_positive": false,
+      "score": -0.27376753072095916
+    },
+    {
+      "query_id": "comp547:outcome3",
+      "compound_id": "comp547",
+      "structure_key": "8a95fd92251aa7a13f4e",
+      "reported_positive": true,
+      "score": -0.2860781907793918
+    },
+    {
+      "query_id": "comp552:outcome0",
+      "compound_id": "comp552",
+      "structure_key": "ed9ec5827a58d3b1a55e",
+      "reported_positive": false,
+      "score": -0.37051088808446797
+    },
+    {
+      "query_id": "comp552:outcome1",
+      "compound_id": "comp552",
+      "structure_key": "ed9ec5827a58d3b1a55e",
+      "reported_positive": false,
+      "score": -0.4425120514269112
+    },
+    {
+      "query_id": "comp552:outcome2",
+      "compound_id": "comp552",
+      "structure_key": "ed9ec5827a58d3b1a55e",
+      "reported_positive": false,
+      "score": 0.5419020691039546
+    },
+    {
+      "query_id": "comp552:outcome3",
+      "compound_id": "comp552",
+      "structure_key": "ed9ec5827a58d3b1a55e",
+      "reported_positive": false,
+      "score": 0.47024057747240533
+    },
+    {
+      "query_id": "comp552:outcome4",
+      "compound_id": "comp552",
+      "structure_key": "ed9ec5827a58d3b1a55e",
+      "reported_positive": true,
+      "score": -0.37051088808446797
+    },
+    {
+      "query_id": "comp552:outcome5",
+      "compound_id": "comp552",
+      "structure_key": "ed9ec5827a58d3b1a55e",
+      "reported_positive": false,
+      "score": -0.37051088808446797
+    },
+    {
+      "query_id": "comp552:outcome6",
+      "compound_id": "comp552",
+      "structure_key": "ed9ec5827a58d3b1a55e",
+      "reported_positive": false,
+      "score": 0.5419020691039546
+    },
+    {
+      "query_id": "comp566:outcome0",
+      "compound_id": "comp566",
+      "structure_key": "c529df147951f48ac9fa",
+      "reported_positive": false,
+      "score": 0.10379131871327513
+    },
+    {
+      "query_id": "comp566:outcome1",
+      "compound_id": "comp566",
+      "structure_key": "c529df147951f48ac9fa",
+      "reported_positive": false,
+      "score": 0.030408663215347076
+    },
+    {
+      "query_id": "comp566:outcome2",
+      "compound_id": "comp566",
+      "structure_key": "c529df147951f48ac9fa",
+      "reported_positive": true,
+      "score": -0.13419998192862242
+    },
+    {
+      "query_id": "comp569:outcome0",
+      "compound_id": "comp569",
+      "structure_key": "b4a2296e065ed5a9ac4d",
+      "reported_positive": true,
+      "score": 0.5228325466711617
+    },
+    {
+      "query_id": "comp569:outcome1",
+      "compound_id": "comp569",
+      "structure_key": "b4a2296e065ed5a9ac4d",
+      "reported_positive": false,
+      "score": -0.5228325466711617
+    },
+    {
+      "query_id": "comp575:outcome0",
+      "compound_id": "comp575",
+      "structure_key": "da421e43984edd1966f1",
+      "reported_positive": false,
+      "score": 0.5061638257551252
+    },
+    {
+      "query_id": "comp575:outcome1",
+      "compound_id": "comp575",
+      "structure_key": "da421e43984edd1966f1",
+      "reported_positive": false,
+      "score": -1.002586981202647
+    },
+    {
+      "query_id": "comp575:outcome2",
+      "compound_id": "comp575",
+      "structure_key": "da421e43984edd1966f1",
+      "reported_positive": true,
+      "score": 0.4964231554475218
+    },
+    {
+      "query_id": "comp576:outcome0",
+      "compound_id": "comp576",
+      "structure_key": "8da7b38900cd1fd90d0a",
+      "reported_positive": false,
+      "score": 0.5061638257551252
+    },
+    {
+      "query_id": "comp576:outcome1",
+      "compound_id": "comp576",
+      "structure_key": "8da7b38900cd1fd90d0a",
+      "reported_positive": false,
+      "score": -1.002586981202647
+    },
+    {
+      "query_id": "comp576:outcome2",
+      "compound_id": "comp576",
+      "structure_key": "8da7b38900cd1fd90d0a",
+      "reported_positive": true,
+      "score": 0.4964231554475218
+    },
+    {
+      "query_id": "comp577:outcome0",
+      "compound_id": "comp577",
+      "structure_key": "823c1e67ae8f15e6e63f",
+      "reported_positive": false,
+      "score": 0.5061638257551252
+    },
+    {
+      "query_id": "comp577:outcome1",
+      "compound_id": "comp577",
+      "structure_key": "823c1e67ae8f15e6e63f",
+      "reported_positive": false,
+      "score": -1.002586981202647
+    },
+    {
+      "query_id": "comp577:outcome2",
+      "compound_id": "comp577",
+      "structure_key": "823c1e67ae8f15e6e63f",
+      "reported_positive": true,
+      "score": 0.4964231554475218
+    },
+    {
+      "query_id": "comp578:outcome0",
+      "compound_id": "comp578",
+      "structure_key": "9497b05fd1644887e398",
+      "reported_positive": false,
+      "score": 0.5061638257551252
+    },
+    {
+      "query_id": "comp578:outcome1",
+      "compound_id": "comp578",
+      "structure_key": "9497b05fd1644887e398",
+      "reported_positive": false,
+      "score": -1.002586981202647
+    },
+    {
+      "query_id": "comp578:outcome2",
+      "compound_id": "comp578",
+      "structure_key": "9497b05fd1644887e398",
+      "reported_positive": true,
+      "score": 0.4964231554475218
+    }
+  ],
+  "model_sha256": "277cb0814bc5861fb41bc70c39b9095a641a3cd00376b677cd99194c98ff5572"
+}

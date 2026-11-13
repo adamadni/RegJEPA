@@ -1,0 +1,646 @@
+{
+  "schema_version": 1,
+  "proposal_id": "af05d8348e60ad38b6e4",
+  "recorded_at_utc": "2026-11-13T04:43:08.602966+00:00",
+  "run_directory": "reports/evaluation_runs/af05d8348e60ad38b6e4",
+  "status": "complete_and_artifact_audited",
+  "feature_run_key": "d76c42313dcf5e17ac96",
+  "cohort": "conservative_bromination",
+  "molecules": 299,
+  "structures": 299,
+  "outcome_rows": 1264,
+  "leakage_groups": 250,
+  "summary_sha256": "3dba5a432b7262cb8dacc45e0166c461022fabc10d2f7089111cc865c4caa455",
+  "frozen_artifact_sha256": "781d25e1eee756f30f5db728ff1804f8115e646f2622d19e82ad3c3f33da8ac1",
+  "descriptive_metrics": {
+    "atom_jepa:budget50": {
+      "top1": 0.6454849498327759,
+      "top2": 0.8606465997770345,
+      "reciprocal_rank": 0.7954584063279715,
+      "nll": 0.8754733923683763,
+      "uniform_top1": 0.28314752879970273,
+      "uniform_nll": 1.352522146639527,
+      "information_gain_nats": 0.4770487542711508,
+      "molecules": 299,
+      "structures": 299,
+      "top2_nontrivial_molecules": 244,
+      "top2_nontrivial": 0.8292349726775957
+    },
+    "atom_jepa:budget100": {
+      "top1": 0.713489409141583,
+      "top2": 0.9063545150501672,
+      "reciprocal_rank": 0.8381748686096512,
+      "nll": 0.7342937059319851,
+      "uniform_top1": 0.28314752879970273,
+      "uniform_nll": 1.352522146639527,
+      "information_gain_nats": 0.618228440707542,
+      "molecules": 299,
+      "structures": 299,
+      "top2_nontrivial_molecules": 244,
+      "top2_nontrivial": 0.8852459016393442
+    },
+    "atom_jepa:budgetfull": {
+      "top1": 0.7558528428093646,
+      "top2": 0.9297658862876255,
+      "reciprocal_rank": 0.8649386845039019,
+      "nll": 0.6166740263516262,
+      "uniform_top1": 0.28314752879970273,
+      "uniform_nll": 1.352522146639527,
+      "information_gain_nats": 0.7358481202879009,
+      "molecules": 299,
+      "structures": 299,
+      "top2_nontrivial_molecules": 244,
+      "top2_nontrivial": 0.9139344262295082
+    },
+    "random_backbone:budget50": {
+      "top1": 0.6142697881828317,
+      "top2": 0.8439241917502789,
+      "reciprocal_rank": 0.7749190423103466,
+      "nll": 1.0288722556933672,
+      "uniform_top1": 0.28314752879970273,
+      "uniform_nll": 1.352522146639527,
+      "information_gain_nats": 0.32364989094616,
+      "molecules": 299,
+      "structures": 299,
+      "top2_nontrivial_molecules": 244,
+      "top2_nontrivial": 0.808743169398907
+    },
+    "random_backbone:budget100": {
+      "top1": 0.673355629877369,
+      "top2": 0.903010033444816,
+      "reciprocal_rank": 0.8170674735892126,
+      "nll": 0.8549953998662543,
+      "uniform_top1": 0.28314752879970273,
+      "uniform_nll": 1.352522146639527,
+      "information_gain_nats": 0.4975267467732728,
+      "molecules": 299,
+      "structures": 299,
+      "top2_nontrivial_molecules": 244,
+      "top2_nontrivial": 0.8811475409836066
+    },
+    "random_backbone:budgetfull": {
+      "top1": 0.745819397993311,
+      "top2": 0.9464882943143813,
+      "reciprocal_rank": 0.8627090301003344,
+      "nll": 0.6650666874731449,
+      "uniform_top1": 0.28314752879970273,
+      "uniform_nll": 1.352522146639527,
+      "information_gain_nats": 0.6874554591663823,
+      "molecules": 299,
+      "structures": 299,
+      "top2_nontrivial_molecules": 244,
+      "top2_nontrivial": 0.9344262295081968
+    },
+    "morgan:budget50": {
+      "top1": 0.4406354515050167,
+      "top2": 0.6982534373838721,
+      "reciprocal_rank": 0.6537008281573499,
+      "nll": 1.247448858667738,
+      "uniform_top1": 0.28314752879970273,
+      "uniform_nll": 1.352522146639527,
+      "information_gain_nats": 0.10507328797178933,
+      "molecules": 299,
+      "structures": 299,
+      "top2_nontrivial_molecules": 244,
+      "top2_nontrivial": 0.6302367941712204
+    },
+    "morgan:budget100": {
+      "top1": 0.5133779264214047,
+      "top2": 0.7896692679301376,
+      "reciprocal_rank": 0.7119689087080392,
+      "nll": 1.1259008027127961,
+      "uniform_top1": 0.28314752879970273,
+      "uniform_nll": 1.352522146639527,
+      "information_gain_nats": 0.22662134392673097,
+      "molecules": 299,
+      "structures": 299,
+      "top2_nontrivial_molecules": 244,
+      "top2_nontrivial": 0.7422586520947176
+    },
+    "morgan:budgetfull": {
+      "top1": 0.6354515050167224,
+      "top2": 0.9046822742474916,
+      "reciprocal_rank": 0.7967112597547379,
+      "nll": 0.9623514874468655,
+      "uniform_top1": 0.28314752879970273,
+      "uniform_nll": 1.352522146639527,
+      "information_gain_nats": 0.39017065919266175,
+      "molecules": 299,
+      "structures": 299,
+      "top2_nontrivial_molecules": 244,
+      "top2_nontrivial": 0.8831967213114754
+    },
+    "electronic:budget50": {
+      "top1": 0.8260869565217391,
+      "top2": 0.9331103678929766,
+      "reciprocal_rank": 0.8990523968784838,
+      "nll": 0.558089117109362,
+      "uniform_top1": 0.28314752879970273,
+      "uniform_nll": 1.352522146639527,
+      "information_gain_nats": 0.7944330295301649,
+      "molecules": 299,
+      "structures": 299,
+      "top2_nontrivial_molecules": 244,
+      "top2_nontrivial": 0.9180327868852459
+    },
+    "electronic:budget100": {
+      "top1": 0.8528428093645485,
+      "top2": 0.9554069119286509,
+      "reciprocal_rank": 0.9167781493868451,
+      "nll": 0.512552853353482,
+      "uniform_top1": 0.28314752879970273,
+      "uniform_nll": 1.352522146639527,
+      "information_gain_nats": 0.8399692932860451,
+      "molecules": 299,
+      "structures": 299,
+      "top2_nontrivial_molecules": 244,
+      "top2_nontrivial": 0.9453551912568305
+    },
+    "electronic:budgetfull": {
+      "top1": 0.8561872909698997,
+      "top2": 0.9698996655518395,
+      "reciprocal_rank": 0.9210702341137122,
+      "nll": 0.4551420155594445,
+      "uniform_top1": 0.28314752879970273,
+      "uniform_nll": 1.352522146639527,
+      "information_gain_nats": 0.8973801310800826,
+      "molecules": 299,
+      "structures": 299,
+      "top2_nontrivial_molecules": 244,
+      "top2_nontrivial": 0.9631147540983607
+    },
+    "jepa_plus_qm:budget50": {
+      "top1": 0.8294314381270903,
+      "top2": 0.9520624303232997,
+      "reciprocal_rank": 0.9051839464882943,
+      "nll": 0.5404892918122995,
+      "uniform_top1": 0.28314752879970273,
+      "uniform_nll": 1.352522146639527,
+      "information_gain_nats": 0.8120328548272275,
+      "molecules": 299,
+      "structures": 299,
+      "top2_nontrivial_molecules": 244,
+      "top2_nontrivial": 0.9412568306010929
+    },
+    "jepa_plus_qm:budget100": {
+      "top1": 0.8595317725752508,
+      "top2": 0.9687848383500556,
+      "reciprocal_rank": 0.9235600148643627,
+      "nll": 0.42306521785504353,
+      "uniform_top1": 0.28314752879970273,
+      "uniform_nll": 1.352522146639527,
+      "information_gain_nats": 0.9294569287844835,
+      "molecules": 299,
+      "structures": 299,
+      "top2_nontrivial_molecules": 244,
+      "top2_nontrivial": 0.9617486338797815
+    },
+    "jepa_plus_qm:budgetfull": {
+      "top1": 0.8695652173913043,
+      "top2": 0.9665551839464883,
+      "reciprocal_rank": 0.9279264214046823,
+      "nll": 0.401716717837164,
+      "uniform_top1": 0.28314752879970273,
+      "uniform_nll": 1.352522146639527,
+      "information_gain_nats": 0.9508054288023633,
+      "molecules": 299,
+      "structures": 299,
+      "top2_nontrivial_molecules": 244,
+      "top2_nontrivial": 0.9590163934426229
+    }
+  },
+  "paired_top1_comparisons": [
+    {
+      "left": "atom_jepa",
+      "right": "random_backbone",
+      "budget": "50",
+      "mean_delta": 0.03121516164994426,
+      "ci95": [
+        -0.01948201224063293,
+        0.08307374866879648
+      ],
+      "molecules": 299,
+      "resampled_leakage_groups": 250,
+      "repetitions": 10000,
+      "seed": 42,
+      "scope": "paired molecular mean; cluster-resampled; conditional on fitted out-of-fold models"
+    },
+    {
+      "left": "atom_jepa",
+      "right": "morgan",
+      "budget": "50",
+      "mean_delta": 0.2048494983277592,
+      "ci95": [
+        0.14939662474760465,
+        0.25897881454812144
+      ],
+      "molecules": 299,
+      "resampled_leakage_groups": 250,
+      "repetitions": 10000,
+      "seed": 42,
+      "scope": "paired molecular mean; cluster-resampled; conditional on fitted out-of-fold models"
+    },
+    {
+      "left": "atom_jepa",
+      "right": "electronic",
+      "budget": "50",
+      "mean_delta": -0.18060200668896323,
+      "ci95": [
+        -0.2347425639105954,
+        -0.12666558441558445
+      ],
+      "molecules": 299,
+      "resampled_leakage_groups": 250,
+      "repetitions": 10000,
+      "seed": 42,
+      "scope": "paired molecular mean; cluster-resampled; conditional on fitted out-of-fold models"
+    },
+    {
+      "left": "jepa_plus_qm",
+      "right": "atom_jepa",
+      "budget": "50",
+      "mean_delta": 0.1839464882943144,
+      "ci95": [
+        0.13610032248193396,
+        0.231681029004296
+      ],
+      "molecules": 299,
+      "resampled_leakage_groups": 250,
+      "repetitions": 10000,
+      "seed": 42,
+      "scope": "paired molecular mean; cluster-resampled; conditional on fitted out-of-fold models"
+    },
+    {
+      "left": "jepa_plus_qm",
+      "right": "electronic",
+      "budget": "50",
+      "mean_delta": 0.0033444816053511683,
+      "ci95": [
+        -0.020620334162815494,
+        0.02511415525114155
+      ],
+      "molecules": 299,
+      "resampled_leakage_groups": 250,
+      "repetitions": 10000,
+      "seed": 42,
+      "scope": "paired molecular mean; cluster-resampled; conditional on fitted out-of-fold models"
+    },
+    {
+      "left": "atom_jepa",
+      "right": "random_backbone",
+      "budget": "100",
+      "mean_delta": 0.04013377926421405,
+      "ci95": [
+        -0.009966777408637871,
+        0.08859357696566998
+      ],
+      "molecules": 299,
+      "resampled_leakage_groups": 250,
+      "repetitions": 10000,
+      "seed": 42,
+      "scope": "paired molecular mean; cluster-resampled; conditional on fitted out-of-fold models"
+    },
+    {
+      "left": "atom_jepa",
+      "right": "morgan",
+      "budget": "100",
+      "mean_delta": 0.2001114827201784,
+      "ci95": [
+        0.14350280822236863,
+        0.25453592395862457
+      ],
+      "molecules": 299,
+      "resampled_leakage_groups": 250,
+      "repetitions": 10000,
+      "seed": 42,
+      "scope": "paired molecular mean; cluster-resampled; conditional on fitted out-of-fold models"
+    },
+    {
+      "left": "atom_jepa",
+      "right": "electronic",
+      "budget": "100",
+      "mean_delta": -0.13935340022296547,
+      "ci95": [
+        -0.191126677645449,
+        -0.08945621964206865
+      ],
+      "molecules": 299,
+      "resampled_leakage_groups": 250,
+      "repetitions": 10000,
+      "seed": 42,
+      "scope": "paired molecular mean; cluster-resampled; conditional on fitted out-of-fold models"
+    },
+    {
+      "left": "jepa_plus_qm",
+      "right": "atom_jepa",
+      "budget": "100",
+      "mean_delta": 0.1460423634336678,
+      "ci95": [
+        0.10503751339764203,
+        0.1889299545770411
+      ],
+      "molecules": 299,
+      "resampled_leakage_groups": 250,
+      "repetitions": 10000,
+      "seed": 42,
+      "scope": "paired molecular mean; cluster-resampled; conditional on fitted out-of-fold models"
+    },
+    {
+      "left": "jepa_plus_qm",
+      "right": "electronic",
+      "budget": "100",
+      "mean_delta": 0.006688963210702337,
+      "ci95": [
+        -0.02112862688498482,
+        0.03490990990990991
+      ],
+      "molecules": 299,
+      "resampled_leakage_groups": 250,
+      "repetitions": 10000,
+      "seed": 42,
+      "scope": "paired molecular mean; cluster-resampled; conditional on fitted out-of-fold models"
+    },
+    {
+      "left": "atom_jepa",
+      "right": "random_backbone",
+      "budget": "full",
+      "mean_delta": 0.010033444816053512,
+      "ci95": [
+        -0.0472972972972973,
+        0.06862745098039216
+      ],
+      "molecules": 299,
+      "resampled_leakage_groups": 250,
+      "repetitions": 10000,
+      "seed": 42,
+      "scope": "paired molecular mean; cluster-resampled; conditional on fitted out-of-fold models"
+    },
+    {
+      "left": "atom_jepa",
+      "right": "morgan",
+      "budget": "full",
+      "mean_delta": 0.12040133779264214,
+      "ci95": [
+        0.056117692839847806,
+        0.1864118880292919
+      ],
+      "molecules": 299,
+      "resampled_leakage_groups": 250,
+      "repetitions": 10000,
+      "seed": 42,
+      "scope": "paired molecular mean; cluster-resampled; conditional on fitted out-of-fold models"
+    },
+    {
+      "left": "atom_jepa",
+      "right": "electronic",
+      "budget": "full",
+      "mean_delta": -0.10033444816053512,
+      "ci95": [
+        -0.1610738255033557,
+        -0.03934426229508197
+      ],
+      "molecules": 299,
+      "resampled_leakage_groups": 250,
+      "repetitions": 10000,
+      "seed": 42,
+      "scope": "paired molecular mean; cluster-resampled; conditional on fitted out-of-fold models"
+    },
+    {
+      "left": "jepa_plus_qm",
+      "right": "atom_jepa",
+      "budget": "full",
+      "mean_delta": 0.11371237458193979,
+      "ci95": [
+        0.06209150326797386,
+        0.16718290670078423
+      ],
+      "molecules": 299,
+      "resampled_leakage_groups": 250,
+      "repetitions": 10000,
+      "seed": 42,
+      "scope": "paired molecular mean; cluster-resampled; conditional on fitted out-of-fold models"
+    },
+    {
+      "left": "jepa_plus_qm",
+      "right": "electronic",
+      "budget": "full",
+      "mean_delta": 0.013377926421404682,
+      "ci95": [
+        -0.023728813559322035,
+        0.051194539249146756
+      ],
+      "molecules": 299,
+      "resampled_leakage_groups": 250,
+      "repetitions": 10000,
+      "seed": 42,
+      "scope": "paired molecular mean; cluster-resampled; conditional on fitted out-of-fold models"
+    }
+  ],
+  "regularization_grid_edges": {
+    "atom_jepa:budget50": {
+      "fits": 15,
+      "any_edge": 0,
+      "components": {
+        "shared": {
+          "at_minimum": 0,
+          "at_maximum": 0
+        }
+      }
+    },
+    "atom_jepa:budget100": {
+      "fits": 15,
+      "any_edge": 0,
+      "components": {
+        "shared": {
+          "at_minimum": 0,
+          "at_maximum": 0
+        }
+      }
+    },
+    "atom_jepa:budgetfull": {
+      "fits": 5,
+      "any_edge": 0,
+      "components": {
+        "shared": {
+          "at_minimum": 0,
+          "at_maximum": 0
+        }
+      }
+    },
+    "random_backbone:budget50": {
+      "fits": 15,
+      "any_edge": 7,
+      "components": {
+        "shared": {
+          "at_minimum": 0,
+          "at_maximum": 7
+        }
+      }
+    },
+    "random_backbone:budget100": {
+      "fits": 15,
+      "any_edge": 0,
+      "components": {
+        "shared": {
+          "at_minimum": 0,
+          "at_maximum": 0
+        }
+      }
+    },
+    "random_backbone:budgetfull": {
+      "fits": 5,
+      "any_edge": 0,
+      "components": {
+        "shared": {
+          "at_minimum": 0,
+          "at_maximum": 0
+        }
+      }
+    },
+    "morgan:budget50": {
+      "fits": 15,
+      "any_edge": 2,
+      "components": {
+        "shared": {
+          "at_minimum": 0,
+          "at_maximum": 2
+        }
+      }
+    },
+    "morgan:budget100": {
+      "fits": 15,
+      "any_edge": 0,
+      "components": {
+        "shared": {
+          "at_minimum": 0,
+          "at_maximum": 0
+        }
+      }
+    },
+    "morgan:budgetfull": {
+      "fits": 5,
+      "any_edge": 0,
+      "components": {
+        "shared": {
+          "at_minimum": 0,
+          "at_maximum": 0
+        }
+      }
+    },
+    "electronic:budget50": {
+      "fits": 15,
+      "any_edge": 1,
+      "components": {
+        "shared": {
+          "at_minimum": 1,
+          "at_maximum": 0
+        }
+      }
+    },
+    "electronic:budget100": {
+      "fits": 15,
+      "any_edge": 0,
+      "components": {
+        "shared": {
+          "at_minimum": 0,
+          "at_maximum": 0
+        }
+      }
+    },
+    "electronic:budgetfull": {
+      "fits": 5,
+      "any_edge": 2,
+      "components": {
+        "shared": {
+          "at_minimum": 2,
+          "at_maximum": 0
+        }
+      }
+    },
+    "jepa_plus_qm:budget50": {
+      "fits": 15,
+      "any_edge": 6,
+      "components": {
+        "jepa": {
+          "at_minimum": 0,
+          "at_maximum": 4
+        },
+        "qm": {
+          "at_minimum": 2,
+          "at_maximum": 0
+        }
+      }
+    },
+    "jepa_plus_qm:budget100": {
+      "fits": 15,
+      "any_edge": 2,
+      "components": {
+        "jepa": {
+          "at_minimum": 0,
+          "at_maximum": 2
+        },
+        "qm": {
+          "at_minimum": 0,
+          "at_maximum": 0
+        }
+      }
+    },
+    "jepa_plus_qm:budgetfull": {
+      "fits": 5,
+      "any_edge": 1,
+      "components": {
+        "jepa": {
+          "at_minimum": 0,
+          "at_maximum": 1
+        },
+        "qm": {
+          "at_minimum": 0,
+          "at_maximum": 0
+        }
+      }
+    }
+  },
+  "qm_relative_rms": {
+    "50": {
+      "minimum": 0.5161937524963063,
+      "median": 0.7853445619379443,
+      "maximum": 0.9086674832983588
+    },
+    "100": {
+      "minimum": 0.46745307171568806,
+      "median": 0.7321684502902225,
+      "maximum": 0.8852354419273303
+    },
+    "full": {
+      "minimum": 0.5149742363391792,
+      "median": 0.6730221764064062,
+      "maximum": 0.9035242653744734
+    }
+  },
+  "convergence": {
+    "completed_final_fits": 175,
+    "completed_inner_fits": 6300,
+    "largest_iteration_count": 1186,
+    "largest_gradient_inf_norm": 7.828157371977951e-07,
+    "fits_over_original_1000_cap": 9
+  },
+  "validation_report": "reports/evaluation_result_validation.json",
+  "scope": "Frozen-feature linear prediction of source-reported outcomes, with known-source/similarity-component holdouts",
+  "limitations": [
+    "Exploratory, unadjusted paired top-1 intervals are conditional on the fitted models; other metrics are descriptive.",
+    "Bibliographic/patent families are incomplete; comp480/comp481 span folds. This is not proven independent-series or OOD evaluation.",
+    "Pretraining overlap is unaudited and the random backbone has only one initialization seed.",
+    "Features describe substrates without reaction conditions; unreported sites are not confirmed negative products.",
+    "The bank uses one shared conformer and retains all seven geometry-fallback records.",
+    "The numerical L2 grid can imply different effective shrinkage across blocks; edge selections are diagnostic, not corrected posthoc.",
+    "The study does not isolate the JEPA pretraining objective or infer mechanisms, stereoselectivity or product fractions."
+  ],
+  "interpretation": {
+    "strongest_single_block_top1_at_all_budgets": "electronic",
+    "pretrained_minus_random_top1_intervals_include_zero_at_all_budgets": true,
+    "combined_minus_electronic_top1_intervals_include_zero_at_all_budgets": true,
+    "combined_nll_lower_than_electronic_at_all_budgets": true,
+    "nll_comparison_scope": "Descriptive only; no paired NLL intervals were in the approved protocol",
+    "conclusion": "This pilot does not resolve a top-1 benefit of pretraining versus the random backbone or of adding JEPA to QM; it does not establish equivalence or absence of benefit."
+  }
+}

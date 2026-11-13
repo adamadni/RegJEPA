@@ -1,8 +1,10 @@
 # RegJEPA
 
-Investigating whether JEPA-derived molecular features improve regioselectivity prediction, especially with limited reaction labels and unfamiliar substrates.
+Investigating whether frozen JEPA-derived molecular features improve prediction of reported EAS regioselectivity with limited reaction labels.
 
-The current milestone is **frozen feature extraction on validated, symmetrically distinct outcome queries**. We use a published structure-only Atom-JEPA encoder and a randomly initialized frozen copy of the same architecture. No regioselectivity prediction head has been trained yet.
+The current milestone is a **completed frozen-feature linear pilot on 299 conservative bromination records**. We compare a published structure-only Atom-JEPA encoder, a randomly initialized frozen copy, atom-centered Morgan fingerprints, electronic descriptors, and JEPA + QM. All 6,300 inner fits and 175 final fits converged; every saved model and score passed replay validation.
+
+Electronic descriptors are the strongest single block. Adding JEPA gives small positive top-1 point estimates, but its gain over QM and pretrained JEPA's gain over the random backbone remain unresolved by the exploratory paired intervals. Read the [results and limits](reports/evaluation_results.md), [numerical audit](reports/evaluation_result_validation.md), and [Claude results-review prompt](reports/claude_results_review_prompt.txt).
 
 See the [feature extraction report](reports/feature_extraction.md) and `data/features/latest.json` for the aligned feature bank, geometry archive, checkpoint provenance and coverage.
 
@@ -48,10 +50,11 @@ data/processed/molecules.jsonl Typed molecule records
 data/processed/candidate_sites.csv  Candidate atom and outcome-group table
 data/processed/summary.json    Aggregate counts
 data/features/                Aligned frozen feature blocks and portable 3D geometry
-src/regjepa/                   Reusable ingestion, validation, and symmetry code
+data/splits/                  Immutable proposals, approvals and frozen split bindings
+src/regjepa/                   Ingestion, chemistry, features and linear evaluation
 scripts/                       Download, audit, and report commands
 tests/                         Chemistry and source-integration checks
-reports/                       Audit, offline molecule browser, and examples
+reports/                       Data audits, molecule browser and evaluation results
 docs/                          Definitions, pending decisions, and experiment plan
 ```
 
@@ -92,7 +95,7 @@ Compare these frozen features through simple site-scoring heads on identical gro
 
 ## Linear evaluation harness
 
-The linear scorer and nested evaluation harness are implemented. No full real-data experiment has run. Read the [evaluation protocol](docs/evaluation_protocol.md), [grouping/split preflight](reports/evaluation_preflight.md), and [Claude review prompt](reports/claude_review_prompt.txt).
+The reviewed linear scorer and nested evaluation harness have completed proposal `af05d8348e60ad38b6e4`. Read the [evaluation protocol](docs/evaluation_protocol.md), [completed results](reports/evaluation_results.md), and [current results-review prompt](reports/claude_results_review_prompt.txt). The [preflight](reports/evaluation_preflight.md) and original review prompt are historical preparation records.
 
 ```text
 python -m pip install -r requirements-evaluation.txt
@@ -102,6 +105,16 @@ python scripts/prepare_evaluation.py
 Preparation writes an immutable, label-blind split **proposal** and a grouping audit under `data/splits/`, plus Markdown/JSON preflight reports. All 535 records participate in linkage before filtering the 299-record cohort. Exact identity, tautomer, explicit source/series links and whole-molecule Morgan Tanimoto >=0.6 neighbours stay together. This is a conservative metadata constraint, not verified international patent-family recovery.
 
 After reviewing the proposal, use the explicit freeze and run commands in the protocol. The runner inspects artifacts without fitting unless `--run` is supplied, and fitting rejects unfrozen or changed inputs. Legacy raw-atom scoring helpers in `chemistry.py` are not used on feature-bank rows; the harness has independent exact-tie-aware metrics.
+
+The original 1,000-iteration attempt remains separately preserved after a convergence failure. The user-approved [cap-only amendment](reports/evaluation_iteration_amendment.md) raised the cap to 5,000; the fresh run completed without relaxing convergence criteria. See the [split index](data/splits/README.md), exact approval alongside the amended frozen artifact, and [runtime record](reports/evaluation_amended_runtime.json). This split holds out known source/series/similarity components; it is not a verified independent-publication-family or out-of-distribution evaluation.
+
+To audit the committed results without fitting, use the exact locked runtime and a new report path:
+
+```text
+python scripts/validate_evaluation_results.py --splits data/splits/af05d8348e60ad38b6e4/frozen.json --output reports/evaluation_runs/af05d8348e60ad38b6e4 --report .cache/replay-audit.json
+```
+
+A fresh model rerun must specify a new `--output` directory: the committed experiment outputs are never overwritten. Validation reuses the implementation and checks saved artifacts; it is not an independent scientific replication.
 
 For tests with a workspace-local temporary directory, create its parent first (also works in a fresh clone):
 

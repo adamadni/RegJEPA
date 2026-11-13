@@ -10,10 +10,12 @@ The change is driven by the convergence failure, without inspecting outer-test p
 
 The original-cap replay reproduced the failure exactly: inner fold 1, 160 training molecules, JEPA penalty 0.0001 and QM penalty 10. Its diagnostics are in `evaluation_convergence_diagnosis.md` and `.json`. The artifact audit in `evaluation_failed_attempt_integrity.md` and `.json` independently checked the cap-only difference, identical groups/folds/locks and the saved model hashes. These checks do not prove the larger cap will converge.
 
+The subsequently approved fresh run **completed all 6,300 inner fits and 175 final fits** and passed saved-model replay validation. Nine fits needed more than 1,000 iterations; the largest used 1,186. The original outputs remain unchanged and separate. Current results: `evaluation_results.md` and `.json`; validation: `evaluation_result_validation.md` and `.json`.
+
 Claude review prompt: `reports/claude_iteration_amendment_review_prompt.txt`.
 
 Files: `configs/evaluation_iteration_extension.json`, `data/splits/af05d8348e60ad38b6e4/proposal.json` and its sibling `grouping.json`.
 
 ## Not done
 
-The fresh rerun and its verification are pending. No convergence threshold has been relaxed and no failed fit has been counted as valid.
+Independent results review remains pending. No convergence threshold was relaxed and no failed fit was counted as valid.

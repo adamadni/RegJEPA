@@ -1,0 +1,99 @@
+Independently review the completed RegJEPA frozen-feature linear experiment.
+Repository: https://github.com/adamadni/RegJEPA
+
+First inspect git ls-files, git log --oneline -5 and git status --short. Record
+the actual HEAD. Read reports/evaluation_amended_execution_status.json first;
+if execution or verification is incomplete, report that instead of claiming a
+complete result. This prompt can be prepared while the run is in progress.
+
+Review only. Do not change tracked files, install dependencies, create a branch,
+freeze a proposal, regenerate features, train/refit a model, tune a grid or send
+messages externally. Read-only numerical checks may write disposable evidence
+under .cache. Do not overwrite the experiment or its validation report.
+
+Approved proposal: af05d8348e60ad38b6e4. Freeze/approval/runtime checkpoint:
+f938849. Reviewed model implementation: 977f120. The user explicitly approved
+"Approve cap 5,000 and rerun". Compare this binding to the exact proposal hash.
+The original 09ebadea135ec50dc873 attempt failed at its 1,000-iteration cap and
+remains preserved separately with 146 final fits. The amended experiment reruns
+all five blocks from scratch, changing only max_iterations to 5,000. No outer
+test performance was inspected to choose the amendment. No failed or old fit
+may be substituted into the amended run.
+
+Read:
+- README.md, docs/evaluation_protocol.md, docs/feature_bank.md
+- configs/evaluation.json and configs/evaluation_iteration_extension.json
+- data/splits/README.md and af05d8348e60ad38b6e4/{proposal,grouping,frozen,approval}.json
+- reports/evaluation_iteration_amendment.md and its JSON sibling
+- reports/evaluation_amended_runtime.json and evaluation_amended_execution_status.{md,json}
+- reports/evaluation_convergence_diagnosis.{md,json} and evaluation_failed_attempt_integrity.{md,json}
+- reports/evaluation_runs/af05d8348e60ad38b6e4/summary.{md,json}, split_manifest.json,
+  all per-fit JSON files and their NPZ coefficient/scale/mask files
+- reports/evaluation_result_validation.{md,json} and evaluation_results.{md,json}, if present
+- src/regjepa/{evaluation,linear,experiment,grouping,splits,protocol}.py
+- scripts/validate_evaluation_results.py and tests/test_{evaluation,linear,experiment,protocol,splits}.py
+  where those test paths actually exist; use git ls-files rather than assuming names
+- reports/evaluation_review_response.md and prior claude_review_prompt.txt for review history
+
+Numerical environment: the recorded exact-version Linux runtime is under
+.cache/linux-evaluation/venv/bin/python in the existing prexsyn-baseline WSL
+distro. The original Windows RDKit DLLs were blocked by Application Control;
+do not change security settings or rename DLLs. If this runtime is unavailable
+on your machine, report your actual versions and any checks you cannot execute.
+Do not silently install or import unpinned sklearn/pandas/plotting dependencies.
+
+Optional same-runtime saved-model audit, from the repository root:
+wsl -d prexsyn-baseline --exec /usr/bin/env PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=4 OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 /mnt/c/Users/adamm/OneDrive/Documents/ChatGPT/ChemJEPA/.cache/linux-evaluation/venv/bin/python -B /mnt/c/Users/adamm/OneDrive/Documents/ChatGPT/ChemJEPA/scripts/validate_evaluation_results.py --splits /mnt/c/Users/adamm/OneDrive/Documents/ChatGPT/ChemJEPA/data/splits/af05d8348e60ad38b6e4/frozen.json --output /mnt/c/Users/adamm/OneDrive/Documents/ChatGPT/ChemJEPA/reports/evaluation_runs/af05d8348e60ad38b6e4 --report /mnt/c/Users/adamm/OneDrive/Documents/ChatGPT/ChemJEPA/.cache/claude-saved-model-audit.json
+That command fits nothing and requires a new audit-report path. Its checks reuse
+the model implementation, so it is not an independent scientific replication.
+
+Review gates:
+1. Provenance and completeness. Rebuild/validate the frozen binding. Recompute
+   299 records, 299 structures, 1,264 outcome rows, 250 leakage components and
+   uniform expected top-1 0.28314752879970273 through load_feature_bank. Check
+   all 175 final fits and 6,300 inner fits, exact model hashes, configurations,
+   grids and approval records. Confirm data/raw and the existing bank are intact.
+2. Training and saved models. Check the single molecular softmax objective and
+   analytic gradient, zero initialization, train-only transform and constant-column
+   mask. Every label used by inner selection must be inside the 50/100/full budget.
+   JEPA+QM has 36 penalty pairs; each single block has 6 choices. Selected penalties
+   must minimize pooled molecular validation NLL. Optimizer success plus finite
+   parameters/objective plus gradient <=1e-5 is required; gtol=1e-7 and ftol=1e-14
+   allow either successful termination route. Audit all saved convergence diagnostics.
+   Reconstruct final logits and at least independently derive some loss/gradient
+   and JEPA/QM component diagnostics from weights, masks and scales.
+3. Candidate integrity and evaluation. Each feature-bank row is already a
+   symmetry-averaged distinct outcome. Rank rows directly; never call raw-atom
+   mean_group_scores/top1_hit on these rows or weight by symmetry multiplicity.
+   Identical feature rows must remain tied under fixed per-row float64 reduction.
+   Verify uniform expected tie credit for top-1/top-2 and expected reciprocal rank.
+   Check query alignment, complete candidate sets and one positive per molecule.
+   Recompute metrics from logits, including NLL and information gain versus uniform.
+4. Aggregation and uncertainty. Every method/budget must cover the same 299
+   molecules. Average the three subset repetitions per molecule at budgets 50/100;
+   full training has one repetition. These are metric averages, not logit ensembles.
+   Independently check paired top-1 differences and 10,000-resample intervals over
+   the 250 leakage components. Do not resample rows or count repetitions as extra
+   molecules. Intervals are conditional on fitted models, exploratory and unadjusted
+   for the 15 comparisons; no intervals were implemented for secondary metrics.
+5. Reporting. Verify every number in evaluation_results.md against saved predictions
+   and summary.json. Does evidence support each comparison with random backbone,
+   Morgan, QM and JEPA+QM at each label budget? Check the actual sign and interval,
+   not just rankings or point estimates. Include negative information gain and
+   grid-edge selections when present. JEPA/QM RMS is score amplitude, not information
+   attribution; correlated components may cancel. The richer grid does not force
+   concatenation to reproduce either single-block optimum.
+6. Limits on claims. This is source-annotation prediction with substrate-only frozen
+   features, not product fractions, mechanistic inference or an isolated JEPA-objective
+   benefit. Pretraining membership is unaudited and the random encoder has one seed.
+   The grouping holds out known identity/source/series/similarity components, not a
+   verified publication-family or out-of-distribution split. Retain comp480/comp481
+   and unresolved bibliography/patent-family limitations. All 299 primary cases must
+   remain; no posthoc deletion, relabeling or geometry filtering may improve metrics.
+
+Return exact HEAD and checks performed; blockers/major/minor findings with file:line
+evidence and consequences; each gate supported/failed/not checked; corrected actual
+counts or arithmetic if needed; which scientific claims survive; and the smallest
+necessary next steps. Distinguish artifacts you inspected from checks you executed.
+Do not repair or rerun the study to make a claim hold.
+End with a section titled "## Not done".
